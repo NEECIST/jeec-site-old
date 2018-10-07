@@ -1,6 +1,8 @@
 <template>
     <div id="home-app">
-        <img class="jeec_logo" src="../../static/logo_jeec.png"/>
+        <div class="home-main-flex">
+        
+        </div>
     </div>
 </template>
 
@@ -11,8 +13,9 @@
 
 
 <style>
-    .jeec_logo {
-        width: 1000px;
-        vertical-align: middle;
+    .home-main-flex {
+        width: 100%;
+        height: 900px;
+        background-color: rgb(151, 199, 253);
     }
 </style>

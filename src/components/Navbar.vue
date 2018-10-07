@@ -1,34 +1,30 @@
+
 <template>
     <div id="navbar">
         
         <div class="navbar-logo">
             <router-link to="/">JEEC|19</router-link>
         </div>
-        
 
         <div class="navbar-title">
-            <router-link to="/about">About</router-link>
+            <router-link to="/editions">Last Editions</router-link>
+        </div>
+
+         <div class="navbar-title">
+            <router-link to="/team">Team</router-link>
+        </div>
+        
+        <div class="navbar-title">
+            <router-link to="/program">Program</router-link>
         </div>
 
         <div class="navbar-title">
-            <router-link to="/activities">Activities</router-link>
+            <router-link to="/partners">Partners</router-link>
         </div>
-        
 
         <div class="navbar-title">
             <router-link to="/speakers">Speakers</router-link>
         </div>
-
-        <div class="navbar-title">
-            <router-link to="/team">Team</router-link>
-        </div>
-
-        <div class="navbar-title">
-            <router-link to="/contacts">Contacts</router-link>
-        </div>
-
-        
-
     </div>
 </template>
 
@@ -64,7 +60,7 @@ export default {
 }
 
 .navbar-title {
-    float: left;
+    float: right;
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 26px;

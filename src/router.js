@@ -1,11 +1,12 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
-import About from "./views/About.vue";
-import Activities from "./views/Activities.vue";
+import Last_Editions from "./views/Last-Editions.vue";
+import Partners from "./views/Partners.vue";
+import Program from "./views/Program.vue";
 import Speakers from "./views/Speakers.vue";
 import Team from "./views/Team.vue";
-import Contacts from "./views/Contacts.vue";
+
 
 Vue.use(Router);
 
@@ -17,14 +18,20 @@ export default new Router({
       component: Home
     },
     {
-      path: "/about",
-      name: "about",
-      component: About
+      path: "/editions",
+      name: "editions",
+      component: Last_Editions
     },
     {
-      path: "/activities",
-      name: "activities",
-      component: Activities
+      path: "/partners",
+      name: "partners",
+      component: Partners
+    },
+    ,
+    {
+      path: "/program",
+      name: "program",
+      component: Program
     },
     {
       path: "/speakers",
@@ -35,11 +42,6 @@ export default new Router({
       path: "/team",
       name: "team",
       component: Team
-    },
-    {
-      path: "/contacts",
-      name: "contacts",
-      component: Contacts
     }
   ]
 });
