@@ -1,75 +1,78 @@
-
 <template>
-    <div id="navbar">
-        
-        <div class="navbar-logo">
-            <router-link to="/">JEEC|19</router-link>
-        </div>
+    <div class="navbar">
+        <router-link router-link :to="{ name: 'Home' }">
+        <img class="navbar-left-logo" src="../../static/logo_navbar.png">
+        </router-link>
 
-        <div class="navbar-title">
-            <router-link to="/editions">Last Editions</router-link>
-        </div>
+        <!--<router-link router-link :to="{ name: 'Workshops' }">
+        <div class="navbar-title">Workshops</div>
+        </router-link>
+        <router-link router-link :to="{ name: 'Internships' }">
+        <div class="navbar-title">Summer Internships</div>
+        </router-link>
+        <router-link router-link :to="{ name: 'Events' }">
+        <div class="navbar-title">partners</div>
+        </router-link>
+        <router-link router-link :to="{ name: 'About' }">
+        <div class="navbar-title">speakers</div>
+        </router-link>-->
 
-         <div class="navbar-title">
-            <router-link to="/team">Team</router-link>
-        </div>
-        
-        <div class="navbar-title">
-            <router-link to="/program">Program</router-link>
-        </div>
-
-        <div class="navbar-title">
-            <router-link to="/partners">Partners</router-link>
-        </div>
-
-        <div class="navbar-title">
-            <router-link to="/speakers">Speakers</router-link>
-        </div>
     </div>
 </template>
 
-
-
 <script>
+
 export default {
-  name: "Navbar",
-  
-};
+  name: 'navbar',
+
+  methods: {
+    openNav () {
+      document.getElementById('mySidenav').style.width = '250px'
+    },
+
+    closeNav () {
+      document.getElementById('mySidenav').style.width = '0'
+    }
+  }
+}
 </script>
 
-
 <style>
-#navbar {
-    width: 100%;
-    height: 80px;
-    background-color: rgba(45, 46, 46, 0.09);
+.navbar {
+  width: 100%;
+  height: 80px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
+  position: fixed;
+  z-index: 1000;
+  background-color: #ffffff;
 }
 
-.navbar-logo {
-    width: 120px;
-    float: left;
-    font-family: 'Open Sans';
-    font-size: 30px;
-    padding-left: 40px;
-    padding-right: 30px;
-    margin-top: 16px;
-    height: 50px;
-    color: #000000;
-    -webkit-text-stroke: 1.5px #353535;
-    border-right: 1px solid #000000;
+.navbar-left-logo {
+  width: 140px;
+  margin-left: 20px;
+  margin-top: 25px;
+  float: left;
 }
 
 .navbar-title {
-    float: right;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 26px;
-    font-family: 'Open Sans';
-    font-size: 20px;
-    color: #000000;
+  float: right;
+  margin-top: 16pt;
+  margin-right: 5vw;
+  font-family: 'Montserrat';
+  font-weight: bold;
 }
 
-.navbar-logo, .navbar-title {
-    display: inline-block;
+.navbar-title:hover {
+  font-weight: bold;
 }
+
+.navbar-title:active {
+  color: #4c6c8b;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
 </style>
