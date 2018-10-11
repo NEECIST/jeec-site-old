@@ -1,28 +1,28 @@
 <template>
     <div class="home-app">
         <div class="date-location">
-            <img src="../static/calendar.svg" id="calendar-icon">11 to 15 March 2019
+            <img src="../../static/calendar.svg" id="calendar-icon">11 to 15 March 2019
         
             <div class="location">Instituto Superior Técnico</div>
         </div>
         
         <div class="main-logo-container">
-            <img src="../static/jeec_logo.png" class="logo-home">
+            <img src="../../static/jeec_logo.png" class="logo-home">
         </div>
 
         <div class="follow-us">Follow us on</div>
         <div class="social-icons">
             <a href="https://www.linkedin.com/company/jeecist/">
-                <img src="../static/linkedin.svg" class="icon shadow"></a>
+                <img src="../../static/linkedin.svg" class="icon shadow"></a>
 
             <a href="https://www.facebook.com/JEECIST/">
-            <img src="../static/facebook.svg" class="icon shadow"></a>
+            <img src="../../static/facebook.svg" class="icon shadow"></a>
 
             <a href="https://www.youtube.com/channel/UCTO2g_8WD8ZEQ_VvIeQ1QRQ">
-            <img src="../static/youtube.svg" class="icon"></a>
+            <img src="../../static/youtube.svg" class="icon"></a>
 
             <a href="https://www.instagram.com/jeec.ist/">
-            <img src="../static/instagram.svg" class="icon"></a>
+            <img src="../../static/instagram.svg" class="icon"></a>
 
         </div>
     </div>
