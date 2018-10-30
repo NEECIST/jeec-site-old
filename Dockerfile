@@ -1,17 +1,22 @@
-FROM ubuntu:xenial
+FROM node:9.11.1-alpine
 
-RUN apt-get update && apt-get install -y \
-    nginx \
-    && rm -rf /var/lib/apt/lists/*
+# install simple http server for serving static content
+RUN npm install -g http-server
 
-COPY site.conf /etc/nginx/sites-available
-RUN ln -s /etc/nginx/sites-available/site.conf /etc/nginx/sites-enabled
-COPY .htpasswd /etc/nginx
+# make the 'app' folder the current working directory
+WORKDIR /vue_project
 
-COPY startup.sh /home/
-RUN chmod 777 /home/startup.sh
-CMD ["bash","/home/startup.sh"]
+# copy both 'package.json' and 'package-lock.json' (if available)
+COPY package*.json ./
 
-EXPOSE 9000
+# install project dependencies
+RUN npm install
 
-COPY vue_project/dist /home/html/
+# copy project files and folders to the current working directory (i.e. 'app' folder)
+COPY . .
+
+# build app for production with minification
+RUN npm run build
+
+EXPOSE 8080
+CMD [ "http-server", "dist" ]
