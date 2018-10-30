@@ -26,13 +26,14 @@
 
         </div>
     </div>
+
 </template>
 
 
 <style>
 .home-app {
     background-color: #f3f3f3;
-    height: 105vh;
+    height: 1080px;
 }
 
 #calendar-icon {
@@ -64,7 +65,7 @@
 
 .logo-home {
     margin-top: 100px;
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
     width: 1100px;
 }

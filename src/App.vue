@@ -2,6 +2,7 @@
   <div id="app">
     <navbar/>
     <router-view/>
+    <ouractivities/>
   </div>
 </template>
 
