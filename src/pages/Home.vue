@@ -65,7 +65,7 @@
 
 .logo-home {
     margin-top: 100px;
-    max-width: 90%;
+    max-width: 100%;
     height: auto;
     width: 1100px;
 }
