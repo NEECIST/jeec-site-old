@@ -1,3 +1,4 @@
+<<<<<<< HEAD:deployment/vue/Dockerfile
 FROM node:9.11.1-alpine
 
 # make the 'app' folder the current working directory
@@ -14,4 +15,3 @@ COPY ./vue_project . .
 
 # build app for production with minification
 RUN npm run build
-
