@@ -128,7 +128,7 @@
    .activities{
        min-width: 50%;
        width: 50%;
-       font-size: 60px;
+       font-size: 80px;
        height: auto;
        line-height: normal;
    }
