@@ -22,6 +22,7 @@
 <style>
 .OurActivities{
     height:800px;
+    width: auto;
     background-color: #f1f7ff;
 }
 
@@ -82,7 +83,7 @@
 
 .matchmaking{
    
-    float: left;
+  float: left;
   margin-top: 125px;
   margin-left:11.5%;
 }
@@ -119,6 +120,68 @@
     margin-right: 10.4%;
 }
 
+@media screen and (max-width: 1200px){
+    .OurActivities{
+        height: auto;
+    }
 
+   .activities{
+       min-width: 50%;
+       width: 50%;
+       font-size: 60px;
+       height: auto;
+       line-height: normal;
+   }
+
+   .matchmaking{
+  margin-top: 65px;
+  float: none;
+  display: inline-block;
+  text-align: center;
+  margin-left: auto;
+}
+    .workshops{
+  margin-top: 65px;
+  margin-right: auto;
+  text-align: center;
+  float: none;
+  display: inline-block;
+}
+
+.tech-talks{
+    margin-top: 65px;
+  margin-left: auto;
+  text-align: center;
+  float: none;
+  display: inline-block;
+}
+
+.job-fair{
+  
+    margin-top: 65px;
+  margin-right: auto;
+  text-align: center;
+  float: none;
+  display: inline-block;
+  
+}
+.discussion-panels{
+  
+    margin-top: 65px;
+  margin-left: auto;
+  text-align: center;
+  float: none;
+  display: inline-block;
+}
+
+.startup-corner{
+    margin-top: 65px;
+  margin-right: auto;
+  text-align: center;
+  float: none;
+  display: inline-block;
+}
+
+}
 
 </style>
