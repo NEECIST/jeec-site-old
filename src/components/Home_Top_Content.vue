@@ -32,6 +32,7 @@
 .home-top-comp {
     background-color: #f3f3f3;
     height: 105vh;
+    width: 100%;
 }
 
 #calendar-icon {

@@ -1,13 +1,13 @@
 <template>
     <div class="who-are-we-comp">
-      <div class="title" style="margin-left: 101px">
+      <div class="title">
         <div class="title_left">WHO</div>
         <div class="title_right">ARE WE?</div>
       </div>
 
-      <div class="subtitle" style="margin-left: 101px">Why you should attend the event</div>
+      <div class="subtitle">Why you should attend the event</div>
 
-      <div class="subtitle2" style="margin-left: 101px">
+      <div class="subtitle2">
         <div class="subtitle2_left">AS A</div>
         <div class="subtitle2_right">STUDENT</div>
       </div>

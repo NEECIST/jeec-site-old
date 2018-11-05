@@ -41,8 +41,9 @@ export default {
 .navbar {
   width: 100%;
   height: 80px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.16);
   position: fixed;
   z-index: 1000;
   background-color: #ffffff;
