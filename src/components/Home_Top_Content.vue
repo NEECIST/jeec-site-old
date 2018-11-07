@@ -1,5 +1,6 @@
 <template>
     <div class="home-top-comp">
+
         <div class="date-location">
             <img src="../../static/calendar.svg" id="calendar-icon">11 to 15 March 2019
             
@@ -10,19 +11,21 @@
             <img src="../../static/jeec_logo.png" class="logo-home">
         </div>
 
-        <div class="follow-us">Follow us on</div>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/company/jeecist/">
-                    <img src="../../static/linkedin.svg" class="icon shadow"></a>
+        <div class="social-networks">
+            <div class="follow-us">Follow us on</div>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/company/jeecist/">
+                        <img src="../../static/linkedin.svg" class="icon shadow"></a>
 
-                <a href="https://www.facebook.com/JEECIST/">
-                    <img src="../../static/facebook.svg" class="icon shadow"></a>
+                    <a href="https://www.facebook.com/JEECIST/">
+                        <img src="../../static/facebook.svg" class="icon shadow"></a>
 
-                <a href="https://www.youtube.com/channel/UCTO2g_8WD8ZEQ_VvIeQ1QRQ">
-                    <img src="../../static/youtube.svg" class="icon"></a>
+                    <a href="https://www.youtube.com/channel/UCTO2g_8WD8ZEQ_VvIeQ1QRQ">
+                        <img src="../../static/youtube.svg" class="icon"></a>
 
-                <a href="https://www.instagram.com/jeec.ist/">
-                    <img src="../../static/instagram.svg" class="icon"></a>
+                    <a href="https://www.instagram.com/jeec.ist/">
+                        <img src="../../static/instagram.svg" class="icon"></a>
+            </div>
         </div>
     </div>
 </template>
@@ -30,9 +33,11 @@
 
 <style>
 .home-top-comp {
-    background-color: #f3f3f3;
-    height: 105vh;
-    width: 100%;
+    background-image: url('/static/background.jpg');
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;   
+    height: 103vh;
 }
 
 #calendar-icon {
@@ -44,10 +49,11 @@
 
 .date-location {
     width: 100%;
-    height: 42px;
+    height: 72px;
     font-family: 'Roboto', sans-serif;
     font-size: 28px;
     font-weight: 500;
+    color: white;
     padding-top: 130px;
     text-align: center;
 } 
@@ -59,26 +65,43 @@
 }
 
 .main-logo-container {
-    height: 500px;
+    margin-top: 30px;
+    padding: 35px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    background: rgba(235, 235, 235, 0.9);
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 500px;
+    width: 1200px;
 }
 
 .logo-home {
-    margin-top: 100px;
-    max-width: 100%;
     height: auto;
     width: 1100px;
 }
 
+.social-networks {
+    margin-top: 50px;
+    padding-top: 20px;
+    width: 500px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    background: rgba(235, 235, 235, 0.95);
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.2);
+}
+
 .follow-us {
-    width: 100%;
-    height: 28px;
+    position: relative;
     font-family: 'Roboto', sans-serif;
     font-size: 23px;
     font-weight: bold;
     letter-spacing: 0.7px;
     text-align: center;
     color: #3391c2;
-    margin-top: 100px;
 }
 
 .social-icons {
