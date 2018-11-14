@@ -12,6 +12,8 @@
         </div>-->
         <who-are-we/>
 
+        <ouractivities/>
+
         <contacts/>
     </div>
 </template>

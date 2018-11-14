@@ -8,6 +8,8 @@ import Navbar from './components/Navbar'
 import Home_Top_Content from './components/Home_Top_Content'
 import Who_Are_We from './components/Who_Are_We'
 import Contacts from './components/Contacts'
+import OurActivities from './components/OurActivities'
+
 
 Vue.config.productionTip = false
 
@@ -16,6 +18,7 @@ Vue.component('navbar', Navbar)
 Vue.component('home-top', Home_Top_Content)
 Vue.component('who-are-we', Who_Are_We)
 Vue.component('contacts', Contacts)
+Vue.component('ouractivities', OurActivities)
 
 
 /* eslint-disable no-new */
