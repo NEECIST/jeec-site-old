@@ -47,36 +47,36 @@
 
 .title-contacts
 {
+    font-size: 40px;
     width: 244pt;
 }
 
 .subtitle-contacts 
 {
+    font-size: 30px;
     width: 400pt;
+    margin-bottom: 50px;
 }
 
-.c_location 
+.contact-location 
 {
-    position: absolute;
-    width: 900pt;
-
     color: black;
-    font-size: 30pt;
-    text-align: left;
-    line-height: 35pt;
+    font-size: 20px;
     font-family: "Roboto", text style;
+    margin-bottom: 25px;
 }
+
 .email
 {
     width: 319pt;
-
     color:black;
     font-size:20px;
     text-align: left;
     line-height: 35pt; 
     font-family: "Roboto", text style;
-
+    margin-bottom: 25px;
 }
+
 .foot_title
 {
     color:black;
