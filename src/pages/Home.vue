@@ -1,16 +1,18 @@
 <template>
     <div class="home-app">
         <home-top/>
+
+        <who-are-we/>
         
-        <!--
+
         <div>
-            <iframe width="850px" height="515" src="https://www.youtube.com/embed/F-Vawhs9-4U" 
+            <iframe width="80%" height="600px" src="https://www.youtube.com/embed/F-Vawhs9-4U" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
             </iframe>
-        </div>-->
-        <who-are-we/>
+        </div>
+        <why-attend/>
 
         <ouractivities/>
 
