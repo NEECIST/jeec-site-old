@@ -1,26 +1,15 @@
 version: '3'
 services:
-  vue:
+  webapp:
     build:
       context: .
-      dockerfile: ./deployment/vue/Dockerfile
+      dockerfile: ./deployment/webapp/Dockerfile
     restart: on-failure
     container_name: jeec-webpage
     volumes:
-      - ./src:/src
-    expose:
-      - "8080"
-  nginx:
-    build:
-      context: .
-      dockerfile: ./deployment/nginx/Dockerfile
-    container_name: jeec-nginx
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
+      - ./app:/app
       - ./config/nginx:/etc/nginx/conf.d
-      - ./logs/nginx:/var/log/nginx
       - ./config/nginx/ssl:/etc/nginx/ssl/
-    depends_on:
-      - vue
+    ports:
+      - "8080:80"
+      - "443:443"
