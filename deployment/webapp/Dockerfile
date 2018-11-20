@@ -1,5 +1,5 @@
 # build stage
-FROM node:9.11.1-alpine as build-stage
+FROM node:11.2.0-alpine as build-stage
 
 # make the 'app' folder the current working directory
 RUN mkdir app
