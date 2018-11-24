@@ -1,180 +1,182 @@
 <template>
-    <div class="contacts">
-<!--         <router-link router-link :to="{ name: 'Home' }">) -->
-
-
-        <div class="title-contact">
-                <h1>Contacts</h1>
-        </div>
-        <div class="subtitle-contact">
-                <h2>come meet us for a talk</h2>
+    <div class="contacts-comp">
+        <div class="title-contacts">
+            Contacts
         </div>
 
-        <div class="c_location">Instituto Superior Técnico- Campus da Alameda Av. Rovisco Pais, 1049-001 Lisboa</div>
+        <div class="subtitle-contacts">
+            come <span style="color: #00c2ff;">meet</span> us for a talk
+        </div>
 
-        <div class="email">jeec@neecist.tecnico.pt</div>
+        <div class="contact-location">
+            Instituto Superior Técnico- Campus da Alameda Av. Rovisco Pais,<p/>1049-001 Lisboa
+        </div>
 
-        <div class="foot_title">JORNADAS DE ENGENHARIA ELECTROTÉCNICA E DE COMPUTADORES</div>
+        <div class="email">
+            jeec@neecist.tecnico.pt
+        </div>
+        <div class="foot_coordinates">Google Maps Coordinates</div>
 
+        <div class="foot-title">JORNADAS DE ENGENHARIA ELECTROTÉCNICA E DE COMPUTADORES</div>
 
-        <a href="https://tecnico.ulisboa.pt/pt/">
-            <img src="../../static/IST_Logo_2012.png" class= "contacts-icon-IST" >
-        </a>
+		<div class='foot_icons'>
+        	<a href="https://tecnico.ulisboa.pt/pt/">
+            	<img src="../../static/ist_logo.png" class= "contacts-icon-IST" >
+        	</a>
 
-        <a href="https://neecist.org">
-                <img src="../../static/NEEC LOGO_transparente.png" class="contacts-icon-NEEC1">
-            </a>
+        	<a href="https://neecist.org">
+            	<img src="../../static/NEEC_BLUE.png" class="contacts-icon-NEEC1">
+        	</a>
+		</div>
 
-
-        <a href="https://www.google.com/maps/place/Pavilhão+Central,+Av.+Rovisco+Pais+1,+1049-001+Lisboa/@38.7349257,-9.1365347,16z/data=!4m5!3m4!1s0xd1933a2302b2157:0x11c13201e2cf8229!8m2!3d38.7368464!4d-9.1393457">
-                <img src="../../static/mapa_pav.png" class="mapa_pav">
-            </a>
-
-
-
-
-
-
-<!--         </router-link> -->
 
     </div>
 </template>
 
-
-
-
 <script>
     export default {
         name: 'contacts',
-        methods: {
-            openCont () {
-                document.getElementById('myCont').style.width = '250px'
-            },
-            closeCont (){
-                document.getElementById('myCont').style.width = '0'
-            }
-        }
-}
-    
-
-
-</script>>
+    }
+</script>
 
 <style>
+.contacts-comp {
 
-.contacts {
-    background-color: #f3f3f3;
-    height: 435vh; /* verificar isto */
-}
-
-
-.title-contact 
-{
-    position: absolute;
-    width: 244pt;
-    margin-left: 66pt ;
-    margin-top: 4182pt;
-    height: 45pt;
-}
-
-h1
-{
-    color: black;
-    text-transform: uppercase;
-    font-size: 45pt;
-    text-align: center;
-    line-height: 44pt;
-    font-family:"Roboto", sans-serif;
-}
-
-.subtitle-contact 
-{
-    position: absolute;
-    width: 400pt;
-    margin-left: 76pt ;
-    margin-top: 4233pt;
-    height: 30pt;
-}
-
-h2
-{
-    color: black;
-    font-size: 30pt;
-    text-align: center;
-    line-height: 44pt;
-    letter-spacing: -0.9pt;
-    font-family:"Roboto", text style;
-}
-.c_location 
-{
-    position: absolute;
-    width: 900pt;
-    margin-left: 140pt;
-    margin-top: 4321pt;
-    height: 65pt;
-
-    color: black;
-    font-size: 30pt;
+    padding-top: 50px;
+   	padding-bottom: 80px;
+    background-color: #eeeeee;
     text-align: left;
-    line-height: 35pt;
-    font-family: "Roboto", text style;
+    width: 100%;
+
 }
+
+.title-contacts
+{
+    font-size: 40px;
+    width: 100%;
+    margin-left: 50px
+}
+
+.subtitle-contacts 
+{
+    font-size: 30px;
+    width: 100%;
+    margin-bottom: 50px;
+    margin-left: 50px;
+}
+
+.contact-location 
+{
+    color: black;
+    font-size: 20px;
+    font-family: "Roboto", text style;
+    margin-top: 80px;
+    width: 100%;
+    margin-left: 50px;
+}
+
 .email
 {
-    position: absolute;
-    width: 319pt;
-    margin-left: 141pt;
-    margin-top: 4485pt;
-    height: 30pt;
-
+    width: 100%;
     color:black;
-    font-size:30pt;
+    font-size:20px;
     text-align: left;
     line-height: 35pt; 
     font-family: "Roboto", text style;
+    margin-top: 40px;
+    margin-left: 50px;
+}
+.foot_coordinates
+{
+width: 100%;
+text-align: left;
+color: black;
+font-size: 20px;
+line-height:35px;
+font-family:"Raleway", text style;
+margin-top: 40px;
+margin-left: 50px;
 
 }
-.foot_title
-{
-    position: absolute;
-    width: 897pt;
-    margin-left: 31pt;
-    margin-top: 4773pt;
-    height: 24pt;
 
+
+
+
+.foot_title
+{	width: 100%;
     color:black;
     font-size:20pt;
     text-align: left;
     line-height: 39pt; 
     letter-spacing: 3.8pt;
     font-family: "Roboto", text style;
+    margin-left: 500px;
 }
 
 
 .contacts-icon-IST
-{   position: absolute;
-    width: 216pt;
-    height: 83.53pt;
-    margin-left: -845pt;
-    margin-top: 4689.29pt;
+{   
+    width: 10%;
+    position: absolute;
+    margin-left: 1203pt;
+    margin-top: -200pt;
+
 }
+
 .contacts-icon-NEEC1
 {
-    width: 216pt;
-    height: 62pt;
-    position: absolute;
-
-    margin-left: -530pt;
-    margin-top: 4700pt;
+    width: 10%;  
+    position:absolute;  
+    margin-left: 1503pt;
+    margin-top: -190pt;
 }
-.mapa_pav
+
+/* On screens that are 992px wide or less*/
+
+@media only screen and (max-width: 2257px)
 {
-    width: 977px;
-    height: 612px;
-    position: absolute;
-    margin-top: 4173pt;
-    margin-left: 70pt;
+	.contacts-icon-NEEC1 {
+	width:10%;
+	margin-left:1800px;
+	}
 
-
+	.contacts-icon-IST
+	{   
+	    width: 10%;
+	    margin-left: 1500px;
+	}
 }
+@media only screen and(max-width: 2140px)
+{
+	.contacts-icon-NEEC1 {
+	width:10%;
+	margin-left:1683px;
+	}
+
+	.contacts-icon-IST
+	{   
+	    width: 10%;
+	    margin-left: 1383px;
+	}
+}
+/*este novo resize não funciona.(PK?). Os novos valroes de margin não sao os corretos para este caso, era só para testar. 
+*/
+@media only screen and(max-width: 2043px)
+{
+	.contacts-icon-NEEC1 {
+	width:10%;
+	margin-left:1266px;
+	}
+
+	.contacts-icon-IST
+	{   
+	    width: 10%;
+	    margin-left: 1066px;
+	}
+}
+
+
+
+
+
 </style>
