@@ -55,7 +55,7 @@ export default {
       second_navbar_title: "Partners",
       third_navbar_title: "Schedule",
       fourth_navbar_title: "Team",
-      navbar_logo_link: "../../static/logo_navbar.png"
+      navbar_logo_link: "../../static/jeec_logo_small.svg"
     }
   },
 
@@ -86,7 +86,7 @@ export default {
 .navbar-left-logo {
   width: 140px;
   margin-left: 20px;
-  margin-top: 25px;
+  margin-top: 20px;
   float: left;
 }
 
