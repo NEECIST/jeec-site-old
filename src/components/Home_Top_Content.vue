@@ -1,31 +1,60 @@
 <template>
     <div class="home-top-comp">
         <div class="date-location">
-            11 to 15 March 2019
-            <p>Instituto Superior Técnico</p>
+            {{ date }}
+            <p>{{ location }}</p>
         </div>
             
         <div class="main-logo-container">
-            <img src="../../static/jeec_logo.png" class="logo-home">
+            <img :src="center_image_link" class="logo-home">
         </div>
 
-        <div class="follow-us">Follow us on</div>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/company/jeecist/">
-                    <img src="../../static/linkedin.svg" class="social-icon shadow"></a>
+        <div class="social-media">
+            <div class="follow-us">{{ social_media_text }}</div>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/company/jeecist/">
+                        <img :src="linkedin_icon_link" class="social-icon shadow"></a>
 
-                <a href="https://www.facebook.com/JEECIST/">
-                    <img src="../../static/facebook.svg" class="social-icon shadow"></a>
+                    <a href="https://www.facebook.com/JEECIST/">
+                        <img :src="facebook_icon_link" class="social-icon shadow"></a>
 
-                <a href="https://www.youtube.com/channel/UCTO2g_8WD8ZEQ_VvIeQ1QRQ">
-                    <img src="../../static/youtube.svg" class="social-icon"></a>
+                    <a href="https://www.youtube.com/channel/UCTO2g_8WD8ZEQ_VvIeQ1QRQ">
+                        <img :src="youtube_icon_link" class="social-icon"></a>
 
-                <a href="https://www.instagram.com/jeec.ist/">
-                    <img src="../../static/instagram.svg" class="social-icon"></a>
+                    <a href="https://www.instagram.com/jeec.ist/">
+                        <img :src="instagram_icon_link" class="social-icon"></a>
+            </div>
         </div>
     </div>
 </template>
 
+<script>
+export default {
+  name: 'home-top-comp',
+  data() {
+    return {
+      date: "11 to 15 March",
+      location: "Instituto Superior Técnico",
+      social_media_text: "Follow us on",
+      center_image_link: "../../static/jeec_logo.svg",
+      linkedin_icon_link: "../../static/linkedin.svg",
+      facebook_icon_link: "../../static/facebook.svg",
+      youtube_icon_link: "../../static/youtube.svg",
+      instagram_icon_link: "../../static/instagram.svg"
+    }
+  },
+
+  methods: {
+    openNav () {
+      document.getElementById('mySidenav').style.width = '250px'
+    },
+
+    closeNav () {
+      document.getElementById('mySidenav').style.width = '0'
+    }
+  }
+}
+</script>
 
 <style>
 .home-top-comp { 
@@ -35,6 +64,7 @@
     background-position:center; */
     background-color: #ffffff;
     width: 100%;
+    height: 100vh;
     padding-bottom: 47px;
 }
 
@@ -44,7 +74,8 @@
     font-family: 'Roboto', sans-serif;
     font-size: 28px;
     font-weight: 500;
-    padding-top: 130px;
+    line-height: 20px;
+    padding-top: 140px;
     text-align: center;
 } 
 
@@ -53,11 +84,20 @@
 }
 
 .logo-home {
-    margin-top: 100px;
+    margin-top: 50px;
     max-width: 100%;
     height: auto;
     width: 1100px;
     display: inline-block;
+}
+
+.social-media {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 50px;
 }
 
 .follow-us {
@@ -69,19 +109,22 @@
     letter-spacing: 0.7px;
     text-align: center;
     color: #3391c2;
-    margin-top: 100px;
 }
+
 .social-icons {
     width: 100%;
 }
+
 .social-icon {
     width: 45px;
     height: 45px;
     margin: 20px;
 }
+
 .shadow {
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
 }
+
 .social-icon:hover {
   display: inline-block;
   position: relative;

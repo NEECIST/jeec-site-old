@@ -1,19 +1,35 @@
 <template>
   <div class="who-are-we-comp">
     <div class="div-title">
-      <span class="first-word-style">WHO</span> ARE WE?
+      <span v-html="title"></span>
     </div>
 
     <div class="who-are-we-text">
-      The <b>Electrical and Computer Engineering Career Week</b> is an event organized by <b>IST students</b>, whose main purpose is to promote the approximation and integration of the students in the business world.
-      
-      <p>The activities provided by JEEC such as the job fair, the panel discussions, workshops and matchmaking sessions are open, free of charge, to a student community of over 11.400 students.</p>
+      <span v-html="text"></span>
     </div>
   </div>
 </template>
 
 <script>
+export default {
+  name: 'who-are-we',
+  data() {
+    return {
+      title: '<span class="first-word-style">WHO</span> ARE WE?',
+      text: 'The <b>Electrical and Computer Engineering Career Week</b> is an event organized by <b>IST students</b>, whose main purpose is to promote the approximation and integration of the students in the business world.<p>The activities provided by JEEC such as the job fair, the panel discussions, workshops and matchmaking sessions are open, free of charge, to a student community of over 11.400 students.</p>',
+    }
+  },
 
+  methods: {
+    openNav () {
+      document.getElementById('mySidenav').style.width = '250px'
+    },
+
+    closeNav () {
+      document.getElementById('mySidenav').style.width = '0'
+    }
+  }
+}
 </script>
 
 <style>
@@ -28,7 +44,7 @@
 .div-title {
   width: 80%;
   font-family: 'Raleway';
-  font-size: 60px;
+  font-size: 40px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -46,9 +62,8 @@
 
 .who-are-we-text {
   width: 80%;
-  height: 224px;
   font-family: 'Raleway';
-  font-size: 30px;
+  font-size: 25px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -69,7 +84,7 @@
 @media only screen and (max-width: 600px) {
   .who-are-we-text {
     width: 95%;
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .div-title {

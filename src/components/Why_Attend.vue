@@ -1,59 +1,70 @@
 <template>
     <div class="why-attend-comp">
         <div class="div-title">
-            <span class="first-word-style">WHY</span> YOU SHOULD ATTEND
+            <span v-html="title"></span>
         </div>
 
-        <div class="target-audience-title">
-            AS A <span class="target-second-word-style">STUDENT</span>
-        </div>
-
-
-        <div class="icons-flex">
-            <div class="reason-to-come">
-                <div><img class="icon" src="../../static/organized_by_students.svg"></div>
-                <div class="icon-text">Organized by students, for the students.</div>
+        <div v-for="(group, index) in audience" :key="group.title">
+            <div class="target-audience-title">
+                <span v-html="group.title"></span>
             </div>
 
-            <div class="reason-to-come">
-                <div><img class="icon" src="../../static/high_academic_value.svg"></div>
-                <div class="icon-text">High academic value</div>
+            <div class="icons-flex">
+                <div class="reason-to-come" v-for="icon in group.icons" :key="icon.link">
+                    <div><img class="icon" :src="icon.link"></div>
+                    <div class="icon-text">{{ icon.description }}</div>
+                </div>
             </div>
 
-            <div class="reason-to-come">
-                <div><img class="icon" src="../../static/quality_speakers.svg"></div>
-                <div class="icon-text">Quality speakers from the engineering areas</div>
-            </div>
-        </div>
-
-        <hr>
-
-        <div class="target-audience-title">
-            AS A <span class="target-second-word-style">COMPANY</span>
-        </div>
-
-        <div class="icons-flex">
-            <div class="reason-to-come">
-                <div><img class="icon" src="../../static/find_the_best_students.svg"></div>
-                <div class="icon-text">Find the best graduating students.</div>
-            </div>
-
-            <div class="reason-to-come">
-                <div><img class="icon" src="../../static/publicize_your_company.svg"></div>
-                <div class="icon-text">Promote your company </div>
-            </div>
-
-            <div class="reason-to-come">
-                <div><img class="icon" src="../../static/promote_your_areas.svg"></div>
-                <div class="icon-text">Promote your areas of expertise</div>
-            </div>
+            <hr v-if="index != audience.length - 1">
         </div>
     </div>
 </template>
 
 <script>
 export default {
-  name: "as_a_student"
+  name: "as_a_student",
+  data() {
+      return {
+          title: '<span class="first-word-style">WHY</span> YOU SHOULD ATTEND',
+          audience: [
+              {
+                title: 'AS A <span class="target-second-word-style">STUDENT</span>',
+                icons: [
+                    {
+                        link: '../../static/organized_by_students.svg',
+                        description: 'Organized by students, for the students'
+                    },
+                    {
+                        link: '../../static/high_academic_value.svg',
+                        description: 'High academic value'
+                    },
+                    {
+                        link: '../../static/quality_speakers.svg',
+                        description: 'Quality speakers from the engineering areas'
+                    }
+                ]
+              },
+              {
+                title: 'AS A <span class="target-second-word-style">COMPANY</span>',
+                icons: [
+                    {
+                        link: '../../static/find_the_best_students.svg',
+                        description: 'Find the best graduating students'
+                    },
+                    {
+                        link: '../../static/publicize_your_company.svg',
+                        description: 'Promote your company'
+                    },
+                    {
+                        link: '../../static/promote_your_areas.svg',
+                        description: 'Promote your areas of expertise'
+                    }
+                ]
+              }
+          ]
+      }
+  }
 };
 </script>
 
@@ -88,8 +99,8 @@ export default {
   flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 80px;
-  padding-left: 200px;
-  padding-right: 200px;
+  padding-left: 150px;
+  padding-right: 150px;
 }
 
 .reason-to-come {
@@ -98,8 +109,8 @@ export default {
 }
 
 .icon {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   display: inline-block;
 }
 
@@ -107,12 +118,11 @@ export default {
   display: inline-block;
   width: 80%;
   font-family: 'Raleway';
-  font-size: 30px;
+  font-size: 25px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.47;
-  letter-spacing: -0.5px;
   color: #000000;
   margin-top: 30px;
 }
@@ -152,7 +162,7 @@ hr {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      padding-top: 40px;
+      padding-top: 50px;
       padding-left: 20px;
       padding-right: 20px;
   }
@@ -168,7 +178,7 @@ hr {
   }
 
   .icon-text {
-      font-size: 20px;
+      font-size: 17px;
       margin-top: 10px;
   }
 
