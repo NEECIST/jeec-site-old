@@ -5,21 +5,24 @@
         </div>
 
         <div class="activities-flex">
-            <div class="activity">Matchmaking
+            <div class="matchmaking"><p class="activity-name">MATCHMAKING</p>
             </div>
 
-            <div class="activity">Tech Talks
+            <div class="workshops"><p class="activity-name">WORKSHOPS</p>
             </div>
 
-            <div class="activity">Job Fair
+            <div class="tech-talks"><p class="activity-name">TECH TALKS</p>
+            </div>
+
+            <div class="job-fair"><p class="activity-name">JOB FAIR</p>
                 
             </div>
 
-            <div class="activity">Discussion Panels
+            <div class="discussion-panels"><p class="activity-name">DISCUSSION PANELS</p>
                 
             </div>
 
-            <div class="activity">Startup Corner
+            <div class="startup-corner"><p class="activity-name">STARTUP CORNER</p>
                 
             </div>
         </div>
@@ -29,7 +32,7 @@
 <style>
 .activities-comp {
     padding-top: 60px;
-    padding-bottom: 150px;
+    padding-bottom: 60px;
     text-align: center;
     background-color: #eeeeee;
 }
@@ -40,115 +43,123 @@
   flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 120px;
+  padding-right: 120px;
 }
 
-.activity {
-  width: 32%;
-  height: 100px;
-  width: 200px;
-  border-radius: 20px;
-  border-color: black;
-}
 
-.activities{
-  width: 98%;
-  text-align: center;
-  text-shadow: 0 6px 12px rgba(0, 0, 0, 0.24);
+.activity-name{
   font-family: 'Raleway', sans-serif;
-  font-size: 60px;
-  font-weight: normal;
+  font-size: 50px;
+  font-weight:1000;
   font-style: normal;
   font-stretch: normal;
-  line-height: 0.49;
-  letter-spacing: -1.4px;
-  color: #000000;
+  line-height: 0.68;
+  letter-spacing: -1px;
+  text-align: center;
+  color: #ffffff;
+  display: block;
+  position: relative;
+  top: 75%;
 }
 
 .matchmaking{
-   
-  float: left;
-  margin-top: 125px;
-  margin-left:11.5%;
+  height: 400px;
+  width: 400px;
+  background-image: url("https://scontent.flis7-1.fna.fbcdn.net/v/t31.0-8/17311105_10154490838085765_7317731105368184101_o.jpg?_nc_cat=108&_nc_ht=scontent.flis7-1.fna&oh=181c54e16981374115fa16c7f53438cd&oe=5C9ABBE4");
+  opacity:0.7;
+  border-radius: 44px;
 }
 
 .workshops{
-    float: right;
-  margin-top: 125px;
-  margin-right:12.5%;
+  background-image: url("https://scontent.flis7-1.fna.fbcdn.net/v/t31.0-8/28616406_10155431666205765_6879092902674912024_o.jpg?_nc_cat=108&_nc_ht=scontent.flis7-1.fna&oh=770e6344e4169c2b77da198882a22308&oe=5CA7866F");
+  height: 400px;
+  width: 400px;
+  opacity:0.7;
+  border-radius: 44px;
 }
 
 .tech-talks{
-    float: left;
-  margin-top: 96px;
-  margin-left: 14.3%;
+  background-image: url("https://scontent.flis7-1.fna.fbcdn.net/v/t31.0-8/17359094_10154490841835765_9222700794809466547_o.jpg?_nc_cat=110&_nc_ht=scontent.flis7-1.fna&oh=aca07bce38d87422f7a7b5e33994b9f4&oe=5C65B2D7");
+  height: 400px;
+  width: 400px;
+  opacity:0.7;
+  border-radius: 44px;
 }
 
 .job-fair{
-  
-    float: right;
-  margin-top: 96px;
-  margin-right:18%;
+  background-image: url("https://scontent.flis7-1.fna.fbcdn.net/v/t31.0-8/17359094_10154490841835765_9222700794809466547_o.jpg?_nc_cat=110&_nc_ht=scontent.flis7-1.fna&oh=aca07bce38d87422f7a7b5e33994b9f4&oe=5C65B2D7");
+  height: 400px;
+  width: 400px;
+  opacity:0.7;
+  border-radius: 44px;
+  display: none;
   
 }
 .discussion-panels{
-  
-    float: left;
-    margin-top: 96px;
-    margin-left: 6.5%
+  background-image: url("https://scontent.flis7-1.fna.fbcdn.net/v/t31.0-8/17359094_10154490841835765_9222700794809466547_o.jpg?_nc_cat=110&_nc_ht=scontent.flis7-1.fna&oh=aca07bce38d87422f7a7b5e33994b9f4&oe=5C65B2D7");
+  height: 400px;
+  width: 400px;
+  opacity:0.7;
+  border-radius: 44px;
+  display: none;
 }
 
 .startup-corner{
-    float: right;
-    margin-top: 96px;
-    margin-right: 10.4%;
+  background-image: url("https://scontent.flis7-1.fna.fbcdn.net/v/t31.0-8/17359094_10154490841835765_9222700794809466547_o.jpg?_nc_cat=110&_nc_ht=scontent.flis7-1.fna&oh=aca07bce38d87422f7a7b5e33994b9f4&oe=5C65B2D7");
+  height: 400px;
+  width: 400px;
+  opacity:0.7;
+  border-radius: 44px;
+  display: none;
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 600px){
+  .activities-flex{
+    display: inline-flex;
+    text-align: center;
+    flex-direction: column;
+  }
 
-   .activities{
-       font-size: 30px;
-       height: auto;
-       text-align: center;
-       line-height: normal;
-   }
+  .activity-name{
+    font-size: 25px;
+    top: 65%;
+  }
 
    .matchmaking{
-  margin-top: 65px;
-  float: none;
-  display: inline-block;
+ height: 200px;
+ width: 200px;
 }
     .workshops{
-  margin-top: 65px;
-  float: none;
-  display: inline-block;
+  height: 200px;
+ width: 200px;
+ margin-top: 10px;
 }
 
 .tech-talks{
-    margin-top: 65px;
-  float: none;
-  display: inline-block;
+  height: 200px;
+ width: 200px;
+ margin-top: 10px;
 }
 
 .job-fair{
-  
-    margin-top: 65px;
-  float: none;
-  display: inline-block;
-  
+  height: 200px;
+ width: 200px;
+ display:initial;
+ margin-top: 10px;
 }
 .discussion-panels{
-  
-    margin-top: 65px;
-  float: none;
-  display: inline-block;
+  height: 200px;
+ width: 200px;
+ display: initial;
+ margin-top: 10px;
 }
 
 .startup-corner{
-    margin-top: 65px;
-  float: none;
-  display: inline-block;
+ height: 200px;
+ width: 200px;
+ display: initial;
+ margin-top: 10px;
 }
 
 }
