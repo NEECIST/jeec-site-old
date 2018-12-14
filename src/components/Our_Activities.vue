@@ -98,8 +98,8 @@
 }
 .discussion-panels{
   background-image: url("https://scontent.flis7-1.fna.fbcdn.net/v/t31.0-8/17359094_10154490841835765_9222700794809466547_o.jpg?_nc_cat=110&_nc_ht=scontent.flis7-1.fna&oh=aca07bce38d87422f7a7b5e33994b9f4&oe=5C65B2D7");
-  height: 400px;
-  width: 400px;
+  height: 350px;
+  width: 350px;
   opacity:0.7;
   border-radius: 44px;
   display: none;
@@ -107,8 +107,8 @@
 
 .startup-corner{
   background-image: url("https://scontent.flis7-1.fna.fbcdn.net/v/t31.0-8/17359094_10154490841835765_9222700794809466547_o.jpg?_nc_cat=110&_nc_ht=scontent.flis7-1.fna&oh=aca07bce38d87422f7a7b5e33994b9f4&oe=5C65B2D7");
-  height: 400px;
-  width: 400px;
+  height: 350px;
+  width: 350px;
   opacity:0.7;
   border-radius: 44px;
   display: none;
