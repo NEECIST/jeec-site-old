@@ -50,7 +50,7 @@
 
 .activity-name{
   font-family: 'Raleway', sans-serif;
-  font-size: 50px;
+  font-size: 45px;
   font-weight:1000;
   font-style: normal;
   font-stretch: normal;
@@ -60,7 +60,7 @@
   color: #ffffff;
   display: block;
   position: relative;
-  top: 75%;
+  top: 0.05%;
 }
 
 .matchmaking{
@@ -114,52 +114,60 @@
   display: none;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 900px){
   .activities-flex{
-    display: inline-flex;
-    text-align: center;
+    padding-top: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
     flex-direction: column;
   }
 
   .activity-name{
-    font-size: 25px;
-    top: 65%;
+    font-size: 30px;
+    top: 25%;
   }
 
    .matchmaking{
- height: 200px;
- width: 200px;
+     height: 130px;
+ width: 100%;
+ border-radius: 0%;
+ filter: hue-rotate(30deg);
 }
     .workshops{
-  height: 200px;
- width: 200px;
- margin-top: 10px;
+   height: 130px;
+ width: 100%;
+ border-radius: 0%;
+ filter: hue-rotate(90deg);
 }
 
 .tech-talks{
-  height: 200px;
- width: 200px;
- margin-top: 10px;
+   height: 130px;
+ width: 100%;
+ border-radius: 0%;
+ filter: hue-rotate(150deg);
 }
 
 .job-fair{
-  height: 200px;
- width: 200px;
- display:initial;
- margin-top: 10px;
+   height: 130px;
+ width: 100%;
+ border-radius: 0%;
+ filter: hue-rotate(210deg);
+ display: initial;
 }
 .discussion-panels{
-  height: 200px;
- width: 200px;
+   height: 130px;
+ width: 100%;
+ border-radius: 0%;
+ filter: hue-rotate(270deg);
  display: initial;
- margin-top: 10px;
 }
 
 .startup-corner{
- height: 200px;
- width: 200px;
+  height: 130px;
+ width: 100%;
+ border-radius: 0%;
+ filter: hue-rotate(330deg);
  display: initial;
- margin-top: 10px;
 }
 
 }
