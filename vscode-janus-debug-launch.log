@@ -1,0 +1,4 @@
+INFO |00000.159|JanusDebugSession: launchRequest
+ERROR|00000.173|JanusDebugSession: launchRequest failed: loading source from script failed: Error: ENOENT: no such file or directory, open 'C:\Users\Juliana\jeec19-webapp\dev'
+DEBUG|00000.175|DebugAdapterIPC: connected to VS Code extension
+INFO |00000.176|JanusDebugSession: disconnectRequest

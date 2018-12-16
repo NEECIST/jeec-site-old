@@ -128,38 +128,38 @@
   }
 
    .matchmaking{
-     height: 130px;
- width: 100%;
+    height: 130px;
+    width: 100%;
  border-radius: 0%;
  filter: hue-rotate(30deg);
 }
-    .workshops{
-   height: 130px;
- width: 100%;
- border-radius: 0%;
- filter: hue-rotate(90deg);
+ .workshops{
+  height: 130px;
+  width: 100%;
+  border-radius: 0%;
+  filter: hue-rotate(90deg);
 }
 
 .tech-talks{
-   height: 130px;
- width: 100%;
- border-radius: 0%;
- filter: hue-rotate(150deg);
+  height: 130px;
+  width: 100%;
+  border-radius: 0%;
+  filter: hue-rotate(150deg);
 }
 
 .job-fair{
-   height: 130px;
- width: 100%;
- border-radius: 0%;
- filter: hue-rotate(210deg);
- display: initial;
+  height: 130px;
+  width: 100%;
+  border-radius: 0%;
+  filter: hue-rotate(210deg);
+  display: initial;
 }
 .discussion-panels{
-   height: 130px;
- width: 100%;
- border-radius: 0%;
- filter: hue-rotate(270deg);
- display: initial;
+  height: 130px;
+  width: 100%;
+  border-radius: 0%;
+  filter: hue-rotate(270deg);
+  display: initial;
 }
 
 .startup-corner{
