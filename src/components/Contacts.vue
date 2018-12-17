@@ -39,6 +39,7 @@
 
 <style>
 .contacts-comp {
+    position: relative;
     padding-top: 50px;
     padding-left: 50px;
     background-color: #f3f3f3;
@@ -88,14 +89,36 @@
 }
 
 .contacts-icon-IST
-{   position: absolute;
-    width: 216pt;
+{  
+    position: absolute;
+    width: 120pt;
+    height: 40pt;
+    right: 300px;
+    top: 50px;
 }
 
 .contacts-icon-NEEC1
 {
-    width: 216pt;
-    height: 62pt;
+    position: absolute;
+    width: 120pt;
+    height: 40pt;
+    right: 100px;
+    top: 45px;
+}
+
+@media screen and (max-width: 900px){
+  .contacts-icon-IST{
+    position: relative;
+    width: 90px;
+    height: 30px;
+    left: 50px;
+  }
+  .contacts-icon-NEEC1{
+    position: relative;
+    width: 90px;
+    height: 30px;
+    left: 100px;
+  }
 }
 
 </style>
