@@ -44,7 +44,7 @@
     font-size: 28px;
     font-weight: 500;
     line-height: 20px;
-    padding-top: 140px;
+    padding-top: 50px;
     text-align: center;
 } 
 
