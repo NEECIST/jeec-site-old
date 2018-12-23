@@ -32,9 +32,9 @@
 <style>
 .home-app {
     background-color: #ffffff;
-    height: 100vh;
+    height: 100%;
     width: 100%;
-    padding-bottom: 40px;
+    padding-bottom: 10px;
 }
 
 .date-location {
@@ -54,19 +54,19 @@
 
 .logo-home {
     margin-top: 50px;
-    max-width: 100%;
+    max-width: 1100px;
     height: auto;
-    width: 1100px;
+    width: 100%;
     display: inline-block;
 }
 
 .social-media {
-    position: absolute;
+    position: relative;
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    bottom: 50px;
+    bottom: 0px;
 }
 
 .follow-us {
@@ -140,9 +140,18 @@
 
 /* On screens that are 600px wide*/
 @media only screen and (max-width: 600px) {
+    .home-app {
+        height: 100vh;
+    }
+
+    .social-media {
+        position: absolute;
+        bottom: 100px;
+    }
+
     .social-icon {
-        width: 25px;
-        height: 25px;
+        width: 50px;
+        height: 50px;
         margin: 10px;
     }
 
