@@ -1,5 +1,11 @@
 <template>
     <div class="home-app">
+        <div class="maintenance">
+            <div id="maintenance-msg">
+                Our website is currently under maintenance!
+            </div>
+        </div>
+
         <div class="date-location">
             11 to 15 March
             <p>Instituto Superior Técnico</p>
@@ -25,6 +31,12 @@
                         <img src="../../static/instagram.svg" class="social-icon"></a>
             </div>
         </div>
+
+        <div class="bottom-bar">
+            <div id="copyright">
+                Copyright © 2018 - Jornadas de Engenharia Eletrotécnica e de Computadores do Instituto Superior Técnico
+            </div>
+        </div>
     </div>
 </template>
 
@@ -34,7 +46,24 @@
     background-color: #ffffff;
     height: 100%;
     width: 100%;
-    padding-bottom: 10px;
+}
+
+.maintenance {
+  margin-top: 40px;
+  width: 650px;
+  height: 40px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); 
+  background-color: rgb(196, 231, 255);
+  border-radius: 10px;
+  display: inline-block;
+}
+
+#maintenance-msg {
+  margin-top: 8px;
+  letter-spacing: 0.5px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
 }
 
 .date-location {
@@ -103,6 +132,26 @@
   animation: bounce 0.5s infinite linear;
   color:000;
 }
+
+.bottom-bar {
+    margin-top: 37px;
+  width: 100%;
+  height: 30px;
+  background-color: rgb(91, 170, 223);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  bottom: 0;
+}
+
+#copyright {
+  font-size: 13px;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 9px;
+  margin-left: 20px;
+}
+
 .icon:active {
     width: 50px;
     height: 50px;
@@ -138,15 +187,38 @@
     100% { top: 0; }
 }
 
+@media only screen and (max-width: 1100px) {
+    .social-media {
+        position: absolute;
+        bottom: 50px;
+    }
+
+    .bottom-bar {
+        position: absolute;
+        bottom: 0px;
+    }
+}
+
 /* On screens that are 600px wide*/
 @media only screen and (max-width: 600px) {
     .home-app {
         height: 100vh;
     }
 
+    .maintenance {
+      width: 300px;
+      height: 60px;
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+
+    #maintenance-msg {
+      margin-top: 12px;
+    }
+
     .social-media {
         position: absolute;
-        bottom: 100px;
+        bottom: 8vh;
     }
 
     .social-icon {
@@ -157,6 +229,12 @@
 
     .date-location {
         font-size: 20px;
+    }
+
+    #copyright {
+      font-size: 8px;
+      text-align: left;
+      margin-top: 8px;
     }
 }
 </style>
