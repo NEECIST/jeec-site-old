@@ -1,3 +1,0 @@
-#excluding the node_modules directory and the .git directory
-node_modules/
-.git/
