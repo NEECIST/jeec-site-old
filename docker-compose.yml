@@ -1,0 +1,15 @@
+version: '3'
+services:
+  webapp:
+    build:
+      context: .
+      dockerfile: ./deployment/webapp/Dockerfile
+    restart: on-failure
+    container_name: jeec-webpage
+    volumes:
+      - ./app:/app
+      - ./config/nginx:/etc/nginx/conf.d
+      - ./config/nginx/ssl:/etc/nginx/ssl/
+    ports:
+      - "80:80"
+      - "443:443"
