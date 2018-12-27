@@ -2,6 +2,6 @@
 /redirect/twitter   https://twitter.com/JEECIST 301!
 /redirect/evento    https://www.facebook.com/events/919116684933710 301
 /redirect/www       /   302
-/redirect/qa        https://qa.jeec.ist 301!
+/redirect/qa        https://www.qajeecist.netlify.com 301!
 
 https://jeecist.netlify.com/* https://jeec.ist/:splat 301!
