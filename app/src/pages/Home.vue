@@ -207,7 +207,7 @@
 
     .maintenance {
       width: 300px;
-      height: 60px;
+      height: 70px;
       font-size: 15px;
       letter-spacing: 1px;
     }
