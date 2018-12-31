@@ -26,7 +26,11 @@
             <img src="../../static/neec_logo.png" class="contacts-icon-NEEC1">
         </a>
 
-
+        <div class="bottom-bar">
+            <div id="copyright">
+                Copyright © 2018 - Jornadas de Engenharia Eletrotécnica e de Computadores do Instituto Superior Técnico
+            </div>
+        </div>
 
     </div>
 </template>
@@ -40,8 +44,6 @@
 <style>
 .contacts-comp {
     position: relative;
-    padding-top: 50px;
-    padding-left: 50px;
     background-color: #f3f3f3;
     text-align: left;
 }
@@ -49,13 +51,13 @@
 .title-contacts
 {
     font-size: 40px;
-    width: 244pt;
+    width: 100%;
 }
 
 .subtitle-contacts 
 {
     font-size: 30px;
-    width: 400pt;
+    width: 100%;
     margin-bottom: 50px;
 }
 
@@ -69,7 +71,7 @@
 
 .email
 {
-    width: 319pt;
+    width: 100%;
     color:black;
     font-size:20px;
     text-align: left;
@@ -91,7 +93,6 @@
 .contacts-icon-IST
 {  
     position: absolute;
-    width: 120pt;
     height: 40pt;
     right: 300px;
     top: 50px;
@@ -100,10 +101,28 @@
 .contacts-icon-NEEC1
 {
     position: absolute;
-    width: 120pt;
     height: 40pt;
     right: 100px;
     top: 45px;
+}
+
+.bottom-bar {
+    margin-top: 37px;
+  width: 100%;
+  height: 30px;
+  background-color: rgb(91, 170, 223);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  bottom: 0;
+}
+
+#copyright {
+  font-size: 13px;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 9px;
+  margin-left: 20px;
 }
 
 @media screen and (max-width: 900px){

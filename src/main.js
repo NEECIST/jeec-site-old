@@ -10,6 +10,7 @@ import Why_Attend from './components/Why_Attend'
 import Contacts from './components/Contacts'
 import Our_Activities from './components/Our_Activities'
 import Who_Are_We from './components/Who_Are_We'
+import Latest_Speakers from './components/Latest_Speakers'
 
 
 Vue.config.productionTip = false
@@ -21,6 +22,7 @@ Vue.component('who-are-we', Who_Are_We)
 Vue.component('why-attend', Why_Attend)
 Vue.component('contacts', Contacts)
 Vue.component('ouractivities', Our_Activities)
+Vue.component('latest-speakers', Latest_Speakers)
 
 
 /* eslint-disable no-new */
