@@ -33,7 +33,7 @@ Vue.component('google-map', GoogleMap)
 /*Google Maps API setup*/
 Vue.use(VueGoogleMaps, {
   load: {
-    key: "AIzaSyBHZp6eqXpsIeA6edshfbLFHfkdLQKDbt4",
+    key: "",
     libraries: "places" // necessary for places input
   }
 });
