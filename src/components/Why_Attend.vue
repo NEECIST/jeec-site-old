@@ -8,14 +8,19 @@
             <div class="target-audience-title">
                 <span v-html="group.title"></span>
             </div>
-
-            <div class="icons-flex">
-                <div class="reason-to-come" v-for="icon in group.icons" :key="icon.link">
-                    <div><img class="icon" :src="icon.link"></div>
-                    <div class="icon-text">{{ icon.description }}</div>
+            
+            <div class="audience-container">
+                <div class="icons-flex">
+                    <div class="reason-to-come" v-for="icon in group.icons" :key="icon.link">
+                        <div><img class="icon" :src="icon.link"></div>
+                        
+                        <div class="icon-text-container">
+                            <div class="icon-text">{{ icon.description }}</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
+            
             <hr v-if="index != audience.length - 1">
         </div>
     </div>
@@ -72,7 +77,7 @@ export default {
 .why-attend-comp {
   background-color: #ecf7ff;
   padding-top: 60px;
-  padding-bottom: 150px;
+  padding-bottom: 60px;
   text-align: center;
 }
 
@@ -96,11 +101,19 @@ export default {
 
 .icons-flex {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  padding-top: 80px;
+  padding-top: 30px;
   padding-left: 150px;
   padding-right: 150px;
+}
+
+.audience-container {
+    background-color: #fafafa;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    margin-top: 20px;
+    margin-left: 300px;
+    margin-right: 300px;
 }
 
 .reason-to-come {
@@ -112,6 +125,10 @@ export default {
   width: 120px;
   height: 120px;
   display: inline-block;
+}
+
+.icon-text-container {
+    padding: 10px;
 }
 
 .icon-text {
@@ -138,15 +155,33 @@ hr {
 
 
 /* On screens that are 992px wide or less*/
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1400px) {
   .reason-to-come {
       width: 50%;
       margin-bottom: 30px;
   }
+
+  .audience-container {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.icons-flex {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+ .icon {
+    width: 90px;
+    height: 90px;
+  }
+
+  .icon-text {
+      font-size: 20px;
+  }
 }
 
 /* On screens that are 600px wide*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .why-attend-comp {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -158,18 +193,24 @@ hr {
       margin-top: 10px;
   }
 
+  
+  .audience-container {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
   .icons-flex {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       padding-top: 50px;
-      padding-left: 20px;
-      padding-right: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
   }
 
   .icon {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
   }
 
   .reason-to-come {

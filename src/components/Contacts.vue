@@ -1,11 +1,7 @@
 <template>
     <div class="contacts-comp">
         <div class="title-contacts">
-            Contacts
-        </div>
-
-        <div class="subtitle-contacts">
-            come <span style="color: #00c2ff;">meet</span> us for a talk
+            Contact <span style="color: #00c2ff;">Information</span>
         </div>
 
         <div class="contact-location">
@@ -16,15 +12,27 @@
             jeec@neecist.tecnico.pt
         </div>
 
-        <div class="foot-title">JORNADAS DE ENGENHARIA ELECTROTÉCNICA E DE COMPUTADORES</div>
+        <div class="sponsor">
+            <div class="sponsor-type">Main Sponsor</div>
 
-        <a href="https://tecnico.ulisboa.pt/pt/">
-            <img src="../../static/ist_logo.png" class= "contacts-icon-IST" >
-        </a>
+            <a href="https://tecnico.ulisboa.pt/pt/">
+                <img src="../../static/ist_logo.png" class= "sponsor-icon" >
+            </a>
+        </div>
 
-        <a href="https://neecist.org">
-            <img src="../../static/neec_logo.png" class="contacts-icon-NEEC1">
-        </a>
+        <div class="sponsor">
+            <div class="sponsor-type">IST Sponsors</div>
+            
+            <a href="https://tecnico.ulisboa.pt/pt/">
+                <img src="../../static/ist_logo.png" class= "sponsor-icon" >
+            </a>
+
+            <a href="https://neecist.org">
+                <img src="../../static/neec_logo.png" class="sponsor-icon">
+            </a>
+        </div>
+
+        <google-map/>
 
         <div class="bottom-bar">
             <div id="copyright">
@@ -51,63 +59,53 @@
 .title-contacts
 {
     font-size: 40px;
-    width: 100%;
-}
-
-.subtitle-contacts 
-{
-    font-size: 30px;
-    width: 100%;
-    margin-bottom: 50px;
+    padding: 30px;
 }
 
 .contact-location 
 {
     color: black;
     font-size: 20px;
-    font-family: "Roboto", text style;
-    margin-bottom: 25px;
+    line-height: 10px;
+    font-family: "Roboto";
+    padding-left: 30px;
 }
 
 .email
 {
-    width: 100%;
     color:black;
     font-size:20px;
     text-align: left;
-    line-height: 35pt; 
-    font-family: "Roboto", text style;
-    margin-bottom: 25px;
+    margin-top: 30px;
+    font-family: "Roboto";
+    padding-left: 30px;
 }
 
-.foot_title
-{
-    color:black;
-    font-size:20pt;
-    text-align: left;
-    line-height: 39pt; 
-    letter-spacing: 3.8pt;
-    font-family: "Roboto", text style;
+.sponsor {
+    float: left;
+    background-color: #fafafa;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 120px;
+    width: 200px;
 }
 
-.contacts-icon-IST
+.sponsor-type {
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sponsor-icon
 {  
-    position: absolute;
-    height: 40pt;
-    right: 300px;
-    top: 50px;
-}
-
-.contacts-icon-NEEC1
-{
-    position: absolute;
-    height: 40pt;
-    right: 100px;
-    top: 45px;
+    height: 30px;
+    width: 30px;
 }
 
 .bottom-bar {
-    margin-top: 37px;
+  margin-top: 45px;
   width: 100%;
   height: 30px;
   background-color: rgb(91, 170, 223);
@@ -126,18 +124,18 @@
 }
 
 @media screen and (max-width: 900px){
-  .contacts-icon-IST{
+    .contact-location {
+        color: black;
+        font-size: 15px;
+        line-height: 10px;
+        font-family: "Roboto";
+        padding-left: 30px;
+    }
+
+  .sponsor-icon {
     position: relative;
     width: 90px;
     height: 30px;
-    left: 50px;
-  }
-  .contacts-icon-NEEC1{
-    position: relative;
-    width: 90px;
-    height: 30px;
-    left: 100px;
   }
 }
-
 </style>

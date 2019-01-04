@@ -85,8 +85,8 @@ export default {
 }
 
 .activity{
-  height: 350px;
-  width: 500px;
+  height: 200px;
+  width: 400px;
   opacity:0.7;
   border-radius: 44px;
 }

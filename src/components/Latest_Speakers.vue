@@ -68,9 +68,9 @@ export default {
 }
 
 .speaker-card {
-    background-color: #e9e9e9;
+    background-color: #fafafa;
     font-family: 'Roboto';
-    padding-top: 10px;
+    padding-top: 20px;
     padding-bottom: 20px;
     border-radius: 20px;
     width: 400px;
@@ -90,7 +90,7 @@ export default {
 }
 
 .speaker-current-function {
-  height: 50px;
+  height: 40px;
   margin-top: 10px;
   text-align: center;
 }
@@ -126,8 +126,8 @@ export default {
   }
 
   .speaker-image {
-      width: 100px;
-      height: 100px;
+      width: 130px;
+      height: 130px;
   }
 }
 
@@ -155,12 +155,12 @@ export default {
   .speaker-card {
     margin-top: 40px;
     border-radius: 20px;
-    width: 350px;
+    width: 300px;
   }
 
   .speaker-image {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
   }
 }
 </style>

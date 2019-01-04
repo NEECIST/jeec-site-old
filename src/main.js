@@ -12,6 +12,10 @@ import Our_Activities from './components/Our_Activities'
 import Who_Are_We from './components/Who_Are_We'
 import Latest_Speakers from './components/Latest_Speakers'
 
+import GoogleMap from "./components/GoogleMap";
+
+import * as VueGoogleMaps from "vue2-google-maps";
+
 
 Vue.config.productionTip = false
 
@@ -23,6 +27,16 @@ Vue.component('why-attend', Why_Attend)
 Vue.component('contacts', Contacts)
 Vue.component('ouractivities', Our_Activities)
 Vue.component('latest-speakers', Latest_Speakers)
+
+Vue.component('google-map', GoogleMap)
+
+/*Google Maps API setup*/
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: "AIzaSyBHZp6eqXpsIeA6edshfbLFHfkdLQKDbt4",
+    libraries: "places" // necessary for places input
+  }
+});
 
 
 /* eslint-disable no-new */
