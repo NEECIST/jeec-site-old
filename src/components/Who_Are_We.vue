@@ -35,9 +35,9 @@ export default {
 <style>
 .who-are-we-comp {
   width: 100%;
-  background-color: #f3f3f3;
-  padding-top: 47px;
-  padding-bottom: 47px;
+  background-color: #ffffff;
+  padding-top: 40px;
+  padding-bottom: 40px;
   text-align: center;
 }
 

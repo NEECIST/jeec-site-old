@@ -54,8 +54,8 @@ export default {
 
 <style>
 .activities-comp {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     text-align: center;
     background-color: #eeeeee;
 }
@@ -64,7 +64,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-top: 30px;
+  padding-top: 20px;
   padding-left: 120px;
   padding-right: 120px;
 }
@@ -79,7 +79,6 @@ export default {
   letter-spacing: -1px;
   text-align: center;
   color: #ffffff;
-  display: block;
   position: relative;
   top: 0.05%;
 }
@@ -93,9 +92,9 @@ export default {
 
 @media screen and (max-width: 900px){
   .activities-flex{
-    padding-top: 15px;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     flex-direction: column;
   }
 
@@ -107,8 +106,7 @@ export default {
    .activity{
     height: 130px;
     width: 100%;
-    border-radius: 0%;
-    filter: hue-rotate(30deg);
+    border-radius: 20%;
   }
 }
 

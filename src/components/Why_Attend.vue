@@ -42,7 +42,7 @@ export default {
                     },
                     {
                         link: '../../static/high_academic_value.svg',
-                        description: 'High academic value'
+                        description: 'Promote yourself next to top-class companies'
                     },
                     {
                         link: '../../static/quality_speakers.svg',
@@ -75,7 +75,7 @@ export default {
 
 <style>
 .why-attend-comp {
-  background-color: #ecf7ff;
+  background-color: #dfe6f5;
   padding-top: 60px;
   padding-bottom: 60px;
   text-align: center;
@@ -102,9 +102,10 @@ export default {
 .icons-flex {
   display: flex;
   justify-content: space-between;
-  padding-top: 30px;
-  padding-left: 150px;
-  padding-right: 150px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
 
 .audience-container {
@@ -122,8 +123,8 @@ export default {
 }
 
 .icon {
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
   display: inline-block;
 }
 
@@ -133,24 +134,20 @@ export default {
 
 .icon-text {
   display: inline-block;
-  width: 80%;
   font-family: 'Raleway';
-  font-size: 25px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
+  font-size: 20px;
   line-height: 1.47;
   color: #000000;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 hr {
-  left: 20%;
-  width: 60%;
-  margin-top: 80px;
+  left: 5%;
+  width: 80%;
+  margin-top: 40px;
   height: 0;
   border: solid 1px #c2c2c2;
-  margin-bottom: 40px;
+  margin-bottom: 15px;
 }
 
 
@@ -167,9 +164,12 @@ hr {
 }
 
 .icons-flex {
+    padding-top: 30px;
     padding-left: 20px;
+    padding-bottom: 10px;
     padding-right: 20px;
 }
+
  .icon {
     width: 90px;
     height: 90px;
@@ -183,8 +183,8 @@ hr {
 /* On screens that are 600px wide*/
 @media screen and (max-width: 700px) {
   .why-attend-comp {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     text-align: center;
   }
 
@@ -215,7 +215,7 @@ hr {
 
   .reason-to-come {
       width: 100%;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
   }
 
   .icon-text {
@@ -224,8 +224,8 @@ hr {
   }
 
   hr {
-    margin-top: 30px;
-    margin-bottom: 40px;
+    margin-top: 25px;
+    margin-bottom: 10px;
   }
 }
 </style>

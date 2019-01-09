@@ -5,34 +5,20 @@
         </div>
 
         <div class="contact-location">
-            Instituto Superior Técnico- Campus da Alameda<p/>Av. Rovisco Pais,<p/>1049-001 Lisboa
+            Instituto Superior Técnico- Alameda Campus<p/>Av. Rovisco Pais,<p/>1049-001 Lisbon
         </div>
 
         <div class="email">
-            jeec@neecist.tecnico.pt
+            contacto@jeec.ist
         </div>
 
-        <div class="sponsor">
-            <div class="sponsor-type">Main Sponsor</div>
-
-            <a href="https://tecnico.ulisboa.pt/pt/">
-                <img src="../../static/ist_logo.png" class= "sponsor-icon" >
-            </a>
+        <div class="sponsors-flex">
+                <div><img src="../../static/vtxrm.png" style="width: 100px"></div>
+                <div><img src="../../static/santander_logo.png" style="width: 200px"></div>
+                <div><img src="../../static/ist_logo.png" style="width: 150px"></div>
+                <div><img src="../../static/neec_logo.png" style="width: 100px"></div>
+                <div><img src="../../static/deec_logo.png" style="width: 250px"></div>
         </div>
-
-        <div class="sponsor">
-            <div class="sponsor-type">IST Sponsors</div>
-            
-            <a href="https://tecnico.ulisboa.pt/pt/">
-                <img src="../../static/ist_logo.png" class= "sponsor-icon" >
-            </a>
-
-            <a href="https://neecist.org">
-                <img src="../../static/neec_logo.png" class="sponsor-icon">
-            </a>
-        </div>
-
-        <google-map/>
 
         <div class="bottom-bar">
             <div id="copyright">
@@ -58,7 +44,7 @@
 
 .title-contacts
 {
-    font-size: 40px;
+    font-size: 30px;
     padding: 30px;
 }
 
@@ -81,31 +67,16 @@
     padding-left: 30px;
 }
 
-.sponsor {
-    float: left;
-    background-color: #fafafa;
-    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    height: 120px;
-    width: 200px;
-}
-
-.sponsor-type {
-    padding: 10px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.sponsor-icon
-{  
-    height: 30px;
-    width: 30px;
+.sponsors-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  padding-left: 7vw;
+  padding-right: 7vw;
 }
 
 .bottom-bar {
-  margin-top: 45px;
+  margin-top: 25px;
   width: 100%;
   height: 30px;
   background-color: rgb(91, 170, 223);
@@ -136,6 +107,13 @@
     position: relative;
     width: 90px;
     height: 30px;
+  }
+
+  .sponsors-flex {
+      flex-wrap: wrap;
+      padding-top: 50px;
+      padding-left: 10px;
+      padding-right: 10px;
   }
 }
 </style>

@@ -16,7 +16,7 @@
         
         <why-attend/>
 
-        <ouractivities/>
+        <!--<ouractivities/>-->
 
         <contacts/>
     </div>

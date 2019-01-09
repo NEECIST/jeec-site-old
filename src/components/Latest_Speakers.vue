@@ -16,7 +16,7 @@
               <div class="speaker-company">{{ speaker.company }}</div>
             </div>
 
-            <div class="speaker-notes">{{ speaker.notes }}</div>
+            <div class="speaker-notes" v-html="speaker.notes"></div>
         </div>
     </div>
     
@@ -34,7 +34,7 @@ export default {
                 name: 'Jeremy Blum',
                 current_function: 'Head of Electrical Engineering',
                 company: 'Shaper, San Francisco',
-                notes: 'YouTuber and former Google worker.',
+                notes: 'YouTuber and former Google worker. <div style="margin-bottom: 20px;"><a href="https://www.youtube.com/channel/UC4KXPjmKwPutGjwFZsEXB5g" style="float:left;margin-left:20%;">Youtube Channel</a><a href="https://www.jeremyblum.com/" style="float:right; margin-right:20%;">Website</a></div>',
                 image: '../../static/jeremy_blum.svg'
               },
               {
@@ -53,9 +53,9 @@ export default {
 <style>
 .latest-speakers-comp {
   width: 100%;
-  background-color: #f3f3f3;
-  padding-top: 47px;
-  padding-bottom: 47px;
+  background-color: #dfe6f5;
+  padding-top: 40px;
+  padding-bottom: 40px;
   text-align: center;
 }
 
@@ -67,11 +67,16 @@ export default {
   padding-right: 23vw;
 }
 
+a {
+  color: rgb(55, 123, 190);
+  text-decoration: underline;
+}
+
 .speaker-card {
     background-color: #fafafa;
     font-family: 'Roboto';
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
     border-radius: 20px;
     width: 400px;
     box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.3);
@@ -139,21 +144,21 @@ export default {
   }
   
   .speaker-card {
-      width: 300px;
+      width: 350px;
   }
 }
 
 
 
 /* On screens that are 600px wide*/
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 850px) {
   .latest-speakers-flex {
     justify-content: space-between;
     display: inline-block;
   }
 
   .speaker-card {
-    margin-top: 40px;
+    margin-top: 30px;
     border-radius: 20px;
     width: 300px;
   }

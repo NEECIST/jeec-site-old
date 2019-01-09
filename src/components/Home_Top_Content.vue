@@ -12,9 +12,6 @@
         <div class="social-media">
             <div class="follow-us">{{ social_media_text }}</div>
                 <div class="social-icons">
-                    <a href="https://www.linkedin.com/company/jeecist/">
-                        <img :src="linkedin_icon_link" class="social-icon shadow"></a>
-
                     <a href="https://www.facebook.com/JEECIST/">
                         <img :src="facebook_icon_link" class="social-icon shadow"></a>
 
