@@ -34,15 +34,17 @@ export default {
                 name: 'Jeremy Blum',
                 current_function: 'Head of Electrical Engineering',
                 company: 'Shaper, San Francisco',
+                related_companies: [
+                  {
+                    name: 'Google',
+                    logo: ''
+                  },
+                  {
+                    
+                  }
+                ],
                 notes: 'YouTuber and former Google worker. <div style="margin-bottom: 20px;"><a href="https://www.youtube.com/channel/UC4KXPjmKwPutGjwFZsEXB5g" style="float:left;margin-left:20%;">Youtube Channel</a><a href="https://www.jeremyblum.com/" style="float:right; margin-right:20%;">Website</a></div>',
                 image: '../../static/jeremy_blum.svg'
-              },
-              {
-                name: 'Aida Fernandez Peña',
-                current_function: 'Product Manager',
-                company: 'InterCloud, Paris',
-                notes: 'Creating products users will find useful, usable and adapted to their real needs.',
-                image: '../../static/aida_peña.svg'
               }
           ]
       }
@@ -60,11 +62,12 @@ export default {
 }
 
 .latest-speakers-flex {
-  display: flex;
+  display: inline-block;
   flex-wrap: wrap;
   justify-content: space-between;
   padding-left: 23vw;
   padding-right: 23vw;
+  text-align: center;
 }
 
 a {

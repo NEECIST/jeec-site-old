@@ -22,6 +22,8 @@
                         <img :src="instagram_icon_link" class="social-icon"></a>
             </div>
         </div>
+
+        <mouse-scroll id="mouse-scroll"/>
     </div>
 </template>
 
@@ -30,6 +32,7 @@ export default {
   name: 'home-top-comp',
   data() {
     return {
+
       date: "11 to 15 March",
       location: "Instituto Superior Técnico",
       social_media_text: "Follow us on",
@@ -62,7 +65,7 @@ export default {
     background-color: #ffffff;
     width: 100%;
     height: 100%;
-    padding-bottom: 47px;
+    padding-bottom: 20px;
 }
 
 .date-location {
@@ -94,9 +97,8 @@ export default {
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
-    padding-top: 5vh;
-    bottom: 50px;
+    padding-top: 10px;
+    bottom: 20px;
 }
 
 .follow-us {
@@ -186,6 +188,10 @@ export default {
 
     .date-location {
         font-size: 20px;
+    }
+
+    #mouse-scroll {
+        display: none;
     }
 }
 </style>

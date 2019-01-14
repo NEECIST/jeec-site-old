@@ -14,6 +14,8 @@ import Latest_Speakers from './components/Latest_Speakers'
 import Speakers_at_jeec from './components/Speakers_at_jeec'
 import Meet_our_speakers from './components/Meet_our_speakers'
 
+import Mouse_Scroll from './components/Mouse_Scroll'
+
 
 Vue.config.productionTip = false
 
@@ -27,6 +29,7 @@ Vue.component('ouractivities', Our_Activities)
 Vue.component('latest-speakers', Latest_Speakers)
 Vue.component('speakers-at-jeec', Speakers_at_jeec)
 Vue.component('meet-our-speakers', Meet_our_speakers)
+Vue.component('mouse-scroll', Mouse_Scroll)
 
 /* eslint-disable no-new */
 new Vue({
