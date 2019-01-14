@@ -61,7 +61,7 @@ export default {
     background-position:center; */
     background-color: #ffffff;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     padding-bottom: 47px;
 }
 
@@ -89,11 +89,13 @@ export default {
 }
 
 .social-media {
-    position: absolute;
+    position: relative;
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20px;
+    padding-top: 5vh;
     bottom: 50px;
 }
 
@@ -168,6 +170,14 @@ export default {
 
 /* On screens that are 600px wide*/
 @media only screen and (max-width: 600px) {
+    .logo-home {
+        max-width: 85%;
+    }
+
+    .social-media {
+        margin-top: 10vh;
+    }
+
     .social-icon {
         width: 25px;
         height: 25px;
