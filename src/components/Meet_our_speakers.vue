@@ -2,7 +2,7 @@
     <div class="meet-our-speakers">
 
         <div class="div-title">
-            MEET OUR </p> <span style="font-weight: 900; font-size: 60px"> SPEAKERS </span>
+            MEET OUR <span style="font-weight: 900; font-size: 60px"> SPEAKERS </span>
         </div>
     </div>
 </template>

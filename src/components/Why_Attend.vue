@@ -1,8 +1,6 @@
 <template>
     <div class="why-attend-comp">
-        <div class="div-title">
-            <span v-html="title"></span>
-        </div>
+        <component-title title="Why is it a big deal?" subtitle="Reasons to attend the event"/>
 
         <div v-for="(group, index) in audience" :key="group.title">
             <div class="target-audience-title">
@@ -31,10 +29,9 @@ export default {
   name: "as_a_student",
   data() {
       return {
-          title: '<span class="first-word-style">WHY</span> YOU SHOULD ATTEND',
           audience: [
               {
-                title: 'AS A <span class="target-second-word-style">STUDENT</span>',
+                title: 'For the students',
                 icons: [
                     {
                         link: '../../static/organized_by_students.svg',
@@ -51,7 +48,7 @@ export default {
                 ]
               },
               {
-                title: 'AS A <span class="target-second-word-style">COMPANY</span>',
+                title: 'For the companies',
                 icons: [
                     {
                         link: '../../static/find_the_best_students.svg',
@@ -76,34 +73,25 @@ export default {
 <style>
 .why-attend-comp {
   background-color: #dfe6f5;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 10px;
+  padding-bottom: 50px;
   text-align: center;
 }
 
 .target-audience-title {
-  width: 80%;
-  font-family: 'Raleway';
-  font-size: 40px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
+  font-family: 'Karla';
+  font-size: 30px;
+  font-weight: 600;
   color: #2e2e2e;
   display: inline-block;
   margin-top: 20px;
-}
-
-.target-second-word-style {
-  font-weight: bold;
 }
 
 .icons-flex {
   display: flex;
   justify-content: space-between;
   padding-top: 20px;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
   padding-left: 5vw;
   padding-right: 5vw;
 }
@@ -134,7 +122,7 @@ export default {
 
 .icon-text {
   display: inline-block;
-  font-family: 'Raleway';
+  font-family: 'Lato';
   font-size: 20px;
   line-height: 1.47;
   color: #000000;
@@ -155,7 +143,6 @@ hr {
 @media only screen and (max-width: 1400px) {
   .reason-to-come {
       width: 50%;
-      margin-bottom: 30px;
   }
 
   .audience-container {

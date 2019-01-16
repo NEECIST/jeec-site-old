@@ -23,7 +23,7 @@
             </div>
         </div>
 
-        <mouse-scroll id="mouse-scroll"/>
+        <scroll-down-arrow id="scroll-down-arrow"/>
     </div>
 </template>
 
@@ -65,7 +65,7 @@ export default {
     background-color: #ffffff;
     width: 100%;
     height: 100%;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 
 .date-location {
@@ -190,7 +190,7 @@ export default {
         font-size: 20px;
     }
 
-    #mouse-scroll {
+    #scroll-down-arrow {
         display: none;
     }
 }

@@ -1,23 +1,36 @@
 <template>
     <div class="contacts-comp">
-        <div class="title-contacts">
-            Contact <span style="color: #00c2ff;">Information</span>
-        </div>
+        <component-title title="Contact Us" subtitle=""/>
 
-        <div class="contact-location">
-            Instituto Superior Técnico- Alameda Campus<p/>Av. Rovisco Pais,<p/>1049-001 Lisbon
-        </div>
+       <section id="contact" class="section-bg wow fadeInUp">
+            <div class="container">
+                <div class="row contact-info">
+                <div class="col-md-4">
+                    <div class="contact-address">
+                    <h3>Address</h3>
+                    <address>Instituto Superior Técnico - Av. Rovisco Pais, 1049-001 Lisbon</address>
+                    </div>
+                </div>
 
-        <div class="email">
-            contacto@jeec.ist
-        </div>
+                <div class="col-md-4">
+                    <div class="contact-email">
+                    <i class="ion-ios-email-outline"></i>
+                    <h3>Email</h3>
+                    <p><a href="mailto:info@example.com">contacto@jeec.ist</a></p>
+                    </div>
+                </div>
 
-        <div class="sponsors-flex">
-                <div><img src="../../static/vtxrm.png" style="width: 100px"></div>
-                <div><img src="../../static/santander_logo.png" style="width: 200px"></div>
-                <div><img src="../../static/ist_logo.png" style="width: 150px"></div>
-                <div><img src="../../static/neec_logo.png" style="width: 100px"></div>
-                <div><img src="../../static/deec_logo.png" style="width: 250px"></div>
+                </div>
+            </div>
+        </section>
+
+        <div class="flexbox-imgs">
+            <img href="http://www.vtxrm.com/" src="../../static/vtxrm.png">
+            <img href="https://www.santandertotta.pt/pt_PT/Particulares/Universitarios.html" src="../../static/santander_logo.png">
+            <img href="https://tecnico.ulisboa.pt/pt/" src="../../static/ist_logo.png">
+
+            <a href="https://neecist.org/" target="_blank"><img src="../../static/neec_logo.png"></a>
+            <img href="https://fenix.tecnico.ulisboa.pt/departamentos/deec" src="../../static/deec_logo.png">
         </div>
 
         <div class="bottom-bar">
@@ -38,41 +51,9 @@
 <style>
 .contacts-comp {
     position: relative;
-    background-color: #f3f3f3;
+    padding-top: 10px;
+    background-color: #ffffff;
     text-align: left;
-}
-
-.title-contacts
-{
-    font-size: 30px;
-    padding: 30px;
-}
-
-.contact-location 
-{
-    color: black;
-    font-size: 20px;
-    line-height: 10px;
-    font-family: "Roboto";
-    padding-left: 30px;
-}
-
-.email
-{
-    color:black;
-    font-size:20px;
-    text-align: left;
-    margin-top: 30px;
-    font-family: "Roboto";
-    padding-left: 30px;
-}
-
-.sponsors-flex {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 25px;
-  padding-left: 7vw;
-  padding-right: 7vw;
 }
 
 .bottom-bar {
@@ -116,4 +97,106 @@
       padding-right: 10px;
   }
 }
+
+.flexbox-imgs {
+  display: -webkit-box;  /* iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* IE 10 */
+  display: -webkit-flex; /* Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;         /*Firefox, Chrome, Opera */
+  
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 50px;
+}
+.flexbox-imgs img {
+      justify-content: center;
+    max-height: 100px;
+    max-width: 150px;
+    margin: 5px 12px;
+    padding-left: 30px;
+    opacity: .85;
+    transition: all .3s;
+ 
+}
+.flexbox-imgs img:hover {
+	opacity: 1;
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+
+@media screen and (max-width: 800px) {
+    .flexbox-imgs img {
+      max-width: 125px;
+      max-height: 88px;
+      margin: 5px 8px;
+      padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .flexbox-imgs img {
+      max-width: 85px;
+      max-height: 60px;
+      margin: 3px 5px;
+  }
+}
+
+.section-with-bg {
+  background-color: #f6f7fd;
+}
+
+#contact .contact-info {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#contact .contact-info i {
+  font-size: 48px;
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #f82249;
+}
+
+.col-md-4 {
+    width: 30%;
+    display: inline-block;
+}
+
+#contact .contact-info address,
+#contact .contact-info p {
+  margin-bottom: 0;
+  color: #112363;
+}
+
+#contact .contact-info h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #112363;
+}
+
+#contact .contact-info a {
+  color: #4869df;
+}
+
+#contact .contact-info a:hover {
+  color: #f82249;
+}
+
+#contact .contact-address,
+#contact .contact-phone,
+#contact .contact-email {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 560px) {
+  .col-md-4 {
+      width: 80%;
+  }
+}
+
 </style>

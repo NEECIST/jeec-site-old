@@ -1,8 +1,6 @@
 <template>
   <div class="latest-speakers-comp">
-    <div class="div-title">
-      <span v-html="title"></span>
-    </div>
+    <component-title title="Latest Speakers" subtitle="Minds that push engineering forward"/>
 
     <div class="latest-speakers-flex">
         <div class="speaker-card" v-for="speaker in speakers" :key="speaker.name">
@@ -28,7 +26,6 @@ export default {
   name: "latest_speakers",
   data() {
       return {
-          title: '<span class="first-word-style">LATEST</span> SPEAKERS',
           speakers: [
               {
                 name: 'Jeremy Blum',
@@ -56,7 +53,7 @@ export default {
 .latest-speakers-comp {
   width: 100%;
   background-color: #dfe6f5;
-  padding-top: 40px;
+  padding-top: 10px;
   padding-bottom: 40px;
   text-align: center;
 }
@@ -68,6 +65,7 @@ export default {
   padding-left: 23vw;
   padding-right: 23vw;
   text-align: center;
+  margin-top: 20px;
 }
 
 a {
@@ -106,6 +104,7 @@ a {
 .company-container {
   width: 100%;
   background-color: rgb(41, 141, 235);
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
   padding-top: 5px;
   padding-bottom: 5px;
 }
@@ -161,7 +160,7 @@ a {
   }
 
   .speaker-card {
-    margin-top: 30px;
+    margin-top: 10px;
     border-radius: 20px;
     width: 300px;
   }

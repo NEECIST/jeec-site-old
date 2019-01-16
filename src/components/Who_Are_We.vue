@@ -1,12 +1,12 @@
 <template>
   <div class="who-are-we-comp">
-    <div class="div-title">
-      <span v-html="title"></span>
-    </div>
+  
+      <component-title title="Who are we?" subtitle="JEECIST"/>
 
-    <div class="who-are-we-text">
-      <span v-html="text"></span>
-    </div>
+      <div class="who-are-we-text">
+        <span v-html="text"></span>
+      </div>
+
   </div>
 </template>
 
@@ -15,8 +15,7 @@ export default {
   name: 'who-are-we',
   data() {
     return {
-      title: '<span class="first-word-style">WHO</span> ARE WE?',
-      text: 'The <b>Electrical and Computer Engineering Career Week</b> is an event organized by <b>IST students</b>, whose main purpose is to promote the approximation and integration of the students in the business world.<p>The activities provided by JEEC such as the job fair, the panel discussions, workshops and matchmaking sessions are open, free of charge, to a student community of over 11.400 students.</p>',
+      text: 'An event organized by <b>IST</b> students, whose main purpose is to promote the approximation and integration of the students in the business world.<p>Activities provided by JEEC such as:<div style="line-height: 20px;"><p><b>Job Fair</b></p><p><b>Panel Discussions</b></p><p><b>Workshops</b></p><p><b>Matchmaking sessions</b></p></div> are open, <b>free of charge</b>, to a student community of over <b>11.400</b> students.</p>',
     }
   },
 
@@ -36,19 +35,20 @@ export default {
 .who-are-we-comp {
   width: 100%;
   background-color: #ffffff;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 10px;
+  padding-bottom: 30px;
   text-align: center;
 }
 
 .who-are-we-text {
-  width: 80%;
-  font-family: 'Raleway';
+  width: 75%;
+  font-family: 'Lato';
+  margin-top: 20px;
   font-size: 25px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  line-height: normal;
+  line-height: 35px;
   letter-spacing: normal;
   color: #505050;
   display: inline-block;
@@ -66,6 +66,7 @@ export default {
   .who-are-we-text {
     width: 95%;
     font-size: 16px;
+    line-height: 25px;
   }
 
   .div-title {

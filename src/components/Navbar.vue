@@ -92,16 +92,20 @@ export default {
 
 .navbar-title {
   float: right;
-  margin-top: 26px;
+  margin-top: 28px;
   margin-right: 5vw;
   color: black;
-  font-size: 22px;
-  font-family: 'Roboto';
-}
+  font-size: 20px;
+  font-family: 'Lato';
 
-.navbar-title:hover {
-  font-weight: bold;
-}
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+  }
+
+.navbar-title:hover { color:rgb(55, 121, 184); }
 
 a:hover {
   cursor: pointer;
