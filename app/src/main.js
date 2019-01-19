@@ -19,6 +19,8 @@ import Component_Title from './components/Component_Title'
 
 import Gold_Partners from './components/Gold_Partners'
 
+import Posts from './components/Posts'
+
 Vue.config.productionTip = false
 
 // Home page components
@@ -36,6 +38,9 @@ Vue.component('scroll-down-arrow', Scroll_Down_Arrow)
 Vue.component('component-title', Component_Title)
 
 Vue.component('gold-partners', Gold_Partners)
+
+Vue.component('posts', Posts)
+
 
 /* eslint-disable no-new */
 new Vue({

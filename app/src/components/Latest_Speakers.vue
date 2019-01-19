@@ -150,8 +150,6 @@ a {
   }
 }
 
-
-
 /* On screens that are 600px wide*/
 @media only screen and (max-width: 850px) {
   .latest-speakers-flex {
@@ -168,6 +166,24 @@ a {
   .speaker-image {
     width: 120px;
     height: 120px;
+  }
+}
+
+/* On screens that are 600px wide*/
+@media only screen and (max-width: 400px) {
+  .speaker-card {
+    margin-top: 10px;
+    border-radius: 20px;
+    width: 80vw;
+  }
+
+  .speaker-company {
+    font-size: 17px;
+  }
+
+  .speaker-image {
+    width: 100px;
+    height: 100px;
   }
 }
 </style>
