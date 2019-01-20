@@ -69,6 +69,8 @@
 }
 
 #copyright {
+  padding-left: 10px;
+  padding-bottom: 5px;
   padding-top: 9px;
   font-size: 13px;
   width: 100%;
@@ -133,6 +135,8 @@
       text-align: center;
       font-size: 8px;
       width: 80%;
+      padding-left: 0px;
+      padding-bottom: 0px;
   }
 
   .bottom-bar {
