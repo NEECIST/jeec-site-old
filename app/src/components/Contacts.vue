@@ -35,7 +35,7 @@
 
         <div class="bottom-bar">
             <div id="copyright">
-                Copyright © 2018 - Jornadas de Engenharia Eletrotécnica e de Computadores do Instituto Superior Técnico
+                Copyright © 2019 - Jornadas de Engenharia Eletrotécnica e de Computadores do Instituto Superior Técnico
             </div>
         </div>
 
@@ -59,7 +59,7 @@
 .bottom-bar {
   margin-top: 25px;
   width: 100%;
-  height: 30px;
+  height: 25px;
   background-color: rgb(91, 170, 223);
   color: white;
   position: relative;
@@ -69,10 +69,10 @@
 }
 
 #copyright {
+  padding-top: 9px;
   font-size: 13px;
+  width: 100%;
   font-family: 'Roboto', sans-serif;
-  margin-top: 9px;
-  margin-left: 20px;
 }
 
 @media screen and (max-width: 900px){
@@ -83,19 +83,6 @@
         font-family: "Roboto";
         padding-left: 30px;
     }
-
-  .sponsor-icon {
-    position: relative;
-    width: 90px;
-    height: 30px;
-  }
-
-  .sponsors-flex {
-      flex-wrap: wrap;
-      padding-top: 50px;
-      padding-left: 10px;
-      padding-right: 10px;
-  }
 }
 
 .flexbox-imgs {
@@ -140,6 +127,17 @@
       max-width: 85px;
       max-height: 60px;
       margin: 3px 5px;
+  }
+
+  .copyright {
+      text-align: center;
+      font-size: 8px;
+      width: 80%;
+  }
+
+  .bottom-bar {
+      text-align: center;
+      height: 50px;
   }
 }
 
