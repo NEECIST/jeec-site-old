@@ -59,7 +59,7 @@
 .bottom-bar {
   margin-top: 25px;
   width: 100%;
-  height: 25px;
+  height: 30px;
   background-color: rgb(91, 170, 223);
   color: white;
   position: relative;
