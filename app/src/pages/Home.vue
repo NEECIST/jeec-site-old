@@ -16,8 +16,8 @@
 
         <who-are-we/>
 
-        <!--
-        <why-attend/>-->
+        
+        <why-attend/>
 
         <!--<ouractivities/>-->
 
