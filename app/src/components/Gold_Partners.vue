@@ -27,7 +27,7 @@
                         name: 'Accenture'
                     },
                     {
-                        logo: 'https://i2.wp.com/humansideoftech.com/wp-content/uploads/PNGPIX-COM-Microsoft-Logo-PNG-Transparent-1.png?ssl=1',
+                        logo: 'https://logos-download.com/wp-content/uploads/2016/10/Deloitte_logo.png',
                         name: 'Deloitte'
                     },
                     {
@@ -85,21 +85,42 @@
     background-color: white;
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
     border-style: solid;
-    border-color: black;
+    border-color: #cfbf2c;
     border-width: 2px;
-    border-radius: 5px;
+    border-radius: 20px;
     margin-top: 20px;
     margin-left: 300px;
     margin-right: 300px;
 }
 
 .partners-flex {
-  display: flex;
-  justify-content: space-between;
+  display: -webkit-box;  /* iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* IE 10 */
+  display: -webkit-flex; /* Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;         /*Firefox, Chrome, Opera */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   padding-top: 20px;
   padding-bottom: 15px;
   padding-left: 5vw;
   padding-right: 5vw;
+}
+
+.partners-flex img {
+      justify-content: center;
+    max-height: 100px;
+    max-width: 150px;
+    margin: 5px 12px;
+    opacity: .85;
+    transition: all .3s;
+ 
+}
+.partners-flex img:hover {
+	opacity: 1;
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
 }
 
 .reason-to-come {

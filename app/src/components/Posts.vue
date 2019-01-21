@@ -19,18 +19,6 @@ export default {
               {
                 embedded_code: '<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FJEECIST%2Fposts%2F10156078368610765&width=500" width="500" height="671" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>',
               },
-              {
-                embedded_code: '<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FJEECIST%2Fposts%2F10156078368610765&width=500" width="500" height="671" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>',
-              },
-              {
-                embedded_code: '<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FJEECIST%2Fposts%2F10156078368610765&width=500" width="500" height="671" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>',
-              },
-              {
-                embedded_code: '<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FJEECIST%2Fposts%2F10156078368610765&width=500" width="500" height="671" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>',
-              },
-              {
-                embedded_code: '<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FJEECIST%2Fposts%2F10156078368610765&width=500" width="500" height="671" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>',
-              }
           ]
       }
   }

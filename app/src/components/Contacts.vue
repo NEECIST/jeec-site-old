@@ -73,7 +73,7 @@
   padding-bottom: 5px;
   padding-top: 9px;
   font-size: 13px;
-  width: 100%;
+  width: 90%;
   font-family: 'Roboto', sans-serif;
 }
 
