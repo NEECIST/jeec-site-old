@@ -189,9 +189,5 @@ export default {
     .date-location {
         font-size: 20px;
     }
-
-    #scroll-down-arrow {
-        display: none;
-    }
 }
 </style>
