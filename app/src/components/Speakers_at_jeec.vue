@@ -103,66 +103,12 @@ export default {
     color: #007fb8;
 }
 
-.icons-flex {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 30px;
-  padding-left: 150px;
-  padding-right: 150px;
-}
-
-.speakers-to-come {
-  width: 32%;
-  text-align: center;
-}
-
-.icon {
-  width: 120px;
-  height: 120px;
-  display: inline-block;
-}
-
-.icon-text-container {
-    padding: 20px;
-}
-
-.icon-text {
-  display: inline-block;
-  width: 80%;
-  font-family: 'Raleway';
-  font-size: 25px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.47;
-  color: #000000;
-  margin-top: 30px;
-}
-
 
 /* On screens that are 992px wide or less*/
 @media only screen and (max-width: 1400px) {
   .speakers-to-come {
       width: 50%;
       margin-bottom: 30px;
-  }
-
-  .audience-container {
-    margin-left: 40px;
-    margin-right: 40px;
-}
-
-.icons-flex {
-    padding-left: 20px;
-    padding-right: 20px;
-}
- .icon {
-    width: 90px;
-    height: 90px;
-  }
-
-  .icon-text , .icon-company {
-      font-size: 20px;
   }
 }
 
@@ -172,36 +118,6 @@ export default {
     padding-top: 60px;
     padding-bottom: 60px;
     text-align: center;
-  }
-
-  
-  .audience-container {
-    margin-left: 40px;
-    margin-right: 40px;
-}
-
-  .icons-flex {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      padding-top: 50px;
-      padding-left: 10px;
-      padding-right: 10px;
-  }
-
-  .icon {
-    width: 80px;
-    height: 80px;
-  }
-
-  .reason-to-come {
-      width: 100%;
-      margin-bottom: 40px;
-  }
-
-  .icon-text, .icon-company {
-      font-size: 17px;
-      margin-top: 10px;
   }
 }
 </style>
