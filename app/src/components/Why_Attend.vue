@@ -164,6 +164,10 @@ hr {
 
 /* On screens that are 600px wide*/
 @media (max-width: 700px) {
+  .reason-to-come {
+      width: 100%;
+  }
+  
   .why-attend-comp {
     padding-top: 40px;
     padding-bottom: 40px;
