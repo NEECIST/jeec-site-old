@@ -7,9 +7,7 @@
                 <div class="partner" v-for="partner in partners" :key="partner.name">
                     <div><img class="logo" :src="partner.logo"></div>
 
-                    <div class="partner-name-container">
-                        <div class="partner-name">{{ partner.name }}</div>
-                    </div>
+                    <div class="partner-name">{{ partner.name }}</div>
                 </div>
             </div>
         </div>
@@ -123,10 +121,6 @@
     filter: grayscale(0%);
 }
 
-.reason-to-come {
-  width: 32%;
-  text-align: center;
-}
 
 .logo {
   width: 80px;
@@ -134,17 +128,14 @@
   display: inline-block;
 }
 
-.icon-text-container {
-    padding: 10px;
-}
-
-.icon-text {
+.partner-name {
   display: inline-block;
   font-family: 'Raleway';
   font-size: 20px;
   line-height: 1.47;
   color: #000000;
   margin-top: 20px;
+  padding: 10px;
 }
 </style>
 
