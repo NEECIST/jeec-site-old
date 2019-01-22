@@ -12,9 +12,7 @@
                     <div class="reason-to-come" v-for="icon in group.icons" :key="icon.link">
                         <div><img class="icon" :src="icon.link"></div>
                         
-                        <div class="icon-text-container">
-                            <div class="icon-text">{{ icon.description }}</div>
-                        </div>
+                        <div class="icon-text">{{ icon.description }}</div>
                     </div>
                 </div>
             </div>
@@ -89,6 +87,10 @@ export default {
 
 .icons-flex {
   display: flex;
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
   justify-content: space-between;
   padding-top: 20px;
   padding-bottom: 10px;
@@ -116,10 +118,6 @@ export default {
   display: inline-block;
 }
 
-.icon-text-container {
-    padding: 10px;
-}
-
 .icon-text {
   display: inline-block;
   font-family: 'Lato';
@@ -127,6 +125,7 @@ export default {
   line-height: 1.47;
   color: #000000;
   margin-top: 20px;
+  padding: 10px;
 }
 
 hr {
@@ -139,12 +138,8 @@ hr {
 }
 
 
-/* On screens that are 992px wide or less*/
+/* On screens that are 1400px wide or less*/
 @media (max-width: 1400px) {
-  .reason-to-come {
-      width: 50%;
-  }
-
   .audience-container {
     margin-left: 40px;
     margin-right: 40px;
@@ -187,9 +182,10 @@ hr {
 }
 
   .icons-flex {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      -webkit-flex-direction: column;
+	  -moz-flex-direction: column;
+	  -ms-flex-direction: column;	
+	  flex-direction: column;
       padding-top: 50px;
       padding-left: 10px;
       padding-right: 10px;
