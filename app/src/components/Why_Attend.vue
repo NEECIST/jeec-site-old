@@ -167,12 +167,6 @@ hr {
   .reason-to-come {
       width: 100%;
   }
-  
-  .why-attend-comp {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    text-align: center;
-  }
 
   .target-audience-title {
       font-size: 25px;
