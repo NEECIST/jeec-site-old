@@ -15,5 +15,15 @@ export default new Router({
       name: 'Home',
       component: Home
     },
+    {
+      path: '/partners',
+      name: 'Partners',
+      component: Partners
+    },
+    {
+      path: '/team',
+      name: 'Team',
+      component: Team
+    },
   ]
 })

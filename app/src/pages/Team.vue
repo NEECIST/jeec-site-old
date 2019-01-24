@@ -1,8 +1,6 @@
 <template>
     <div class="team-app">
-        <div class="title-team-image">
-               <div class="title-team1">KNOW OUR<div class="title-team2">TEAM</div></div>
-        </div>
+        <image-center-text text="Our Team"/>
        <div class="description-team">
            <div class="team-text">
                 <div class="description-title">
@@ -243,31 +241,6 @@ export default {
 
 
 <style>
-
-.title-team-image{
-    background: linear-gradient(122deg, rgba(107,191, 255, 0.7), rgba(63, 0, 70, 0.7)), url("https://www.projecttimes.com/media/k2/items/cache/6612da61425d98755836902a8bde1bce_XL.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 400px;
-
-
-}
-.title-team1{
-    text-align: center;
-    position: relative;
-    top: 45%;
-    color: #ffffff;
-    font-family:'Raleway' sans-serif;
-    font-size: 35px;
-    letter-spacing: -1px;
-}
-
-.title-team2{
-    font-size: 60px;
-    font-weight: bold;
-}
-
-
 .description-team{
     height: 300px;
     background-color:white;

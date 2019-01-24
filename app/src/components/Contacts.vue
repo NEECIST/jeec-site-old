@@ -77,6 +77,10 @@
   font-family: 'Roboto', sans-serif;
 }
 
+address {
+    font-style: normal;
+}
+
 @media screen and (max-width: 900px){
     .contact-location {
         color: black;

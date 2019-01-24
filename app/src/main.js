@@ -17,9 +17,11 @@ import Meet_our_speakers from './components/Meet_our_speakers'
 import Scroll_Down_Arrow from './components/Scroll_Down_Arrow'
 import Component_Title from './components/Component_Title'
 
-import Gold_Partners from './components/Gold_Partners'
+import Partner_Tier from './components/Partner_Tier'
 
 import Posts from './components/Posts'
+
+import Image_Center_Text from './components/Image_Center_Text'
 
 Vue.config.productionTip = false
 
@@ -37,10 +39,11 @@ Vue.component('scroll-down-arrow', Scroll_Down_Arrow)
 
 Vue.component('component-title', Component_Title)
 
-Vue.component('gold-partners', Gold_Partners)
+Vue.component('partner-tier', Partner_Tier)
 
 Vue.component('posts', Posts)
 
+Vue.component('image-center-text', Image_Center_Text)
 
 /* eslint-disable no-new */
 new Vue({
