@@ -42,6 +42,14 @@ export default {
                 ],
                 notes: 'YouTuber and former Google worker. <div style="margin-bottom: 20px;"><a href="https://www.youtube.com/channel/UC4KXPjmKwPutGjwFZsEXB5g" style="float:left;margin-left:20%;">Youtube Channel</a><a href="https://www.jeremyblum.com/" style="float:right; margin-right:20%;">Website</a></div>',
                 image: '../../static/jeremy_blum.svg'
+              },
+              {
+                name: 'Aida Peña',
+                current_function: 'Product Manager',
+                company: 'InterCloud, Paris',
+                
+                notes: 'YouTuber and former Google worker. <div style="margin-bottom: 20px;"><a href="https://www.youtube.com/channel/UC4KXPjmKwPutGjwFZsEXB5g" style="float:left;margin-left:20%;">Youtube Channel</a><a href="https://www.jeremyblum.com/" style="float:right; margin-right:20%;">Website</a></div>',
+                image: '../../static/aida_peña.svg'
               }
           ]
       }
@@ -59,8 +67,11 @@ export default {
 }
 
 .latest-speakers-flex {
-  display: inline-block;
-  flex-wrap: wrap;
+  display: flex;
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
   justify-content: space-between;
   padding-left: 23vw;
   padding-right: 23vw;
