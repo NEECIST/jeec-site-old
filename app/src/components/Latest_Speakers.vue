@@ -48,6 +48,7 @@ export default {
                 current_function: 'Product Manager',
                 company: 'InterCloud, Paris',
                 
+                notes: ' ',
                 image: '../../static/aida_peña.svg'
               }
           ]
