@@ -35,7 +35,7 @@
                             link: 'https://www2.deloitte.com/pt/pt.html'
                         },
                         {
-                            logo: 'https://www.epimetheus.pt/client/skins/images/logo.svg',
+                            logo: '../../static/partner-logos/epimetheus.png',
                             name: 'Epimetheus',
                             link: 'https://www.epimetheus.pt/'
                         },
@@ -116,10 +116,77 @@
                             name: 'Microsoft',
                             link: 'https://www.microsoft.com/pt-pt'
                         },
+                    ],
+                    bronze: [
                         {
-                            logo: '../../static/partner-logos/microsoft.png',
-                            name: 'Premium Minds',
-                            link: 'https://www.premium-minds.com/'
+                            logo: '../../static/partner-logos/dellent_consulting.png',
+                            name: 'Dellent Consulting',
+                            link: 'https://www.dellentconsulting.com/'
+                        },
+                        {
+                            logo: '../../static/partner-logos/technoedif.png',
+                            name: 'Technoedif',
+                            link: 'https://www.technoedif.com/pt/homepage/'
+                        },
+                        {
+                            logo: '../../static/partner-logos/synopsys.png',
+                            name: 'Synopsys',
+                            link: 'https://www.synopsys.com/'
+                        },
+                        {
+                            logo: '../../static/partner-logos/ren.png',
+                            name: 'REN',
+                            link: 'https://www.ren.pt/'
+                        },
+                        {
+                            logo: '../../static/partner-logos/itsector.png',
+                            name: 'ITSector',
+                            link: 'https://www.itsector.pt/pt/'
+                        },
+                        {
+                            logo: '../../static/partner-logos/kwan.png',
+                            name: 'Kwan',
+                            link: 'www.kwan.pt/'
+                        },
+                        {
+                            logo: '../../static/partner-logos/primeit.png',
+                            name: 'PrimeIT',
+                            link: 'https://www.primeit.pt/'
+                        },
+                        {
+                            logo: '../../static/partner-logos/hitachi.png',
+                            name: 'Hitachi Vantara',
+                            link: 'https://www.hitachivantara.com/en-us/home.html'
+                        },
+                        {
+                            logo: '../../static/partner-logos/nos.png',
+                            name: 'NOS',
+                            link: 'www.nos.pt/'
+                        },
+                        {
+                            logo: '../../static/partner-logos/voice_interaction.png',
+                            name: 'Voiceinteraction',
+                            link: 'https://www.voice-interaction.com/pt/'
+                        },
+                        {
+                            logo: '../../static/partner-logos/grupel.png',
+                            name: 'Grupel',
+                            link: 'https://grupel.eu/'
+                        },
+                        {
+                            logo: '../../static/partner-logos/coreso.png',
+                            name: 'Coreso',
+                            link: 'https://www.coreso.eu/'
+                        },
+                        {
+                            logo: '../../static/partner-logos/bcg.png',
+                            name: 'BCG',
+                            link: 'https://www.bcg.com/'
+                        },
+                        {
+                            logo: '../../static/partner-logos/adentis.png',
+                            name: 'Adentis',
+                            link: 'www.adentis.pt/'
                         },
                     ]
                 }

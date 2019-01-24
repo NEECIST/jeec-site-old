@@ -17,6 +17,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 300px;
+    margin-bottom: 60px;
 }
 
 .center-text {
