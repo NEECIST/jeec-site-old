@@ -44,11 +44,11 @@
                             name: 'Everis',
                             link: 'https://www.everis.com/portugal/pt-pt'
                         },
-                        {
+                        /*{
                             logo: '../../static/partner-logos/ey.png',
                             name: 'EY',
                             link: 'https://www.ey.com/en_gl'
-                        },
+                        },*/
                         {
                             logo: '../../static/partner-logos/kpmg.svg',
                             name: 'KPMG',
