@@ -10,6 +10,9 @@ import Schedule from '@/pages/Schedule'
 Vue.use(Router)
 
 export default new Router({
+  scrollBehavior() {
+    return { x: 0, y: 0 };
+  },
   routes: [
     {
       path: '/',
@@ -28,5 +31,6 @@ export default new Router({
     { path: '*', 
       redirect: '/404' 
     },  
-  ]
+  ],
+  mode: 'history'
 })
