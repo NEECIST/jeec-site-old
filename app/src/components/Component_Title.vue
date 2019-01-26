@@ -10,13 +10,28 @@
 <script>
     export default {
         name: 'component-title',
-        props: ['title', 'subtitle']
+        props: {
+            title: {
+                type: String
+            },
+            subtitle: {
+                type: String
+            },
+            font_color: {
+                default: "default",
+                type: String
+            },
+            size: {
+                default: "36px",
+                type: String
+            }
+        }
     }
 </script>
 
 <style>
 .component-title {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .section-header {
@@ -25,6 +40,8 @@
 }
 
 .section-header h2 {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-size: 36px;
   text-transform: uppercase;
   text-align: center;
@@ -33,6 +50,8 @@
 }
 
 .section-header p {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   padding: 0;
   margin: 0;

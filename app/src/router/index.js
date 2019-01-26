@@ -2,8 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/pages/Home'
 import Speakers from '@/pages/Speakers'
-import Team from '@/pages/Team'
+/*import Team from '@/pages/Team'*/
 import Partners from '@/pages/Partners'
+import Error_Handling from '@/pages/Error_Handling'
 import Schedule from '@/pages/Schedule'
 
 Vue.use(Router)
@@ -15,5 +16,17 @@ export default new Router({
       name: 'Home',
       component: Home
     },
+    {
+      path: '/partners',
+      name: 'Partners',
+      component: Partners
+    },
+    { 
+      path: '/404', 
+      component: Error_Handling 
+    },  
+    { path: '*', 
+      redirect: '/404' 
+    },  
   ]
 })
