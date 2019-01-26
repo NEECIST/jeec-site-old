@@ -7,11 +7,11 @@
             <div><img class="speaker-image" :src="speaker.image"></div>
             
             <div class="speaker-name">{{ speaker.name }}</div>
-
+            <!--
             <div class="speaker-current-function">{{ speaker.current_function }}</div>
-            
+            -->
             <div class="company-container">
-              <div class="speaker-company">{{ speaker.company }}</div>
+              <div class="speaker-company">{{ speaker.current_function }}</div>
             </div>
 
             <img class="speaker-company-logo" :src="speaker.company_logo"/>
@@ -51,7 +51,7 @@ export default {
                 current_function: 'Product Manager',
                 company: 'InterCloud, Paris',
                 company_logo: '../../static/speakers/intercloud.png',
-                notes: ' ',
+                notes: 'An experienced Product Manager who thrives on creating products that users find useful, usable and adapted to their real needs.',
                 image: '../../static/aida_peña.svg'
               }
           ]
@@ -103,9 +103,9 @@ a {
 }
 
 .speaker-name {
-  margin-top: 10px;
+  margin-top: 15px;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 25px;
   text-align: center;
 }
 
@@ -121,6 +121,7 @@ a {
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
   padding-top: 5px;
   padding-bottom: 5px;
+  margin-top: 15px;
 }
 
 .speaker-company {
@@ -130,12 +131,12 @@ a {
 }
 
 .speaker-company-logo {
-  margin-top: 20px;
+  margin-top: 15px;
   max-width: 150px;
 }
 
 .speaker-notes {
-  margin-top: 20px;
+  margin-top: 15px;
   text-align: center;
 }
 
