@@ -77,6 +77,8 @@ export default {
 }
 
 .target-audience-title {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-family: 'Karla';
   font-size: 30px;
   font-weight: 600;
@@ -119,6 +121,8 @@ export default {
 }
 
 .icon-text {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;  
   display: inline-block;
   font-family: 'Lato';
   font-size: 20px;

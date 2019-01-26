@@ -1,10 +1,10 @@
 <template>
     <div class="partners-app">
 
-       <image-center-text text="Our Partners"/>
+        <div class="image-center-text-comp"></div>
 
         <component-title title="Main Sponsor"/>
-        <a href="http://www.vtxrm.com/">
+        <a href="http://www.vtxrm.com/" target="_blank">
             <img class="main-sponsor-logo" src="../../static/partner-logos/vtxrm.png">
         </a>
 
@@ -218,6 +218,26 @@
     -webkit-filter: grayscale(0%);
     filter: grayscale(0%);
     transform: scale(1.15); 
+}
+
+.image-center-text-comp {
+    background: linear-gradient(122deg, rgba(107,191, 255, 0.7), rgba(63, 0, 70, 0.7)), url("https://www.projecttimes.com/media/k2/items/cache/6612da61425d98755836902a8bde1bce_XL.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50px;
+    margin-bottom: 60px;
+}
+
+.center-text {
+    text-align: center;
+    position: relative;
+    top: 45%;
+    width: 300px;
+    color: #ffffff;
+    font-family:'Raleway' sans-serif;
+    font-size: 35px;
+    letter-spacing: -1px;
+    font-weight: bold;
 }
 
 @media screen and (max-width: 800px) {

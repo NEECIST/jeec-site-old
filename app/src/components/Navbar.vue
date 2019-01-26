@@ -3,6 +3,10 @@
         <router-link router-link :to="{ name: 'Home' }">
           <img class="navbar-left-logo" :src="navbar_logo_link">
         </router-link>
+
+        <router-link class="navbar-title" router-link :to="{ name: 'Partners' }">
+          Partners
+        </router-link>
     <!--
         <router-link router-link :to="{ name: 'Team' }">
           <div class="navbar-title">{{ fourth_navbar_title }}</div>
@@ -90,22 +94,44 @@ export default {
   float: left;
 }
 
+.partners-button {
+height: 20px;
+text-align: center;
+width: 130px;
+  border-radius: 40px;
+  background: #fff;
+  color: rgb(67, 154, 236);
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: 1px solid rgb(67, 154, 236);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+}
+
+.navbar a {
+  text-decoration: initial;
+}
+
 .navbar-title {
   float: right;
   margin-top: 28px;
   margin-right: 5vw;
   color: black;
-  font-size: 20px;
+  font-size: 21px;
   font-family: 'Lato';
 
-  -o-transition:.5s;
-  -ms-transition:.5s;
-  -moz-transition:.5s;
-  -webkit-transition:.5s;
-  transition:.5s;
+  -o-transition:.2s;
+  -ms-transition:.2s;
+  -moz-transition:.2s;
+  -webkit-transition:.2s;
+  transition:.2s;
   }
 
-.navbar-title:hover { color:rgb(55, 121, 184); }
+.navbar-title:hover { color:rgb(55, 121, 184); transform: scale(1.1); }
 
 a:hover {
   cursor: pointer;
@@ -254,7 +280,8 @@ a:hover
   }
 
   .navbar-title {
-    display: none;
+    margin-top: 25px;
+    /*display: none;*/
   }
 
   #menuToggle {

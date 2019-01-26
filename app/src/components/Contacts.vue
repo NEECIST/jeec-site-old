@@ -37,6 +37,9 @@
             <div id="copyright">
                 Copyright © 2019 - Jornadas de Engenharia Eletrotécnica e de Computadores do Instituto Superior Técnico
             </div>
+            <div id="source-code">
+                Code hosted on <a href="https://github.com/NEECIST/jeec19-webapp" target="_blank">Github</a>
+            </div>
         </div>
 
     </div>
@@ -57,11 +60,11 @@
 }
 
 .bottom-bar {
-  margin-top: 25px;
+  margin-top: 10px;
   width: 100%;
   height: 30px;
-  background-color: rgb(91, 170, 223);
-  color: white;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   position: relative;
   overflow: hidden;
   text-align: left;
@@ -73,22 +76,21 @@
   padding-bottom: 5px;
   padding-top: 9px;
   font-size: 13px;
-  width: 90%;
-  font-family: 'Roboto', sans-serif;
+  float: left;
+  font-family: 'Lato', sans-serif;
+}
+
+#source-code {
+  float: right;
+  font-family: 'Lato', sans-serif;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  padding-top: 9px;
+  font-size: 13px;
 }
 
 address {
     font-style: normal;
-}
-
-@media screen and (max-width: 900px){
-    .contact-location {
-        color: black;
-        font-size: 15px;
-        line-height: 10px;
-        font-family: "Roboto";
-        padding-left: 30px;
-    }
 }
 
 .flexbox-imgs {
@@ -101,7 +103,7 @@ address {
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 .flexbox-imgs img {
       justify-content: center;
@@ -143,6 +145,10 @@ address {
       padding-bottom: 0px;
   }
 
+  .source-code {
+      text-align: center;
+  }
+
   .bottom-bar {
       text-align: center;
       height: 50px;
@@ -154,7 +160,7 @@ address {
 }
 
 #contact .contact-info {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-align: center;
 }
 
@@ -196,7 +202,7 @@ address {
 #contact .contact-phone,
 #contact .contact-email {
   font-size: 18px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 @media screen and (max-width: 560px) {

@@ -14,6 +14,8 @@
               <div class="speaker-company">{{ speaker.company }}</div>
             </div>
 
+            <img class="speaker-company-logo" :src="speaker.company_logo"/>
+
             <div class="speaker-notes" v-html="speaker.notes"></div>
         </div>
     </div>
@@ -31,6 +33,7 @@ export default {
                 name: 'Jeremy Blum',
                 current_function: 'Head of Electrical Engineering',
                 company: 'Shaper, San Francisco',
+                company_logo: '../../static/speakers/shaper.png',
                 related_companies: [
                   {
                     name: 'Google',
@@ -47,7 +50,7 @@ export default {
                 name: 'Aida Peña',
                 current_function: 'Product Manager',
                 company: 'InterCloud, Paris',
-                
+                company_logo: '../../static/speakers/intercloud.png',
                 notes: ' ',
                 image: '../../static/aida_peña.svg'
               }
@@ -126,6 +129,11 @@ a {
   text-align: center;
 }
 
+.speaker-company-logo {
+  margin-top: 20px;
+  max-width: 150px;
+}
+
 .speaker-notes {
   margin-top: 20px;
   text-align: center;
@@ -169,7 +177,7 @@ a {
   }
 
   .speaker-card {
-    margin-top: 10px;
+    margin-top: 40px;
     border-radius: 20px;
     width: 300px;
   }
@@ -183,7 +191,7 @@ a {
 /* On screens that are 600px wide*/
 @media only screen and (max-width: 400px) {
   .speaker-card {
-    margin-top: 10px;
+    margin-top: 40px;
     border-radius: 20px;
     width: 80vw;
   }

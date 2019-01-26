@@ -16,7 +16,7 @@
     background: linear-gradient(122deg, rgba(107,191, 255, 0.7), rgba(63, 0, 70, 0.7)), url("https://www.projecttimes.com/media/k2/items/cache/6612da61425d98755836902a8bde1bce_XL.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 300px;
+    height: 50px;
     margin-bottom: 60px;
 }
 

@@ -31,7 +31,7 @@
     margin-top: 20px;
     margin-left: 9vw;
     margin-right: 9vw;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .partners-flex {
@@ -85,12 +85,12 @@
 
 @media screen and (max-width: 560px) {
   .partners-container {
-    margin-left: 4vw;
-    margin-right: 4vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
   }
 
   .partner-logo  {
-      max-width: 150px;
+      max-width: 160px;
       max-height: 60px;
       margin: 20px 10px;
   }
