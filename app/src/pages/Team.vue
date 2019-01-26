@@ -14,7 +14,7 @@
             </div>
             <img src="https://us.123rf.com/450wm/tupungato/tupungato1611/tupungato161100074/66488989-science-doodle-background-seamless-vector-texture-with-physics-concepts-.jpg?ver=6">
         </div>
-<img style="{ width: 40px; height: 40px;}" src="../../static/team/ana_amaro.svg">
+
         <div v-for="team in teams" :key="team.name">
             <div class="coordenacao">
                 <div class="title-div">{{ team.name }}</div>

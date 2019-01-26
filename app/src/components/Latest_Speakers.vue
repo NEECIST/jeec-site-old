@@ -4,19 +4,31 @@
 
     <div class="latest-speakers-flex">
         <div class="speaker-card" v-for="speaker in speakers" :key="speaker.name">
+
             <div><img class="speaker-image" :src="speaker.image"></div>
             
             <div class="speaker-name">{{ speaker.name }}</div>
-            <!--
+            
             <div class="speaker-current-function">{{ speaker.current_function }}</div>
-            -->
-            <div class="company-container">
-              <div class="speaker-company">{{ speaker.current_function }}</div>
+
+            <a :href="speaker.company_link" target="_blank"><img class="speaker-company-logo" :src="speaker.company_logo"/></a>
+
+            <div>
+              <div class="origin-text">{{ speaker.origin }}</div>
             </div>
 
-            <img class="speaker-company-logo" :src="speaker.company_logo"/>
-
             <div class="speaker-notes" v-html="speaker.notes"></div>
+
+            <div class="speaker-card-bottom">
+              <div class="speaker-links">
+                <a v-for="link in speaker.links" :key="link.link" :href="link.link" target="_blank"><img class="speaker-link-logo" :src="link.logo"/></a>
+              </div>
+
+              <div class="speaker-schedule">
+                <div class="speaker-schedule-day">{{ speaker.schedule.day }}</div>
+                <div class="speaker-schedule-hour">{{ speaker.schedule.hour }}</div>
+              </div>
+            </div>
         </div>
     </div>
     
@@ -32,27 +44,48 @@ export default {
               {
                 name: 'Jeremy Blum',
                 current_function: 'Head of Electrical Engineering',
-                company: 'Shaper, San Francisco',
                 company_logo: '../../static/speakers/shaper.png',
-                related_companies: [
+                company_link: 'https://www.shapertools.com/',
+                notes: '"My passion is using engineering to improve people’s lives, and giving people the tools they need to do the same."',
+                image: '../../static/speakers/jeremy_blum.svg',
+                origin: 'San Francisco',
+                links: [
                   {
-                    name: 'Google',
+                    link: 'https://www.youtube.com/channel/UC4KXPjmKwPutGjwFZsEXB5g',
+                    logo: '../../static/speakers/youtube.jpg'
+                  },
+                  {
+                    link: 'https://www.jeremyblum.com/',
                     logo: ''
                   },
                   {
-                    
+                    link: 'https://www.linkedin.com/in/jeremyeblum/',
+                    logo: '../../static/speakers/linkedin.png'
                   }
                 ],
-                notes: 'YouTuber and former Google worker. <div style="margin-bottom: 20px;"><a href="https://www.youtube.com/channel/UC4KXPjmKwPutGjwFZsEXB5g" style="float:left;margin-left:20%;">Youtube Channel</a><a href="https://www.jeremyblum.com/" style="float:right; margin-right:20%;">Website</a></div>',
-                image: '../../static/jeremy_blum.svg'
+                schedule: {
+                  day: '12 march',
+                  hour: '2 pm'
+                }
               },
               {
                 name: 'Aida Peña',
                 current_function: 'Product Manager',
-                company: 'InterCloud, Paris',
                 company_logo: '../../static/speakers/intercloud.png',
+                company_link: 'https://www.intercloud.com/',
                 notes: 'An experienced Product Manager who thrives on creating products that users find useful, usable and adapted to their real needs.',
-                image: '../../static/aida_peña.svg'
+                image: '../../static/speakers/aida_peña.svg',
+                origin: 'Paris',
+                links: [
+                  {
+                    link: 'https://www.linkedin.com/in/aidafernandez/?originalSubdomain=fr',
+                    logo: '../../static/speakers/linkedin.png'
+                  }
+                ],
+                schedule: {
+                  day: '12 march',
+                  hour: '3:30 pm'
+                }
               }
           ]
       }
@@ -76,8 +109,8 @@ export default {
   display: -ms-flexbox;      /* TWEENER - IE 10 */
   display: -webkit-flex;     /* NEW - Chrome */
   justify-content: space-between;
-  padding-left: 23vw;
-  padding-right: 23vw;
+  padding-left: 20vw;
+  padding-right: 20vw;
   text-align: center;
   margin-top: 20px;
 }
@@ -89,12 +122,22 @@ a {
 
 .speaker-card {
     background-color: #fafafa;
-    font-family: 'Roboto';
     padding-top: 20px;
     padding-bottom: 15px;
     border-radius: 20px;
-    width: 400px;
+    width: 450px;
     box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.3);
+}
+
+.origin-text {
+  font-family: 'Lato';
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.origin-logo, .origin-text {
+  display: inline-block;
 }
 
 .speaker-image {
@@ -113,6 +156,12 @@ a {
   height: 40px;
   margin-top: 10px;
   text-align: center;
+  font-family: 'Lato';
+  font-size: 18px;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #000000;
 }
 
 .company-container {
@@ -124,42 +173,87 @@ a {
   margin-top: 15px;
 }
 
-.speaker-company {
-  font-size: 20px;
-  color: white;
-  text-align: center;
+.speaker-company-logo {
+  max-width: 150px;
+  transition: all .2s ease-in-out;
 }
 
-.speaker-company-logo {
-  margin-top: 15px;
-  max-width: 150px;
+.speaker-company-logo:hover {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+    transform: scale(1.1); 
 }
 
 .speaker-notes {
   margin-top: 15px;
-  text-align: center;
+  padding-left: 13px;
+  padding-right: 13px;
+  font-family: 'Lato';
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #000000;
+  margin-bottom: 7px;
+}
+
+.speaker-card-bottom {
+  height: 60px;
+}
+
+.speaker-links {
+  margin-top: 20px;
+  width: 50%;
+  float: left;
+}
+
+.speaker-link-logo {
+  max-width: 30px;
+  margin-right: 15px;
+  transition: all .2s ease-in-out;
+}
+
+.speaker-link-logo:hover {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+    transform: scale(1.2); 
+}
+
+.speaker-schedule {
+  margin-top: 12px;
+  width: 50%;
+  float: right;
+}
+
+.speaker-schedule-day {
+  font-family: 'Lato';
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.speaker-schedule-hour {
+  font-family: 'Lato';
+  font-weight: bold;
+  font-size: 16px;
+  color: #3477f3;
+  margin-bottom: 5px;
 }
 
 /* On screens that are 992px wide or less*/
 @media only screen and (max-width: 1600px) {
   .latest-speakers-flex {
     justify-content: space-between;
-    padding-left: 15vw;
-    padding-right: 15vw;
+    padding-left: 13vw;
+    padding-right: 13vw;
   }
 
   .speaker-card {
-      width: 350px;
-  }
-
-  .speaker-image {
-      width: 130px;
-      height: 130px;
+      width: 450px;
   }
 }
 
 /* On screens that are 992px wide or less*/
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1200px) {
   .latest-speakers-flex {
     padding-left: 7vw;
     padding-right: 7vw;
@@ -179,8 +273,7 @@ a {
 
   .speaker-card {
     margin-top: 40px;
-    border-radius: 20px;
-    width: 300px;
+    width: 400px;
   }
 
   .speaker-image {
@@ -190,11 +283,11 @@ a {
 }
 
 /* On screens that are 600px wide*/
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 550px) {
   .speaker-card {
     margin-top: 40px;
     border-radius: 20px;
-    width: 80vw;
+    width: 310px;
   }
 
   .speaker-company {
@@ -204,6 +297,13 @@ a {
   .speaker-image {
     width: 100px;
     height: 100px;
+  }
+}
+
+/* On screens that are 600px wide*/
+@media only screen and (max-width: 350px) {
+  .speaker-card {
+    width: 280px;
   }
 }
 </style>
