@@ -32,5 +32,5 @@ export default new Router({
       redirect: '/404' 
     },  
   ],
-  mode: 'history'
+  /*mode: 'history'*/
 })
