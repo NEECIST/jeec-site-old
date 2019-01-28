@@ -13,20 +13,23 @@ export default new Router({
   scrollBehavior() {
     return { x: 0, y: 0 };
   },
-  mode: 'history',
   routes: [
     {
       path: '/',
       name: 'Home',
       component: Home
-    }, 
+    },
+    { 
+      path: '/404', 
+      component: Error_Handling 
+    },  
     { path: '*', 
-      redirect: Error_Handling 
+      redirect: '/404' 
     },
     /*{
       path: '/partners',
       name: 'Partners',
       component: Partners
     },*/  
-  ]
+  ],
 })
