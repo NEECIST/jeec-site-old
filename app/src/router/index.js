@@ -19,13 +19,9 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: Home
-    },
-    { 
-      path: '/404', 
-      component: Error_Handling 
-    },  
+    }, 
     { path: '*', 
-      redirect: '/404' 
+      redirect: Error_Handling 
     },
     /*{
       path: '/partners',
