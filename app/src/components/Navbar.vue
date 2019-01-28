@@ -3,11 +3,11 @@
         <router-link router-link :to="{ name: 'Home' }">
           <img class="navbar-left-logo" :src="navbar_logo_link">
         </router-link>
-
+        <!--
         <router-link class="navbar-title" router-link :to="{ name: 'Partners' }">
           Partners
         </router-link>
-    <!--
+    
         <router-link router-link :to="{ name: 'Team' }">
           <div class="navbar-title">{{ fourth_navbar_title }}</div>
         </router-link>

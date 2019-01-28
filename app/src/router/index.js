@@ -19,11 +19,11 @@ export default new Router({
       name: 'Home',
       component: Home
     },
-    {
+    /*{
       path: '/partners',
       name: 'Partners',
       component: Partners
-    },
+    },*/
     { 
       path: '/404', 
       component: Error_Handling 
