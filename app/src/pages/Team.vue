@@ -1,6 +1,5 @@
 <template>
     <div class="team-app">
-        <image-center-text text="Our Team"/>
 
        <div class="description-team">
            <div class="team-text">
