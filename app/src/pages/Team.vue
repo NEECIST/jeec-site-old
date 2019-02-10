@@ -387,7 +387,7 @@ export default {
 
     .description-team img{
         width: 475px;
-        top: 50px;
+        top: 150px;
     }
 
     .team{
