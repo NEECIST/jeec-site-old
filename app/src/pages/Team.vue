@@ -252,7 +252,7 @@ export default {
     transform: rotate(30deg);
     clip-path: polygon(0 0, 0 57.7%, 100% 0);
     position: absolute;
-    top:79px;
+    top:179px;
     left: -200px;
     z-index: 0;
 }
@@ -343,7 +343,7 @@ export default {
 
     .description-team img{
         width: 475px;
-        top: 149px;
+        top: 179px;
     }
     
     .team-flex {
