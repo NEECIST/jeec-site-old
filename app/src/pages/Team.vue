@@ -5,25 +5,24 @@
        <div class="description-team">
            <div class="team-text">
                 <div class="description-title">
-                    <span class="first-word-style"> JEEC'S</span> TEAM
+                    Our Team
                 </div>
 
-                <div class="description-text">Há 19 anos que trazemos ao Técnico os melhores
-                    empregadores de eletrotecnia!
+                <div class="description-text">For 19 years we have brought to IST some of the best
+                    employers of Electrical and Computer Engineers!
                 </div>
             </div>
             <img src="https://us.123rf.com/450wm/tupungato/tupungato1611/tupungato161100074/66488989-science-doodle-background-seamless-vector-texture-with-physics-concepts-.jpg?ver=6">
         </div>
 
-        <div v-for="team in teams" :key="team.name">
-            <div class="coordenacao">
-                <div class="title-div">{{ team.name }}</div>
-                <div class="team-flex2">
-                    <div v-for="member in team.members" :key="member.name">
-                        <div class="team-member">
-                            <img v-bind:src="member.picture">
-                            <p class="member-name">{{ member.name }}</p>
-                        </div>
+        <div class="team" v-for="team in teams" :key="team.name">
+            <component-title :title="team.name"/>
+
+            <div class="team-flex">
+                <div v-for="member in team.members" :key="member.name">
+                    <div class="team-member">
+                        <img v-bind:src="member.picture">
+                        <p class="member-name">{{ member.name }}</p>
                     </div>
                 </div>
             </div>
@@ -45,19 +44,19 @@ export default {
                 members: [
                     {
                         name: 'Ana Amaro',
-                        picture: '../../static/team/ana_amaro.svg'
+                        picture: '../../static/team/ana_amaro.png'
                     },
                     {
                         name: 'José Correia',
-                        picture: '../../static/team/jose_correia.svg'
+                        picture: '../../static/team/jose_correia.png'
                     },
                     {
                         name: 'Maria Teles',
-                        picture: '../../static/team/maria_teles.svg'
+                        picture: '../../static/team/maria_teles.png'
                     },
                     {
                         name: 'Rita Machado',
-                        picture: '../../static/team/rita_machado.svg'
+                        picture: '../../static/team/rita_machado.png'
                     }
                 ]
               },
@@ -66,67 +65,67 @@ export default {
                 members: [
                     {
                         name: 'Adelaide Ambrósio',
-                        picture: '../../static/team/adelaide.svg'
+                        picture: '../../static/team/adelaide.png'
                     },
                     {
                         name: 'André Pereira',
-                        picture: '../../static/team/andre.svg'
+                        picture: '../../static/team/andre.png'
                     },
                     {
                         name: 'Carolina Roque',
-                        picture: '../../static/team/carolina_roque.svg'
+                        picture: '../../static/team/carolina_roque.png'
                     },
                     {
                         name: 'Catarina Pires',
-                        picture: '../../static/team/catarina_pires.svg'
+                        picture: '../../static/team/catarina_pires.png'
                     },
                     {
                         name: 'Gonçalo Morais',
-                        picture: '../../static/team/gonçalo_morais.svg'
+                        picture: '../../static/team/gonçalo_morais.png'
                     },
                     {
                         name: 'Ion Ciobotari',
-                        picture: '../../static/team/ion.svg'
+                        picture: '../../static/team/ion.png'
                     },
                     {
                         name: 'Isabel Castelo',
-                        picture: '../../static/team/isabel_castelo.svg'
+                        picture: '../../static/team/isabel_castelo.png'
                     },
                     {
                         name: 'João Janeiro',
-                        picture: '../../static/team/joao_janeiro.svg'
+                        picture: '../../static/team/joao_janeiro.png'
                     },
-                    {
+                    /*{
                         name: 'Manuel Diniz',
                         picture: ''
                     },
                     {
                         name: 'Maria Salgueiro',
                         picture: ''
-                    },
+                    },*/
                     {
                         name: 'Matilde Peixoto',
-                        picture: '../../static/team/matilde_peixoto.svg'
+                        picture: '../../static/team/matilde_peixoto.png'
                     },
                     {
                         name: 'Nuno Pavia',
-                        picture: '../../static/team/nuno_paiva.svg'
+                        picture: '../../static/team/nuno_paiva.png'
                     },
                     {
                         name: 'Sérgio Marinheiro',
-                        picture: '../../static/team/sergio_marinheiro.svg'
+                        picture: '../../static/team/sergio_marinheiro.png'
                     },
                     {
                         name: 'Tarcísio Silva',
-                        picture: '../../static/team/tarcisio.svg'
-                    },
+                        picture: '../../static/team/tarcisio.png'
+                    },/*
                     {
                         name: 'Tiago Felizardo',
                         picture: ''
-                    },
+                    },*/
                     {
                         name: 'Vasco Araújo',
-                        picture: '../../static/team/vasco_araujo.svg'
+                        picture: '../../static/team/vasco_araujo.png'
                     }
                 ]
               },
@@ -135,39 +134,39 @@ export default {
                 members: [
                     {
                         name: 'Bárbara Correia',
-                        picture: '../../static/team/barbara_correia.svg'
+                        picture: '../../static/team/barbara_correia.png'
                     },
                     {
                         name: 'Bernardo Gonilho',
-                        picture: '../../static/team/bernardo_gonilho.svg'
+                        picture: '../../static/team/bernardo_gonilho.png'
                     },
                     {
                         name: 'Duarte Honrado',
-                        picture: '../../static/team/duarte_honrado.svg'
+                        picture: '../../static/team/duarte_honrado.png'
                     },
                     {
                         name: 'Pedro Martins',
-                        picture: '../../static/team/pedro_martins.svg'
-                    },
+                        picture: '../../static/team/pedro_martins.png'
+                    },/*
                     {
                         name: 'Sara Barroso',
                         picture: ''
-                    },
+                    },*/
                     {
                         name: 'Sofia Bebiano',
-                        picture: '../../static/team/sofia_bebiano.svg'
-                    },
+                        picture: '../../static/team/sofia_bebiano.png'
+                    },/*
                     {
                         name: 'Sophie Taboada',
                         picture: ''
-                    },
+                    },*/
                     {
                         name: 'Teresa Araújo',
-                        picture: '../../static/team/teresa_araújo.svg'
+                        picture: '../../static/team/teresa_araújo.png'
                     },
                     {
                         name: 'Tiago Brito',
-                        picture: '../../static/team/tiago_brito.svg'
+                        picture: '../../static/team/tiago_brito.png'
                     }
                 ]
               },
@@ -176,31 +175,31 @@ export default {
                 members: [
                     {
                         name: 'Ana Silvestre',
-                        picture: '../../static/team/catarina_silvestre.svg'
+                        picture: '../../static/team/catarina_silvestre.png'
                     },
                     {
                         name: 'Rita Pagaimo',
-                        picture: '../../static/team/rita_pagaimo.svg'
+                        picture: '../../static/team/rita_pagaimo.png'
                     },
                     {
                         name: 'Beatriz Silva',
-                        picture: '../../static/team/beatriz_silva.svg'
+                        picture: '../../static/team/beatriz_silva.png'
                     },
                     {
                         name: 'Inês Coelho',
-                        picture: '../../static/team/ines_coelho.svg'
+                        picture: '../../static/team/ines_coelho.png'
                     },
                     {
                         name: 'Madalena Ramos',
-                        picture: '../../static/team/madalena.svg'
+                        picture: '../../static/team/madalena.png'
                     },
                     {
                         name: 'Sara Bernardes',
-                        picture: '../../static/team/sara_bernardes.svg'
+                        picture: '../../static/team/sara_bernardes.png'
                     },
                     {
                         name: 'Tiago Silvério',
-                        picture: '../../static/team/tiago_silverio.svg'
+                        picture: '../../static/team/tiago_silverio.png'
                     }
                 ]
               },
@@ -209,27 +208,27 @@ export default {
                 members: [
                     {
                         name: 'Carlos Silva',
-                        picture: '../../static/team/carlos_silva.svg'
+                        picture: '../../static/team/carlos_silva.png'
                     },
                     {
                         name: 'Gilberto Silva',
-                        picture: '../../static/team/gilberto.svg'
+                        picture: '../../static/team/gilberto.png'
                     },
                     {
                         name: 'Guilherme Lopes',
-                        picture: '../../static/team/guilherme.svg'
+                        picture: '../../static/team/guilherme.png'
                     },
                     {
                         name: 'Ivan Andrushka',
-                        picture: '../../static/team/ivan.svg'
+                        picture: '../../static/team/ivan.png'
                     },
                     {
                         name: 'Marina Relvas',
-                        picture: '../../static/team/marina.svg'
+                        picture: '../../static/team/marina.png'
                     },
                     {
                         name: 'Raúl Vaqueiro',
-                        picture: '../../static/team/raul_vaqueiro.svg'
+                        picture: '../../static/team/raul_vaqueiro.png'
                     }
                 ]
               }
@@ -249,11 +248,11 @@ export default {
 }
 
 .description-team img{
-    width: 600px;
+    width: 700px;
     transform: rotate(30deg);
     clip-path: polygon(0 0, 0 57.7%, 100% 0);
     position: absolute;
-    top:110px;
+    top:79px;
     left: -200px;
     z-index: 0;
 }
@@ -273,103 +272,142 @@ export default {
     color: #505050;
     text-align: right;
     padding-top: 30px;
-    }
-
-.description-text{
-    font-size: 30px;
-    width: 600px;
-    text-align: right;
-    color: #505050;
-    padding-top: 20px;
 }
 
-.coordenacao{
-    height: 100%;
+.description-text{
+    margin-top: 10px;
+    background-color: rgb(95, 140, 179);
+    border-radius: 5px;
+    font-size: 30px;
+    font-family: 'Karla';
+    width: 750px;
+    padding-right: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-right: -40px;
+    text-align: right;
+    color: #ffffff;
+    line-height: 50px;
+}
+
+.team{
+    padding-top: 40px;
     background-color: #ecf7ff;
 }
 
-.title-div{
-    font-family: 'Raleway', sans-serif;
-    font-weight: bolder;
-    color: #1d67d5;
-    font-size: 60px;
-    letter-spacing: -1px;
-    padding-top: 30px;
-}
-
 .team-flex{
+    padding-left: 50px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-right: 115px;
-    margin-left: 115px;
+    justify-content: space-around;
+    margin-right: 8vw;
+    margin-left: 8vw;
     margin-top: 30px;
 }
-
 
 .team-flex img{
-    border-radius: 100%;
-    height: 220px;
-    width: 220px;
-    margin-top: 30px;
-}
-.team-flex2{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-right: 250px;
-    margin-left: 250px;
-    margin-top: 30px;
-}
-
-.team-flex2 img{
-    border-radius: 100%;
+    flex: 0 0 50%; margin-right: 60px;
     height: 220px;
     width: 220px;
     margin-top: 30px;
 }
 
 .member-name{
-    width: 120px;
-    font-size: 20px;
+    margin-left: 20%;
+    width: 100px;
+    font-size: 22px;
     text-align: center;
-    font-family:'Raleway', sans-serif;
+    font-family:'Lato', sans-serif;
     color: #262626;
-    margin-left: 50px;
 }
 
-.oradores{
-    background-color: #eeeeee;
-    height: 100%;
+
+@media screen and (max-width: 1200px) {
+    .team-flex {
+        padding-left: 12px;
+        margin-right: 5vw;
+        margin-left: 5vw;
+    }
 }
-@media screen and (max-width: 900px) {
+
+@media screen and (max-width: 800px) {
     .description-title{
         font-size: 40px;
     }
     .description-text{
-        font-size: 20px;
-        width: 400px;
+        font-size: 18px;
+        width: 320px;
+        padding-right: 40px;
+        line-height: 28px;
     }
 
     .description-team img{
-        width: 500px;
-        top: 142px;
+        width: 475px;
+        top: 149px;
     }
-    .title-div{
-        font-size: 40px;
+    
+    .team-flex {
+        padding-left: 12px;
+        margin-right: 5vw;
+        margin-left: 5vw;
     }
-    .team-flex, .team-flex2{
-        margin-left: 50px;
-        margin-right: 50px;
 
+    .team-flex img{
+        height: 140px;
+        width: 140px;
+        margin-top: 30px;
+        flex: 0 0 50%; margin-right: 10px;
     }
-    .team-flex img, .team-flex2 img{
-        width: 180px;
-        height: 180px;
-    }
+
     .member-name{
-        font-size: 20px;
-        margin-left:30px;
+        font-size: 17px;
+        margin-left:13%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .description-team{
+        height: 200px;
+        background-color:white;
+        position: relative;
+    }
+
+    .description-title{
+        font-size: 30px;
+        padding-top: 10px;
+    }
+
+    .description-text{
+        font-size: 16px;
+        width: 250px;
+        padding-right: 30px;
+        padding-left: 20px;
+        line-height: 24px;
+    }
+
+    .description-team img{
+        width: 475px;
+        top: 50px;
+    }
+
+    .team{
+        padding-top: 20px;
+    }
+    
+    .team-flex {
+        margin-right: 2vw;
+        margin-left: 2vw;
+    }
+
+    .team-flex img{
+        height: 120px;
+        width: 120px;
+        margin-top: 5px;
+        flex: 0 0 50%; margin-right: 10px;
+    }
+
+    .member-name{
+        margin-left:6%;
     }
 }
 </style>

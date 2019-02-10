@@ -19,6 +19,11 @@ import Component_Title from './components/Component_Title'
 
 import Partner_Tier from './components/Partner_Tier'
 
+import Workshops from './components/Workshops'
+import Matchmaking from './components/Matchmaking'
+import Job_Fair from './components/Job_Fair'
+
+
 import Posts from './components/Posts'
 
 import Image_Center_Text from './components/Image_Center_Text'
@@ -42,6 +47,10 @@ Vue.component('component-title', Component_Title)
 Vue.component('partner-tier', Partner_Tier)
 
 Vue.component('posts', Posts)
+
+Vue.component('workshops', Workshops)
+Vue.component('matchmaking', Matchmaking)
+Vue.component('job-fair', Job_Fair)
 
 Vue.component('image-center-text', Image_Center_Text)
 

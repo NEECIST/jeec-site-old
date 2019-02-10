@@ -2,10 +2,10 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/pages/Home'
 import Speakers from '@/pages/Speakers'
-/*import Team from '@/pages/Team'*/
+import Team from '@/pages/Team'
 import Partners from '@/pages/Partners'
 import Error_Handling from '@/pages/Error_Handling'
-import Schedule from '@/pages/Schedule'
+import Activities from '@/pages/Activities'
 
 Vue.use(Router)
 
@@ -18,6 +18,16 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: Home
+    },/*
+    {
+      path: '/activities',
+      name: 'Activities',
+      component: Activities
+    },*/
+    {
+      path: '/team',
+      name: 'Team',
+      component: Team
     },
     { 
       path: '/404', 

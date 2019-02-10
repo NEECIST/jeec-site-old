@@ -3,14 +3,17 @@
         <router-link router-link :to="{ name: 'Home' }">
           <img class="navbar-left-logo" :src="navbar_logo_link">
         </router-link>
+
         <!--
         <router-link class="navbar-title" router-link :to="{ name: 'Partners' }">
           Partners
-        </router-link>
+        </router-link>-->
     
         <router-link router-link :to="{ name: 'Team' }">
-          <div class="navbar-title">{{ fourth_navbar_title }}</div>
+          <div class="navbar-title">Team</div>
         </router-link>
+        
+        <!--
         <router-link router-link :to="{ name: 'Schedule' }">
           <div class="navbar-title">{{ third_navbar_title }}</div>
         </router-link>
@@ -19,9 +22,9 @@
         </router-link>
         <router-link router-link :to="{ name: 'Speakers' }">
           <div class="navbar-title">{{ first_navbar_title }}</div>
-        </router-link>
+        </router-link>-->
 
-      
+      <!--
         <div id="menuToggle">
           <input type="checkbox" />
     
@@ -55,10 +58,6 @@ export default {
   name: 'navbar',
   data() {
     return {
-      first_navbar_title: "Speakers",
-      second_navbar_title: "Partners",
-      third_navbar_title: "Schedule",
-      fourth_navbar_title: "Team",
       navbar_logo_link: "../../static/jeec_logo_small.svg"
     }
   },
@@ -118,10 +117,10 @@ width: 130px;
 
 .navbar-title {
   float: right;
-  margin-top: 28px;
+  margin-top: 26px;
   margin-right: 5vw;
   color: black;
-  font-size: 21px;
+  font-size: 24px;
   font-family: 'Lato';
 
   -o-transition:.2s;
@@ -280,7 +279,7 @@ a:hover
   }
 
   .navbar-title {
-    margin-top: 25px;
+    margin-top: 23px;
     /*display: none;*/
   }
 
