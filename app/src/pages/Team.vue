@@ -343,7 +343,7 @@ export default {
 
     .description-team img{
         width: 475px;
-        top: 179px;
+        top: 200px;
     }
     
     .team-flex {
