@@ -74,7 +74,7 @@ export default {
                 company_logo: '../../static/speakers/intercloud.png',
                 company_link: 'https://www.intercloud.com/',
                 notes: 'An experienced Product Manager who thrives on creating products that users find useful, usable and adapted to their real needs.',
-                image: '../../static/speakers/aida_peña.svg',
+                image: '../../static/speakers/aida_peña.png',
                 origin: 'Paris',
                 links: [
                   {
