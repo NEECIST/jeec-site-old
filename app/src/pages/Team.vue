@@ -306,7 +306,8 @@ export default {
 }
 
 .team-flex img{
-    flex: 0 0 50%; margin-right: 60px;
+    flex: 0 0 50%; 
+    margin-right: 60px;
     height: 220px;
     width: 220px;
     margin-top: 30px;

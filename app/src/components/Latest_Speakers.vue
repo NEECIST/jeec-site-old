@@ -86,6 +86,21 @@ export default {
                   day: '12 march',
                   hour: '3:30 pm'
                 }
+              },
+              {
+                name: 'Fernando Silva',
+                current_function: 'Director of Energy Management',
+                company_logo: '../../static/speakers/siemens.png',
+                company_link: 'https://new.siemens.com/pt/pt.html',
+                notes: 'Expert in the areas of intelligent electrical grids, efficient buildings and electrical mobility.',
+                image: '../../static/speakers/fernando_silva.png',
+                origin: 'Portugal',
+                links: [
+                ],
+                schedule: {
+                  day: '13 march',
+                  hour: '3:30 pm'
+                }
               }
           ]
       }
@@ -108,9 +123,10 @@ export default {
   display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
   display: -ms-flexbox;      /* TWEENER - IE 10 */
   display: -webkit-flex;     /* NEW - Chrome */
-  justify-content: space-between;
-  padding-left: 20vw;
-  padding-right: 20vw;
+  justify-content: space-around;
+  flex: wrap;
+  padding-left: 5vw;
+  padding-right: 5vw;
   text-align: center;
   margin-top: 20px;
 }
@@ -123,9 +139,9 @@ a {
 .speaker-card {
     background-color: #fafafa;
     padding-top: 20px;
-    padding-bottom: 15px;
+    padding-bottom: 5px;
     border-radius: 20px;
-    width: 450px;
+    width: 400px;
     box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.3);
 }
 
@@ -242,25 +258,27 @@ a {
 /* On screens that are 992px wide or less*/
 @media only screen and (max-width: 1600px) {
   .latest-speakers-flex {
-    justify-content: space-between;
-    padding-left: 13vw;
-    padding-right: 13vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
   }
 
   .speaker-card {
-      width: 450px;
+      width: 350px;
   }
 }
 
 /* On screens that are 992px wide or less*/
 @media only screen and (max-width: 1200px) {
   .latest-speakers-flex {
+    justify-content: space-between;
+    display: inline-block;
     padding-left: 7vw;
     padding-right: 7vw;
   }
   
   .speaker-card {
-      width: 350px;
+    margin-top: 40px;
+      width: 450px;
   }
 }
 
@@ -277,8 +295,8 @@ a {
   }
 
   .speaker-image {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
   }
 }
 
@@ -294,16 +312,20 @@ a {
     font-size: 17px;
   }
 
-  .speaker-image {
-    width: 100px;
-    height: 100px;
+  .speaker-name {
+    margin-top: 10px;
   }
 }
 
-/* On screens that are 600px wide*/
+/* On screens that are 350px wide*/
 @media only screen and (max-width: 350px) {
   .speaker-card {
     width: 280px;
+  }
+
+  .speaker-image {
+    width: 130px;
+    height: 130px;
   }
 }
 </style>
