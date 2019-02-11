@@ -70,7 +70,7 @@ export default {
 
 .date-location {
     width: 100%;
-    height: 42px;
+    height: 80px;
     font-family: 'Roboto', sans-serif;
     font-size: 28px;
     font-weight: 500;
@@ -84,7 +84,7 @@ export default {
 }
 
 .logo-home {
-    margin-top: 50px;
+    margin-top: 0px;
     max-width: 100%;
     height: auto;
     width: 1100px;

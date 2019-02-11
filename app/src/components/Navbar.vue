@@ -3,7 +3,8 @@
         <router-link router-link :to="{ name: 'Home' }">
           <img class="navbar-left-logo" :src="navbar_logo_link">
         </router-link>
-
+        
+        
         <!--
         <router-link class="navbar-title" router-link :to="{ name: 'Partners' }">
           Partners
@@ -12,7 +13,10 @@
         <router-link router-link :to="{ name: 'Team' }">
           <div class="navbar-title">Team</div>
         </router-link>
-        
+        <div class="join-quote">Do you want to join our team during the week of the event? <span style="margin-left: 20px; margin-right: 5px;">Apply to the</span></div>
+
+        <a class="register-button" :href="form_link" target="_blank">volunteering</a>
+
         <!--
         <router-link router-link :to="{ name: 'Schedule' }">
           <div class="navbar-title">{{ third_navbar_title }}</div>
@@ -58,6 +62,7 @@ export default {
   name: 'navbar',
   data() {
     return {
+      form_link: 'https://docs.google.com/forms/d/e/1FAIpQLScGDBAYDkulB1g7fsDmm5Covn-cDCqVRm9HlnYseK0uyxetxg/viewform',
       navbar_logo_link: "../../static/jeec_logo_small.svg"
     }
   },
@@ -109,6 +114,39 @@ width: 130px;
   padding-top: 5px;
   padding-bottom: 10px;
   border-radius: 20px;
+}
+
+.join-quote {
+    font-family: 'Roboto';
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.register-button {
+    background-color: rgb(66, 161, 199);
+    color: white;
+    border-radius: 5px;
+    padding: 0.5em 0.7em;
+    font-weight: 600;
+    font-size: 16px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+  transition: all .2s ease-in-out;
+  letter-spacing: 1.5px;
+}
+
+
+.register-button:hover {
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.3);
+  transform: scale(1.03); 
+  cursor: pointer;
+  color: white;
+}
+
+.join-quote, .register-button {
+    display: inline-block;
 }
 
 .navbar a {
@@ -266,6 +304,16 @@ a:hover
   transform: none;
 }
 
+@media only screen and (max-width: 1100px) {
+  .join-quote {
+    display: none;
+  }
+
+  .register-button {
+    margin-top: 24px;
+  }
+}
+
 /* On screens that are 600px wide*/
 @media only screen and (max-width: 600px) {
   .navbar {
@@ -285,6 +333,18 @@ a:hover
 
   #menuToggle {
     display: block;
+  }
+
+  .register-button {
+    margin-top: 24px;
+    font-size: 14px;
+    letter-spacing: 0.8px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+.register-button {
+    margin-top: 30px;
   }
 }
 </style>

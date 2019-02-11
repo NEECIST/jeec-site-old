@@ -23,7 +23,6 @@ import Workshops from './components/Workshops'
 import Matchmaking from './components/Matchmaking'
 import Job_Fair from './components/Job_Fair'
 
-
 import Posts from './components/Posts'
 
 import Image_Center_Text from './components/Image_Center_Text'
