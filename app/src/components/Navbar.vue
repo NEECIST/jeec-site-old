@@ -66,7 +66,7 @@ export default {
     return {
       form_link: 'https://docs.google.com/forms/d/e/1FAIpQLScGDBAYDkulB1g7fsDmm5Covn-cDCqVRm9HlnYseK0uyxetxg/viewform',
       navbar_logo_link: "../../static/jeec_logo_small.svg",
-      navbar_mobile_logo_link: "../../static/jeec_logo_small_mobile.png"
+      navbar_mobile_logo_link: "../../static/jeec_logo_mobile.svg"
     }
   },
 
