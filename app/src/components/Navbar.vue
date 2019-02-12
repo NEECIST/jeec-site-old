@@ -2,6 +2,8 @@
     <div class="navbar">
         <router-link router-link :to="{ name: 'Home' }">
           <img class="navbar-left-logo" :src="navbar_logo_link">
+
+          <img class="navbar-left-logo-mobile" :src="navbar_mobile_logo_link">
         </router-link>
         
         
@@ -63,7 +65,8 @@ export default {
   data() {
     return {
       form_link: 'https://docs.google.com/forms/d/e/1FAIpQLScGDBAYDkulB1g7fsDmm5Covn-cDCqVRm9HlnYseK0uyxetxg/viewform',
-      navbar_logo_link: "../../static/jeec_logo_small.svg"
+      navbar_logo_link: "../../static/jeec_logo_small.svg",
+      navbar_mobile_logo_link: "../../static/jeec_logo_small_mobile.png"
     }
   },
 
@@ -96,6 +99,10 @@ export default {
   margin-left: 20px;
   margin-top: 20px;
   float: left;
+}
+
+.navbar-left-logo-mobile {
+  display: none;
 }
 
 .partners-button {
@@ -321,9 +328,15 @@ a:hover
   }
 
   .navbar-left-logo {
-    width: 100px;
-    margin-left: 15px;
-    margin-top: 24px;
+    display: none;
+  }
+
+  .navbar-left-logo-mobile {
+    display: block;
+    width: 50px;
+    margin-left: 20px;
+    margin-top: 10px;
+    float: left;
   }
 
   .navbar-title {

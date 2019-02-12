@@ -25,12 +25,12 @@
         </section>
 
         <div class="flexbox-imgs">
-            <img href="http://www.vtxrm.com/" src="../../static/vtxrm.png">
-            <img href="https://www.santandertotta.pt/pt_PT/Particulares/Universitarios.html" src="../../static/santander_logo.png">
-            <img href="https://tecnico.ulisboa.pt/pt/" src="../../static/ist_logo.png">
+            <a href="http://www.vtxrm.com/" target="_blank"><img src="../../static/partner-logos/vtxrm.png"></a>
+            <a href="https://www.santandertotta.pt/pt_PT/Particulares/Universitarios.html" target="_blank"><img src="../../static/santander_logo.png"></a>
+            <a href="https://tecnico.ulisboa.pt/pt/" target="_blank"><img src="../../static/ist_logo.png"></a>
 
             <a href="https://neecist.org/" target="_blank"><img src="../../static/neec_logo.png"></a>
-            <img href="https://fenix.tecnico.ulisboa.pt/departamentos/deec" src="../../static/deec_logo.png">
+            <a href="https://fenix.tecnico.ulisboa.pt/departamentos/deec" target="_blank"><img src="../../static/deec_logo.png"></a>
         </div>
 
         <div class="bottom-bar">
