@@ -25,8 +25,8 @@
               </div>
 
               <div class="speaker-schedule">
-                <div class="speaker-schedule-day">{{ speaker.schedule.day }}</div>
-                <div class="speaker-schedule-hour">{{ speaker.schedule.hour }}</div>
+                <div class="speaker-schedule-day">{{ speaker.schedule.date }}</div>
+                <div class="speaker-schedule-hour">{{ speaker.schedule.time }}</div>
               </div>
             </div>
         </div>
@@ -64,8 +64,8 @@ export default {
                   }
                 ],
                 schedule: {
-                  day: '12 march',
-                  hour: '2 pm'
+                  date: '12 march',
+                  time: '2 pm'
                 }
               },
               {
@@ -83,8 +83,8 @@ export default {
                   }
                 ],
                 schedule: {
-                  day: '12 march',
-                  hour: '3:30 pm'
+                  date: '12 march',
+                  time: '3:30 pm'
                 }
               },
               {
@@ -98,8 +98,8 @@ export default {
                 links: [
                 ],
                 schedule: {
-                  day: '13 march',
-                  hour: '3:30 pm'
+                  date: '13 march',
+                  time: '3:30 pm'
                 }
               }
           ]
@@ -108,7 +108,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .latest-speakers-comp {
   width: 100%;
   background-color: #dfe6f5;
