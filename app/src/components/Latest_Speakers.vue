@@ -48,7 +48,7 @@ export default {
                 company_link: 'https://www.shapertools.com/',
                 notes: '"My passion is using engineering to improve people’s lives, and giving people the tools they need to do the same."',
                 image: '../../static/speakers/jeremy_blum.svg',
-                origin: 'San Francisco',
+                origin: 'San Francisco, California',
                 links: [
                   {
                     link: 'https://www.youtube.com/channel/UC4KXPjmKwPutGjwFZsEXB5g',
@@ -67,7 +67,7 @@ export default {
                   day: '12 march',
                   hour: '2 pm'
                 }
-              },
+              },/*
               {
                 name: 'Aida Peña',
                 current_function: 'Product Manager',
@@ -85,6 +85,25 @@ export default {
                 schedule: {
                   day: '12 march',
                   hour: '3:30 pm'
+                }
+              },*/
+              {
+                name: 'Vicki Ferguson',
+                current_function: 'Lead Programmer',
+                company_logo: '../../static/speakers/ubisoft.png',
+                company_link: 'https://www.ubisoft.com/',
+                notes: 'Lead Programmer on ‘Eagle Flight’, the first virtual reality game released by Ubisoft Montreal and winner of the 2017 D.I.C.E. award.',
+                image: '../../static/speakers/vicki_ferguson.png',
+                origin: 'Montreal, Canada',
+                links: [
+                  {
+                    link: 'https://www.linkedin.com/in/vicki-ferguson-63aa491/',
+                    logo: '../../static/speakers/linkedin.png'
+                  }
+                ],
+                schedule: {
+                  day: '14 march',
+                  hour: '2:00 pm'
                 }
               },
               {
@@ -191,6 +210,7 @@ a {
 
 .speaker-company-logo {
   max-width: 150px;
+  max-height: 45px;
   transition: all .2s ease-in-out;
 }
 
