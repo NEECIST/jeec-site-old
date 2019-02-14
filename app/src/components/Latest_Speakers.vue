@@ -103,7 +103,7 @@ export default {
                 ],
                 schedule: {
                   day: '14 march',
-                  hour: '2:00 pm'
+                  hour: '2 pm'
                 }
               },
               {
