@@ -188,7 +188,7 @@ a {
 }
 
 .speaker-current-function {
-  height: 40px;
+  height: 35px;
   margin-top: 10px;
   text-align: center;
   font-family: 'Lato';
@@ -199,18 +199,9 @@ a {
   color: #000000;
 }
 
-.company-container {
-  width: 100%;
-  background-color: rgb(41, 141, 235);
-  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-top: 15px;
-}
-
 .speaker-company-logo {
-  max-width: 150px;
-  max-height: 45px;
+  max-width: 160px;
+  max-height: 40px;
   transition: all .2s ease-in-out;
 }
 
