@@ -129,23 +129,23 @@ export default {
           }
         },
         {
-                name: 'Vicki Ferguson',
-                current_function: 'Lead Programmer',
-                company_logo: '../../static/speakers/ubisoft.png',
-                company_link: 'https://www.ubisoft.com/',
-                notes: 'Lead Programmer on ‘Eagle Flight’, the first virtual reality game released by Ubisoft Montreal and winner of the 2017 D.I.C.E. award.',
-                image: '../../static/speakers/vicki_ferguson.png',
-                origin: 'Montreal, Canada',
-                links: [
-                  {
-                    link: 'https://www.linkedin.com/in/vicki-ferguson-63aa491/',
-                    logo: '../../static/speakers/linkedin.png'
-                  }
-                ],
-                schedule: {
-                  day: '14 march',
-                  hour: '2 pm'
-                }
+          name: 'Vicki Ferguson',
+          current_function: 'Lead Programmer',
+          company_logo: '../../static/speakers/ubisoft.png',
+          company_link: 'https://www.ubisoft.com/',
+          notes: 'Lead Programmer on ‘Eagle Flight’, the first virtual reality game released by Ubisoft Montreal and winner of the 2017 D.I.C.E. award.',
+          image: '../../static/speakers/vicki_ferguson.png',
+          origin: 'Montreal, Canada',
+          links: [
+            {
+              link: 'https://www.linkedin.com/in/vicki-ferguson-63aa491/',
+              logo: '../../static/speakers/linkedin.png'
+            }
+          ],
+          schedule: {
+            day: '14 march',
+            hour: '2 pm'
+          }
         }
       ]
     };
@@ -169,11 +169,10 @@ export default {
   display: -ms-flexbox; /* TWEENER - IE 10 */
   display: -webkit-flex; /* NEW - Chrome */
   justify-content: space-around;
-  flex: wrap;
+  flex-wrap: wrap;
   padding-left: 5vw;
   padding-right: 5vw;
   text-align: center;
-  margin-top: 20px;
   margin-bottom: 20px;
 }
 
@@ -189,6 +188,7 @@ a {
   border-radius: 20px;
   width: 400px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
 }
 
 .origin-text {
