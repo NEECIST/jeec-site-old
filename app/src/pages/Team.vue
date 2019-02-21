@@ -107,6 +107,10 @@ export default {
                         picture: '../../static/team/matilde_peixoto.png'
                     },
                     {
+                        name: 'Pedro Fernandes',
+                        picture: '../../static/team/pedro_fernandes.png'
+                    },
+                    {
                         name: 'Nuno Pavia',
                         picture: '../../static/team/nuno_pavia.png'
                     },
