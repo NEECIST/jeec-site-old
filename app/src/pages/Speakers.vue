@@ -7,7 +7,4 @@
 
 
 <style>
-.speakers-app {
-    padding-top: 100px;
-}
 </style>
