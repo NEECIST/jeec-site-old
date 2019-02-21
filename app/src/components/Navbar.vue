@@ -12,9 +12,15 @@
           Partners
         </router-link>-->
     
+
         <router-link router-link :to="{ name: 'Team' }">
           <div class="navbar-title">Team</div>
         </router-link>
+
+        <router-link router-link :to="{ name: 'Speakers' }">
+          <div class="navbar-title">Speakers</div>
+        </router-link>
+
         <div class="join-quote">Do you want to join our team during the week of the event? <span style="margin-left: 20px; margin-right: 5px;">Apply to the</span></div>
 
         <a class="register-button" :href="form_link" target="_blank">volunteering</a>
@@ -311,7 +317,7 @@ a:hover
   transform: none;
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1250px) {
   .join-quote {
     display: none;
   }
