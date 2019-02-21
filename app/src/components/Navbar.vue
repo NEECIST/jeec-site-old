@@ -6,7 +6,6 @@
           <img class="navbar-left-logo-mobile" :src="navbar_mobile_logo_link">
         </router-link>
         
-        
         <!--
         <router-link class="navbar-title" router-link :to="{ name: 'Partners' }">
           Partners
@@ -25,6 +24,29 @@
 
         <a class="register-button" :href="form_link" target="_blank">volunteering</a>
 
+        <div id="menuToggle">
+          <input type="checkbox" />
+    
+          <span></span>
+          <span></span>
+          <span></span>
+    
+          <ul id="menu">
+            <router-link router-link :to="{ name: 'Speakers' }">
+             <li>Speakers</li>
+            </router-link>
+            <router-link router-link :to="{ name: 'Partners' }">
+              <li>Partners</li>
+            </router-link>
+            <router-link router-link :to="{ name: 'Schedule' }">
+             <li>Schedule</li>
+            </router-link>
+            <router-link router-link :to="{ name: 'Team' }">
+              <li>Team</li>
+            </router-link>
+          </ul>
+        </div>
+        
         <!--
         <router-link router-link :to="{ name: 'Schedule' }">
           <div class="navbar-title">{{ third_navbar_title }}</div>
@@ -35,33 +57,6 @@
         <router-link router-link :to="{ name: 'Speakers' }">
           <div class="navbar-title">{{ first_navbar_title }}</div>
         </router-link>-->
-
-      <!--
-        <div id="menuToggle">
-          <input type="checkbox" />
-    
-          <span></span>
-          <span></span>
-          <span></span>
-    
-          <ul id="menu">
-            <router-link router-link :to="{ name: 'Home' }">
-             <li>Home</li>
-            </router-link>
-            <router-link router-link :to="{ name: 'Speakers' }">
-             <li>{{ first_navbar_title }}</li>
-            </router-link>
-            <router-link router-link :to="{ name: 'Partners' }">
-              <li>{{ second_navbar_title }}</li>
-            </router-link>
-            <router-link router-link :to="{ name: 'Schedule' }">
-             <li>{{ third_navbar_title }}</li>
-            </router-link>
-            <router-link router-link :to="{ name: 'Team' }">
-              <li>{{ fourth_navbar_title }}</li>
-            </router-link>
-          </ul>
-        </div>-->
     </div>
 </template>
 
@@ -214,9 +209,10 @@ a:hover
 #menuToggle
 {
   display: none;
+  float: right;
   position: relative;
   top: 25px;
-  left: 85vw;
+  right: 5vw;
   z-index: 1;
   -webkit-user-select: none;
   user-select: none;
@@ -290,7 +286,7 @@ a:hover
 #menu
 {
   position: absolute;
-  width: 100%;
+  width: 100vw;
   margin-left: -98vw;
   padding: 50px;
   padding-top: 50px;
@@ -347,7 +343,7 @@ a:hover
 
   .navbar-title {
     margin-top: 23px;
-    /*display: none;*/
+    display: none;
   }
 
   #menuToggle {
