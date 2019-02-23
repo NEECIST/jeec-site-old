@@ -42,6 +42,25 @@ export default {
       return {
           speakers: [
               {
+                name: 'Konstantinos Laskaris',
+                current_function: 'Principal Motor Designer',
+                company_logo: '../../static/speakers/tesla.png',
+                company_link: 'https://www.tesla.com/',
+                notes: 'An expert in high performance powertrain systems. He was also a central piece in the development of the linear motor for the Hyperloop.',
+                image: '../../static/speakers/konstantinos_laskaris.png',
+                origin: 'San Francisco, California',
+                links: [
+                  {
+                    link: 'https://www.linkedin.com/in/konstantinos-laskaris-95b40a',
+                    logo: '../../static/speakers/linkedin.png'
+                  }
+                ],
+                schedule: {
+                  day: '15 march',
+                  hour: '2 pm'
+                }
+              },
+              /*{
                 name: 'Jeremy Blum',
                 current_function: 'Head of Electrical Engineering',
                 company_logo: '../../static/speakers/shaper.png',
@@ -67,7 +86,7 @@ export default {
                   day: '12 march',
                   hour: '2 pm'
                 }
-              },/*
+              },
               {
                 name: 'Aida Peña',
                 current_function: 'Product Manager',
@@ -111,7 +130,7 @@ export default {
                 current_function: 'Director of Energy Management',
                 company_logo: '../../static/speakers/siemens.png',
                 company_link: 'https://new.siemens.com/pt/pt.html',
-                notes: 'Expert in the areas of intelligent electrical grids, efficient buildings and electrical mobility.',
+                notes: 'Expert in the areas of intelligent electrical grids, efficient buildings and electrical mobility.<p> "The future is here, and it runs on electricity".',
                 image: '../../static/speakers/fernando_silva.png',
                 origin: 'Portugal',
                 links: [
@@ -156,7 +175,7 @@ a {
 }
 
 .speaker-card {
-    background-color: #fafafa;
+    background-color: #ffffff;
     padding-top: 20px;
     padding-bottom: 5px;
     border-radius: 20px;
@@ -200,8 +219,8 @@ a {
 }
 
 .speaker-company-logo {
-  max-width: 160px;
-  max-height: 40px;
+  max-width: 195px;
+  max-height: 55px;
   transition: all .2s ease-in-out;
 }
 
