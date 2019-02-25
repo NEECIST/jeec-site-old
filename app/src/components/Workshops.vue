@@ -42,7 +42,8 @@ export default {
                     time: "12 pm",
                     logo: "../../static/partner-logos/bcg.png",
                     eventbride_link: "",
-                    registration_open: false
+                    registration_open: false,
+                    /*full: false*/
                 },
                 {
                     company: "Outsystems",

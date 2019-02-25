@@ -94,21 +94,29 @@ export default {
                         name: 'João Janeiro',
                         picture: '../../static/team/joao_janeiro.png'
                     },
-                    /*{
+                    {
                         name: 'Manuel Diniz',
-                        picture: ''
+                        picture: '../../static/team/manuel_diniz.png'
                     },
                     {
                         name: 'Maria Salgueiro',
-                        picture: ''
-                    },*/
+                        picture: '../../static/team/maria_salgueiro.png'
+                    },
                     {
                         name: 'Matilde Peixoto',
                         picture: '../../static/team/matilde_peixoto.png'
                     },
                     {
+                        name: 'Pedro Fernandes',
+                        picture: '../../static/team/pedro_fernandes.png'
+                    },
+                    {
                         name: 'Nuno Pavia',
-                        picture: '../../static/team/nuno_paiva.png'
+                        picture: '../../static/team/nuno_pavia.png'
+                    },
+                    {
+                        name: 'Rui Paiva',
+                        picture: '../../static/team/rui_paiva.png'
                     },
                     {
                         name: 'Sérgio Marinheiro',
@@ -117,11 +125,11 @@ export default {
                     {
                         name: 'Tarcísio Silva',
                         picture: '../../static/team/tarcisio.png'
-                    },/*
+                    },
                     {
                         name: 'Tiago Felizardo',
-                        picture: ''
-                    },*/
+                        picture: '../../static/team/tiago_felizardo.png'
+                    },
                     {
                         name: 'Vasco Araújo',
                         picture: '../../static/team/vasco_araujo.png'
@@ -154,11 +162,11 @@ export default {
                     {
                         name: 'Sofia Bebiano',
                         picture: '../../static/team/sofia_bebiano.png'
-                    },/*
+                    },
                     {
                         name: 'Sophie Taboada',
-                        picture: ''
-                    },*/
+                        picture: '../../static/team/sophie_taboada.png'
+                    },
                     {
                         name: 'Teresa Araújo',
                         picture: '../../static/team/teresa_araújo.png'

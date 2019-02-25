@@ -42,13 +42,32 @@ export default {
       return {
           speakers: [
               {
+                name: 'Konstantinos Laskaris',
+                current_function: 'Principal Motor Designer',
+                company_logo: '../../static/speakers/tesla.png',
+                company_link: 'https://www.tesla.com/',
+                notes: 'An expert in high performance powertrain systems. He was also a central piece in the development of the linear motor for the Hyperloop.',
+                image: '../../static/speakers/konstantinos_laskaris.png',
+                origin: 'San Francisco, California',
+                links: [
+                  {
+                    link: 'https://www.linkedin.com/in/konstantinos-laskaris-95b40a',
+                    logo: '../../static/speakers/linkedin.png'
+                  }
+                ],
+                schedule: {
+                  day: '15 march',
+                  hour: '2 pm'
+                }
+              },
+              /*{
                 name: 'Jeremy Blum',
                 current_function: 'Head of Electrical Engineering',
                 company_logo: '../../static/speakers/shaper.png',
                 company_link: 'https://www.shapertools.com/',
                 notes: '"My passion is using engineering to improve people’s lives, and giving people the tools they need to do the same."',
                 image: '../../static/speakers/jeremy_blum.svg',
-                origin: 'San Francisco',
+                origin: 'San Francisco, California',
                 links: [
                   {
                     link: 'https://www.youtube.com/channel/UC4KXPjmKwPutGjwFZsEXB5g',
@@ -86,13 +105,32 @@ export default {
                   date: '12 march',
                   time: '3:30 pm'
                 }
+              },*/
+              {
+                name: 'Vicki Ferguson',
+                current_function: 'Lead Programmer',
+                company_logo: '../../static/speakers/ubisoft.png',
+                company_link: 'https://www.ubisoft.com/',
+                notes: 'Lead Programmer on ‘Eagle Flight’, the first virtual reality game released by Ubisoft Montreal and winner of the 2017 D.I.C.E. award.',
+                image: '../../static/speakers/vicki_ferguson.png',
+                origin: 'Montreal, Canada',
+                links: [
+                  {
+                    link: 'https://www.linkedin.com/in/vicki-ferguson-63aa491/',
+                    logo: '../../static/speakers/linkedin.png'
+                  }
+                ],
+                schedule: {
+                  day: '14 march',
+                  hour: '2 pm'
+                }
               },
               {
                 name: 'Fernando Silva',
                 current_function: 'Director of Energy Management',
                 company_logo: '../../static/speakers/siemens.png',
                 company_link: 'https://new.siemens.com/pt/pt.html',
-                notes: 'Expert in the areas of intelligent electrical grids, efficient buildings and electrical mobility.',
+                notes: 'Expert in the areas of intelligent electrical grids, efficient buildings and electrical mobility.<p> "The future is here, and it runs on electricity".',
                 image: '../../static/speakers/fernando_silva.png',
                 origin: 'Portugal',
                 links: [
@@ -137,7 +175,7 @@ a {
 }
 
 .speaker-card {
-    background-color: #fafafa;
+    background-color: #ffffff;
     padding-top: 20px;
     padding-bottom: 5px;
     border-radius: 20px;
@@ -169,7 +207,7 @@ a {
 }
 
 .speaker-current-function {
-  height: 40px;
+  height: 35px;
   margin-top: 10px;
   text-align: center;
   font-family: 'Lato';
@@ -180,17 +218,9 @@ a {
   color: #000000;
 }
 
-.company-container {
-  width: 100%;
-  background-color: rgb(41, 141, 235);
-  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-top: 15px;
-}
-
 .speaker-company-logo {
-  max-width: 150px;
+  max-width: 195px;
+  max-height: 55px;
   transition: all .2s ease-in-out;
 }
 
