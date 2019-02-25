@@ -7,6 +7,12 @@
         <span v-html="text"></span>
       </div>
 
+      <!--<div class="activities-container">
+        <div class="activity-flex">
+          <span v-for="activity in activities" v-html="activity" v-bind:key="activity"/>
+        </div>
+      </div>-->
+
   </div>
 </template>
 
@@ -15,7 +21,13 @@ export default {
   name: 'who-are-we',
   data() {
     return {
-      text: 'An event organized by <b>IST</b> students, whose main purpose is to promote the approximation and integration of the students in the business world.<p>Activities provided by JEEC such as:<div style="line-height: 20px;"><p><b>Job Fair</b></p><p><b>Panel Discussions</b></p><p><b>Workshops</b></p><p><b>Matchmaking sessions</b></p></div> are open, <b>free of charge</b>, to a student community of over <b>11.400</b> students.</p>',
+      activities: [
+        'Job Fair',
+        'Panel Discussions',
+        'Workshops',
+        'Matchmaking sessions'
+      ],
+      text: 'A group of <b>IST</b> students, whose main purpose is the organization of an event that intends to close the gap between the business world and university life.<p>Participation is free of charge and open to an 11.400 strong student community.</p><p>Activities available at JEEC:<div style="line-height: 20px;"><p><b>Job Fair</b></p><p><b>Panel Discussions</b></p><p><b>Workshops</b></p><p><b>Matchmaking sessions</b></p></div></p>',
     }
   },
 

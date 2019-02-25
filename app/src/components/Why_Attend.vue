@@ -12,7 +12,7 @@
                     <div class="reason-to-come" v-for="icon in group.icons" :key="icon.link">
                         <div><img class="icon" :src="icon.link"></div>
                         
-                        <div class="icon-text">{{ icon.description }}</div>
+                        <div class="icon-text" v-html="icon.description"/>
                     </div>
                 </div>
             </div>
@@ -33,15 +33,15 @@ export default {
                 icons: [
                     {
                         link: '../../static/organized_by_students.svg',
-                        description: 'Organized by students, for the students'
+                        description: 'Organized <b>by</b> students, <b>for</b> students'
                     },
                     {
                         link: '../../static/high_academic_value.svg',
-                        description: 'Promote yourself next to top-class companies'
+                        description: 'Get in touch with leading tech companies'
                     },
                     {
                         link: '../../static/quality_speakers.svg',
-                        description: 'Quality speakers from the engineering areas'
+                        description: 'High profile <b>guest speakers</b> from all over the world'
                     }
                 ]
               },
@@ -50,15 +50,15 @@ export default {
                 icons: [
                     {
                         link: '../../static/find_the_best_students.svg',
-                        description: 'Find the best graduating students'
+                        description: 'Connect with the best <b>graduating students</b>'
                     },
                     {
                         link: '../../static/publicize_your_company.svg',
-                        description: 'Promote your company'
+                        description: '<b>Promote your company</b>'
                     },
                     {
                         link: '../../static/promote_your_areas.svg',
-                        description: 'Promote your areas of expertise'
+                        description: 'Advertize your areas of expertise'
                     }
                 ]
               }
