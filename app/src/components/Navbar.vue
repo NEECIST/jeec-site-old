@@ -16,8 +16,6 @@
           <div class="navbar-title">Team</div>
         </router-link>
 
-        <a class="register-button" :href="form_link" target="_blank">volunteering</a>
-
         <!--
         <router-link router-link :to="{ name: 'Schedule' }">
           <div class="navbar-title">{{ third_navbar_title }}</div>
