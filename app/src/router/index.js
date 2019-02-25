@@ -29,11 +29,11 @@ export default new Router({
       name: 'Team',
       component: Team
     },
-    /*{
+    {
       path: '/partners',
       name: 'Partners',
       component: Partners
-    },*/
+    },
     {
       path: '/speakers',
       name: 'Speakers',

@@ -6,14 +6,12 @@
           <img class="navbar-left-logo-mobile" :src="navbar_mobile_logo_link">
         </router-link>
         
-        <!--
-        <router-link class="navbar-title" router-link :to="{ name: 'Partners' }">
-          Partners
-        </router-link>-->
-    
-
         <router-link router-link :to="{ name: 'Team' }">
           <div class="navbar-title">Team</div>
+        </router-link>
+
+        <router-link router-link :to="{ name: 'Partners' }">
+          <div class="navbar-title">Partners</div>
         </router-link>
 
         <router-link router-link :to="{ name: 'Speakers' }">
@@ -351,6 +349,11 @@ a:hover
     margin-top: 24px;
     font-size: 14px;
     letter-spacing: 0.8px;
+  }
+
+  .navbar-title {
+    font-size: 19px;
+    margin-top: 25px;
   }
 }
 
