@@ -16,6 +16,11 @@
           <div class="navbar-title">Team</div>
         </router-link>
 
+        <router-link router-link :to="{ name: 'Speakers' }">
+          <div class="navbar-title">Speakers</div>
+        </router-link>
+
+        <!--
         <div id="menuToggle">
           <input type="checkbox" />
     
@@ -39,7 +44,7 @@
           </ul>
         </div>
         
-        <!--
+        
         <router-link router-link :to="{ name: 'Schedule' }">
           <div class="navbar-title">{{ third_navbar_title }}</div>
         </router-link>
@@ -335,7 +340,7 @@ a:hover
 
   .navbar-title {
     margin-top: 23px;
-    display: none;
+    /*display: none;*/
   }
 
   #menuToggle {

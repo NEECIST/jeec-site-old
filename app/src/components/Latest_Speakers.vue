@@ -56,56 +56,10 @@ export default {
                   }
                 ],
                 schedule: {
-                  day: '15 march',
-                  hour: '2 pm'
-                }
-              },
-              /*{
-                name: 'Jeremy Blum',
-                current_function: 'Head of Electrical Engineering',
-                company_logo: '../../static/speakers/shaper.png',
-                company_link: 'https://www.shapertools.com/',
-                notes: '"My passion is using engineering to improve people’s lives, and giving people the tools they need to do the same."',
-                image: '../../static/speakers/jeremy_blum.svg',
-                origin: 'San Francisco, California',
-                links: [
-                  {
-                    link: 'https://www.youtube.com/channel/UC4KXPjmKwPutGjwFZsEXB5g',
-                    logo: '../../static/speakers/youtube.jpg'
-                  },
-                  {
-                    link: 'https://www.jeremyblum.com/',
-                    logo: ''
-                  },
-                  {
-                    link: 'https://www.linkedin.com/in/jeremyeblum/',
-                    logo: '../../static/speakers/linkedin.png'
-                  }
-                ],
-                schedule: {
-                  date: '12 march',
+                  date: '15 march',
                   time: '2 pm'
                 }
               },
-              {
-                name: 'Aida Peña',
-                current_function: 'Product Manager',
-                company_logo: '../../static/speakers/intercloud.png',
-                company_link: 'https://www.intercloud.com/',
-                notes: 'An experienced Product Manager who thrives on creating products that users find useful, usable and adapted to their real needs.',
-                image: '../../static/speakers/aida_peña.png',
-                origin: 'Paris',
-                links: [
-                  {
-                    link: 'https://www.linkedin.com/in/aidafernandez/?originalSubdomain=fr',
-                    logo: '../../static/speakers/linkedin.png'
-                  }
-                ],
-                schedule: {
-                  date: '12 march',
-                  time: '3:30 pm'
-                }
-              },*/
               {
                 name: 'Vicki Ferguson',
                 current_function: 'Lead Programmer',
@@ -121,8 +75,8 @@ export default {
                   }
                 ],
                 schedule: {
-                  day: '14 march',
-                  hour: '2 pm'
+                  date: '14 march',
+                  time: '2 pm'
                 }
               },
               {

@@ -5,21 +5,6 @@
       title="Speakers @ JEEC"
       subtitle="The list of speakers that will attend the event during the week"
     />
-
-    <!--<div class="speakers-flex">
-      <transition name="fade">
-        <div class="speaker-container" v-for="speaker in speakers" :key="speaker.name">
-          <div>
-            <img class="speaker-image" :src="speaker.image">
-          </div>
-
-          <div class="info">
-            <div class="speaker-description" v-html="speaker.notes"/>
-          </div>
-        </div>
-      </transition>
-    </div>
-    -->
       <div class="latest-speakers-flex">
         <div class="speaker-card" v-for="speaker in speakers" :key="speaker.name">
           <div>
@@ -35,7 +20,7 @@
           </a>
 
           <div>
-            <div class="origin-text">{{ speaker.origin }}</div>
+            <div class="origin-text" v-html="speaker.origin"/>
           </div>
 
           <div class="speaker-notes" v-html="speaker.notes"></div>
@@ -65,6 +50,25 @@ export default {
     return {
       speakers: [
         {
+          name: 'Konstantinos Laskaris',
+          current_function: 'Principal Motor Designer',
+          company_logo: '../../static/speakers/tesla.png',
+          company_link: 'https://www.tesla.com/',
+          notes: 'An expert in high performance powertrain systems. He was also a central piece in the development of the linear motor for the Hyperloop.',
+          image: '../../static/speakers/konstantinos_laskaris.png',
+          origin: 'San Francisco, California',
+          links: [
+            {
+              link: 'https://www.linkedin.com/in/konstantinos-laskaris-95b40a',
+              logo: '../../static/speakers/linkedin.png'
+            }
+          ],
+          schedule: {
+            date: '15 march',
+            time: '2 pm'
+          }
+        },
+        {
           name: "Jeremy Blum",
           current_function: "Head of Electrical Engineering",
           company_logo: "../../static/speakers/shaper.png",
@@ -72,7 +76,7 @@ export default {
           notes:
             '"My passion is using engineering to improve people’s lives, and giving people the tools they need to do the same."',
           image: "../../static/speakers/jeremy_blum.svg",
-          origin: "San Francisco",
+          origin: '<div style="margin-top: 20px;">San Francisco, California</div>',
           links: [
             {
               link: "https://www.youtube.com/channel/UC4KXPjmKwPutGjwFZsEXB5g",
@@ -90,6 +94,25 @@ export default {
           schedule: {
             date: "12 march",
             time: "2 pm"
+          }
+        },
+        {
+          name: 'Vicki Ferguson',
+          current_function: 'Lead Programmer',
+          company_logo: '../../static/speakers/ubisoft.png',
+          company_link: 'https://www.ubisoft.com/',
+          notes: 'Lead Programmer on ‘Eagle Flight’, the first virtual reality game released by Ubisoft Montreal and winner of the 2017 D.I.C.E. award.',
+          image: '../../static/speakers/vicki_ferguson.png',
+          origin: 'Montreal, Canada',
+          links: [
+            {
+              link: 'https://www.linkedin.com/in/vicki-ferguson-63aa491/',
+              logo: '../../static/speakers/linkedin.png'
+            }
+          ],
+          schedule: {
+            date: '14 march',
+            time: '2 pm'
           }
         },
         {
@@ -128,25 +151,6 @@ export default {
             time: "3:30 pm"
           }
         },
-        {
-          name: 'Vicki Ferguson',
-          current_function: 'Lead Programmer',
-          company_logo: '../../static/speakers/ubisoft.png',
-          company_link: 'https://www.ubisoft.com/',
-          notes: 'Lead Programmer on ‘Eagle Flight’, the first virtual reality game released by Ubisoft Montreal and winner of the 2017 D.I.C.E. award.',
-          image: '../../static/speakers/vicki_ferguson.png',
-          origin: 'Montreal, Canada',
-          links: [
-            {
-              link: 'https://www.linkedin.com/in/vicki-ferguson-63aa491/',
-              logo: '../../static/speakers/linkedin.png'
-            }
-          ],
-          schedule: {
-            day: '14 march',
-            hour: '2 pm'
-          }
-        }
       ]
     };
   }
@@ -170,8 +174,8 @@ export default {
   display: -webkit-flex; /* NEW - Chrome */
   justify-content: space-around;
   flex-wrap: wrap;
-  padding-left: 5vw;
-  padding-right: 5vw;
+  padding-left: 6vw;
+  padding-right: 6vw;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -182,13 +186,14 @@ a {
 }
 
 .speaker-card {
-  background-color: #fafafa;
+  background-color: #ffffff;
   padding-top: 20px;
   padding-bottom: 5px;
   border-radius: 20px;
-  width: 400px;
+  width: 450px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.3);
   margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 .origin-text {
@@ -249,8 +254,8 @@ a {
 
 .speaker-notes {
   margin-top: 15px;
-  padding-left: 13px;
-  padding-right: 13px;
+  padding-left: 25px;
+  padding-right: 25px;
   font-family: "Lato";
   font-size: 16px;
   -webkit-font-smoothing: antialiased;

@@ -65,7 +65,7 @@ export default {
     background-color: #ffffff;
     width: 100%;
     height: 100%;
-    padding-bottom: 30px;
+    padding-bottom: 70px;
 }
 
 .date-location {
