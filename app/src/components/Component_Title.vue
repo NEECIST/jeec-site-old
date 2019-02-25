@@ -1,6 +1,6 @@
 <template>
     <div class="component-title">
-        <div class="section-header">
+        <div class="section-header" >
           <h2>{{ title }}</h2>
           <p>{{ subtitle }}</p>
         </div>

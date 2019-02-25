@@ -18,16 +18,26 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: Home
-    },/*
+    },
     {
       path: '/activities',
       name: 'Activities',
       component: Activities
-    },*/
+    },
     {
       path: '/team',
       name: 'Team',
       component: Team
+    },
+    {
+      path: '/partners',
+      name: 'Partners',
+      component: Partners
+    },
+    {
+      path: '/speakers',
+      name: 'Speakers',
+      component: Speakers
     },
     { 
       path: '/404', 
@@ -35,11 +45,6 @@ export default new Router({
     },  
     { path: '*', 
       redirect: '/404' 
-    },
-    /*{
-      path: '/partners',
-      name: 'Partners',
-      component: Partners
-    },*/  
+    }
   ],
 })
