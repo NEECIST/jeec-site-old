@@ -94,6 +94,10 @@
       max-height: 60px;
       margin: 20px 10px;
   }
+
+  .partners-flex {
+    flex-direction: column;
+    }
 }
 </style>
 
