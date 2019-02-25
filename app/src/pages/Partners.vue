@@ -104,11 +104,11 @@
                             name: 'Infineon',
                             link: 'https://www.infineon.com/'
                         },
-                        /*{
+                        {
                             logo: '../../static/partner-logos/premium_minds.png',
                             name: 'Premium Minds',
                             link: 'https://www.premium-minds.com/'
-                        },*/
+                        },
                         {
                             logo: '../../static/partner-logos/vodafone.jpg',
                             name: 'Vodafone',
