@@ -90,12 +90,7 @@
                             logo: '../../static/partner-logos/thales.png',
                             name: 'Thales',
                             link: 'https://www.thalesgroup.com/pt-pt'
-                        },
-                        {
-                            logo: '../../static/partner-logos/weg.jpg',
-                            name: 'WEG',
-                            link: 'https://www.weg.net/pt'
-                        },
+                        }
                     ],
                     silver: [
                         
@@ -206,6 +201,11 @@
                             name: 'Voiceinteraction',
                             link: 'https://www.voice-interaction.com/pt/'
                         },
+                        {
+                            logo: '../../static/partner-logos/weg.jpg',
+                            name: 'WEG',
+                            link: 'https://www.weg.net/pt'
+                        }
                     ]
                 }
             }
