@@ -182,11 +182,6 @@
                             link: 'https://www.ren.pt/'
                         },
                         {
-                            logo: '../../static/partner-logos/rumos.png',
-                            name: 'Rumos',
-                            link: 'https://www.rumos.pt/'
-                        },
-                        {
                             logo: '../../static/partner-logos/synopsys.png',
                             name: 'Synopsys',
                             link: 'https://www.synopsys.com/'

@@ -97,7 +97,7 @@
 
   .partners-flex {
     flex-direction: column;
-    }
+  }
 }
 </style>
 
