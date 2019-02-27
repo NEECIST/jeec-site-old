@@ -33,7 +33,7 @@ export default {
   data() {
     return {
 
-      date: "11 to 15 March",
+      date: "11 to 15th March",
       location: "Instituto Superior Técnico",
       social_media_text: "Follow us on",
       center_image_link: "../../static/jeec_logo.svg",
