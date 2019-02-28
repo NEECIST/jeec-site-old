@@ -3,7 +3,7 @@
   <div class="speakers-list-comp">
     <component-title
       title="Speakers @ JEEC"
-      subtitle="The list of speakers that will attend the event during the week"
+      subtitle="List of guest speakers that will steal the show!"
     />
       <div class="latest-speakers-flex">
         <div class="speaker-card" v-for="speaker in speakers" :key="speaker.name">

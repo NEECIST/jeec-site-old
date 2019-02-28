@@ -7,8 +7,8 @@
                     Our Team
                 </div>
 
-                <div class="description-text">For 19 years we have brought to IST some of the best
-                    employers of Electrical and Computer Engineers!
+                <div class="description-text">For the past 19 years we have brought to IST some of the best
+                    recruiters of Electrical and Computer Engineers!
                 </div>
             </div>
             <img src="https://us.123rf.com/450wm/tupungato/tupungato1611/tupungato161100074/66488989-science-doodle-background-seamless-vector-texture-with-physics-concepts-.jpg?ver=6">
@@ -185,10 +185,6 @@ export default {
                         picture: '../../static/team/catarina_silvestre.png'
                     },
                     {
-                        name: 'Rita Pagaimo',
-                        picture: '../../static/team/rita_pagaimo.png'
-                    },
-                    {
                         name: 'Beatriz Silva',
                         picture: '../../static/team/beatriz_silva.png'
                     },
@@ -199,6 +195,10 @@ export default {
                     {
                         name: 'Madalena Ramos',
                         picture: '../../static/team/madalena.png'
+                    },
+                    {
+                        name: 'Rita Pagaimo',
+                        picture: '../../static/team/rita_pagaimo.png'
                     },
                     {
                         name: 'Sara Bernardes',

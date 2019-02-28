@@ -2,19 +2,25 @@
     <div class="workshops-comp">
         <component-title title="Workshops" subtitle="Interesting topics that our partners will be teaching!"/>
 
+        <div class="day-selector-flex">
+            <div class="day-button" v-for="(day, index) in workshop_data.days" v-bind:key="day.day_name" v-on:click="selectDay(index)">
+                {{ day.day_name }}
+            </div>
+        </div>
+
         <div class="workshops-flex">
-            <div class="workshop-card" v-for="workshop in workshops" :key="workshop.company">
+            <div class="workshop-card" v-for="session in workshop_data.days[selected_day].sessions" v-bind:key="session.time">
                 <div class="workshop-left">
-                    <a class="helper" :href="workshop.company_link" target="_blank"><img class="workshop-logo" :src="workshop.logo"/></a>
+                    <a class="helper" :href="session.company_link" target="_blank"><img class="workshop-logo" :src="session.logo"/></a>
                 </div>
 
                 <div class="workshop-right">
-                    <div class="workshop-date-time">{{ workshop.day}} at {{ workshop.time }}</div>
+                    <div class="workshop-date-time">{{ session.day}} at {{ session.time }}</div>
 
-                    <div class="workshop-title">{{ workshop.title }}</div>
+                    <div class="workshop-title">{{ session.title }}</div>
 
                     
-                    <a :href="workshop.eventbride_link" target="_blank" v-if="workshop.registration_open">
+                    <a :href="session.eventbride_link" target="_blank" v-if="session.registration_open">
                         <div class="registration-button">Attend</div>
                     </a>
 
@@ -31,111 +37,18 @@
 <script>
 export default {
     name: "workshops",
+    props: ['workshop_data'],
     data() {
         return {
-            workshops: [
-                {
-                    company: "BCG",
-                    company_link: "www.bcg.com",
-                    title: "How to crack a case",
-                    day: "Monday, 11",
-                    time: "12 pm",
-                    logo: "../../static/partner-logos/bcg.png",
-                    eventbride_link: "",
-                    registration_open: false,
-                    /*full: false*/
-                },
-                {
-                    company: "Outsystems",
-                    company_link: "www.outsystems.com",
-                    title: "IoT devices",
-                    day: "Monday, 11",
-                    time: "5:30 pm",
-                    logo: "../../static/partner-logos/outsystems.jpg",
-                    eventbride_link: "",
-                    registration_open: false,
-                    show: true
-                },
-                {
-                    company: "Deloitte",
-                    company_link: "www.deloitte.com",
-                    title: "IoT devices",
-                    day: "Tuesday, 12",
-                    time: "12 pm",
-                    logo: "../../static/partner-logos/deloitte.png",
-                    eventbride_link: "",
-                    registration_open: false,
-                    show: true
-                },
-                {
-                    company: "CS",
-                    company_link: "www.microsoft.com",
-                    title: "How to build something out of nothing",
-                    day: "Tuesday, 12",
-                    time: "5:30 pm",
-                    logo: "../../static/partner-logos/microsoft.png",
-                    eventbride_link: "",
-                    registration_open: true,
-                    show: true
-                },
-                {
-                    company: "KPMG",
-                    company_link: "www.microsoft.com",
-                    title: "IoT devices",
-                    day: "Wednesday, 13",
-                    time: "12 pm",
-                    logo: "../../static/partner-logos/kpmg.svg",
-                    eventbride_link: "",
-                    registration_open: true,
-                    show: true
-                },
-                {
-                    company: "Talkdesk",
-                    company_link: "www.talkdesk.com",
-                    title: "IoT devices",
-                    day: "Wednesday, 13",
-                    time: "5:30 pm",
-                    logo: "../../static/partner-logos/talkdesk.png",
-                    eventbride_link: "",
-                    registration_open: true,
-                    show: true
-                },/*
-                {
-                    company: "Vodafone",
-                    company_link: "www.vodafone.pt",
-                    title: "IoT devices",
-                    day: "Thursday, 14",
-                    time: "12 pm",
-                    logo: "../../static/partner-logos/vodafone.svg",
-                    eventbride_link: "",
-                    registration_open: true,
-                    show: true
-                },*/
-                {
-                    company: "Microsoft",
-                    company_link: "www.vodafone.pt",
-                    title: "IoT devices",
-                    day: "Thursday, 14",
-                    time: "5:30 pm",
-                    logo: "../../static/partner-logos/microsoft.png",
-                    eventbride_link: "",
-                    registration_open: true,
-                    show: true
-                },
-                {
-                    company: "VTXRM",
-                    company_link: "www.vodafone.pt",
-                    title: "IoT devices",
-                    day: "Friday, 15",
-                    time: "12 pm",
-                    logo: "../../static/partner-logos/vtxrm.png",
-                    eventbride_link: "",
-                    registration_open: true,
-                    show: true
-                },
-            ]
+            selected_day: 0,
         }
-    }
+    },
+
+    methods: {
+        selectDay(index) {
+            this.selected_day = index;
+        }
+    },
 }
 </script>
 
@@ -146,6 +59,37 @@ export default {
   padding-top: 100px;
   padding-bottom: 40px;
   text-align: center;
+}
+
+
+.day-selector-flex {
+  display: -webkit-box;  /* iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* IE 10 */
+  display: -webkit-flex; /* Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;         /*Firefox, Chrome, Opera */
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.day-button {
+    border-color: rgb(34, 130, 214);
+    border-style: solid;
+    background-color: #ffffff;
+    border-width: 1px;
+    border-radius: 5px;
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    padding-top: 16px;
+    font-family: 'Lato';
+    font-weight: 600;
+    margin: 10px; 
 }
 
 .workshops-flex {
