@@ -80,17 +80,21 @@ export default {
                 }
               },
               {
-                name: 'Fernando Silva',
-                current_function: 'Director of Energy Management',
-                company_logo: '../../static/speakers/siemens.png',
-                company_link: 'https://new.siemens.com/pt/pt.html',
-                notes: 'Expert in the areas of intelligent electrical grids, efficient buildings and electrical mobility.<p> "The future is here, and it runs on electricity".',
-                image: '../../static/speakers/fernando_silva.png',
+                name: 'António Alegria',
+                current_function: 'Head of Artificial Intelligence',
+                company_logo: '../../static/speakers/outsystems.png',
+                company_link: 'https://www.outsystems.com/',
+                notes: 'An expert in relating Engineering, Data Science and Product. He is currently the Head of AI at OutSystems.<p>"I like to drive change and continuous improvement in every team I work with"</p>',
+                image: '../../static/speakers/antonio_alegria.png',
                 origin: 'Portugal',
                 links: [
+                  {
+                    link: 'https://www.linkedin.com/in/antonioalegria/',
+                    logo: '../../static/speakers/linkedin.png'
+                  }
                 ],
                 schedule: {
-                  date: '13 march',
+                  date: '11 march',
                   time: '3:30 pm'
                 }
               }

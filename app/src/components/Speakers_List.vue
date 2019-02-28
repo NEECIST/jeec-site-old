@@ -116,6 +116,25 @@ export default {
           }
         },
         {
+          name: 'António Alegria',
+          current_function: 'Head of Artificial Intelligence',
+          company_logo: '../../static/speakers/outsystems.png',
+          company_link: 'https://www.outsystems.com/',
+          notes: '"I like to drive change and continuous improvement in every team I work with"',
+          image: '../../static/speakers/antonio_alegria.png',
+          origin: 'Portugal',
+          links: [
+            {
+              link: 'https://www.linkedin.com/in/antonioalegria/',
+              logo: '../../static/speakers/linkedin.png'
+            }
+          ],
+          schedule: {
+            date: '11 march',
+            time: '3:30 pm'
+          }
+        },
+        {
           name: "Aida Peña",
           current_function: "Product Manager",
           company_logo: "../../static/speakers/intercloud.png",
