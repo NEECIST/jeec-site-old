@@ -50,22 +50,22 @@ export default {
     return {
       speakers: [
         {
-          name: 'Konstantinos Laskaris',
-          current_function: 'Principal Motor Designer',
-          company_logo: '../../static/speakers/tesla.png',
-          company_link: 'https://www.tesla.com/',
-          notes: 'An expert in high performance powertrain systems. He was also a central piece in the development of the linear motor for the Hyperloop.',
-          image: '../../static/speakers/konstantinos_laskaris.png',
-          origin: 'San Francisco, California',
+          name: 'António Alegria',
+          current_function: 'Head of Artificial Intelligence',
+          company_logo: '../../static/speakers/outsystems.png',
+          company_link: 'https://www.outsystems.com/',
+          notes: '"I like to drive change and continuous improvement in every team I work with"',
+          image: '../../static/speakers/antonio_alegria.png',
+          origin: 'Portugal',
           links: [
             {
-              link: 'https://www.linkedin.com/in/konstantinos-laskaris-95b40a',
+              link: 'https://www.linkedin.com/in/antonioalegria/',
               logo: '../../static/speakers/linkedin.png'
             }
           ],
           schedule: {
-            date: '15 march',
-            time: '2 pm'
+            date: '11 march',
+            time: '3:30 pm'
           }
         },
         {
@@ -76,7 +76,7 @@ export default {
           notes:
             '"My passion is using engineering to improve people’s lives, and giving people the tools they need to do the same."',
           image: "../../static/speakers/jeremy_blum.svg",
-          origin: '<div style="margin-top: 20px;">San Francisco, California</div>',
+          origin: 'San Francisco, California',
           links: [
             {
               link: "https://www.youtube.com/channel/UC4KXPjmKwPutGjwFZsEXB5g",
@@ -94,44 +94,6 @@ export default {
           schedule: {
             date: "12 march",
             time: "2 pm"
-          }
-        },
-        {
-          name: 'Vicki Ferguson',
-          current_function: 'Lead Programmer',
-          company_logo: '../../static/speakers/ubisoft.png',
-          company_link: 'https://www.ubisoft.com/',
-          notes: 'Lead Programmer on ‘Eagle Flight’, the first virtual reality game released by Ubisoft Montreal and winner of the 2017 D.I.C.E. award.',
-          image: '../../static/speakers/vicki_ferguson.png',
-          origin: 'Montreal, Canada',
-          links: [
-            {
-              link: 'https://www.linkedin.com/in/vicki-ferguson-63aa491/',
-              logo: '../../static/speakers/linkedin.png'
-            }
-          ],
-          schedule: {
-            date: '14 march',
-            time: '2 pm'
-          }
-        },
-        {
-          name: 'António Alegria',
-          current_function: 'Head of Artificial Intelligence',
-          company_logo: '../../static/speakers/outsystems.png',
-          company_link: 'https://www.outsystems.com/',
-          notes: '"I like to drive change and continuous improvement in every team I work with"',
-          image: '../../static/speakers/antonio_alegria.png',
-          origin: 'Portugal',
-          links: [
-            {
-              link: 'https://www.linkedin.com/in/antonioalegria/',
-              logo: '../../static/speakers/linkedin.png'
-            }
-          ],
-          schedule: {
-            date: '11 march',
-            time: '3:30 pm'
           }
         },
         {
@@ -170,6 +132,44 @@ export default {
             time: "3:30 pm"
           }
         },
+        {
+          name: 'Vicki Ferguson',
+          current_function: 'Lead Programmer',
+          company_logo: '../../static/speakers/ubisoft.png',
+          company_link: 'https://www.ubisoft.com/',
+          notes: 'Lead Programmer on ‘Eagle Flight’, the first virtual reality game released by Ubisoft Montreal and winner of the 2017 D.I.C.E. award.',
+          image: '../../static/speakers/vicki_ferguson.png',
+          origin: 'Montreal, Canada',
+          links: [
+            {
+              link: 'https://www.linkedin.com/in/vicki-ferguson-63aa491/',
+              logo: '../../static/speakers/linkedin.png'
+            }
+          ],
+          schedule: {
+            date: '14 march',
+            time: '2 pm'
+          }
+        },
+        {
+          name: 'Konstantinos Laskaris',
+          current_function: 'Principal Motor Designer',
+          company_logo: '../../static/speakers/tesla.png',
+          company_link: 'https://www.tesla.com/',
+          notes: 'An expert in high performance powertrain systems. He was also a central piece in the development of the linear motor for the Hyperloop.',
+          image: '../../static/speakers/konstantinos_laskaris.png',
+          origin: 'San Francisco, California',
+          links: [
+            {
+              link: 'https://www.linkedin.com/in/konstantinos-laskaris-95b40a',
+              logo: '../../static/speakers/linkedin.png'
+            }
+          ],
+          schedule: {
+            date: '15 march',
+            time: '2 pm'
+          }
+        }
       ]
     };
   }
