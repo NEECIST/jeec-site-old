@@ -93,7 +93,6 @@
                         }
                     ],
                     silver: [
-                        
                         {
                             logo: '../../static/partner-logos/aubay.png',
                             name: 'Aubay',
@@ -135,12 +134,12 @@
                             logo: '../../static/partner-logos/bcg.png',
                             name: 'BCG',
                             link: 'https://www.bcg.com/'
-                        },/*
+                        },
                         {
-                            logo: '../../static/partner-logos/celfinet.jpg',
+                            logo: '../../static/partner-logos/celfinet.png',
                             name: 'Celfinet',
                             link: 'https://www.celfinet.com/'
-                        },*/
+                        },
                         {
                             logo: '../../static/partner-logos/coreso.png',
                             name: 'Coreso',
