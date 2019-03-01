@@ -70,7 +70,7 @@ export default {
         },
         {
           name: "Jeremy Blum",
-          current_function: "Head of Electrical Engineering",
+          current_function: "Director of Engineering",
           company_logo: "../../static/speakers/shaper.png",
           company_link: "https://www.shapertools.com/",
           notes:
