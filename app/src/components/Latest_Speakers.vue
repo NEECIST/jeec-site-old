@@ -84,7 +84,7 @@ export default {
                 current_function: 'Head of Artificial Intelligence',
                 company_logo: '../../static/speakers/outsystems.png',
                 company_link: 'https://www.outsystems.com/',
-                notes: 'An expert in relating Engineering, Data Science and Product. He is currently the Head of AI at OutSystems.<p>"I like to drive change and continuous improvement in every team I work with"</p>',
+                notes: '"I like to drive change and continuous improvement in every team I work with."',
                 image: '../../static/speakers/antonio_alegria.png',
                 origin: 'Portugal',
                 links: [
