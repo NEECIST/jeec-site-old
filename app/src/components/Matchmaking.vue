@@ -50,7 +50,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .matchmaking-comp {
   background-color: #dfe6f5;
   padding-top: 10px;

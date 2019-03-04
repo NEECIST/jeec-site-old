@@ -3,7 +3,7 @@
         
         <workshops v-bind:workshop_data="workshop_data"/>
         <job-fair v-bind:job_fair_data="job_fair_data"/>
-        <matchmaking v-bind:matchmaking_data="matchmaking_data"/>
+        <!--<matchmaking v-bind:matchmaking_data="matchmaking_data"/>-->
         
         <contacts/>
     </div>
@@ -25,6 +25,7 @@ export default {
                                 company: "BCG",
                                 company_link: "www.bcg.com",
                                 title: "How to crack a case",
+                                description: "Come and join us to better understand BCG's approach to solving a real case! Attend our crack the case session on March 11 to understand how we tackle a problem. We will discuss why BCG uses case interviews, how we evaluate the candidates and the do's and don'ts to succeed in our recruitment process. We will also put our advices into action by solving a case together with you in the session!",
                                 time: "12 pm",
                                 logo: "../../static/partner-logos/bcg.png",
                                 eventbride_link: "",
@@ -34,7 +35,8 @@ export default {
                             {
                                 company: "Outsystems",
                                 company_link: "www.outsystems.com",
-                                title: "IoT devices",
+                                title: "Mobile and web rapid application development with OutSystems",
+                                description: "Build and deliver better apps faster",
                                 time: "5:30 pm",
                                 logo: "../../static/partner-logos/outsystems.jpg",
                                 eventbride_link: "",
@@ -51,13 +53,14 @@ export default {
                             {
                                 company: "Deloitte",
                                 company_link: "www.deloitte.com",
-                                title: "IoT devices",
+                                title: "Understanding (Deep) Reinforcemente Learning",
+                                description: "Some of the most interesting advances in AI recently have come from the field of (deep) reinforcement learning (RL). RL represents a step towards building autonomous systems with a higher level understanding of the visual world. For this reason, RL has a great potential for real-world applications. If you want to know more and try out some exercises, please join this workshop.",
                                 time: "12 pm",
                                 logo: "../../static/partner-logos/deloitte.png",
                                 eventbride_link: "",
                                 registration_open: false,
                                 show: true
-                            },
+                            },/*
                             {
                                 company: "CS",
                                 company_link: "www.microsoft.com",
@@ -67,7 +70,7 @@ export default {
                                 eventbride_link: "",
                                 registration_open: true,
                                 show: true
-                            },
+                            },*/
                         ]
                     },
                     {
@@ -75,7 +78,7 @@ export default {
                         day_number: '13',
                         border_color: '#D1E71C',
                         sessions: [
-                            {
+                            /*{
                                 company: "KPMG",
                                 company_link: "www.microsoft.com",
                                 title: "IoT devices",
@@ -96,7 +99,7 @@ export default {
                                 eventbride_link: "",
                                 registration_open: true,
                                 show: true
-                            },
+                            },*/
                         ]
                     },
                     {
@@ -107,10 +110,11 @@ export default {
                             {
                                 company: "Vodafone",
                                 company_link: "www.vodafone.pt",
-                                title: "IoT devices",
+                                title: "Vodafone: Evolução e dimensionamento da rede móvel",
+                                description: "Tecnologias 2G, 3G, 4G e 5G; Evolução dos padrões de consumo dos utilizadores de rede móvel: Das simples chamadas de voz às live stories do Instagram; Dimensionamento da rede para multidões (Jogos futebol, Concertos, conferencias mundiais, …)",
                                 day: "Thursday, 14",
                                 time: "12 pm",
-                                logo: "../../static/partner-logos/vodafone.svg",
+                                logo: "../../static/partner-logos/vodafone.jpg",
                                 eventbride_link: "",
                                 registration_open: true,
                                 show: true
@@ -118,7 +122,8 @@ export default {
                             {
                                 company: "Microsoft",
                                 company_link: "www.vodafone.pt",
-                                title: "IoT devices",
+                                title: "Azure IoT Introduction",
+                                description: "Learn how to connect a device, send device-to-cloud (D2C) and cloud-to-device (C2D) messages, and build costume dashboards.",
                                 day: "Thursday, 14",
                                 time: "5:30 pm",
                                 logo: "../../static/partner-logos/microsoft.png",
@@ -255,7 +260,19 @@ export default {
                                 link: 'https://www.thalesgroup.com/pt-pt'
                             }
                         ]
-                    }
+                    },
+                    {
+                        day_name: 'Wednesday, 13th',
+                        day_number: '13',
+                        border_color: '#3399ff',
+                        partners: []
+                    },
+                    {
+                        day_name: 'Thursday, 14th',
+                        day_number: '14',
+                        border_color: '#3399ff',
+                        partners: []
+                    },
                 ]
             },
             matchmaking_data: {
@@ -360,7 +377,7 @@ export default {
                         day_number: '13',
                         border_color: '#3399ff',
                         sessions: [
-                            {
+                            /*{
                                 time: '10 am - 12 pm',
                                 registration_open: false,
                                 eventbride_link: '',
@@ -408,7 +425,7 @@ export default {
                                         link: 'https://www.microsoft.com/pt-pt'
                                     },
                                 ]
-                            },
+                            },*/
                         ]
                     },
                     {
@@ -416,7 +433,7 @@ export default {
                         day_number: '14',
                         border_color: '#3399ff',
                         sessions: [
-                            {
+                            /*{
                                 time: '10 am - 12 pm',
                                 registration_open: false,
                                 eventbride_link: '',
@@ -437,7 +454,7 @@ export default {
                                         link: 'https://www.accenture.com/pt-pt/new-applied-now'
                                     }
                                 ]
-                            }
+                            }*/
                         ]
                     }
                 ]
