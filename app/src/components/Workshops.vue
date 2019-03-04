@@ -2,19 +2,29 @@
     <div class="workshops-comp">
         <component-title title="Workshops" subtitle="Interesting topics that our partners will be teaching!"/>
 
+        <div class="select-day">Select the day</div>
+        <div class="day-selector-flex">
+            <div class="day-button" v-for="(day, index) in workshop_data.days" v-bind:key="day.day_name" v-on:click="selectDay(index)">
+                {{ day.day_name }}
+            </div>
+        </div>
+
         <div class="workshops-flex">
-            <div class="workshop-card" v-for="workshop in workshops" :key="workshop.company">
-                <div class="workshop-left">
-                    <a class="helper" :href="workshop.company_link" target="_blank"><img class="workshop-logo" :src="workshop.logo"/></a>
+            <div class="workshop-card" v-for="session in workshop_data.days[selected_day].sessions" v-bind:key="session.time">
+                <div class="workshop-card-top">
+                    <div class="workshop-left">
+                        <a class="helper" :href="session.company_link" target="_blank"><img class="workshop-logo" :src="session.logo"/></a>
+                    </div>
+
+                    <div class="workshop-right">
+                        <div class="workshop-date-time">{{ workshop_data.days[selected_day].day_name }} @ {{ session.time }}</div>
+
+                        <div class="workshop-title">{{ session.title }}</div>
+                    </div>
                 </div>
 
-                <div class="workshop-right">
-                    <div class="workshop-date-time">{{ workshop.day}} at {{ workshop.time }}</div>
-
-                    <div class="workshop-title">{{ workshop.title }}</div>
-
-                    
-                    <a :href="workshop.eventbride_link" target="_blank" v-if="workshop.registration_open">
+                <div class="registration">
+                    <a :href="session.eventbride_link" target="_blank" v-if="session.registration_open">
                         <div class="registration-button">Attend</div>
                     </a>
 
@@ -22,7 +32,7 @@
                     Registrations will open soon
                     </div>
                 </div>
-
+                <div class="workshop-description"><b>Description:</b><p>{{ session.description }}</p></div>
             </div>
         </div>
     </div>
@@ -31,111 +41,18 @@
 <script>
 export default {
     name: "workshops",
+    props: ['workshop_data'],
     data() {
         return {
-            workshops: [
-                {
-                    company: "BCG",
-                    company_link: "www.bcg.com",
-                    title: "How to crack a case",
-                    day: "Monday, 11",
-                    time: "12 pm",
-                    logo: "../../static/partner-logos/bcg.png",
-                    eventbride_link: "",
-                    registration_open: false,
-                    /*full: false*/
-                },
-                {
-                    company: "Outsystems",
-                    company_link: "www.outsystems.com",
-                    title: "IoT devices",
-                    day: "Monday, 11",
-                    time: "5:30 pm",
-                    logo: "../../static/partner-logos/outsystems.jpg",
-                    eventbride_link: "",
-                    registration_open: false,
-                    show: true
-                },
-                {
-                    company: "Deloitte",
-                    company_link: "www.deloitte.com",
-                    title: "IoT devices",
-                    day: "Tuesday, 12",
-                    time: "12 pm",
-                    logo: "../../static/partner-logos/deloitte.png",
-                    eventbride_link: "",
-                    registration_open: false,
-                    show: true
-                },
-                {
-                    company: "CS",
-                    company_link: "www.microsoft.com",
-                    title: "How to build something out of nothing",
-                    day: "Tuesday, 12",
-                    time: "5:30 pm",
-                    logo: "../../static/partner-logos/microsoft.png",
-                    eventbride_link: "",
-                    registration_open: true,
-                    show: true
-                },
-                {
-                    company: "KPMG",
-                    company_link: "www.microsoft.com",
-                    title: "IoT devices",
-                    day: "Wednesday, 13",
-                    time: "12 pm",
-                    logo: "../../static/partner-logos/kpmg.svg",
-                    eventbride_link: "",
-                    registration_open: true,
-                    show: true
-                },
-                {
-                    company: "Talkdesk",
-                    company_link: "www.talkdesk.com",
-                    title: "IoT devices",
-                    day: "Wednesday, 13",
-                    time: "5:30 pm",
-                    logo: "../../static/partner-logos/talkdesk.png",
-                    eventbride_link: "",
-                    registration_open: true,
-                    show: true
-                },/*
-                {
-                    company: "Vodafone",
-                    company_link: "www.vodafone.pt",
-                    title: "IoT devices",
-                    day: "Thursday, 14",
-                    time: "12 pm",
-                    logo: "../../static/partner-logos/vodafone.svg",
-                    eventbride_link: "",
-                    registration_open: true,
-                    show: true
-                },*/
-                {
-                    company: "Microsoft",
-                    company_link: "www.vodafone.pt",
-                    title: "IoT devices",
-                    day: "Thursday, 14",
-                    time: "5:30 pm",
-                    logo: "../../static/partner-logos/microsoft.png",
-                    eventbride_link: "",
-                    registration_open: true,
-                    show: true
-                },
-                {
-                    company: "VTXRM",
-                    company_link: "www.vodafone.pt",
-                    title: "IoT devices",
-                    day: "Friday, 15",
-                    time: "12 pm",
-                    logo: "../../static/partner-logos/vtxrm.png",
-                    eventbride_link: "",
-                    registration_open: true,
-                    show: true
-                },
-            ]
+            selected_day: 0,
         }
-    }
+    },
+
+    methods: {
+        selectDay(index) {
+            this.selected_day = index;
+        }
+    },
 }
 </script>
 
@@ -146,6 +63,43 @@ export default {
   padding-top: 100px;
   padding-bottom: 40px;
   text-align: center;
+}
+
+.select-day {
+    font-size: 19px;
+    font-family: 'Lato';
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.day-selector-flex {
+  display: -webkit-box;  /* iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* IE 10 */
+  display: -webkit-flex; /* Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;         /*Firefox, Chrome, Opera */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.day-button {
+    border-color: rgb(34, 130, 214);
+    border-style: solid;
+    background-color: #ffffff;
+    border-width: 1px;
+    border-radius: 5px;
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    padding-top: 16px;
+    font-family: 'Lato';
+    font-weight: 600;
+    margin: 10px; 
 }
 
 .workshops-flex {
@@ -163,7 +117,7 @@ export default {
 }
 
 .workshop-card {
-    background-color: #fafafa;
+    background-color: #ffffff;
     padding-top: 20px;
     padding-bottom: 15px;
     padding-left: 30px;
@@ -172,6 +126,10 @@ export default {
     width: 550px;
     margin-bottom: 20px;
     box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.3);
+}
+
+.workshop-card-top {
+    height: 90px;
 }
 
 .workshop-left {
@@ -210,7 +168,10 @@ export default {
   margin-top: 15px;
   font-weight: 600;
   font-size: 20px;
-  height: 60px;
+}
+
+.registration {
+    height: 60px;
 }
 
 .registration-button {
@@ -218,6 +179,7 @@ export default {
     padding: 8px;
     width: 100px;
     border-radius: 5px;
+    margin-top: 10px;
     font-family: 'Karla';
     font-size: 18px;
     color: white;
@@ -231,79 +193,130 @@ export default {
     font-size: 16px;
     color:#396c96;
     font-weight: 600;
+    margin-top: 20px;
 }
 
 .registration-button:hover {
     transform: scale(1.1,1.1);
 }
 
-
-/* On screens that are 992px wide or less*/
-@media only screen and (max-width: 1600px) {
-  .latest-speakers-flex {
-    justify-content: space-between;
-    padding-left: 13vw;
-    padding-right: 13vw;
-  }
-
-  .speaker-card {
-      width: 450px;
-  }
-}
-
-/* On screens that are 992px wide or less*/
-@media only screen and (max-width: 1200px) {
-  .latest-speakers-flex {
-    padding-left: 7vw;
-    padding-right: 7vw;
-  }
-  
-  .speaker-card {
-      width: 350px;
-  }
-}
-
-/* On screens that are 600px wide*/
-@media only screen and (max-width: 850px) {
-  .latest-speakers-flex {
-    justify-content: space-between;
-    display: inline-block;
-  }
-
-  .speaker-card {
-    margin-top: 40px;
-    width: 400px;
-  }
-
-  .speaker-image {
-    width: 120px;
-    height: 120px;
-  }
-}
-
-/* On screens that are 600px wide*/
-@media only screen and (max-width: 550px) {
-  .speaker-card {
-    margin-top: 40px;
-    border-radius: 20px;
-    width: 310px;
-  }
-
-  .speaker-company {
+.workshop-description {
     font-size: 17px;
-  }
+    line-height: 23px;
+    font-family: 'Lato';
+    text-align: left;
+}
 
-  .speaker-image {
-    width: 100px;
-    height: 100px;
-  }
+/* On screens that are 992px wide or less*/
+@media only screen and (max-width: 1550px) {
+    .workshops-flex {
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+}
+
+/* On screens that are 992px wide or less*/
+@media only screen and (max-width: 1300px) {
+  .workshops-flex {
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+
+.workshop-card {
+    width: 95%;
+}
+
 }
 
 /* On screens that are 600px wide*/
-@media only screen and (max-width: 350px) {
-  .speaker-card {
-    width: 280px;
-  }
+@media only screen and (max-width: 950px) {
+  
+.workshop-card {
+    width: 92%;
 }
+
+}
+
+/* On screens that are 600px wide*/
+@media only screen and (max-width: 700px) {
+  .workshop-card {
+    width: 88%;
+}
+}
+
+/* On screens that are 600px wide*/
+@media only screen and (max-width: 650px) {
+  .workshop-left {
+    float: initial;
+    width: 100%;
+    white-space: nowrap; /* this is required unless you put the helper span closely near the img */
+    text-align: center; margin: 1.5em 0;
+}
+
+.workshop-right {
+    float: initial;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.workshop-card-top {
+    height: 150px;
+}
+}
+
+@media only screen and (max-width: 460px) {
+.workshop-card {
+    width: 85%;
+}
+
+.registration-button {
+    margin-top: 20px;
+    width: 150px;
+    padding: 10px;
+    font-size: 21px;
+}
+
+.workshop-card-top {
+    height: 150px;
+}
+
+.registration {
+    height: 80px;
+}
+}
+
+@media only screen and (max-width: 380px) {
+.workshop-card {
+    width: 80%;
+}
+
+.workshop-card-top {
+    height: 180px;
+}
+
+.day-button {
+    width: 250px;
+    height: 40px;
+    font-size: 20px;
+    padding-top: 16px;
+    margin: 10px; 
+}
+}
+
+@media only screen and (max-width: 300px) {
+.workshop-card {
+    width: 74%;
+}
+
+.workshop-card-top {
+    height: 200px;
+}
+}
+
+
 </style>
 
