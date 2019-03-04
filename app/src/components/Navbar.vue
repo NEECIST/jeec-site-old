@@ -18,40 +18,20 @@
           <div class="navbar-title">Speakers</div>
         </router-link>
 
-        <!--
+        
         <div id="menuToggle">
-          <input type="checkbox" />
+          <input type="checkbox" :checked="show_menu" v-on:click="show_menu = !show_menu"/>
     
           <span></span>
           <span></span>
           <span></span>
     
           <ul id="menu">
-            <router-link router-link :to="{ name: 'Speakers' }">
-             <li>Speakers</li>
-            </router-link>
-            <router-link router-link :to="{ name: 'Partners' }">
-              <li>Partners</li>
-            </router-link>
-            <router-link router-link :to="{ name: 'Schedule' }">
-             <li>Schedule</li>
-            </router-link>
-            <router-link router-link :to="{ name: 'Team' }">
-              <li>Team</li>
-            </router-link>
+             <li v-on:click="redirect('Speakers')">Speakers</li>
+              <li v-on:click="redirect('Partners')">Partners</li>
+              <li v-on:click="redirect('Team')">Team</li>
           </ul>
         </div>
-        
-        
-        <router-link router-link :to="{ name: 'Schedule' }">
-          <div class="navbar-title">{{ third_navbar_title }}</div>
-        </router-link>
-        <router-link router-link :to="{ name: 'Partners' }">
-          <div class="navbar-title">{{ second_navbar_title }}</div>
-        </router-link>
-        <router-link router-link :to="{ name: 'Speakers' }">
-          <div class="navbar-title">{{ first_navbar_title }}</div>
-        </router-link>-->
     </div>
 </template>
 
@@ -60,19 +40,16 @@ export default {
   name: 'navbar',
   data() {
     return {
-      form_link: 'https://docs.google.com/forms/d/e/1FAIpQLScGDBAYDkulB1g7fsDmm5Covn-cDCqVRm9HlnYseK0uyxetxg/viewform',
+      show_menu: false,
       navbar_logo_link: "../../static/jeec_logo_small.svg",
       navbar_mobile_logo_link: "../../static/jeec_logo_mobile.svg"
     }
   },
 
   methods: {
-    openNav () {
-      document.getElementById('mySidenav').style.width = '250px'
-    },
-
-    closeNav () {
-      document.getElementById('mySidenav').style.width = '0'
+    redirect(page) {
+      this.show_menu = false;
+      this.$router.push({ name: page});
     }
   }
 }
@@ -285,16 +262,17 @@ a:hover
   margin-left: -98vw;
   padding: 50px;
   padding-top: 50px;
-  
-  background: #ededed;
+  margin-top: 18px;
+  background: #ffffff;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
-  
+  box-shadow: 0 200px 300px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
   transform-origin: 0% 0%;
-  transform: translate(0, -550px);
+  transform: translate(800px, 0);
   
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  transition: transform 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #menu li
@@ -338,7 +316,7 @@ a:hover
 
   .navbar-title {
     margin-top: 23px;
-    /*display: none;*/
+    display: none;
   }
 
   #menuToggle {
