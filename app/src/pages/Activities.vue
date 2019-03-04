@@ -116,7 +116,7 @@ export default {
                                 time: "12 pm",
                                 logo: "../../static/partner-logos/vodafone.jpg",
                                 eventbride_link: "",
-                                registration_open: true,
+                                registration_open: false,
                                 show: true
                             },
                             {
@@ -128,7 +128,7 @@ export default {
                                 time: "5:30 pm",
                                 logo: "../../static/partner-logos/microsoft.png",
                                 eventbride_link: "",
-                                registration_open: true,
+                                registration_open: false,
                                 show: true
                             },
                         ]
