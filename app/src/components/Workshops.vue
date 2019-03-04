@@ -300,10 +300,10 @@ export default {
 
 .day-button {
     width: 250px;
-    height: 40px;
-    font-size: 20px;
-    padding-top: 16px;
-    margin: 10px; 
+    height: 30px;
+    font-size: 17px;
+    padding-top: 8px;
+    margin: 8px; 
 }
 }
 
