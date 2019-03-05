@@ -4,6 +4,8 @@
             {{ date }}
             <p>{{ location }}</p>
         </div>
+
+        <div class="warning">Monday activities opened for registration!</div>
             
         <div class="main-logo-container">
             <img :src="center_image_link" class="logo-home">
@@ -71,13 +73,22 @@ export default {
 .date-location {
     width: 100%;
     height: 80px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-size: 28px;
     font-weight: 500;
     line-height: 20px;
-    padding-top: 140px;
+    padding-top: 125px;
     text-align: center;
 } 
+
+.warning {
+    font-size: 22px;
+    font-weight: 600;
+    font-family: 'Lato';
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #3391c2;
+}
 
 .main-logo-container {
     text-align: center;
@@ -104,7 +115,7 @@ export default {
 .follow-us {
     width: 100%;
     height: 28px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-size: 23px;
     font-weight: bold;
     letter-spacing: 0.7px;
@@ -188,6 +199,15 @@ export default {
 
     .date-location {
         font-size: 20px;
+    }
+
+    .warning {
+        font-size: 18px;
+        font-weight: 600;
+        font-family: 'Lato';
+        margin-top: 10px;
+        margin-bottom: 15px;
+        color: #3391c2;
     }
 }
 </style>
