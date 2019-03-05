@@ -61,21 +61,21 @@ export default {
                 }
               },
               {
-                name: 'Vicki Ferguson',
-                current_function: 'Lead Programmer',
-                company_logo: '../../static/speakers/ubisoft.png',
-                company_link: 'https://www.ubisoft.com/',
-                notes: 'Lead Programmer on ‘Eagle Flight’, the first virtual reality game released by Ubisoft Montreal and winner of the 2017 D.I.C.E. award.',
-                image: '../../static/speakers/vicki_ferguson.png',
-                origin: 'Montreal, Canada',
+                name: 'Rui Carvalho',
+                current_function: 'Development Director',
+                company_logo: '../../static/speakers/east.png',
+                company_link: 'https://www.association-secure-transactions.eu/',
+                notes: "Years of experience in the area of security and fraud prevention working at the European Association for Secure Transactions.",
+                image: '../../static/speakers/rui_carvalho.png',
+                origin: 'Portugal',
                 links: [
                   {
-                    link: 'https://www.linkedin.com/in/vicki-ferguson-63aa491/',
+                    link: 'https://www.linkedin.com/in/rui-carvalho/',
                     logo: '../../static/speakers/linkedin.png'
                   }
                 ],
                 schedule: {
-                  date: '14 march',
+                  date: '13 march',
                   time: '2 pm'
                 }
               },
@@ -84,7 +84,7 @@ export default {
                 current_function: 'Head of Artificial Intelligence',
                 company_logo: '../../static/speakers/outsystems.png',
                 company_link: 'https://www.outsystems.com/',
-                notes: '"I like to drive change and continuous improvement in every team I work with."',
+                notes: 'An experienced engineer specialized in AI, Machine Learning, Fraud Prevention and Large Scala Data Engineering. <b>Técnico alumni</b> - Computer Engineering.',
                 image: '../../static/speakers/antonio_alegria.png',
                 origin: 'Portugal',
                 links: [
