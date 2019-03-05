@@ -3,7 +3,7 @@
         
         <workshops v-bind:workshop_data="workshop_data"/>
         <job-fair v-bind:job_fair_data="job_fair_data"/>
-        <!--<matchmaking v-bind:matchmaking_data="matchmaking_data"/>-->
+        <matchmaking v-bind:matchmaking_data="matchmaking_data"/>
         
         <contacts/>
     </div>
@@ -28,8 +28,8 @@ export default {
                                 description: "Come and join us to better understand BCG's approach to solving a real case! Attend our crack the case session on March 11 to understand how we tackle a problem. We will discuss why BCG uses case interviews, how we evaluate the candidates and the do's and don'ts to succeed in our recruitment process. We will also put our advices into action by solving a case together with you in the session!",
                                 time: "12 pm",
                                 logo: "../../static/partner-logos/bcg.png",
-                                eventbride_link: "",
-                                registration_open: false,
+                                eventbride_link: "https://www.eventbrite.pt/e/bilhetes-workshop-bcg-how-to-crack-a-case-57612259820",
+                                registration_open: true,
                                 /*full: false*/
                             },
                             {
@@ -39,8 +39,8 @@ export default {
                                 description: "Build and deliver better apps faster",
                                 time: "5:30 pm",
                                 logo: "../../static/partner-logos/outsystems.jpg",
-                                eventbride_link: "",
-                                registration_open: false,
+                                eventbride_link: "https://www.eventbrite.pt/e/bilhetes-workshop-outsystems-mobile-and-web-rapid-application-development-with-outsystems-57617016046",
+                                registration_open: true,
                                 show: true
                             },
                         ]
@@ -285,7 +285,7 @@ export default {
                             {
                                 time: '10 am - 12 pm',
                                 registration_open: true,
-                                eventbride_link: '',
+                                eventbride_link: 'https://www.eventbrite.pt/e/bilhetes-matchmaking-sessao-1-outsystems-nova-base-ey-thales-57614033124',
                                 partners: [
                                     {
                                         logo: '../../static/partner-logos/outsystems.jpg',

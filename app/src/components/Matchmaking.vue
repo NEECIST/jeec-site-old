@@ -2,6 +2,7 @@
     <div class="matchmaking-comp">
         <component-title title="Matchmaking" subtitle="Looking for a more serious talk with a recruiter?"/>
 
+        <div class="select-day">Select the day</div>
         <div class="day-selector-flex">
             <div class="day-button" v-for="(day, index) in matchmaking_data.days" v-bind:key="day.day_name" v-on:click="selectDay(index)">
                 {{ day.day_name }}
@@ -19,7 +20,7 @@
                         </a>
                     </div>
                 </div>
-
+                
                 <a :href="session.eventbride_link" target="_blank" v-if="session.registration_open">
                     <div class="registration-button">Attend</div>
                 </a>
@@ -59,13 +60,21 @@ export default {
   text-align: center;
 }
 
+.select-day {
+    font-size: 19px;
+    font-family: 'Lato';
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+
 .day-selector-flex {
   display: -webkit-box;  /* iOS 6-, Safari 3.1-6, BB7 */
   display: -ms-flexbox;  /* IE 10 */
   display: -webkit-flex; /* Safari 6.1+. iOS 7.1+, BB10 */
   display: flex;         /*Firefox, Chrome, Opera */
   flex-wrap: wrap;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
   padding-top: 20px;
@@ -145,8 +154,8 @@ export default {
 
 .session-partner-logo {
     justify-content: center;
-    max-height: 80px;
-    max-width: 130px;
+    max-height: 90px;
+    max-width: 160px;
     margin: 10px 25px;
     opacity: .85;
     transition: all .2s ease-in-out;
@@ -168,16 +177,18 @@ export default {
     font-family: 'Karla';
     font-size: 18px;
     color: white;
-    text-align: center;
+    margin-left: 40%;
+    margin-top: 15px;
+    margin-bottom: 15px;
     transition: all .2s ease-in-out;
     box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
-    margin-left: 44%;
 }
 
 .registration-closed {
     font-size: 16px;
     color:#396c96;
     font-weight: 600;
+    margin-bottom: 20px;
 }
 
 .registration-button:hover {
@@ -212,22 +223,7 @@ export default {
     }
 }
 
-@media screen and (max-width: 1000px) {
-    .session-partners-flex {
-        display: -webkit-box;  /* iOS 6-, Safari 3.1-6, BB7 */
-        display: -ms-flexbox;  /* IE 10 */
-        display: -webkit-flex; /* Safari 6.1+. iOS 7.1+, BB10 */
-        display: flex;         /*Firefox, Chrome, Opera */
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding-top: 20px;
-        padding-bottom: 15px;
-        padding-left: 1vw;
-        padding-right: 1vw;
-    }
-    
+@media screen and (max-width: 1000px) {    
     
     .session-partner-logo {
         justify-content: center;
@@ -242,8 +238,7 @@ export default {
         background-color: #396c96;
         padding: 8px;
         width: 100px;
-        position: absolute;
-        float: right;
+        float: center;
         border-radius: 5px;
         font-family: 'Karla';
         font-size: 18px;
@@ -255,23 +250,38 @@ export default {
 }
 
 @media screen and (max-width: 560px) {
+    .session-partners-flex {
+        display: -webkit-box;  /* iOS 6-, Safari 3.1-6, BB7 */
+        display: -ms-flexbox;  /* IE 10 */
+        display: -webkit-flex; /* Safari 6.1+. iOS 7.1+, BB10 */
+        display: flex;         /*Firefox, Chrome, Opera */
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 20px;
+        padding-bottom: 15px;
+        padding-left: 1vw;
+        padding-right: 1vw;
+    }
+
   .session-partners-container {
     margin-left: 2vw;
     margin-right: 2vw;
   }
 
   .session-partner-logo  {
-      max-width: 110px;
-      max-height: 50px;
-      margin: 20px 10px;
+      margin: 10px 10px;
   }
+}
 
-  .day-button {
-    width: 100px;
+@media screen and (max-width: 380px) {
+.day-button {
+    width: 250px;
     height: 30px;
-    font-size: 14px;
-    padding-top: 15px;
-    margin: 10px; 
-  }
+    font-size: 17px;
+    padding-top: 8px;
+    margin: 8px; 
+}
 }
 </style>
