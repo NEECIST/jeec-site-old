@@ -78,17 +78,18 @@ export default {
                         day_number: '13',
                         border_color: '#D1E71C',
                         sessions: [
-                            /*{
+                            {
                                 company: "KPMG",
                                 company_link: "www.microsoft.com",
-                                title: "IoT devices",
+                                title: "Cyber Security",
+                                description: '',
                                 day: "Wednesday, 13",
                                 time: "12 pm",
                                 logo: "../../static/partner-logos/kpmg.svg",
                                 eventbride_link: "",
-                                registration_open: true,
+                                registration_open: false,
                                 show: true
-                            },
+                            },/*
                             {
                                 company: "Talkdesk",
                                 company_link: "www.talkdesk.com",

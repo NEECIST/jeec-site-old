@@ -32,7 +32,7 @@
                     Registrations will open soon
                     </div>
                 </div>
-                <div class="workshop-description"><b>Description:</b><p>{{ session.description }}</p></div>
+                <div class="workshop-description" v-if="session.description != ''"><b>Description:</b><p>{{ session.description }}</p></div>
             </div>
         </div>
     </div>
