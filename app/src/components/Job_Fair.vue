@@ -42,7 +42,8 @@ export default {
 <style>
 .job-fair-comp {
   width: 100%;
-  background-color: #ffffff;
+  background-color: #dfe6f5;
+  padding-top: 10px;
   padding-bottom: 40px;
   text-align: center;
 }

@@ -53,7 +53,7 @@ export default {
 
 <style scoped>
 .matchmaking-comp {
-  background-color: #dfe6f5;
+  background-color: #ffffff;
   padding-top: 10px;
   width: 100%;
   padding-bottom: 40px;

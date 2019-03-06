@@ -2,8 +2,8 @@
     <div class="activities-app">
         
         <workshops v-bind:workshop_data="workshop_data"/>
-        <job-fair v-bind:job_fair_data="job_fair_data"/>
         <matchmaking v-bind:matchmaking_data="matchmaking_data"/>
+        <job-fair v-bind:job_fair_data="job_fair_data"/>
         
         <contacts/>
     </div>
@@ -492,8 +492,8 @@ export default {
                         sessions: [
                             {
                                 time: '10 am - 12 pm',
-                                registration_open: false,
-                                eventbride_link: '',
+                                registration_open: true,
+                                eventbride_link: 'https://www.eventbrite.pt/e/bilhetes-matchmaking-sessao-4-synopsys-everis-talkdesk-kwan-57615316964',
                                 partners: [
                                     {
                                         logo: '../../static/partner-logos/synopsys.png',
@@ -519,8 +519,8 @@ export default {
                             },
                             {
                                 time: '12 pm - 14 pm',
-                                registration_open: false,
-                                eventbride_link: '',
+                                registration_open: true,
+                                eventbride_link: 'https://www.eventbrite.pt/e/bilhetes-matchmaking-sessao-5-rumos-celfinet-siemens-microsoft-57615939827',
                                 partners: [
                                     {
                                         logo: '../../static/partner-logos/celfinet.png',
@@ -553,8 +553,8 @@ export default {
                         sessions: [
                             {
                                 time: '10 am - 12 pm',
-                                registration_open: false,
-                                eventbride_link: '',
+                                registration_open: true,
+                                eventbride_link: 'https://www.eventbrite.pt/e/bilhetes-matchmaking-sessao-6-navigator-deloitte-infinion-accenture-57616196595',
                                 partners: [ 
                                     {
                                         logo: '../../static/partner-logos/deloitte.png',
