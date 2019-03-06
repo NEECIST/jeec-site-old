@@ -86,8 +86,8 @@ export default {
                                 day: "Wednesday, 13",
                                 time: "12 pm",
                                 logo: "../../static/partner-logos/kpmg.svg",
-                                eventbride_link: "",
-                                registration_open: false,
+                                eventbride_link: "https://www.eventbrite.pt/e/bilhetes-workshop-kpmg-cyber-security-57620601771",
+                                registration_open: true,
                                 show: true
                             },/*
                             {
@@ -116,8 +116,8 @@ export default {
                                 day: "Thursday, 14",
                                 time: "12 pm",
                                 logo: "../../static/partner-logos/vodafone.jpg",
-                                eventbride_link: "",
-                                registration_open: false,
+                                eventbride_link: "https://www.eventbrite.pt/e/bilhetes-workshop-vodafone-vodafone-evolucao-e-dimensionamento-da-rede-movel-57622905662",
+                                registration_open: true,
                                 show: true
                             },
                             {
@@ -128,8 +128,8 @@ export default {
                                 day: "Thursday, 14",
                                 time: "5:30 pm",
                                 logo: "../../static/partner-logos/microsoft.png",
-                                eventbride_link: "",
-                                registration_open: false,
+                                eventbride_link: "https://www.eventbrite.pt/e/bilhetes-workshop-microsoft-azure-iot-introduction-57623025019",
+                                registration_open: true,
                                 show: true
                             },
                         ]
