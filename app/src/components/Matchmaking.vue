@@ -119,9 +119,10 @@ export default {
   padding-top: 20px;
   padding-bottom: 20px;
   border-radius: 20px;
-  width: 900px;
+  width: 500px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.3);
   margin-bottom: 40px;
+  margin-left: 20px;
 }
 
 .session-day {
@@ -154,7 +155,7 @@ export default {
 
 .session-partner-logo {
     justify-content: center;
-    max-height: 90px;
+    max-height: 70px;
     max-width: 160px;
     margin: 10px 25px;
     opacity: .85;

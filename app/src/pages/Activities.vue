@@ -57,8 +57,8 @@ export default {
                                 description: "Some of the most interesting advances in AI recently have come from the field of (deep) reinforcement learning (RL). RL represents a step towards building autonomous systems with a higher level understanding of the visual world. For this reason, RL has a great potential for real-world applications. If you want to know more and try out some exercises, please join this workshop.",
                                 time: "12 pm",
                                 logo: "../../static/partner-logos/deloitte.png",
-                                eventbride_link: "",
-                                registration_open: false,
+                                eventbride_link: "https://www.eventbrite.pt/e/bilhetes-workshop-deloitte-understanding-deep-reinforcement-learning-57613151487",
+                                registration_open: true,
                                 show: true
                             },/*
                             {
@@ -143,9 +143,24 @@ export default {
                         border_color: '#D1E71C',
                         partners: [
                             {
-                                logo: '../../static/partner-logos/technoedif.png',
-                                name: 'Technoedif',
-                                link: 'https://www.technoedif.com/pt/homepage/'
+                                logo: '../../static/partner-logos/altran.png',
+                                name: 'Altran',
+                                link: 'https://www.altran.com/pt/pt-pt/'
+                            },
+                            {
+                                logo: '../../static/partner-logos/aubay.png',
+                                name: 'Aubay',
+                                link: 'https://www.aubay.pt/'
+                            },
+                            {
+                                logo: '../../static/partner-logos/celfinet.png',
+                                name: 'Celfinet',
+                                link: 'https://www.celfinet.com/'
+                            },
+                            {
+                                logo: '../../static/partner-logos/ey.png',
+                                name: 'EY',
+                                link: 'https://www.ey.com/en_gl'
                             },
                             {
                                 logo: '../../static/partner-logos/novabase.jpg',
@@ -166,37 +181,22 @@ export default {
                                 logo: '../../static/partner-logos/premium_minds.png',
                                 name: 'Premium Minds',
                                 link: 'https://www.premium-minds.com/'
+                            },    
+                            {
+                                logo: '../../static/partner-logos/technoedif.png',
+                                name: 'Technoedif',
+                                link: 'https://www.technoedif.com/pt/homepage/'
                             },
                             {
-                                logo: '../../static/partner-logos/aubay.png',
-                                name: 'Aubay',
-                                link: 'https://www.aubay.pt/'
-                            },
-                            {
-                                logo: '../../static/partner-logos/altran.png',
-                                name: 'Altran',
-                                link: 'https://www.altran.com/pt/pt-pt/'
+                                logo: '../../static/partner-logos/thales.png',
+                                name: 'Thales',
+                                link: 'https://www.thalesgroup.com/pt-pt'
                             },
                             {
                                 logo: '../../static/partner-logos/vtxrm.png',
                                 name: 'VTXRM',
                                 link: 'http://www.vtxrm.com/'
                             },
-                            {
-                                logo: '../../static/partner-logos/ey.png',
-                                name: 'EY',
-                                link: 'https://www.ey.com/en_gl'
-                            },
-                            {
-                                logo: '../../static/partner-logos/celfinet.png',
-                                name: 'Celfinet',
-                                link: 'https://www.celfinet.com/'
-                            },
-                            {
-                                logo: '../../static/partner-logos/thales.png',
-                                name: 'Thales',
-                                link: 'https://www.thalesgroup.com/pt-pt'
-                            }
                         ]
                     },
                     {
@@ -205,49 +205,9 @@ export default {
                         border_color: '#3399ff',
                         partners: [
                             {
-                                logo: '../../static/partner-logos/dellent_consulting.png',
-                                name: 'Dellent Consulting',
-                                link: 'https://www.dellentconsulting.com/'
-                            },
-                            {
-                                logo: '../../static/partner-logos/novabase.jpg',
-                                name: 'Nova Base',
-                                link: 'http://www.novabase.pt/pt'
-                            },
-                            {
-                                logo: '../../static/partner-logos/neyond.svg',
-                                name: 'Neyond',
-                                link: 'https://www.epimetheus.pt/'
-                            },
-                            {
                                 logo: '../../static/partner-logos/coreso.png',
                                 name: 'Coreso',
                                 link: 'https://www.coreso.eu/'
-                            },
-                            {
-                                logo: '../../static/partner-logos/ren.png',
-                                name: 'REN',
-                                link: 'https://www.ren.pt/'
-                            },
-                            {
-                                logo: '../../static/partner-logos/kpmg.svg',
-                                name: 'KPMG',
-                                link: 'https://home.kpmg/pt/en/home.html'
-                            },
-                            {
-                                logo: '../../static/partner-logos/outsystems.jpg',
-                                name: 'Outsystems',
-                                link: 'https://www.outsystems.com/'
-                            },
-                            {
-                                logo: '../../static/partner-logos/vtxrm.png',
-                                name: 'VTXRM',
-                                link: 'http://www.vtxrm.com/'
-                            },
-                            {
-                                logo: '../../static/partner-logos/everis.png',
-                                name: 'Everis',
-                                link: 'https://www.everis.com/portugal/pt-pt'
                             },
                             {
                                 logo: '../../static/partner-logos/critical_techworks.png',
@@ -255,23 +215,175 @@ export default {
                                 link: 'https://www.criticaltechworks.com/'
                             },
                             {
+                                logo: '../../static/partner-logos/dellent_consulting.png',
+                                name: 'Dellent Consulting',
+                                link: 'https://www.dellentconsulting.com/'
+                            },
+                            {
+                                logo: '../../static/partner-logos/everis.png',
+                                name: 'Everis',
+                                link: 'https://www.everis.com/portugal/pt-pt'
+                            },
+                            {
+                                logo: '../../static/partner-logos/kpmg.svg',
+                                name: 'KPMG',
+                                link: 'https://home.kpmg/pt/en/home.html'
+                            },
+                            {
+                                logo: '../../static/partner-logos/neyond.svg',
+                                name: 'Neyond',
+                                link: 'https://www.epimetheus.pt/'
+                            },
+                            {
+                                logo: '../../static/partner-logos/novabase.jpg',
+                                name: 'Nova Base',
+                                link: 'http://www.novabase.pt/pt'
+                            },
+                            {
+                                logo: '../../static/partner-logos/outsystems.jpg',
+                                name: 'Outsystems',
+                                link: 'https://www.outsystems.com/'
+                            },
+                            {
+                                logo: '../../static/partner-logos/ren.png',
+                                name: 'REN',
+                                link: 'https://www.ren.pt/'
+                            },
+                            {
                                 logo: '../../static/partner-logos/thales.png',
                                 name: 'Thales',
                                 link: 'https://www.thalesgroup.com/pt-pt'
-                            }
+                            },
+                            {
+                                logo: '../../static/partner-logos/vtxrm.png',
+                                name: 'VTXRM',
+                                link: 'http://www.vtxrm.com/'
+                            },
                         ]
                     },
                     {
                         day_name: 'Wednesday, 13th',
                         day_number: '13',
-                        border_color: '#3399ff',
-                        partners: []
+                        border_color: '#3bd6c6',
+                        partners: [
+                            {
+                                logo: '../../static/partner-logos/accenture.png',
+                                name: 'Accenture',
+                                link: 'https://www.accenture.com/pt-pt/new-applied-now'
+                            },
+                            {
+                                logo: '../../static/partner-logos/deloitte.png',
+                                name: 'Deloitte',
+                                link: 'https://www2.deloitte.com/pt/pt.html'
+                            },
+                            {
+                                logo: '../../static/partner-logos/everis.png',
+                                name: 'Everis',
+                                link: 'https://www.everis.com/portugal/pt-pt'
+                            },
+                            {
+                                logo: '../../static/partner-logos/infineon.png',
+                                name: 'Infineon',
+                                link: 'https://www.infineon.com/'
+                            },
+                            {
+                                logo: '../../static/partner-logos/kwan.png',
+                                name: 'Kwan',
+                                link: 'www.kwan.pt/'
+                            },
+                            {
+                                logo: '../../static/partner-logos/microsoft.png',
+                                name: 'Microsoft',
+                                link: 'https://www.microsoft.com/pt-pt'
+                            },
+                            {
+                                logo: '../../static/partner-logos/navigator.png',
+                                name: 'Navigator',
+                                link: 'http://www.thenavigatorcompany.com/'
+                            },                            
+                            {
+                                logo: '../../static/partner-logos/siemens.jpg',
+                                name: 'Siemens',
+                                link: 'https://www.siemens.com/'
+                            },
+                            {
+                                logo: '../../static/partner-logos/synopsys.png',
+                                name: 'Synopsys',
+                                link: 'https://www.synopsys.com/'
+                            },
+                            {
+                                logo: '../../static/partner-logos/talkdesk.png',
+                                name: 'Talkdesk',
+                                link: 'https://www.talkdesk.com/'
+                            },
+                            {
+                                logo: '../../static/partner-logos/weg.jpg',
+                                name: 'WEG',
+                                link: 'https://www.weg.net/pt'
+                            }
+                        ]
                     },
                     {
                         day_name: 'Thursday, 14th',
                         day_number: '14',
-                        border_color: '#3399ff',
-                        partners: []
+                        border_color: '#afabd2',
+                        partners: [
+                            {
+                                logo: '../../static/partner-logos/accenture.png',
+                                name: 'Accenture',
+                                link: 'https://www.accenture.com/pt-pt/new-applied-now'
+                            },
+                            {
+                                logo: '../../static/partner-logos/alten.png',
+                                name: 'Alten',
+                                link: 'http://www.alten.com/'
+                            },
+                            {
+                                logo: '../../static/partner-logos/deloitte.png',
+                                name: 'Deloitte',
+                                link: 'https://www2.deloitte.com/pt/pt.html'
+                            },
+                            {
+                                logo: '../../static/partner-logos/infineon.png',
+                                name: 'Infineon',
+                                link: 'https://www.infineon.com/'
+                            },
+                            {
+                                logo: '../../static/partner-logos/microsoft.png',
+                                name: 'Microsoft',
+                                link: 'https://www.microsoft.com/pt-pt'
+                            },
+                            {
+                                logo: '../../static/partner-logos/navigator.png',
+                                name: 'Navigator',
+                                link: 'http://www.thenavigatorcompany.com/'
+                            },
+                            {
+                                logo: '../../static/partner-logos/nos.png',
+                                name: 'NOS',
+                                link: 'www.nos.pt/'
+                            },
+                            {
+                                logo: '../../static/partner-logos/primeit.png',
+                                name: 'PrimeIT',
+                                link: 'https://www.primeit.pt/'
+                            },
+                            {
+                                logo: '../../static/partner-logos/siemens.jpg',
+                                name: 'Siemens',
+                                link: 'https://www.siemens.com/'
+                            },
+                            {
+                                logo: '../../static/partner-logos/talkdesk.png',
+                                name: 'Talkdesk',
+                                link: 'https://www.talkdesk.com/'
+                            },
+                            {
+                                logo: '../../static/partner-logos/voice_interaction.png',
+                                name: 'Voiceinteraction',
+                                link: 'https://www.voice-interaction.com/pt/'
+                            },
+                        ]
                     },
                 ]
             },
@@ -318,8 +430,8 @@ export default {
                         sessions: [
                             {
                                 time: '10 am - 12 pm',
-                                registration_open: false,
-                                eventbride_link: '',
+                                registration_open: true,
+                                eventbride_link: 'https://www.eventbrite.pt/e/bilhetes-matchmaking-sessao-2-adentis-epimetheus-kpmg-hitachi-vantara-57614581765',
                                 partners: [
                                     {
                                         logo: '../../static/partner-logos/neyond.svg',
@@ -345,8 +457,8 @@ export default {
                             },
                             {
                                 time: '12 pm - 14 pm',
-                                registration_open: false,
-                                eventbride_link: '',
+                                registration_open: true,
+                                eventbride_link: 'https://www.eventbrite.pt/e/bilhetes-matchmaking-sessao-3-vtxrm-it-sector-vodafone-cs-57615192592',
                                 partners: [
                                     {
                                         logo: '../../static/partner-logos/vtxrm.png',
@@ -377,7 +489,7 @@ export default {
                         day_number: '13',
                         border_color: '#3399ff',
                         sessions: [
-                            /*{
+                            {
                                 time: '10 am - 12 pm',
                                 registration_open: false,
                                 eventbride_link: '',
@@ -424,8 +536,13 @@ export default {
                                         name: 'Microsoft',
                                         link: 'https://www.microsoft.com/pt-pt'
                                     },
+                                    {
+                                        logo: '../../static/partner-logos/rumos.png',
+                                        name: 'Rumos',
+                                        link: 'https://www.rumos.pt/'
+                                    },
                                 ]
-                            },*/
+                            },
                         ]
                     },
                     {
@@ -433,7 +550,7 @@ export default {
                         day_number: '14',
                         border_color: '#3399ff',
                         sessions: [
-                            /*{
+                            {
                                 time: '10 am - 12 pm',
                                 registration_open: false,
                                 eventbride_link: '',
@@ -452,9 +569,14 @@ export default {
                                         logo: '../../static/partner-logos/accenture.png',
                                         name: 'Accenture',
                                         link: 'https://www.accenture.com/pt-pt/new-applied-now'
-                                    }
+                                    },
+                                    {
+                                        logo: '../../static/partner-logos/navigator.png',
+                                        name: 'Navigator',
+                                        link: 'http://www.thenavigatorcompany.com/'
+                                    },
                                 ]
-                            }*/
+                            }
                         ]
                     }
                 ]
