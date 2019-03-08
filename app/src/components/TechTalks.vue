@@ -23,15 +23,6 @@
                     </div>
                 </div>
 
-                <div class="registration">
-                    <a :href="session.eventbride_link" target="_blank" v-if="session.registration_open">
-                        <div class="registration-button">Attend</div>
-                    </a>
-
-                    <div class="registration-closed" v-else>
-                    Registrations will open soon
-                    </div>
-                </div>
                 <div class="workshop-description" v-if="session.description != ''"><b>Description:</b><p>{{ session.description }}</p></div>
             </div>
         </div>
