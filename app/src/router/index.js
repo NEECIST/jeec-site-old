@@ -6,6 +6,7 @@ import Team from '@/pages/Team'
 import Partners from '@/pages/Partners'
 import Error_Handling from '@/pages/Error_Handling'
 import Activities from '@/pages/Activities'
+import Schedule from '@/pages/Schedule'
 
 Vue.use(Router)
 
@@ -38,6 +39,11 @@ export default new Router({
       path: '/speakers',
       name: 'Speakers',
       component: Speakers
+    },
+    {
+      path: '/schedule',
+      name: 'Schedule',
+      component: Schedule
     },
     { 
       path: '/404', 
