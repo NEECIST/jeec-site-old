@@ -5,7 +5,7 @@
             <p>{{ location }}</p>
         </div>
 
-        <div class="warning">Activities are now opened for registration!</div>
+        <div class="warning">Activities are now open for registration!</div>
             
         <div class="main-logo-container">
             <img :src="center_image_link" class="logo-home">
