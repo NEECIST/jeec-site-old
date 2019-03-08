@@ -196,6 +196,7 @@ export default {
     line-height: 23px;
     font-family: 'Lato';
     text-align: left;
+    margin-top: 30px; 
 }
 
 /* On screens that are 992px wide or less*/
