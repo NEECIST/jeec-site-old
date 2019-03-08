@@ -4,6 +4,7 @@
         <workshops v-bind:workshop_data="workshop_data"/>
         <matchmaking v-bind:matchmaking_data="matchmaking_data"/>
         <job-fair v-bind:job_fair_data="job_fair_data"/>
+        <techtalks v-bind:workshop_data="techtalks_data" />
         
         <contacts/>
     </div>
@@ -132,6 +133,140 @@ export default {
                                 registration_open: true,
                                 show: true
                             },
+                        ]
+                    },
+                ]
+            },
+            techtalks_data: {
+                days: [
+                    {
+                        day_name: 'Monday, 11th',
+                        day_number: '11',
+                        border_color: '#D1E71C',
+                        sessions: [
+                            {
+                                company: "VTXRM",
+                                company_link: "www.vtxrm.com",
+                                title: "How we work",
+                                description: "",
+                                time: "10 am",
+                                logo: "../../static/partner-logos/vtxrm.png",
+                            },
+                            {
+                                company: "Thales",
+                                company_link: "www.thalesgroup.com",
+                                title: "O Pulsar da Cidade / Big Data",
+                                description: "",
+                                time: "10:45 am",
+                                logo: "../../static/partner-logos/thales.png",
+                            },
+                            {
+                                company: "EY",
+                                company_link: "www.ey.com",
+                                title: "ThEY Pitch",
+                                description: "",
+                                time: "11:30 am",
+                                logo: "../../static/partner-logos/ey.png",
+                            },
+                        ]
+                    },
+                    {
+                        day_name: 'Tuesday, 12th',
+                        day_number: '12',
+                        border_color: '#D1E71C',
+                        sessions: [
+                            {
+                                company: "Outsystems",
+                                company_link: "www.outsystems.com",
+                                title: "AI-powered Data Model Design",
+                                description: "Machine Learning applied to Software",
+                                time: "10 am",
+                                logo: "../../static/partner-logos/outsystems.jpg"
+                            },
+                            {
+                                company: "Novabase",
+                                company_link: "www.novabase.com",
+                                title: "Introdução ao Processamento de Linguagem Natural dentro do contexto de Inteligência Artificial",
+                                description: "Quais os desafios, as suas aplicações e limitações",
+                                time: "10:45 am",
+                                logo: "../../static/partner-logos/novabase.jpg"
+                            },
+                            {
+                                company: "Everis",
+                                company_link: "www.everis.com",
+                                title: "Everything that can be digital will be digital",
+                                description: "Como identificar e automatizar processos/tarefas de grande volume mas pouco valor acrescentado, realizadas por humanos, e transformar operações utilizando robots de software, seguindo regras para processar dados estruturados.",
+                                time: "11:30 am",
+                                logo: "../../static/partner-logos/everis.png"
+                            },
+                        ]
+                    },
+                    {
+                        day_name: 'Wednesday, 13th',
+                        day_number: '13',
+                        border_color: '#D1E71C',
+                        sessions: [
+                            {
+                                company: "The Navigator Company",
+                                company_link: "www.thenavigatorcompany.com",
+                                title: "Descarbonização da Navigator. Parece impossível?",
+                                description: 'No âmbito deste tech talk, será debatido o roadmap para atingir, até 2035, a neutralidade carbónica dos processos industriais da Navigator Company.',
+                                day: "Wednesday, 13",
+                                time: "10 am",
+                                logo: "../../static/partner-logos/navigator.png"
+                            },
+                            {
+                                company: "Deloitte",
+                                company_link: "www.deloitte.com",
+                                title: "Network Functions Virtualization, where are we now?",
+                                description: 'Introdução da tecnologia NFV seguido do âmbito/atividades de um projeto Deloitte num operador multinacional relativamente ao tema NFV. Finalização com uma reflexão do estado atual do NFV nas operadoras e quais os próximos passos.',
+                                day: "Wednesday, 13",
+                                time: "10:45 am",
+                                logo: "../../static/partner-logos/deloitte.png"
+                            },
+                            {
+                                company: "Talkdesk",
+                                company_link: "www.talkdesk.com",
+                                title: "From a contest to great tech challenges",
+                                description: '',
+                                day: "Wednesday, 13",
+                                time: "11:30 am",
+                                logo: "../../static/partner-logos/talkdesk.png"
+                            },
+                        ]
+                    },
+                    {
+                        day_name: 'Thursday, 14th',
+                        day_number: '14',
+                        border_color: '#D1E71C',
+                        sessions: [
+                            {
+                                company: "NOS",
+                                company_link: "www.nos.pt",
+                                title: "An insight view of NOS",
+                                description: "",
+                                day: "Thursday, 14",
+                                time: "10 am",
+                                logo: "../../static/partner-logos/nos.png"
+                            },
+                            {
+                                company: "Alten",
+                                company_link: "www.alten.com",
+                                title: "Join the largest IT Hub in Europe",
+                                description: "Come join us at the talk to know more about what we do and what you could gain from this experience!",
+                                day: "Thursday, 14",
+                                time: "10:45 am",
+                                logo: "../../static/partner-logos/alten.png"
+                            },
+                            {
+                                company: "Voice Interaction",
+                                company_link: "www.voice-interaction.com",
+                                title: "Automatic Live-Subtitling: Pushing the Limits of Speech Recognition",
+                                description: "ASR – Automatic Speech Recognition, com base em técnicas de Machine Learning e DNN’s",
+                                day: "Thursday, 14",
+                                time: "11:30 am",
+                                logo: "../../static/partner-logos/voice_interaction.png"
+                            }
                         ]
                     },
                 ]
