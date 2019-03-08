@@ -147,7 +147,7 @@ export default {
                             {
                                 company: "VTXRM",
                                 company_link: "www.vtxrm.com",
-                                title: "How we work Backend/Frontend/Testing/Factory Support/Services",
+                                title: "How we work",
                                 description: "",
                                 time: "10 am",
                                 logo: "../../static/partner-logos/vtxrm.png",
