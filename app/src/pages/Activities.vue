@@ -60,17 +60,17 @@ export default {
                                 eventbride_link: "https://www.eventbrite.pt/e/bilhetes-workshop-deloitte-understanding-deep-reinforcement-learning-57613151487",
                                 registration_open: true,
                                 show: true
-                            },/*
+                            },
                             {
-                                company: "CS",
-                                company_link: "www.microsoft.com",
-                                title: "How to build something out of nothing",
+                                company: "Critical TechWorks",
+                                company_link: "https://www.criticaltechworks.com/",
+                                title: "To be confirmed",
                                 time: "5:30 pm",
-                                logo: "../../static/partner-logos/microsoft.png",
-                                eventbride_link: "",
+                                logo: "../../static/partner-logos/critical_techworks.png",
+                                eventbride_link: "https://www.eventbrite.pt/e/bilhetes-workshop-critical-techworks-by-cs-titulo-a-confirmar-57620076199",
                                 registration_open: true,
                                 show: true
-                            },*/
+                            },
                         ]
                     },
                     {
