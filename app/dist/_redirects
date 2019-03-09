@@ -3,6 +3,6 @@
 /redirect/evento    https://www.facebook.com/events/919116684933710 301
 /redirect/www       / 301
 /redirect/qa        https://qajeecist.netlify.com 301!
-/redirect/cv        http://51.140.99.42:8000 200
+/redirect/cv        http://51.140.99.42:8000 200!
 
 https://jeecist.netlify.com/* https://jeec.ist/:splat 301!
