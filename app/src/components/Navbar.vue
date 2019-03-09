@@ -97,8 +97,10 @@ export default {
   width: 100px;
   height: 30px;
   text-align: center;
+  float: left;
+  margin-left: 20px;
   width: 130px;
-  border-radius: 40px;
+  border-radius: 10px;
   background: #fff;
   color: rgb(67, 154, 236);
   font-weight: bold;
@@ -328,6 +330,7 @@ a:hover
   
 .platform-button {
   margin-top: 15px;
+  margin-left: 30px;
 }
 
 }
