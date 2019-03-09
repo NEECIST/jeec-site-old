@@ -13,6 +13,7 @@ import Who_Are_We from './components/Who_Are_We'
 import Latest_Speakers from './components/Latest_Speakers'
 import Speakers_List from './components/Speakers_List'
 import Meet_our_speakers from './components/Meet_our_speakers'
+import Panels from './components/Panels'
 
 import Scroll_Down_Arrow from './components/Scroll_Down_Arrow'
 import Component_Title from './components/Component_Title'
@@ -41,6 +42,7 @@ Vue.component('latest-speakers', Latest_Speakers)
 Vue.component('speakers-list', Speakers_List)
 Vue.component('meet-our-speakers', Meet_our_speakers)
 Vue.component('scroll-down-arrow', Scroll_Down_Arrow)
+Vue.component('panels', Panels)
 
 Vue.component('component-title', Component_Title)
 
