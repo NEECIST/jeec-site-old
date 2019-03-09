@@ -283,7 +283,7 @@ a:hover
   box-shadow: 0 200px 300px 0 rgba(0, 0, 0, 0.3);
   border-radius: 30px;
   transform-origin: 0% 0%;
-  transform: translate(500px, 50px);
+  transform: translate(1100px, 0px);
   transition: transform 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
