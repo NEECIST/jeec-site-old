@@ -5,7 +5,11 @@
 
           <img class="navbar-left-logo-mobile" :src="navbar_mobile_logo_link">
         </router-link>
-        
+
+        <a href="https://cv.jeec.ist">
+          <div class="platform-button">CV Platform</div>
+        </a>
+
         <router-link router-link :to="{ name: 'Team' }">
           <div class="navbar-title">Team</div>
         </router-link>
@@ -88,22 +92,21 @@ export default {
   display: none;
 }
 
-.partners-button {
-height: 20px;
-text-align: center;
-width: 130px;
+.platform-button {
+  margin-top: 20px;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  width: 130px;
   border-radius: 40px;
   background: #fff;
   color: rgb(67, 154, 236);
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  border: 1px solid rgb(67, 154, 236);
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 5px;
-  padding-bottom: 10px;
-  border-radius: 20px;
+  padding-top: 10px;
+  border: 2px solid #77a1d1;
+  display: inline-block;
 }
 
 .join-quote {
@@ -268,8 +271,8 @@ a:hover
 #menu
 {
   position: absolute;
-  width: 100vw;
-  margin-left: -98vw;
+  width: 1500vw;
+  margin-left: -60vw;
   padding: 50px;
   padding-top: 50px;
   margin-top: 18px;
@@ -307,7 +310,7 @@ a:hover
 }
 
 /* On screens that are 600px wide*/
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 1050px) {
   .navbar {
     height: 70px;
   }

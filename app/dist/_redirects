@@ -5,4 +5,5 @@
 /redirect/qa        https://qajeecist.netlify.com 301!
 /redirect/cv        http://51.140.99.42/
 
+
 https://jeecist.netlify.com/* https://jeec.ist/:splat 301!
