@@ -106,36 +106,15 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   padding-top: 10px;
   border: 2px solid #77a1d1;
+  transition: all .2s ease-in-out;
   display: inline-block;
 }
 
-.join-quote {
-    font-family: 'Roboto';
-    font-size: 18px;
-    margin-top: 30px;
-}
 
-.register-button {
-    background-color: rgb(66, 161, 199);
-    color: white;
-    border-radius: 5px;
-    padding: 0.5em 0.7em;
-    font-weight: 600;
-    font-size: 16px;
-  position: relative;
-  text-decoration: none;
-  text-transform: uppercase;
+.platform-button:hover {
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
-  transition: all .2s ease-in-out;
-  letter-spacing: 1.5px;
-}
-
-
-.register-button:hover {
-  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.3);
   transform: scale(1.03); 
   cursor: pointer;
-  color: white;
 }
 
 .join-quote, .register-button {
@@ -345,6 +324,12 @@ a:hover
     font-size: 19px;
     margin-top: 25px;
   }
+
+  
+.platform-button {
+  margin-top: 15px;
+}
+
 }
 
 @media only screen and (max-width: 350px) {
