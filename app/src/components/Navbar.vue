@@ -271,8 +271,8 @@ a:hover
 #menu
 {
   position: absolute;
-  width: 1500vw;
-  margin-left: -60vw;
+  width: 100vw;
+  margin-left: -96vw;
   padding: 50px;
   padding-top: 50px;
   margin-top: 18px;
@@ -283,8 +283,7 @@ a:hover
   box-shadow: 0 200px 300px 0 rgba(0, 0, 0, 0.3);
   border-radius: 30px;
   transform-origin: 0% 0%;
-  transform: translate(800px, 0);
-  
+  transform: translate(500px, 50px);
   transition: transform 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
