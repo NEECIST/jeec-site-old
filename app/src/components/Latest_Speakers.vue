@@ -59,7 +59,7 @@ export default {
                   date: '15 march',
                   time: '2 pm'
                 }
-              },
+              },/*
               {
                 name: 'Rui Carvalho',
                 current_function: 'Development Director',
@@ -78,7 +78,7 @@ export default {
                   date: '13 march',
                   time: '2 pm'
                 }
-              },
+              },*/
               {
                 name: 'António Alegria',
                 current_function: 'Head of Artificial Intelligence',

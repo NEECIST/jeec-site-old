@@ -117,7 +117,7 @@ export default {
             time: "3:30 pm"
           }
         },
-        {
+        /*{
           name: 'Rui Carvalho',
           current_function: 'Development Director',
           company_logo: '../../static/speakers/east.png',
@@ -135,7 +135,7 @@ export default {
             date: '13 march',
             time: '2 pm'
           }
-        },
+        },*/
         {
           name: "Fernando Silva",
           current_function: "Director of Energy Management",
