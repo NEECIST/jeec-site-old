@@ -80,24 +80,33 @@ export default {
                 }
               },
               {
-                name: 'António Alegria',
-                current_function: 'Head of Artificial Intelligence',
-                company_logo: '../../static/speakers/outsystems.png',
-                company_link: 'https://www.outsystems.com/',
-                notes: 'An experienced engineer specialized in AI, Machine Learning, Fraud Prevention and Large Scala Data Engineering. <b>Técnico alumni</b> - Computer Engineering.',
-                image: '../../static/speakers/antonio_alegria.png',
-                origin: 'Portugal',
+                name: "Jeremy Blum",
+                current_function: "Director of Engineering",
+                company_logo: "../../static/speakers/shaper.png",
+                company_link: "https://www.shapertools.com/",
+                notes:
+                  '"My passion is using engineering to improve people’s lives, and giving people the tools they need to do the same."',
+                image: "../../static/speakers/jeremy_blum.svg",
+                origin: 'San Francisco, California',
                 links: [
                   {
-                    link: 'https://www.linkedin.com/in/antonioalegria/',
-                    logo: '../../static/speakers/linkedin.png'
+                    link: "https://www.youtube.com/channel/UC4KXPjmKwPutGjwFZsEXB5g",
+                    logo: "../../static/speakers/youtube.jpg"
+                  },
+                  {
+                    link: "https://www.jeremyblum.com/",
+                    logo: ""
+                  },
+                  {
+                    link: "https://www.linkedin.com/in/jeremyeblum/",
+                    logo: "../../static/speakers/linkedin.png"
                   }
                 ],
                 schedule: {
-                  date: '11 march',
-                  time: '3:30 pm'
+                  date: "12 march",
+                  time: "2 pm"
                 }
-              }
+              },
           ]
       }
   }
