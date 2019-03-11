@@ -8,6 +8,7 @@
     <img class="schedule_phone" src="../../static/schedule_2.png">
     <img class="schedule_phone" src="../../static/schedule_3.png">
     <img class="schedule_phone" src="../../static/schedule_4.png">
+    <img class="schedule_phone" src="../../static/schedule_5.png">
     <contacts/>
   </div>
 </template>
