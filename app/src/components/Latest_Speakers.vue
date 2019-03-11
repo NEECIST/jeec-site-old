@@ -62,7 +62,7 @@ export default {
               },
               {
                 name: 'Miguel Gonçalves',
-                current_function: 'Comandante Executivo',
+                current_function: 'CEO',
                 company_logo: '../../static/speakers/spark.png',
                 company_link: 'http://sparkagency.pt/',
                 notes: "An entrepreneur, travel consultant and co-founder of Spark, a Portuguese agency specializing in talent management and employer branding. Face of Pitch Bootcamp.",
