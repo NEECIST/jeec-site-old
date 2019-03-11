@@ -59,18 +59,18 @@ export default {
                   date: '15 march',
                   time: '2 pm'
                 }
-              },/*
+              },
               {
-                name: 'Rui Carvalho',
-                current_function: 'Development Director',
-                company_logo: '../../static/speakers/east.png',
-                company_link: 'https://www.association-secure-transactions.eu/',
-                notes: "Years of experience in the area of security and fraud prevention working at the European Association for Secure Transactions.",
-                image: '../../static/speakers/rui_carvalho.png',
+                name: 'Miguel Gonçalves',
+                current_function: 'Comandante Executivo',
+                company_logo: '../../static/speakers/spark.png',
+                company_link: 'http://sparkagency.pt/',
+                notes: "An entrepreneur, travel consultant and co-founder of Spark, a Portuguese agency specializing in talent management and employer branding. Face of Pitch Bootcamp.",
+                image: '../../static/speakers/miguel_gonçalves.png',
                 origin: 'Portugal',
                 links: [
                   {
-                    link: 'https://www.linkedin.com/in/rui-carvalho/',
+                    link: 'https://www.linkedin.com/in/miguel-gon%C3%A7alves-2490228b/?originalSubdomain=pt',
                     logo: '../../static/speakers/linkedin.png'
                   }
                 ],
@@ -78,7 +78,7 @@ export default {
                   date: '13 march',
                   time: '2 pm'
                 }
-              },*/
+              },
               {
                 name: 'António Alegria',
                 current_function: 'Head of Artificial Intelligence',
