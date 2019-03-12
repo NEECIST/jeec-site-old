@@ -90,18 +90,18 @@ export default {
                                 eventbride_link: "https://www.eventbrite.pt/e/bilhetes-workshop-kpmg-cyber-security-57620601771",
                                 registration_open: true,
                                 show: true
-                            },/*
+                            },
                             {
-                                company: "Talkdesk",
-                                company_link: "www.talkdesk.com",
-                                title: "IoT devices",
+                                company: "Accenture",
+                                company_link: "www.accenture.com",
+                                title: "DevOps",
                                 day: "Wednesday, 13",
                                 time: "5:30 pm",
-                                logo: "../../static/partner-logos/talkdesk.png",
-                                eventbride_link: "",
+                                logo: "../../static/partner-logos/accenture.png",
+                                eventbride_link: "https://www.eventbrite.pt/e/bilhetes-workshop-accenture-devops-58672938338",
                                 registration_open: true,
                                 show: true
-                            },*/
+                            },
                         ]
                     },
                     {
