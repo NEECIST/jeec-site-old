@@ -50,22 +50,22 @@ export default {
     return {
       speakers: [
         {
-          name: 'João Graça',
-          current_function: 'Founder & CTO',
-          company_logo: '../../static/speakers/unbabel.png',
-          company_link: 'https://www.unbabel.com/',
-          notes: 'Técnico Computer Engineering Alumni and Doc. in Machine Learning at Univ. of Pennsylvania. Founded Unbabel in 2013, a portuguese startup which is enabling trustworthy, seamless and scalable translations between companies and their customers.',
-          image: '../../static/speakers/joao_graça.png',
+          name: 'António Alegria',
+          current_function: 'Head of Artificial Intelligence',
+          company_logo: '../../static/speakers/outsystems.png',
+          company_link: 'https://www.outsystems.com/',
+          notes: 'An experienced engineer specialized in AI, Machine Learning, Fraud Prevention and Large Scala Data Engineering. <b>Técnico alumni</b> - Computer Engineering.',
+          image: '../../static/speakers/antonio_alegria.png',
           origin: 'Portugal',
           links: [
             {
-              link: 'https://www.linkedin.com/in/jo%C3%A3o-gra%C3%A7a-5444531/?originalSubdomain=pt',
+              link: 'https://www.linkedin.com/in/antonioalegria/',
               logo: '../../static/speakers/linkedin.png'
             }
           ],
           schedule: {
-            date: '14 march',
-            time: '2 pm'
+            date: '11 march',
+            time: '3:30 pm'
           }
         },
         {
@@ -149,6 +149,25 @@ export default {
           schedule: {
             date: "13 march",
             time: "3:30 pm"
+          }
+        },
+        {
+          name: 'João Graça',
+          current_function: 'Founder & CTO',
+          company_logo: '../../static/speakers/unbabel.png',
+          company_link: 'https://www.unbabel.com/',
+          notes: 'Técnico Computer Engineering Alumni and Doc. in Machine Learning at Univ. of Pennsylvania. Founded Unbabel in 2013, a portuguese startup which is enabling trustworthy, seamless and scalable translations between companies and their customers.',
+          image: '../../static/speakers/joao_graça.png',
+          origin: 'Portugal',
+          links: [
+            {
+              link: 'https://www.linkedin.com/in/jo%C3%A3o-gra%C3%A7a-5444531/?originalSubdomain=pt',
+              logo: '../../static/speakers/linkedin.png'
+            }
+          ],
+          schedule: {
+            date: '14 march',
+            time: '2 pm'
           }
         },
         {
