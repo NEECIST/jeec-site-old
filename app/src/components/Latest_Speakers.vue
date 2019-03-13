@@ -84,7 +84,7 @@ export default {
                 current_function: 'Founder & CTO',
                 company_logo: '../../static/speakers/unbabel.png',
                 company_link: 'https://www.unbabel.com/',
-                notes: 'Técnico Computer Engineering Alumni and Doc. in Machine Learning at Univ. of Pennsylvania. Founded Unbabel in 2013, a portuguese startup which is enabling trustworthy, seamless and scalable translations between companies and their customers.',
+                notes: 'Técnico Computer Engineering Alumni. Doc. in Machine Learning at Univ. of Pennsylvania. Founded Unbabel in 2013, a portuguese startup which is enabling trustworthy, seamless and scalable translations between companies and their customers.',
                 image: '../../static/speakers/joao_graça.png',
                 origin: 'Portugal',
                 links: [
