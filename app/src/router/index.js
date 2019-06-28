@@ -10,8 +10,6 @@ import Schedule from '@/pages/Schedule'
 
 Vue.use(Router)
 
-console.log('process.env.VUE_APP_HISTORY_MODE', process.env.VUE_APP_HISTORY_MODE)
-
 export default new Router({
   scrollBehavior() {
     return { x: 0, y: 0 };
