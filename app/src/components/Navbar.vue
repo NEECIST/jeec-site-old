@@ -5,10 +5,11 @@
 
           <img class="navbar-left-logo-mobile" :src="navbar_mobile_logo_link">
         </router-link>
-
+        <!--
         <a href="https://cv.jeec.ist">
           <div class="platform-button">CV Platform</div>
         </a>
+        -->
 
         <router-link router-link :to="{ name: 'Team' }">
           <div class="navbar-title">Team</div>
@@ -26,10 +27,11 @@
           <div class="navbar-title">Speakers</div>
         </router-link>
 
+        <!--
         <router-link router-link :to="{ name: 'Schedule' }">
           <div class="navbar-title">Schedule</div>
         </router-link>
-
+        -->
         
         <div id="menuToggle">
           <input type="checkbox" :checked="show_menu" v-on:click="show_menu = !show_menu"/>

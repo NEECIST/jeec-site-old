@@ -1,6 +1,6 @@
 <template>
   <div class="latest-speakers-comp">
-    <component-title title="Latest Speakers" subtitle="Minds that push engineering forward"/>
+    <component-title title="Speakers at JEEC|19" subtitle="Minds that push engineering forward"/>
 
     <div class="latest-speakers-flex">
         <div class="speaker-card" v-for="speaker in speakers" :key="speaker.name">
@@ -61,41 +61,50 @@ export default {
                 }
               },
               {
-                name: 'Miguel Gonçalves',
-                current_function: 'CEO',
-                company_logo: '../../static/speakers/spark.png',
-                company_link: 'http://sparkagency.pt/',
-                notes: "An entrepreneur, travel consultant and co-founder of Spark, a Portuguese agency specializing in talent management and employer branding. Face of Pitch Bootcamp.",
-                image: '../../static/speakers/miguel_gonçalves.png',
-                origin: 'Portugal',
+                name: "Jeremy Blum",
+                current_function: "Director of Engineering",
+                company_logo: "../../static/speakers/shaper.png",
+                company_link: "https://www.shapertools.com/",
+                notes:
+                  '"My passion is using engineering to improve people’s lives, and giving people the tools they need to do the same."',
+                image: "../../static/speakers/jeremy_blum.svg",
+                origin: 'San Francisco, California',
                 links: [
                   {
-                    link: 'https://www.linkedin.com/in/miguel-gon%C3%A7alves-2490228b/?originalSubdomain=pt',
-                    logo: '../../static/speakers/linkedin.png'
+                    link: "https://www.youtube.com/channel/UC4KXPjmKwPutGjwFZsEXB5g",
+                    logo: "../../static/speakers/youtube.jpg"
+                  },
+                  {
+                    link: "https://www.jeremyblum.com/",
+                    logo: ""
+                  },
+                  {
+                    link: "https://www.linkedin.com/in/jeremyeblum/",
+                    logo: "../../static/speakers/linkedin.png"
                   }
                 ],
                 schedule: {
-                  date: '13 march',
-                  time: '2 pm'
+                  date: "12 march",
+                  time: "2 pm"
                 }
               },
               {
-                name: 'João Graça',
-                current_function: 'Founder & CTO',
-                company_logo: '../../static/speakers/unbabel.png',
-                company_link: 'https://www.unbabel.com/',
-                notes: 'Técnico Computer Engineering Alumni. Doc. in Machine Learning at Univ. of Pennsylvania. Founded Unbabel in 2013, a portuguese startup which is enabling trustworthy, seamless and scalable translations between companies and their customers.',
-                image: '../../static/speakers/joao_graça.png',
+                name: 'António Alegria',
+                current_function: 'Head of Artificial Intelligence',
+                company_logo: '../../static/speakers/outsystems.png',
+                company_link: 'https://www.outsystems.com/',
+                notes: 'An experienced engineer specialized in AI, Machine Learning, Fraud Prevention and Large Scala Data Engineering. <b>Técnico alumni</b> - Computer Engineering.',
+                image: '../../static/speakers/antonio_alegria.png',
                 origin: 'Portugal',
                 links: [
                   {
-                    link: 'https://www.linkedin.com/in/jo%C3%A3o-gra%C3%A7a-5444531/?originalSubdomain=pt',
+                    link: 'https://www.linkedin.com/in/antonioalegria/',
                     logo: '../../static/speakers/linkedin.png'
                   }
                 ],
                 schedule: {
-                  date: '14 march',
-                  time: '2 pm'
+                  date: '11 march',
+                  time: '3:30 pm'
                 }
               },
           ]
