@@ -4,9 +4,10 @@
             {{ date }}
             <p>{{ location }}</p>
         </div>
+        
+        <!--
+        <div class="warning">Thank you for attending the event!</div>-->
 
-        <div class="warning">Thank you for attending the event!</div>
-            
         <div class="main-logo-container">
             <img :src="center_image_link" class="logo-home">
         </div>
@@ -38,7 +39,7 @@ export default {
       date: "11th to 15th of March 2020",
       location: "Instituto Superior Técnico",
       social_media_text: "Follow us on",
-      center_image_link: "../../static/jeec_logo.svg",
+      center_image_link: "../../static/jeec-logo.png",
       linkedin_icon_link: "../../static/linkedin.svg",
       facebook_icon_link: "../../static/facebook.svg",
       youtube_icon_link: "../../static/youtube.svg",

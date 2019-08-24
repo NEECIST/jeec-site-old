@@ -33,7 +33,7 @@ export default {
                 icons: [
                     {
                         link: '../../static/organized_by_students.svg',
-                        description: 'Organized <b>by</b> students, <b>for</b> students'
+                        description: 'Organized by students, for students'
                     },
                     {
                         link: '../../static/high_academic_value.svg',
@@ -41,7 +41,7 @@ export default {
                     },
                     {
                         link: '../../static/quality_speakers.svg',
-                        description: 'High profile <b>guest speakers</b> from all over the world'
+                        description: 'High profile guest speakers from all over the world'
                     }
                 ]
               },
@@ -50,11 +50,11 @@ export default {
                 icons: [
                     {
                         link: '../../static/find_the_best_students.svg',
-                        description: 'Connect with the best <b>graduating students</b>'
+                        description: 'Connect with the best graduating students'
                     },
                     {
                         link: '../../static/publicize_your_company.svg',
-                        description: '<b>Promote your company</b>'
+                        description: 'Promote your company'
                     },
                     {
                         link: '../../static/promote_your_areas.svg',
