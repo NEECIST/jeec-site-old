@@ -36,7 +36,7 @@ export default {
   data() {
     return {
 
-      date: "11th to 15th of March 2020",
+      date: "9th to 13th of March 2020",
       location: "Instituto Superior Técnico",
       social_media_text: "Follow us on",
       center_image_link: "../../static/jeec-logo.png",
