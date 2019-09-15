@@ -1,12 +1,12 @@
 <template>
-    <div class="partner-tier-comp">
+    <div class="partner-tier-comp" v-if="partners.length">
         <component-title v-bind:title="tier"/>
 
         <div class="partners-container" v-bind:style="{ borderColor: tier_color }">
             <div class="partners-flex">
                 <div class="partner" v-for="partner in partners" :key="partner.name">
                     <a v-bind:href="partner.link" target="_blank">
-                        <img class="partner-logo" :src="partner.logo">
+                        <img class="partner-logo" :src="jeec_api_url + partner.logo">
                     </a>
                 </div>
             </div>
@@ -18,6 +18,11 @@
     export default {
         name: 'partner-tier',
         props: ['partners', 'tier', 'tier_color'],
+        data() {
+            return {
+                jeec_api_url : process.env.VUE_APP_JEEC_BRAIN_URL,
+            };
+        },
     }
 </script>
 

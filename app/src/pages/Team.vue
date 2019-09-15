@@ -14,13 +14,16 @@
             <img src="https://us.123rf.com/450wm/tupungato/tupungato1611/tupungato161100074/66488989-science-doodle-background-seamless-vector-texture-with-physics-concepts-.jpg?ver=6">
         </div>
 
-        <div class="team" v-for="team in teams" :key="team.name">
-            <component-title :title="team.name"/>
+        <div class="team" v-for="team in teams" v-if="team.members['data'].length" :key="team.name">
+            <component-title 
+                :title="team.name"
+                :subtitle="team.description"
+            />
 
             <div class="team-flex">
-                <div v-for="member in team.members" :key="member.name">
+                <div v-for="member in team.members['data']" :key="member.name">
                     <div class="team-member">
-                        <img v-bind:src="member.picture">
+                        <img :src="jeec_api_url + member.image">
                         <p class="member-name">{{ member.name }}</p>
                     </div>
                 </div>
@@ -32,215 +35,26 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: "team",
   data() {
       return {
-          title: '<span class="first-word-style">LATEST</span> SPEAKERS',
-          teams: [
-              {
-                name: 'Coordination',
-                members: [
-                    {
-                        name: 'Ana Amaro',
-                        picture: '../../static/team/ana_amaro.png'
-                    },
-                    {
-                        name: 'José Correia',
-                        picture: '../../static/team/jose_correia.png'
-                    },
-                    {
-                        name: 'Maria Teles',
-                        picture: '../../static/team/maria_teles.png'
-                    },
-                    {
-                        name: 'Rita Machado',
-                        picture: '../../static/team/rita_machado.png'
-                    }
-                ]
-              },
-              {
-                name: 'Contact',
-                members: [
-                    {
-                        name: 'Adelaide Ambrósio',
-                        picture: '../../static/team/adelaide.png'
-                    },
-                    {
-                        name: 'André Pereira',
-                        picture: '../../static/team/andre.png'
-                    },
-                    {
-                        name: 'Carolina Roque',
-                        picture: '../../static/team/carolina_roque.png'
-                    },
-                    {
-                        name: 'Catarina Pires',
-                        picture: '../../static/team/catarina_pires.png'
-                    },
-                    {
-                        name: 'Gonçalo Morais',
-                        picture: '../../static/team/gonçalo_morais.png'
-                    },
-                    {
-                        name: 'Ion Ciobotari',
-                        picture: '../../static/team/ion.png'
-                    },
-                    {
-                        name: 'Isabel Castelo',
-                        picture: '../../static/team/isabel_castelo.png'
-                    },
-                    {
-                        name: 'João Janeiro',
-                        picture: '../../static/team/joao_janeiro.png'
-                    },
-                    {
-                        name: 'Manuel Diniz',
-                        picture: '../../static/team/manuel_diniz.png'
-                    },
-                    {
-                        name: 'Maria Salgueiro',
-                        picture: '../../static/team/maria_salgueiro.png'
-                    },
-                    {
-                        name: 'Matilde Peixoto',
-                        picture: '../../static/team/matilde_peixoto.png'
-                    },
-                    {
-                        name: 'Pedro Fernandes',
-                        picture: '../../static/team/pedro_fernandes.png'
-                    },
-                    {
-                        name: 'Nuno Pavia',
-                        picture: '../../static/team/nuno_pavia.png'
-                    },
-                    {
-                        name: 'Rui Paiva',
-                        picture: '../../static/team/rui_paiva.png'
-                    },
-                    {
-                        name: 'Sérgio Marinheiro',
-                        picture: '../../static/team/sergio_marinheiro.png'
-                    },
-                    {
-                        name: 'Tarcísio Silva',
-                        picture: '../../static/team/tarcisio.png'
-                    },
-                    {
-                        name: 'Tiago Felizardo',
-                        picture: '../../static/team/tiago_felizardo.png'
-                    },
-                    {
-                        name: 'Vasco Araújo',
-                        picture: '../../static/team/vasco_araujo.png'
-                    }
-                ]
-              },
-              {
-                name: 'Speakers',
-                members: [
-                    {
-                        name: 'Bárbara Correia',
-                        picture: '../../static/team/barbara_correia.png'
-                    },
-                    {
-                        name: 'Bernardo Gonilho',
-                        picture: '../../static/team/bernardo_gonilho.png'
-                    },
-                    {
-                        name: 'Duarte Honrado',
-                        picture: '../../static/team/duarte_honrado.png'
-                    },
-                    {
-                        name: 'Pedro Martins',
-                        picture: '../../static/team/pedro_martins.png'
-                    },/*
-                    {
-                        name: 'Sara Barroso',
-                        picture: ''
-                    },*/
-                    {
-                        name: 'Sofia Bebiano',
-                        picture: '../../static/team/sofia_bebiano.png'
-                    },
-                    {
-                        name: 'Sophie Taboada',
-                        picture: '../../static/team/sophie_taboada.png'
-                    },
-                    {
-                        name: 'Teresa Araújo',
-                        picture: '../../static/team/teresa_araújo.png'
-                    },
-                    {
-                        name: 'Tiago Brito',
-                        picture: '../../static/team/tiago_brito.png'
-                    }
-                ]
-              },
-              {
-                name: 'Marketing',
-                members: [
-                    {
-                        name: 'Ana Silvestre',
-                        picture: '../../static/team/catarina_silvestre.png'
-                    },
-                    {
-                        name: 'Beatriz Silva',
-                        picture: '../../static/team/beatriz_silva.png'
-                    },
-                    {
-                        name: 'Inês Coelho',
-                        picture: '../../static/team/ines_coelho.png'
-                    },
-                    {
-                        name: 'Madalena Ramos',
-                        picture: '../../static/team/madalena.png'
-                    },
-                    {
-                        name: 'Rita Pagaimo',
-                        picture: '../../static/team/rita_pagaimo.png'
-                    },
-                    {
-                        name: 'Sara Bernardes',
-                        picture: '../../static/team/sara_bernardes.png'
-                    },
-                    {
-                        name: 'Tiago Silvério',
-                        picture: '../../static/team/tiago_silverio.png'
-                    }
-                ]
-              },
-              {
-                name: 'Development',
-                members: [
-                    {
-                        name: 'Carlos Silva',
-                        picture: '../../static/team/carlos_silva.png'
-                    },
-                    {
-                        name: 'Gilberto Silva',
-                        picture: '../../static/team/gilberto.png'
-                    },
-                    {
-                        name: 'Guilherme Lopes',
-                        picture: '../../static/team/guilherme.png'
-                    },
-                    {
-                        name: 'Ivan Andrushka',
-                        picture: '../../static/team/ivan.png'
-                    },
-                    {
-                        name: 'Marina Relvas',
-                        picture: '../../static/team/marina.png'
-                    },
-                    {
-                        name: 'Raúl Vaqueiro',
-                        picture: '../../static/team/raul_vaqueiro.png'
-                    }
-                ]
-              }
-          ]
+        jeec_api_url : process.env.VUE_APP_JEEC_BRAIN_URL,
+        teams: []
       }
+  },
+
+  mounted () {
+    axios
+      .get(process.env.VUE_APP_JEEC_WEBSITE_API_URL + '/teams', {
+        auth: {
+          username: process.env.VUE_APP_JEEC_WEBSITE_USERNAME, 
+          password: process.env.VUE_APP_JEEC_WEBSITE_KEY
+        }
+      })
+      .then(response => (this.teams = response.data['data']))
   }
 };
 </script>

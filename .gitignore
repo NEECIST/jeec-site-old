@@ -13,6 +13,8 @@ yarn-error.log*
 *.njsproj
 *.sln
 
+.env
+
 # SSL files
 cert.pem
 key.pem

@@ -21,11 +21,11 @@ export default new Router({
       name: 'Home',
       component: Home
     },
-    {
-      path: '/activities',
-      name: 'Activities',
-      component: Activities
-    },
+    // {
+    //   path: '/activities',
+    //   name: 'Activities',
+    //   component: Activities
+    // },
     {
       path: '/team',
       name: 'Team',
@@ -41,11 +41,11 @@ export default new Router({
       name: 'Speakers',
       component: Speakers
     },
-    {
-      path: '/schedule',
-      name: 'Schedule',
-      component: Schedule
-    },
+    // {
+    //   path: '/schedule',
+    //   name: 'Schedule',
+    //   component: Schedule
+    // },
     { 
       path: '/404', 
       component: Error_Handling 

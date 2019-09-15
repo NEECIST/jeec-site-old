@@ -5,29 +5,31 @@
     <div class="latest-speakers-flex">
         <div class="speaker-card" v-for="speaker in speakers" :key="speaker.name">
 
-            <div><img class="speaker-image" :src="speaker.image"></div>
+            <div><img class="speaker-image" :src="jeec_api_url + speaker.image"></div>
             
             <div class="speaker-name">{{ speaker.name }}</div>
             
-            <div class="speaker-current-function">{{ speaker.current_function }}</div>
+            <div class="speaker-current-function">{{ speaker.position }}</div>
 
-            <a :href="speaker.company_link" target="_blank"><img class="speaker-company-logo" :src="speaker.company_logo"/></a>
+            <a :href="speaker.company_link" target="_blank"><img class="speaker-company-logo" :src="jeec_api_url + speaker.company_logo"/></a>
 
             <div>
-              <div class="origin-text">{{ speaker.origin }}</div>
+              <div class="origin-text">{{ speaker.country }}</div>
             </div>
 
-            <div class="speaker-notes" v-html="speaker.notes"></div>
+            <div class="speaker-notes" v-html="speaker.bio"></div>
 
             <div class="speaker-card-bottom">
               <div class="speaker-links">
-                <a v-for="link in speaker.links" :key="link.link" :href="link.link" target="_blank"><img class="speaker-link-logo" :src="link.logo"/></a>
+                <a :href="speaker.linkedin_url" target="_blank"><img class="speaker-link-logo" src="../../static/linkedin.svg"/></a>
               </div>
 
+              <!--
               <div class="speaker-schedule">
                 <div class="speaker-schedule-day">{{ speaker.schedule.date }}</div>
                 <div class="speaker-schedule-hour">{{ speaker.schedule.time }}</div>
               </div>
+              -->
             </div>
         </div>
     </div>
@@ -36,79 +38,28 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: "latest_speakers",
   data() {
       return {
-          speakers: [
-              {
-                name: 'Konstantinos Laskaris',
-                current_function: 'Principal Motor Designer',
-                company_logo: '../../static/speakers/tesla.png',
-                company_link: 'https://www.tesla.com/',
-                notes: 'An expert in high performance powertrain systems. He was also a central piece in the development of the linear motor for the Hyperloop.',
-                image: '../../static/speakers/konstantinos_laskaris.png',
-                origin: 'San Francisco, California',
-                links: [
-                  {
-                    link: 'https://www.linkedin.com/in/konstantinos-laskaris-95b40a',
-                    logo: '../../static/speakers/linkedin.png'
-                  }
-                ],
-                schedule: {
-                  date: '15 march',
-                  time: '2 pm'
-                }
-              },
-              {
-                name: "Jeremy Blum",
-                current_function: "Director of Engineering",
-                company_logo: "../../static/speakers/shaper.png",
-                company_link: "https://www.shapertools.com/",
-                notes:
-                  '"My passion is using engineering to improve people’s lives, and giving people the tools they need to do the same."',
-                image: "../../static/speakers/jeremy_blum.svg",
-                origin: 'San Francisco, California',
-                links: [
-                  {
-                    link: "https://www.youtube.com/channel/UC4KXPjmKwPutGjwFZsEXB5g",
-                    logo: "../../static/speakers/youtube.jpg"
-                  },
-                  {
-                    link: "https://www.jeremyblum.com/",
-                    logo: ""
-                  },
-                  {
-                    link: "https://www.linkedin.com/in/jeremyeblum/",
-                    logo: "../../static/speakers/linkedin.png"
-                  }
-                ],
-                schedule: {
-                  date: "12 march",
-                  time: "2 pm"
-                }
-              },
-              {
-                name: 'António Alegria',
-                current_function: 'Head of Artificial Intelligence',
-                company_logo: '../../static/speakers/outsystems.png',
-                company_link: 'https://www.outsystems.com/',
-                notes: 'An experienced engineer specialized in AI, Machine Learning, Fraud Prevention and Large Scala Data Engineering. <b>Técnico alumni</b> - Computer Engineering.',
-                image: '../../static/speakers/antonio_alegria.png',
-                origin: 'Portugal',
-                links: [
-                  {
-                    link: 'https://www.linkedin.com/in/antonioalegria/',
-                    logo: '../../static/speakers/linkedin.png'
-                  }
-                ],
-                schedule: {
-                  date: '11 march',
-                  time: '3:30 pm'
-                }
-              },
-          ]
+          jeec_api_url : process.env.VUE_APP_JEEC_BRAIN_URL,
+          speakers: []
       }
+  },
+
+  mounted () {
+    var basicAuth = 'Basic ' + btoa(process.env.VUE_APP_JEEC_WEBSITE_USERNAME + ':' + process.env.VUE_APP_JEEC_WEBSITE_KEY);
+
+    axios
+      .get(process.env.VUE_APP_JEEC_WEBSITE_API_URL + '/speakers?spotlight=True', {
+        auth: {
+          username: process.env.VUE_APP_JEEC_WEBSITE_USERNAME, 
+          password: process.env.VUE_APP_JEEC_WEBSITE_KEY
+        }
+      })
+      .then(response => (this.speakers = response.data['data']))
   }
 };
 </script>
@@ -186,8 +137,8 @@ a {
 }
 
 .speaker-company-logo {
-  max-width: 195px;
-  max-height: 55px;
+  max-width: 230px;
+  max-height: 65px;
   transition: all .2s ease-in-out;
 }
 
