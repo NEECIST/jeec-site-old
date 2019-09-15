@@ -81,6 +81,6 @@ module.exports = {
     child_process: 'empty'
   },
   plugins: [
-    new Dotenv()
+    new Dotenv({systemvars: true})
   ]
 }
