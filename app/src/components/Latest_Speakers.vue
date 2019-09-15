@@ -22,7 +22,7 @@
             <div class="speaker-card-bottom">
               <div class="speaker-links">
                 <a v-if="speaker.linkedin_url.length" :href="speaker.linkedin_url" target="_blank"><img class="speaker-link-logo" src="../../static/linkedin.svg"/></a>
-                <a v-bind="speaker.youtube_url" :href="speaker.youtube_url" target="_blank"><img class="speaker-link-logo" src="../../static/youtube.svg"/></a>
+                <a v-if="speaker.youtube_url.length" :href="speaker.youtube_url" target="_blank"><img class="speaker-link-logo" src="../../static/youtube.svg"/></a>
               </div>
 
               <!--
