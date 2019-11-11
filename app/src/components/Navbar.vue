@@ -5,11 +5,13 @@
 
           <img class="navbar-left-logo-mobile" :src="navbar_mobile_logo_link">
         </router-link>
-        <!--
-        <a href="https://cv.jeec.ist">
-          <div class="platform-button">CV Platform</div>
+        
+        <a href="https://jeec.jose-correia.com">
+          <div class="platform-button">JEEC|Brain Login</div>
         </a>
-        -->
+
+        <div class="brain-msg">Login as a partner and bid for Main Sponsor of JEEC|20!</div>
+        
 
         <router-link router-link :to="{ name: 'Team' }">
           <div class="navbar-title">Team</div>
@@ -47,7 +49,13 @@
              <!--<li v-on:click="redirect('Activities')">Activities</li>-->
               <li v-on:click="redirect('Partners')">Partners</li>
               <li v-on:click="redirect('Team')">Team</li>
+              
+              <a href="https://jeec.jose-correia.com">
+                <div class="platform-button-menu">JEEC|Brain Login</div>
+              </a>
+
           </ul>
+          
         </div>
     </div>
 </template>
@@ -75,7 +83,7 @@ export default {
 <style>
 .navbar {
   width: 100%;
-  height: 80px;
+  height: 70px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.16);
@@ -85,9 +93,9 @@ export default {
 }
 
 .navbar-left-logo {
-  width: 140px;
+  width: 120px;
   margin-left: 20px;
-  margin-top: 20px;
+  margin-top: 17px;
   float: left;
 }
 
@@ -96,20 +104,20 @@ export default {
 }
 
 .platform-button {
-  margin-top: 20px;
-  width: 100px;
+  margin-top: 15px;
   height: 30px;
   text-align: center;
   float: left;
   margin-left: 20px;
-  width: 130px;
+  width: 170px;
   border-radius: 10px;
   background: #fff;
   color: rgb(67, 154, 236);
   font-weight: bold;
+  font-size: 17px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding-top: 10px;
+  padding-top: 8px;
   border: 2px solid #77a1d1;
   transition: all .2s ease-in-out;
   display: inline-block;
@@ -117,9 +125,35 @@ export default {
 
 
 .platform-button:hover {
-  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
   transform: scale(1.03); 
   cursor: pointer;
+}
+
+.platform-button-menu {
+  margin-top: 15px;
+  height: 30px;
+  text-align: center;
+  width: 170px;
+  border-radius: 10px;
+  background: #fff;
+  color: rgb(67, 154, 236);
+  font-weight: bold;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-top: 8px;
+  border: 2px solid #77a1d1;
+  transition: all .2s ease-in-out;
+  display: none;
+}
+
+.brain-msg {
+  display: inline-block;
+  margin-left: 20px;
+  margin-top: 28px;
+  font-size: 14px;
+  float: left;
 }
 
 .join-quote, .register-button {
@@ -132,10 +166,10 @@ export default {
 
 .navbar-title {
   float: right;
-  margin-top: 26px;
+  margin-top: 23px;
   margin-right: 5vw;
   color: black;
-  font-size: 24px;
+  font-size: 20px;
   font-family: 'Lato';
 
   -o-transition:.2s;
@@ -256,7 +290,7 @@ a:hover
 {
   position: absolute;
   width: 100vw;
-  margin-left: -96vw;
+  margin-left: -95vw;
   padding: 50px;
   padding-top: 50px;
   margin-top: 18px;
@@ -293,7 +327,7 @@ a:hover
 }
 
 /* On screens that are 600px wide*/
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1080px) {
   .navbar {
     height: 70px;
   }
@@ -336,6 +370,22 @@ a:hover
   margin-left: 30px;
 }
 
+}
+
+@media only screen and (max-width: 760px) {
+  .brain-msg {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .platform-button {
+    display: none;
+  }
+
+  .platform-button-menu {
+    display: inline-block;
+  }
 }
 
 @media only screen and (max-width: 350px) {
