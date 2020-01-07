@@ -25,7 +25,6 @@
         </section>
 
         <div class="flexbox-imgs">
-            <a href="http://www.vtxrm.com/" target="_blank"><img src="../../static/partner-logos/vtxrm.png"></a>
             <a href="https://www.santandertotta.pt/pt_PT/Particulares/Universitarios.html" target="_blank"><img src="../../static/partner-logos/santander_logo.png"></a>
             <a href="https://tecnico.ulisboa.pt/pt/" target="_blank"><img src="../../static/partner-logos/ist_logo.png"></a>
 
