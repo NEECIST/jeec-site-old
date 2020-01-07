@@ -69,7 +69,7 @@ export default {
 .latest-speakers-comp {
   width: 100%;
   background-color: #dfe6f5;
-  padding-top: 10px;
+  padding-top: 90px;
   padding-bottom: 40px;
   text-align: center;
 }
@@ -81,9 +81,9 @@ export default {
   display: -ms-flexbox;      /* TWEENER - IE 10 */
   display: -webkit-flex;     /* NEW - Chrome */
   justify-content: space-around;
-  flex: wrap;
-  padding-left: 5vw;
-  padding-right: 5vw;
+  flex-wrap: wrap;
+  padding-left: 6vw;
+  padding-right: 6vw;
   text-align: center;
   margin-top: 20px;
 }
@@ -94,12 +94,14 @@ a {
 }
 
 .speaker-card {
-    background-color: #ffffff;
-    padding-top: 20px;
-    padding-bottom: 5px;
-    border-radius: 20px;
-    width: 400px;
-    box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  border-radius: 20px;
+  width: 450px;
+  box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 .origin-text {
@@ -126,7 +128,7 @@ a {
 }
 
 .speaker-current-function {
-  height: 35px;
+  height: 40px;
   margin-top: 10px;
   text-align: center;
   font-family: 'Lato';
@@ -151,8 +153,8 @@ a {
 
 .speaker-notes {
   margin-top: 15px;
-  padding-left: 13px;
-  padding-right: 13px;
+  padding-left: 25px;
+  padding-right: 25px;
   font-family: 'Lato';
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
