@@ -46,7 +46,7 @@ export default {
   name: "team",
   data() {
       return {
-        jeec_api_url : process.env.VUE_APP_JEEC_BRAIN_URL,
+        jeec_api_url : process.env.VUE_APP_JEEC_BRAIN_URL.replace("admin/", '.'),
         teams: [],
         linkedin_icon_link: "../../static/linkedin.svg"
       }
