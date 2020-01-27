@@ -152,7 +152,6 @@ export default {
     right:0;
     bottom:0;
     margin: auto;
-    background: #ffffff;
     border-radius: 0px;
     width:60px;
     height:60px;
