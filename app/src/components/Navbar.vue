@@ -10,7 +10,7 @@
           <div class="platform-button">JEEC|Brain Login</div>
         </a>
 
-        <div class="brain-msg">Login as a partner and bid for Main Sponsor of JEEC|20!</div>
+        <!--<div class="brain-msg">Login as a partner and bid for Main Sponsor of JEEC|20!</div>-->
         
 
         <router-link router-link :to="{ name: 'Team' }">
