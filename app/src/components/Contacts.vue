@@ -25,6 +25,9 @@
         </section>
 
         <div class="flexbox-imgs">
+            <a v-if="main_sponsor[0]" v-bind:href="main_sponsor[0].link" target="_blank">
+              <img :src="jeec_api_url + main_sponsor[0].logo">
+            </a>
             <a href="https://www.santandertotta.pt/pt_PT/Particulares/Universitarios.html" target="_blank"><img src="../../static/partner-logos/santander_logo.png"></a>
             <a href="https://tecnico.ulisboa.pt/pt/" target="_blank"><img src="../../static/partner-logos/ist_logo.png"></a>
 
@@ -34,20 +37,40 @@
 
         <div class="bottom-bar">
             <div id="copyright">
-                Copyright © 2019 - Jornadas de Engenharia Eletrotécnica e de Computadores do Instituto Superior Técnico
+                Copyright © 2020 - Jornadas de Engenharia Eletrotécnica e de Computadores do Instituto Superior Técnico
             </div>
             <div id="source-code">
-                Code hosted on <a href="https://github.com/NEECIST/jeec19-webapp" target="_blank">Github</a>
+                Code hosted on <a href="https://github.com/NEECIST/jeec-webapp" target="_blank">Github</a>
             </div>
         </div>
 
     </div>
 </template>
 
+
 <script>
-    export default {
-        name: 'contacts',
+import axios from 'axios';
+
+export default {
+    name: 'contacts',
+    data() {
+        return {
+            jeec_api_url : process.env.VUE_APP_JEEC_BRAIN_URL,
+            main_sponsor: [],
+        }
+    },
+
+    mounted () {
+        axios
+        .get(process.env.VUE_APP_JEEC_WEBSITE_API_URL + '/companies?partnership_tier=main_sponsor', {
+            auth: {
+                username: process.env.VUE_APP_JEEC_WEBSITE_USERNAME, 
+                password: process.env.VUE_APP_JEEC_WEBSITE_KEY
+            }
+        })
+        .then(response => (this.main_sponsor = response.data['data']));
     }
+}   
 </script>
 
 <style>
