@@ -25,7 +25,7 @@
                         <div class="team-member">
                             <img :src="jeec_api_url + member.image">
                         </div> 
-                        <div class="social-icons">
+                        <div class="linkedin-icons">
                             <a :href="member.linkedin_url" target="_blank">
                                 <img :src="linkedin_icon_link"></a>
                         </div>                              
@@ -139,7 +139,7 @@ export default {
     width: auto;
 }
 
-.social-icons {
+.linkedin-icons {
     opacity: 0;
     position:absolute;
     top:0;
@@ -153,7 +153,7 @@ export default {
     transition: .5s ease;
 }
 
-.teams_container:hover .social-icons {
+.teams_container:hover .linkedin-icons {
   opacity: 1;
 }
 
