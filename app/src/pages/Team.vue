@@ -7,8 +7,7 @@
                     Our Team
                 </div>
 
-                <div class="description-text">For the past 19 years we have brought to IST some of the best
-                    recruiters of Electrical and Computer Engineers!
+                <div class="description-text">Connecting the best students and engineers for over 20 years!
                 </div>
             </div>
             <img src="https://us.123rf.com/450wm/tupungato/tupungato1611/tupungato161100074/66488989-science-doodle-background-seamless-vector-texture-with-physics-concepts-.jpg?ver=6">
@@ -22,10 +21,16 @@
 
             <div class="team-flex">
                 <div v-for="member in team.members['data']" :key="member.name">
-                    <div class="team-member">
-                        <img :src="jeec_api_url + member.image">
-                        <p class="member-name">{{ member.name }}</p>
-                    </div>
+                    <div class="teams_container">
+                        <div class="team-member">
+                            <img :src="jeec_api_url + member.image">
+                        </div> 
+                        <div class="social-icons">
+                            <a :href="member.linkedin_url" target="_blank">
+                                <img :src="linkedin_icon_link"></a>
+                        </div>                              
+                    </div>         
+                    <p class="member-name">{{ member.name }}</p> 
                 </div>
             </div>
         </div>
@@ -41,8 +46,9 @@ export default {
   name: "team",
   data() {
       return {
-        jeec_api_url : process.env.VUE_APP_JEEC_BRAIN_URL,
-        teams: []
+        jeec_api_url : process.env.VUE_APP_JEEC_BRAIN_URL.replace('admin/','.'),
+        teams: [],
+        linkedin_icon_link: "../../static/linkedin.svg"
       }
   },
 
@@ -127,16 +133,41 @@ export default {
     margin-top: 30px;
 }
 
-.team-flex img{
-    flex: 0 0 50%; 
-    margin-right: 60px;
+.teams_container {
+    position: relative;
+    height: auto;
+    width: auto;
+}
+
+.social-icons {
+    opacity: 0;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin: auto;
+    border-radius: 0px;
+    width:60px;
+    height:60px;
+    transition: .5s ease;
+}
+
+.teams_container:hover .social-icons {
+  opacity: 1;
+}
+
+.team-member img{ 
     height: 220px;
     width: 220px;
-    margin-top: 30px;
+}
+
+.teams_container:hover .team-member {
+  opacity: 0.5;
 }
 
 .member-name{
-    margin-left: 20%;
+    margin-left: 25%;
     width: 100px;
     font-size: 22px;
     text-align: center;
