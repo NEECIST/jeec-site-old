@@ -21,13 +21,13 @@
 
             <div class="team-flex">
                 <div v-for="member in team.members['data']" :key="member.name">
-                    <div class=container>
+                    <div class="teams_container">
                         <div class="team-member">
                             <img :src="jeec_api_url + member.image">
                         </div> 
-                        <div class="social-icons">
-                            <a :href="member.linkedin_url">
-                                <img :src="linkedin_icon_link" class="social-icon"></a>
+                        <div class="linkedin-icons">
+                            <a :href="member.linkedin_url" target="_blank">
+                                <img :src="linkedin_icon_link"></a>
                         </div>                              
                     </div>         
                     <p class="member-name">{{ member.name }}</p> 
@@ -133,19 +133,14 @@ export default {
     margin-top: 30px;
 }
 
-.container {
+.teams_container {
     position: relative;
     height: auto;
     width: auto;
 }
 
-.social-icons {
+.linkedin-icons {
     opacity: 0;
-    transition: .5s ease;
-    background-color: #008CBA;
-}
-
-.social-icon {
     position:absolute;
     top:0;
     left:0;
@@ -155,20 +150,20 @@ export default {
     border-radius: 0px;
     width:60px;
     height:60px;
-    opacity:0.95;
+    transition: .5s ease;
 }
 
-.container:hover .social-icons {
+.teams_container:hover .linkedin-icons {
   opacity: 1;
-}
-
-.container:hover .team-member {
-  opacity: 0.5;
 }
 
 .team-member img{ 
     height: 220px;
     width: 220px;
+}
+
+.teams_container:hover .team-member {
+  opacity: 0.5;
 }
 
 .member-name{
