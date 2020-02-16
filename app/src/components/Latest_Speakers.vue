@@ -1,6 +1,6 @@
 <template>
   <div class="latest-speakers-comp">
-    <component-title title="Speakers at JEEC|19" subtitle="Minds that push engineering forward"/>
+    <component-title title="Latest Speakers" subtitle="Minds that push engineering forward"/>
 
     <div class="latest-speakers-flex">
         <div class="speaker-card" v-for="speaker in speakers" :key="speaker.name">
