@@ -99,17 +99,17 @@ export default {
 }
 
 .module-bottom-flex {
-  display: flex;
-  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;      /* TWEENER - IE 10 */
-  display: -webkit-flex;     /* NEW - Chrome */
-  justify-content: flex-start;
+  display: -webkit-box;  /* iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* IE 10 */
+  display: -webkit-flex; /* Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;         /*Firefox, Chrome, Opera */
   flex-wrap: wrap;
-  flex-flow: row;
+  justify-content: left;
+  align-items: center;
+  flex-direction: row;
   margin-left: 2vw;
   padding-top: 0.5vw;
-  padding-bottom: 2vw;
+  margin-bottom: 2vw;
 
   border-bottom: #1C9CD8 solid 2px;
 }
