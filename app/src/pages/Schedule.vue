@@ -63,7 +63,7 @@ export default {
         "Mar 12, 2020",
         "Mar 13, 2020"
       ],
-      types: ["Matchmaking", "15/15", "Workshop", "Discussion Panel"]
+      types: ["Matchmaking", "15/15", "Workshop", "Discussion Panel", "Job Fair", "Speakers"]
     };
   },
 

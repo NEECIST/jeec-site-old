@@ -9,7 +9,7 @@
           </a>
         </div>
       </div>
-      <div class="activity-title" v-if="title !== null && type !== 'Matchmaking'">{{ title }}</div>
+      <div class="activity-title" v-if="title !== null && type !== 'Matchmaking' && type !== 'Job Fair'">{{ title }}</div>
     </div>
     <div class="module-image-flex">
       <div v-for="(speaker, index) in speakers" :key="index">
