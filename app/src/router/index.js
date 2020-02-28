@@ -8,6 +8,7 @@ import Error_Handling from '@/pages/Error_Handling'
 import Activities from '@/pages/Activities'
 import Schedule from '@/pages/Schedule'
 
+
 Vue.use(Router)
 
 export default new Router({
@@ -42,14 +43,20 @@ export default new Router({
       component: Speakers
     },
     // {
-    //   path: '/schedule',
-    //   name: 'Schedule',
-    //   component: Schedule
+    //   path: '/newfeed',
+    //   name: 'newfeed',
+    //   component: newfeed
     // },
+    {
+      path: '/schedule',
+      name: 'Schedule',
+      component: Schedule
+    },
     { 
       path: '/404', 
       component: Error_Handling 
-    },  
+    }, 
+
     { path: '*', 
       redirect: '/404' 
     }

@@ -1,83 +1,82 @@
 <template>
-    <div class="navbar">
-        <router-link router-link :to="{ name: 'Home' }">
-          <img class="navbar-left-logo" :src="navbar_logo_link">
+  <div class="navbar">
+    <router-link router-link :to="{ name: 'Home' }">
+      <img class="navbar-left-logo" :src="navbar_logo_link" />
 
-          <img class="navbar-left-logo-mobile" :src="navbar_mobile_logo_link">
-        </router-link>
-        
+      <img class="navbar-left-logo-mobile" :src="navbar_mobile_logo_link" />
+    </router-link>
+
+    <a href="https://jeec.jose-correia.com">
+      <div class="platform-button">JEEC|Brain Login</div>
+    </a>
+
+    <!--<div class="brain-msg">Login as a partner and bid for Main Sponsor of JEEC|20!</div>-->
+
+    <router-link router-link :to="{ name: 'Team' }">
+      <div class="navbar-title">Team</div>
+    </router-link>
+
+    <router-link router-link :to="{ name: 'Partners' }">
+      <div class="navbar-title">Partners</div>
+    </router-link>
+
+    <!-- <router-link router-link :to="{ name: 'Activities' }">
+      <div class="navbar-title">Activities</div>
+    </router-link> -->
+
+    <router-link router-link :to="{ name: 'Speakers' }">
+      <div class="navbar-title">Speakers</div>
+    </router-link>
+
+    <!-- <router-link router-link :to="{ name: 'newfeed' }">
+      <div class="navbar-title">Feed</div>
+    </router-link> -->
+
+    <router-link router-link :to="{ name: 'Schedule' }">
+      <div class="navbar-title">Schedule</div>
+    </router-link>
+
+    <div id="menuToggle">
+      <input type="checkbox" :checked="show_menu" v-on:click="show_menu = !show_menu" />
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+      <ul id="menu">
+        <li v-on:click="redirect('Schedule')">Schedule</li>
+        <li v-on:click="redirect('Speakers')">Speakers</li>
+        <!-- <li v-on:click="redirect('Activities')">Activities</li> -->
+        <li v-on:click="redirect('Partners')">Partners</li>
+        <li v-on:click="redirect('Team')">Team</li>
+        <!-- <li v-on:click="redirect('newfeed')">Feed</li> -->
+
         <a href="https://jeec.jose-correia.com">
-          <div class="platform-button">JEEC|Brain Login</div>
+          <div class="platform-button-menu">JEEC|Brain Login</div>
         </a>
-
-        <!--<div class="brain-msg">Login as a partner and bid for Main Sponsor of JEEC|20!</div>-->
-        
-
-        <router-link router-link :to="{ name: 'Team' }">
-          <div class="navbar-title">Team</div>
-        </router-link>
-
-        <router-link router-link :to="{ name: 'Partners' }">
-          <div class="navbar-title">Partners</div>
-        </router-link>
-
-        <!--<router-link router-link :to="{ name: 'Activities' }">
-          <div class="navbar-title">Activities</div>
-        </router-link>
-        -->
-
-        <router-link router-link :to="{ name: 'Speakers' }">
-          <div class="navbar-title">Speakers</div>
-        </router-link>
-
-        <!--
-        <router-link router-link :to="{ name: 'Schedule' }">
-          <div class="navbar-title">Schedule</div>
-        </router-link>
-        -->
-        
-        <div id="menuToggle">
-          <input type="checkbox" :checked="show_menu" v-on:click="show_menu = !show_menu"/>
-    
-          <span></span>
-          <span></span>
-          <span></span>
-    
-          <ul id="menu">
-            <!--<li v-on:click="redirect('Schedule')">Schedule</li>-->
-             <li v-on:click="redirect('Speakers')">Speakers</li>
-             <!--<li v-on:click="redirect('Activities')">Activities</li>-->
-              <li v-on:click="redirect('Partners')">Partners</li>
-              <li v-on:click="redirect('Team')">Team</li>
-              
-              <a href="https://jeec.jose-correia.com">
-                <div class="platform-button-menu">JEEC|Brain Login</div>
-              </a>
-
-          </ul>
-          
-        </div>
+      </ul>
     </div>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'navbar',
+  name: "navbar",
   data() {
     return {
       show_menu: false,
       navbar_logo_link: "../../static/jeec_logo_small.svg",
       navbar_mobile_logo_link: "../../static/jeec_logo_mobile.svg"
-    }
+    };
   },
 
   methods: {
     redirect(page) {
       this.show_menu = false;
-      this.$router.push({ name: page});
+      this.$router.push({ name: page });
     }
   }
-}
+};
 </script>
 
 <style>
@@ -119,14 +118,13 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   padding-top: 8px;
   border: 2px solid #77a1d1;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   display: inline-block;
 }
 
-
 .platform-button:hover {
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
-  transform: scale(1.03); 
+  transform: scale(1.03);
   cursor: pointer;
 }
 
@@ -144,7 +142,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   padding-top: 8px;
   border: 2px solid #77a1d1;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   display: none;
 }
 
@@ -156,8 +154,9 @@ export default {
   float: left;
 }
 
-.join-quote, .register-button {
-    display: inline-block;
+.join-quote,
+.register-button {
+  display: inline-block;
 }
 
 .navbar a {
@@ -170,47 +169,46 @@ export default {
   margin-right: 5vw;
   color: black;
   font-size: 20px;
-  font-family: 'Lato';
+  font-family: "Lato";
 
-  -o-transition:.2s;
-  -ms-transition:.2s;
-  -moz-transition:.2s;
-  -webkit-transition:.2s;
-  transition:.2s;
-  }
+  -o-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
 
-.navbar-title:hover { color:rgb(55, 121, 184); transform: scale(1.1); }
+.navbar-title:hover {
+  color: rgb(55, 121, 184);
+  transform: scale(1.1);
+}
 
 a:hover {
   cursor: pointer;
 }
 
-body
-{
+body {
   margin: 0;
   padding: 0;
-  
+
   /* make it look decent enough */
   background: #232323;
   color: #cdcdcd;
   font-family: "Avenir Next", "Avenir", sans-serif;
 }
 
-a
-{
+a {
   text-decoration: none;
   color: #232323;
-  
+
   transition: color 0.3s ease;
 }
 
-a:hover
-{
+a:hover {
   color: tomato;
 }
 
-#menuToggle
-{
+#menuToggle {
   display: none;
   float: right;
   position: relative;
@@ -221,73 +219,64 @@ a:hover
   user-select: none;
 }
 
-#menuToggle input
-{
+#menuToggle input {
   display: block;
   width: 40px;
   height: 32px;
   position: absolute;
   top: -7px;
   left: -5px;
-  
+
   cursor: pointer;
-  
+
   opacity: 0; /* hide this */
   z-index: 2; /* and place it over the hamburger */
-  
+
   -webkit-touch-callout: none;
 }
 
-#menuToggle span
-{
+#menuToggle span {
   display: block;
   width: 33px;
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  
+
   background: #5ea2e2;
   border-radius: 3px;
-  
+
   z-index: 1;
-  
+
   transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
 
-#menuToggle span:first-child
-{
+#menuToggle span:first-child {
   transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2)
-{
+#menuToggle span:nth-last-child(2) {
   transform-origin: 0% 100%;
 }
 
-#menuToggle input:checked ~ span
-{
+#menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #232323;
 }
 
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
+#menuToggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
+#menuToggle input:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
-#menu
-{
+#menu {
   position: absolute;
   width: 100vw;
   margin-left: -95vw;
@@ -302,17 +291,15 @@ a:hover
   border-radius: 30px;
   transform-origin: 0% 0%;
   transform: translate(1100px, 0px);
-  transition: transform 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
+  transition: transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
-#menu li
-{
+#menu li {
   padding: 20px 0;
   font-size: 22px;
 }
 
-#menuToggle input:checked ~ ul
-{
+#menuToggle input:checked ~ ul {
   transform: none;
 }
 
@@ -364,12 +351,10 @@ a:hover
     margin-top: 25px;
   }
 
-  
-.platform-button {
-  margin-top: 15px;
-  margin-left: 30px;
-}
-
+  .platform-button {
+    margin-top: 15px;
+    margin-left: 30px;
+  }
 }
 
 @media only screen and (max-width: 760px) {
@@ -389,7 +374,7 @@ a:hover
 }
 
 @media only screen and (max-width: 350px) {
-.register-button {
+  .register-button {
     margin-top: 30px;
   }
 }
