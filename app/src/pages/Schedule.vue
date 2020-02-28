@@ -30,7 +30,8 @@
       <div class="info">
         <schedule-company
           v-for="(activity, index) in activities"
-          v-if="activity.type == types[selected_type] && activity.day == days[selected_day]"
+          v-if="(activity.type == types[selected_type] || selected_type == -1) && activity.day == days[selected_day]"
+          :type="activity.type"
           :companies="activity.companies.data"
           :speakers="activity.speakers.data"
           :title="activity.name"
@@ -52,7 +53,7 @@ export default {
   data() {
     return {
       selected_day: 0,
-      selected_type: 0,
+      selected_type: -1,
       jeec_api_url: process.env.VUE_APP_JEEC_BRAIN_URL,
       activities: [],
       days: [
@@ -69,6 +70,7 @@ export default {
   methods: {
     selectDay(index) {
       this.selected_day = index;
+      this.selected_type = -1;
     },
     selectType(index) {
       this.selected_type = index;
@@ -117,9 +119,9 @@ export default {
 }
 
 .day-button {
+  background-color: #ffffff;
   border-color: rgb(34, 130, 214);
   border-style: solid;
-  background-color: #ffffff;
   border-width: 1px;
   border-radius: 5px;
   width: 150px;
@@ -146,6 +148,7 @@ export default {
   flex-wrap: wrap;
   flex-direction: column;
   padding-top: 70px;
+  padding-bottom: 7vw;
 }
 
 .header {
