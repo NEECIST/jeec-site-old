@@ -2,6 +2,13 @@
   <div class="module">
     <div class="module-head-flex">
       <div class="type-name">{{ type }}</div>
+      <div class="module-image-flex">
+        <div v-for="(company, index) in companies" :key="index">
+          <a :href="company.link" target="_blank">
+            <img class="activity-image" :src="jeec_api_url + company.logo" />
+          </a>
+        </div>
+      </div>
       <div class="activity-title" v-if="title !== null && type !== 'Matchmaking'">{{ title }}</div>
     </div>
     <div class="module-image-flex">
@@ -10,13 +17,6 @@
           <img class="activity-image" :src="jeec_api_url + speaker.image" />
         </a>
         <div class="speaker-name">{{ speaker.name }}</div>
-      </div>
-    </div>
-    <div class="module-image-flex">
-      <div v-for="(company, index) in companies" :key="index">
-        <a :href="company.link" target="_blank">
-          <img class="activity-image" :src="jeec_api_url + company.logo" />
-        </a>
       </div>
     </div>
     <div class="module-bottom-flex">
