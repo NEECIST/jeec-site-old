@@ -28,6 +28,8 @@ import Posts from './components/Posts'
 
 import Image_Center_Text from './components/Image_Center_Text'
 
+import Schedule_Company from './components/Schedule_Company'
+
 Vue.config.productionTip = false
 
 // Home page components
@@ -54,6 +56,8 @@ Vue.component('job-fair', Job_Fair)
 Vue.component('techtalks', TechTalks)
 
 Vue.component('image-center-text', Image_Center_Text)
+
+Vue.component('schedule-company', Schedule_Company)
 
 /* eslint-disable no-new */
 new Vue({
