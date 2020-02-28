@@ -68,7 +68,6 @@ export default {
 
   methods: {
     selectDay(index) {
-      console.log(this.activities)
       this.selected_day = index;
     },
     selectType(index) {
