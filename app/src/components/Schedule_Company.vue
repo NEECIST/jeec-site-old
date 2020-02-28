@@ -110,8 +110,6 @@ export default {
   margin-left: 2vw;
   padding-top: 0.5vw;
   margin-bottom: 2vw;
-
-  border-bottom: #1C9CD8 solid 2px;
 }
 
 .timeplace-container {
