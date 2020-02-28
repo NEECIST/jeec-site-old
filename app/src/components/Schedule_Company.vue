@@ -107,7 +107,6 @@ export default {
   justify-content: flex-start;
   flex-wrap: wrap;
   flex-flow: row;
-  text-align: center;
   margin-left: 2vw;
   padding-top: 0.5vw;
   padding-bottom: 2vw;
@@ -138,7 +137,6 @@ export default {
 }
 
 .activity-image {
-    width: 6vw;
     height: 6vw;
     margin: 1vw;
     margin-bottom: 0
@@ -182,13 +180,15 @@ export default {
   margin-top: 1.5vw;
   margin-left: 3vw;
   margin-right: 3vw;
+  margin-bottom: 7px;
   text-align: left;
   font-family: 'Lato';
   font-size: 1.5vw;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #000000;
-  margin-bottom: 7px;
+
+  width: 65%;
 }
 
 .speaker-card-bottom {
