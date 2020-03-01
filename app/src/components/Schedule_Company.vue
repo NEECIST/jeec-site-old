@@ -1,15 +1,21 @@
 <template>
   <div class="module">
     <div class="module-head-flex">
-      <div class="type-name">{{ type }}</div>
-      <div class="module-image-flex">
-        <div v-for="(company, index) in companies" :key="index">
-          <a :href="company.link" target="_blank">
-            <img class="activity-image" :src="jeec_api_url + company.logo" />
-          </a>
+      <div class="module-left-head-flex">
+        <div class="type-name">{{ type }} | <a style="font-size: 2vw; margin-left: 0px" class="type-name">{{ day }}</a></div>
+        <div class="module-image-flex">
+          <div v-for="(company, index) in companies" :key="index">
+            <a :href="company.link" target="_blank">
+              <img class="activity-image" :src="jeec_api_url + company.logo" />
+            </a>
+          </div>
         </div>
+        <div class="activity-title" v-if="title !== null">{{ title }}</div>
       </div>
-      <div class="activity-title" v-if="title !== null && type !== 'Matchmaking' && type !== 'Job Fair'">{{ title }}</div>
+      <div class="timeplace-container">
+        <div class="timeplace">{{ place }}</div>
+        <div class="timeplace">{{ hour }}</div>
+      </div>
     </div>
     <div class="module-image-flex">
       <div v-for="(speaker, index) in speakers" :key="index">
@@ -21,10 +27,6 @@
     </div>
     <div class="module-bottom-flex">
       <div class="activity-description">{{ description }}</div>
-      <div class="timeplace-container">
-        <div class="timeplace">{{ hour }}</div>
-        <div class="timeplace">{{ place }}</div>
-      </div>
     </div>
   </div>
 </template>
@@ -36,10 +38,11 @@ export default {
     type: String,
     title: String,
     description: String,
+    day: String,
     hour: String,
     place: String,
-    companies: [],
-    speakers: []
+    companies: Array,
+    speakers: Array
   },
 
   data() {
@@ -62,8 +65,10 @@ export default {
   flex-flow: column;
   padding-left: 2vw;
   padding-right: 2vw;
-  margin-top: 2vw;
+  margin-top: 0.5vw;
   width: 91%;
+
+  /* border: green solid 3px; */
 }
 
 .module-head-flex {
@@ -72,21 +77,29 @@ export default {
   display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
   display: -ms-flexbox; /* TWEENER - IE 10 */
   display: -webkit-flex; /* NEW - Chrome */
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-flow: row;
+
+  /* border: gray solid 3px; */
+}
+
+.module-left-head-flex {
+  display: flex;
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Chrome */
   justify-content: flex-start;
   flex-wrap: wrap;
   flex-flow: column;
+  width: 62vw;
 
-  border-top: #1c9cd8 solid 2px;
+  /* border: black solid 3px; */
 }
 
 .name-flex {
   display: flex;
-}
-
-.module-head-text {
-  background-color: #ffffff;
-  height: 20.2vw;
-  width: 100%;
 }
 
 .module-bottom-flex {
@@ -99,6 +112,10 @@ export default {
   flex-wrap: wrap;
   flex-flow: row;
   text-align: center;
+
+  /* border: brown solid 3px; */
+
+  border-bottom: #1c9cd8 solid 2px;
 }
 
 .module-image-flex {
@@ -113,6 +130,8 @@ export default {
   margin-left: 2vw;
   /* padding-top: 0.5vw;
   margin-bottom: 2vw; */
+
+  /* border: pink solid 3px; */
 }
 
 .timeplace-container {
@@ -121,9 +140,12 @@ export default {
   display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
   display: -ms-flexbox; /* TWEENER - IE 10 */
   display: -webkit-flex; /* NEW - Chrome */
-  justify-content: flex-end;
+  justify-content: flex-start;
   flex-wrap: wrap;
   flex-direction: column;
+  margin-top: 1.4vw;
+
+  /* border: red solid 3px; */
 }
 
 .timeplace {
@@ -258,4 +280,87 @@ export default {
   color: #3477f3;
   margin-bottom: 5px;
 }
+
+@media screen and (max-width: 800px) {
+  
+  .module-left-head-flex {
+    display: flex;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Chrome */
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-flow: column;
+    width: 50vw;
+
+    /* border: black solid 3px; */
+  }
+
+  .timeplace {
+    margin-top: 10px;
+    margin-left: 30px;
+    font-weight: 600;
+    font-size: 3vw;
+    text-align: right;
+    font-weight: bold;
+
+    color: #1c9cd8;
+  }
+
+  .activity-image {
+    height: 6vw;
+    margin: 1vw;
+    margin-bottom: 0;
+  }
+
+  .type-name {
+    margin-top: 1.5vw;
+    margin-left: 3vw;
+    font-weight: 600;
+    font-size: 5vw;
+    text-align: left;
+    color: #1c9cd8;
+  }
+
+  .activity-title {
+    height: 4vw;
+    margin-top: 1vw;
+    margin-left: 3vw;
+    text-align: left;
+    font-family: "Lato";
+    font-size: 3vw;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #000000;
+  }
+
+  .speaker-name {
+    text-align: center;
+    font-family: "Lato";
+    font-size: 2vw;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #4b4a4a;
+  }
+
+  .activity-description {
+    margin-top: 1.5vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-bottom: 7px;
+    text-align: left;
+    font-family: "Lato";
+    font-size: 2vw;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #000000;
+
+    width: 65%;
+  }
+
+}
+
 </style>
