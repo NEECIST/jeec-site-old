@@ -27,7 +27,7 @@ export default {
         'Workshops',
         'Matchmaking sessions'
       ],
-      text: 'A group of <b>IST</b> students, whose main purpose is to organize an event with the intention of closing the gap between the business world and university life.<p>Participation is free of charge and open to a strong student community with over 11000 aspiring engineers.</p><p>Activities available at JEEC:<div style="line-height: 20px;"><p><b>Job Fair</b></p><p><b>Panel Discussions</b></p><p><b>Workshops</b></p><p><b>Matchmaking sessions</b></p></div></p>',
+      text: 'A group of <b>IST</b> students, whose main purpose is to organize an event with the intention of closing the gap between the business world and university life.<p>Participation is free of charge and open to a strong student community with over 11000 aspiring engineers.</p><p>Activities available at JEEC:<div style="line-height: 20px;"><p><b>Job Fair</b></p><p><b>Speakers</b></p><p><b>Panel Discussions</b></p><p><b>Workshops</b></p><p><b>Matchmaking sessions</b></p><p><b>15/15</b></p></div></p>',
     }
   },
 

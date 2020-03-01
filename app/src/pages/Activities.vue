@@ -1,7 +1,7 @@
 <template>
   <div class="activities-app">
     <div class="registration-comp">
-      <component-title title="registrations" subtitle="Enroll in our activities!"/>
+      <component-title title="registrations" subtitle="Enroll in our activities!" />
 
       <div class="select-day">Select the day</div>
       <div class="day-selector-flex">
@@ -9,7 +9,7 @@
           class="day-button"
           v-for="(day, index) in days"
           v-bind:key="day"
-          v-on:click="selectDay(index)"
+          v-on:click="selectDay(index); selectedDay(index)"
         >{{ day }}</div>
       </div>
 
@@ -20,6 +20,8 @@
           v-if="activity.day == days[selected_day]"
           v-bind:key="activity.type + activity.time"
         >
+          <div class="session-type">{{ activity.type }}</div>
+          <div class="session-name">{{ activity.name }}</div>
           <div class="session-day">{{ days[selected_day] }}</div>
           <div class="session-time">{{ activity.time }}</div>
           <div class="session-partners-flex">
@@ -42,10 +44,10 @@
               </a>
             </div>
           </div>
-          <center>  
-          <a :href="activity.registration_link" target="_blank" v-if="activity.registration_open">
-            <div class="registration-button">Attend</div>
-          </a>
+          <center>
+            <a :href="activity.registration_link" target="_blank" v-if="activity.registration_open">
+              <div class="registration-button">Attend</div>
+            </a>
           </center>
         </div>
       </div>
@@ -72,6 +74,18 @@ export default {
   methods: {
     selectDay(index) {
       this.selected_day = index;
+      this.selected_type = -1;
+    },
+
+    selectedDay(index) {
+      var btnContainer = document.getElementsByClassName("day-selector-flex");
+      var btns = btnContainer[0].getElementsByClassName("day-button");
+
+      var current = btnContainer[0].getElementsByClassName("active");
+      if (current[0] != null) {
+        current[0].className = current[0].className.replace(" active", "");
+      }
+      btns[index].className += " active";
     }
   },
 
@@ -133,23 +147,28 @@ export default {
 }
 
 .day-button {
+  background-color: #ffffff;
   border-color: rgb(34, 130, 214);
   border-style: solid;
-  background-color: #ffffff;
-  border-width: 1px;
-  border-radius: 5px;
-  width: 150px;
-  height: 40px;
-  font-size: 18px;
-  padding-top: 16px;
+  border-width: 0.1vw;
+  border-radius: 0.5vw;
+  width: 14vw;
+  height: 4vw;
+  font-size: 1.6vw;
+  padding-top: 1.6vw;
   font-family: "Lato";
   font-weight: 600;
-  margin: 10px;
+  margin: 0.5vw;
 }
 
 .day-button:hover {
   background-color: rgb(230, 244, 253);
   cursor: pointer;
+}
+
+.day-button.active {
+  background-color: #1c9cd8;
+  color: white;
 }
 
 .registration-flex {
@@ -172,6 +191,24 @@ export default {
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.3);
   margin-bottom: 40px;
   margin-left: 20px;
+}
+
+.session-name {
+  font-size: 24px;
+  font-weight: 600;
+  height: 30px;
+  font-family: "Lato";
+  text-align: center;
+}
+
+.session-type {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1c9cd8;
+  height: 30px;
+  font-family: "Lato";
+  text-align: right;
+  margin-right: 1vw;
 }
 
 .session-day {
@@ -221,7 +258,7 @@ export default {
 .registration-button {
   background-color: #396c96;
   padding: 8px;
-  width: 10%;
+  width: 15%;
   border-radius: 5px;
   font-family: "Karla";
   font-size: 18px;

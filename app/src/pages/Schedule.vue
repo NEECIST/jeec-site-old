@@ -21,16 +21,16 @@
       <div
         class="type-button"
         v-for="(type, index) in types"
-        v-bind:key="type"
+        v-bind:key="type.name"
         v-on:click="selectedType(index); selectType(index)"
-      >{{ type }}</div>
+      >{{ type.name }}</div>
     </div>
 
     <div class="flex-info">
       <div class="info">
         <schedule-company
           v-for="(activity, index) in activities"
-          v-if="(selected_type == -1 || activity.type == types[selected_type]) && activity.day == days[selected_day]"
+          v-if="(selected_type == -1 || activity.type == types[selected_type].name) && activity.day == days[selected_day]"
           :type="activity.type"
           :companies="activity.companies.data"
           :speakers="activity.speakers.data"
@@ -60,14 +60,8 @@ export default {
       selected_type: -1,
       jeec_api_url: process.env.VUE_APP_JEEC_BRAIN_URL,
       activities: [],
-      days: [
-        "Mar 09, 2020",
-        "Mar 10, 2020",
-        "Mar 11, 2020",
-        "Mar 12, 2020",
-        "Mar 13, 2020"
-      ],
-      types: ["Matchmaking", "15/15", "Workshop", "Discussion Panel", "Job Fair", "Speakers"]
+      days: [],
+      types: []
     };
   },
 
@@ -122,19 +116,19 @@ export default {
       )
       .then(response => (this.activities = response.data["data"]));
 
-    // axios
-    //   .get(
-    //     process.env.VUE_APP_JEEC_WEBSITE_API_URL +
-    //       "/event",
-    //     {
-    //       auth: {
-    //         username: process.env.VUE_APP_JEEC_WEBSITE_USERNAME,
-    //         password: process.env.VUE_APP_JEEC_WEBSITE_KEY
-    //       }
-    //     }
-    //   )
-    //   .then(response => (this.types = response.data["data"][0].activity_types["data"], 
-    //                      this.days = response.data["data"][0].dates));
+    axios
+      .get(
+        process.env.VUE_APP_JEEC_WEBSITE_API_URL +
+          "/event",
+        {
+          auth: {
+            username: process.env.VUE_APP_JEEC_WEBSITE_USERNAME,
+            password: process.env.VUE_APP_JEEC_WEBSITE_KEY
+          }
+        }
+      )
+      .then(response => (this.types = response.data["data"][0].activity_types["data"], 
+                         this.days = response.data["data"][0].dates));
   }
 };
 </script>
@@ -169,7 +163,7 @@ export default {
   border-style: solid;
   border-width: 0.1vw;
   border-radius: 0.5vw;
-  width: 13vw;
+  width: 14vw;
   height: 4vw;
   font-size: 1.6vw;
   padding-top: 1.6vw;
@@ -198,7 +192,6 @@ export default {
   flex-wrap: wrap;
   flex-direction: column;
   padding-top: 70px;
-  padding-bottom: 7vw;
 }
 
 .header {
