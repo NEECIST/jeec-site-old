@@ -39,7 +39,7 @@
           :day="activity.day"
           :hour="activity.time"
           :place="activity.location"
-          :key="index"
+          :key="activity.type + activity.day + activity.time"
         ></schedule-company>
       </div>
     </div>
@@ -121,6 +121,20 @@ export default {
         }
       )
       .then(response => (this.activities = response.data["data"]));
+
+    // axios
+    //   .get(
+    //     process.env.VUE_APP_JEEC_WEBSITE_API_URL +
+    //       "/event",
+    //     {
+    //       auth: {
+    //         username: process.env.VUE_APP_JEEC_WEBSITE_USERNAME,
+    //         password: process.env.VUE_APP_JEEC_WEBSITE_KEY
+    //       }
+    //     }
+    //   )
+    //   .then(response => (this.types = response.data["data"][0].activity_types["data"], 
+    //                      this.days = response.data["data"][0].dates));
   }
 };
 </script>

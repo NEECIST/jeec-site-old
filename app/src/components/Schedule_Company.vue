@@ -2,27 +2,30 @@
   <div class="module">
     <div class="module-head-flex">
       <div class="module-left-head-flex">
-        <div class="type-name">{{ type }} | <a style="font-size: 2vw; margin-left: 0px" class="type-name">{{ day }}</a></div>
-        <div class="module-image-flex">
+        <div class="type-name">
+          {{ type }} |
+          <a style="font-size: 2vw; margin-left: 0px" class="type-name">{{ day }}</a>
+        </div>
+        <div class="module-image-flex" v-if="companies.length">
           <div v-for="(company, index) in companies" :key="index">
             <a :href="company.link" target="_blank">
               <img class="activity-image" :src="jeec_api_url + company.logo" />
             </a>
           </div>
         </div>
-        <div class="activity-title" v-if="title !== null && type !== 'Matchmaking' && type !== 'Job Fair'">{{ title }}</div>
+        <div class="module-image-flex" v-if="speakers.length">
+          <div v-for="(speaker, index) in speakers" :key="index">
+            <a :href="speaker.linkedin_url" target="_blank">
+              <img class="activity-image" :src="jeec_api_url + speaker.image" />
+            </a>
+            <div class="speaker-name">{{ speaker.name }}</div>
+          </div>
+        </div>
+        <div class="activity-title" v-if="title !== null || title!== ''">{{ title }}</div>
       </div>
       <div class="timeplace-container">
         <div class="timeplace">{{ place }}</div>
         <div class="timeplace">{{ hour }}</div>
-      </div>
-    </div>
-    <div class="module-image-flex">
-      <div v-for="(speaker, index) in speakers" :key="index">
-        <a :href="speaker.linkedin_url" target="_blank">
-          <img class="activity-image" :src="jeec_api_url + speaker.image" />
-        </a>
-        <div class="speaker-name">{{ speaker.name }}</div>
       </div>
     </div>
     <div class="module-bottom-flex">
@@ -128,6 +131,7 @@ export default {
   align-items: center;
   flex-direction: row;
   margin-left: 2vw;
+  margin-bottom: 1vw;
   /* padding-top: 0.5vw;
   margin-bottom: 2vw; */
 
@@ -175,9 +179,9 @@ export default {
 }
 
 .activity-title {
-  height: 4vw;
-  margin-top: 1vw;
+  /* height: 4vw; */
   margin-left: 3vw;
+  margin-bottom: 1vw;
   text-align: left;
   font-family: "Lato";
   font-size: 2vw;
@@ -210,10 +214,9 @@ export default {
 }
 
 .activity-description {
-  margin-top: 1.5vw;
   margin-left: 3vw;
   margin-right: 3vw;
-  margin-bottom: 7px;
+  margin-bottom: 1vw;
   text-align: left;
   font-family: "Lato";
   font-size: 1.5vw;
@@ -282,7 +285,6 @@ export default {
 }
 
 @media screen and (max-width: 800px) {
-  
   .module-left-head-flex {
     display: flex;
     display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
@@ -324,9 +326,9 @@ export default {
   }
 
   .activity-title {
-    height: 4vw;
-    margin-top: 1vw;
+    /* height: 6vw; */
     margin-left: 3vw;
+    margin-bottom: 1vw;
     text-align: left;
     font-family: "Lato";
     font-size: 3vw;
@@ -360,7 +362,5 @@ export default {
 
     width: 65%;
   }
-
 }
-
 </style>
