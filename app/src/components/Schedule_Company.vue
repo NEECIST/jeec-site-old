@@ -10,7 +10,7 @@
             </a>
           </div>
         </div>
-        <div class="activity-title" v-if="title !== null">{{ title }}</div>
+        <div class="activity-title" v-if="title !== null && type !== 'Matchmaking' && type !== 'Job Fair'">{{ title }}</div>
       </div>
       <div class="timeplace-container">
         <div class="timeplace">{{ place }}</div>
