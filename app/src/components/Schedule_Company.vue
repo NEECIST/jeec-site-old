@@ -312,7 +312,8 @@ export default {
   }
 
   .activity-image {
-    height: 6vw;
+    max-height: 6vw;
+    max-width: 15vw;
     margin: 1vw;
     margin-bottom: 0;
   }
