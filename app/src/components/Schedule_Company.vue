@@ -14,7 +14,7 @@
           </div>
         </div>
         <div class="module-image-flex" v-if="speakers.length">
-          <div v-for="(speaker, index) in speakers" :key="index">
+          <div v-for="(speaker, index) in speakers" :key="index" style="margin-right: 1vw;">
             <a :href="speaker.linkedin_url" target="_blank">
               <img class="activity-image" :src="jeec_api_url + speaker.image" />
             </a>
