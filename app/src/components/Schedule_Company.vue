@@ -164,9 +164,10 @@ export default {
 }
 
 .activity-image {
-  height: 4vw;
+  max-height: 4vw;
   margin: 1vw;
   margin-bottom: 0;
+  max-width: 10vw;
 }
 
 .type-name {
