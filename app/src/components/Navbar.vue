@@ -16,21 +16,21 @@
       <div class="navbar-title">Team</div>
     </router-link>
 
-    <router-link router-link :to="{ name: 'Partners' }">
-      <div class="navbar-title">Partners</div>
-    </router-link>
-
-    <!-- <router-link router-link :to="{ name: 'Activities' }">
-      <div class="navbar-title">Activities</div>
-    </router-link> -->
-
     <router-link router-link :to="{ name: 'Speakers' }">
       <div class="navbar-title">Speakers</div>
+    </router-link>
+    
+    <router-link router-link :to="{ name: 'Partners' }">
+      <div class="navbar-title">Partners</div>
     </router-link>
 
     <!-- <router-link router-link :to="{ name: 'newfeed' }">
       <div class="navbar-title">Feed</div>
     </router-link> -->
+
+    <router-link router-link :to="{ name: 'Activities' }">
+      <div class="navbar-title">Registrations</div>
+    </router-link>
 
     <router-link router-link :to="{ name: 'Schedule' }">
       <div class="navbar-title">Schedule</div>

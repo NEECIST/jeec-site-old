@@ -6,42 +6,46 @@
       subtitle="Never miss another activity!"
     />
 
-    <div class="select-day">Select the Day</div>
+    <div class="select-day">Select Day</div>
     <div class="day-selector-flex">
       <div
         class="day-button"
         v-for="(day, index) in days"
         v-bind:key="day"
-        v-on:click="selectDay(index)"
+        v-on:click="selectDay(index); selectedDay(index); selectedType(-1)"
       >{{ day }}</div>
     </div>
 
-    <div class="select-day">Select the Activity Type</div>
-    <div class="day-selector-flex">
+    <div class="select-type">Select Activity Type</div>
+    <div class="type-selector-flex">
       <div
-        class="day-button"
+        class="type-button"
         v-for="(type, index) in types"
-        v-bind:key="type"
-        v-on:click="selectType(index)"
-      >{{ type }}</div>
+        v-bind:key="type.name"
+        v-on:click="selectedType(index); selectType(index)"
+      >{{ type.name }}</div>
     </div>
 
     <div class="flex-info">
       <div class="info">
         <schedule-company
           v-for="(activity, index) in activities"
-          v-if="(activity.type == types[selected_type] || selected_type == -1) && activity.day == days[selected_day]"
+          v-if="(selected_type == -1 || activity.type == types[selected_type].name) && activity.day == days[selected_day]"
           :type="activity.type"
           :companies="activity.companies.data"
           :speakers="activity.speakers.data"
           :title="activity.name"
           :description="activity.description"
+          :day="activity.day"
           :hour="activity.time"
           :place="activity.location"
-          :key="index"
+          :key="activity.type + activity.day + activity.time"
         ></schedule-company>
       </div>
     </div>
+
+    <contacts/>
+
   </div>
 </template>
 
@@ -56,14 +60,8 @@ export default {
       selected_type: -1,
       jeec_api_url: process.env.VUE_APP_JEEC_BRAIN_URL,
       activities: [],
-      days: [
-        "Mar 09, 2020",
-        "Mar 10, 2020",
-        "Mar 11, 2020",
-        "Mar 12, 2020",
-        "Mar 13, 2020"
-      ],
-      types: ["Matchmaking", "15/15", "Workshop", "Discussion Panel", "Job Fair", "Speakers"]
+      days: [],
+      types: []
     };
   },
 
@@ -73,10 +71,37 @@ export default {
       this.selected_type = -1;
     },
     selectType(index) {
-      this.selected_type = index;
-    }
-  },
+      if (index == this.selected_type) {
+        this.selected_type = -1;
+      }
+      else {
+        this.selected_type = index;
+      }
+    },
+    selectedDay(index) {
+      var btnContainer = document.getElementsByClassName("day-selector-flex");
+      var btns = btnContainer[0].getElementsByClassName("day-button");
 
+      var current = btnContainer[0].getElementsByClassName("active");
+      if (current[0] != null) {
+        current[0].className = current[0].className.replace(" active", "");
+      }
+      btns[index].className += " active";
+    },
+    selectedType(index) {
+      var btnContainer = document.getElementsByClassName("type-selector-flex");
+      var btns = btnContainer[0].getElementsByClassName("type-button");
+
+      var current = btnContainer[0].getElementsByClassName("active");
+      if (current[0] != null) {
+        current[0].className = current[0].className.replace(" active", "");
+      }
+
+      if (index != this.selected_type) {
+        btns[index].className += " active";
+      }
+    },
+  },
   mounted() {
     axios
       .get(
@@ -90,52 +115,71 @@ export default {
         }
       )
       .then(response => (this.activities = response.data["data"]));
+
+    axios
+      .get(
+        process.env.VUE_APP_JEEC_WEBSITE_API_URL +
+          "/event",
+        {
+          auth: {
+            username: process.env.VUE_APP_JEEC_WEBSITE_USERNAME,
+            password: process.env.VUE_APP_JEEC_WEBSITE_KEY
+          }
+        }
+      )
+      .then(response => (this.types = response.data["data"][0].activity_types["data"], 
+                         this.days = response.data["data"][0].dates));
   }
 };
 </script>
 
 
 <style scoped>
-.select-day {
-  font-size: 19px;
+.select-day, .select-type {
+  font-size: 2.5vw;
   font-family: "Lato";
-  margin-top: 20px;
+  margin-top: 1vw;
   font-weight: 600;
 }
 
-.day-selector-flex {
+.day-selector-flex, .type-selector-flex {
   display: -webkit-box; /* iOS 6-, Safari 3.1-6, BB7 */
   display: -ms-flexbox; /* IE 10 */
   display: -webkit-flex; /* Safari 6.1+. iOS 7.1+, BB10 */
   display: flex; /*Firefox, Chrome, Opera */
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: row;
-  padding-top: 20px;
-  padding-bottom: 15px;
-  padding-left: 5vw;
-  padding-right: 5vw;
+  padding-top: 0.1vw;
+  padding-bottom: 0.5vw;
+  padding-left: 4vw;
+  padding-right: 4vw;
 }
 
-.day-button {
+.day-button, .type-button {
   background-color: #ffffff;
   border-color: rgb(34, 130, 214);
   border-style: solid;
-  border-width: 1px;
-  border-radius: 5px;
-  width: 150px;
-  height: 40px;
-  font-size: 18px;
-  padding-top: 16px;
+  border-width: 0.1vw;
+  border-radius: 0.5vw;
+  width: 14vw;
+  height: 4vw;
+  font-size: 1.6vw;
+  padding-top: 1.6vw;
   font-family: "Lato";
   font-weight: 600;
-  margin: 10px;
+  margin: 0.5vw;
 }
 
-.day-button:hover {
+.day-button:hover, .type-button:hover {
   background-color: rgb(230, 244, 253);
   cursor: pointer;
+}
+
+.day-button.active, .type-button.active {
+  background-color: #1C9CD8;
+  color: white;
 }
 
 .flex-all {
@@ -148,7 +192,6 @@ export default {
   flex-wrap: wrap;
   flex-direction: column;
   padding-top: 70px;
-  padding-bottom: 7vw;
 }
 
 .header {
