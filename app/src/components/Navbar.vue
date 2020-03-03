@@ -16,12 +16,12 @@
       <div class="navbar-title">Team</div>
     </router-link>
 
-    <router-link router-link :to="{ name: 'Speakers' }">
-      <div class="navbar-title">Speakers</div>
-    </router-link>
-
     <router-link router-link :to="{ name: 'Partners' }">
       <div class="navbar-title">Partners</div>
+    </router-link>
+
+    <router-link router-link :to="{ name: 'Speakers' }">
+      <div class="navbar-title">Speakers</div>
     </router-link>
 
     <!-- <router-link router-link :to="{ name: 'newfeed' }">
@@ -46,8 +46,8 @@
       <ul id="menu">
         <li v-on:click="redirect('Schedule')">Schedule</li>
         <li v-on:click="redirect('Activities')">Registrations</li>
-        <li v-on:click="redirect('Partners')">Partners</li>
         <li v-on:click="redirect('Speakers')">Speakers</li>
+        <li v-on:click="redirect('Partners')">Partners</li>
         <li v-on:click="redirect('Team')">Team</li>
         <!-- <li v-on:click="redirect('newfeed')">Feed</li> -->
 
