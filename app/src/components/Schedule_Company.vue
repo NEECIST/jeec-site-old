@@ -181,7 +181,7 @@ export default {
   margin-top: 1.5vw;
   margin-left: 3vw;
   font-weight: 600;
-  font-size: 3vw;
+  font-size: 2.5vw;
   text-align: left;
   color: #1c9cd8;
 }
@@ -336,7 +336,7 @@ export default {
     margin-top: 1.5vw;
     margin-left: 3vw;
     font-weight: 600;
-    font-size: 5vw;
+    font-size: 3vw;
     text-align: left;
     color: #1c9cd8;
   }
