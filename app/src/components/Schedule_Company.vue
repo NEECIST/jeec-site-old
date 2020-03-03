@@ -16,7 +16,7 @@
         <div class="module-image-flex" v-if="speakers.length">
           <div v-for="(speaker, index) in speakers" :key="index" style="margin-right: 1vw;">
             <a :href="speaker.linkedin_url" target="_blank">
-              <img class="activity-image" :src="jeec_api_url + speaker.image" />
+              <img class="speaker-image" :src="jeec_api_url + speaker.image" />
             </a>
             <div class="speaker-name">{{ speaker.name }}</div>
           </div>
@@ -170,11 +170,18 @@ export default {
   max-width: 10vw;
 }
 
+.speaker-image {
+  max-height: 7vw;
+  margin: 1vw;
+  margin-bottom: 0;
+  max-width: 10vw;
+}
+
 .type-name {
   margin-top: 1.5vw;
   margin-left: 3vw;
   font-weight: 600;
-  font-size: 3vw;
+  font-size: 2.5vw;
   text-align: left;
   color: #1c9cd8;
 }
@@ -318,11 +325,18 @@ export default {
     margin-bottom: 0;
   }
 
+   .speaker-image {
+    max-height: 10vw;
+    max-width: 15vw;
+    margin: 1vw;
+    margin-bottom: 0;
+  }
+
   .type-name {
     margin-top: 1.5vw;
     margin-left: 3vw;
     font-weight: 600;
-    font-size: 5vw;
+    font-size: 3vw;
     text-align: left;
     color: #1c9cd8;
   }
