@@ -6,6 +6,18 @@
           {{ type }} |
           <a style="font-size: 2vw; margin-left: 0px" class="type-name">{{ day }}</a>
         </div>
+        <div class="module-image-flex" v-if="type === 'Opening Ceremony'">
+          <img class="special-image" src="../../static/abertura.svg" />
+        </div>
+        <div class="module-image-flex" v-if="type=='Closing Ceremony'">
+          <img class="special-image" src="../../static/glasses.svg" />
+        </div>
+        <div class="module-image-flex" v-if="type=='Fast Meeting'">
+          <img class="special-image" src="../../static/neec.svg" />
+        </div>
+        <div class="module-image-flex" v-if="type=='Clarification Session'">
+          <img class="special-image" src="../../static/new.svg" />
+        </div>
         <div class="module-image-flex" v-if="companies.length">
           <div v-for="(company, index) in companies" :key="index">
             <a :href="company.link" target="_blank">
@@ -180,6 +192,12 @@ export default {
   max-width: 10vw;
 }
 
+.special-image {
+  height: 10vw;
+  margin-bottom: 0;
+  margin-left: 2vw;
+}
+
 .type-name {
   margin-top: 1.5vw;
   margin-left: 3vw;
@@ -328,11 +346,17 @@ export default {
     margin-bottom: 0;
   }
 
-   .speaker-image {
+  .speaker-image {
     max-height: 10vw;
     max-width: 15vw;
     margin: 1vw;
     margin-bottom: 0;
+  }
+
+  .special-image {
+    height: 14vw;
+    margin-bottom: 0;
+    margin-left: 2vw;
   }
 
   .type-name {
