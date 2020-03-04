@@ -14,11 +14,14 @@
           </div>
         </div>
         <div class="module-image-flex" v-if="speakers.length">
-          <div v-for="(speaker, index) in speakers" :key="index" style="margin-right: 1vw;">
+          <div v-for="speaker in speakers" :key="speaker.name" style="margin-right: 1vw;">
             <a :href="speaker.linkedin_url" target="_blank">
               <img class="speaker-image" :src="jeec_api_url + speaker.image" />
             </a>
             <div class="speaker-name">{{ speaker.name }}</div>
+            <a :href="speaker.company_link" target="_blank">
+              <img class="activity-image" :src="jeec_api_url + speaker.company_logo" />
+            </a>
           </div>
         </div>
         <div class="activity-title" v-if="title !== null || title!== ''">{{ title }}</div>
