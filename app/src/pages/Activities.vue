@@ -20,10 +20,10 @@
           v-if="activity.day == days[selected_day]"
           v-bind:key="activity.type + activity.time"
         >
-          <div class="session-type">{{ activity.type }}</div>
-          <div class="session-name">{{ activity.name }}</div>
+          <div class="session-type" v-if="activity.type.length">{{ activity.type }}</div>
+          <div class="session-name" v-if="activity.name.length">{{ activity.name }}</div>
           <div class="session-day">{{ days[selected_day] }}</div>
-          <div class="session-time">{{ activity.time }}</div>
+          <div class="session-time" v-if="activity.time">{{ activity.time }}</div>
           <div class="session-partners-flex">
             <div
               class="session-partner"
