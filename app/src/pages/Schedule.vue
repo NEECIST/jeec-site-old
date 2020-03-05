@@ -21,9 +21,9 @@
       <div
         class="type-button"
         v-for="(type, index) in types"
-        v-if="type.name !== 'Opening Ceremony' && type.name !== 'Closing Ceremony' && type.name !== 'Fast Meeting' && type.name !== 'Clarification Session'"
         v-bind:key="type.name"
         v-on:click="selectedType(index); selectType(index)"
+        v-show="type.name !== 'Opening Ceremony & Discussion Panel' && type.name !== 'Closing Ceremony' && type.name !== 'Fast Meeting' && type.name !== 'Clarification Session'"
       >{{ type.name }}</div>
     </div>
 
