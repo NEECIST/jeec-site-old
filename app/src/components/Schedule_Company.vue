@@ -6,16 +6,16 @@
           {{ type }} |
           <a style="font-size: 2vw; margin-left: 0px" class="type-name">{{ day }}</a>
         </div>
-        <div class="module-image-flex" v-if="type === 'Opening Ceremony'">
+        <div class="module-image-flex" v-if="type === 'Opening Ceremony & Discussion Panel'">
           <img class="special-image" src="../../static/abertura.svg" />
         </div>
-        <div class="module-image-flex" v-if="type=='Closing Ceremony'">
+        <div class="module-image-flex" v-if="type === 'Closing Ceremony'">
           <img class="special-image" src="../../static/glasses.svg" />
         </div>
-        <div class="module-image-flex" v-if="type=='Fast Meeting'">
+        <div class="module-image-flex" v-if="type === 'Fast Meeting'">
           <img class="special-image" src="../../static/neec.svg" />
         </div>
-        <div class="module-image-flex" v-if="type=='Clarification Session'">
+        <div class="module-image-flex" v-if="type === 'Clarification Session'">
           <img class="special-image" src="../../static/new.svg" />
         </div>
         <div class="module-image-flex" v-if="companies.length">
