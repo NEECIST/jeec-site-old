@@ -1,12 +1,5 @@
 <template>
   <div class="home-top-comp">
-    <div class="event_warning">
-      <b>{{ event_warning }}</b>
-      <router-link router-link :to="{ name: 'Event_Cancelled' }">
-        <p>Learn More</p>
-      </router-link>
-    </div>
-
     <div class="date-location">
       {{ date }}
       <p>{{ location }}</p>
@@ -80,29 +73,7 @@ export default {
   width: 100%;
   height: 100%;
   padding-bottom: 70px;
-}
-
-.event_warning {
-  width: 100%;
-  height: 80px;
-  font-family: "Lato", sans-serif;
-  font-size: 35px;
-  font-weight: 500;
-  line-height: 20px;
-  padding-top: 125px;
-  text-align: center;
-}
-
-.event_warning p{
-  width: 100%;
-  height: 80px;
-  font-family: "Lato", sans-serif;
-  font-size: 25px;
-  font-weight: 500;
-  color: red;
-  line-height: 20px;
-  text-align: center;
-  text-decoration: underline;
+  padding-top: 70px;
 }
 
 .date-location {
