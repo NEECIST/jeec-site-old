@@ -7,8 +7,6 @@ import Partners from '@/pages/Partners'
 import Error_Handling from '@/pages/Error_Handling'
 import Activities from '@/pages/Activities'
 import Schedule from '@/pages/Schedule'
-import Event_Cancelled from '@/pages/Event_Cancelled'
-
 
 Vue.use(Router)
 
@@ -47,11 +45,6 @@ export default new Router({
       path: '/schedule',
       name: 'Schedule',
       component: Schedule
-    },
-    {
-      path: '/event_cancelled',
-      name: 'Event_Cancelled',
-      component: Event_Cancelled
     },
     { 
       path: '/404', 
