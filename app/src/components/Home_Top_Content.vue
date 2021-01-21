@@ -38,9 +38,7 @@ export default {
   name: "home-top-comp",
   data() {
     return {
-      event_warning:
-        "We're sorry to inform that JEEC has been postponed to 2021.",
-      date: "9th to 13th of March 2020",
+      date: "15th to 19th of March 2021",
       location: "Instituto Superior Técnico",
       social_media_text: "Follow us on",
       center_image_link: "../../static/jeec-logo.png",
@@ -241,14 +239,6 @@ export default {
     width: 25px;
     height: 25px;
     margin: 10px;
-  }
-
-  .event_warning {
-    font-size: 25px;
-  }
-
-  .event_warning p{
-    font-size: 20px;
   }
 
   .date-location {
