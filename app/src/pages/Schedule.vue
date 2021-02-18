@@ -103,7 +103,7 @@ export default {
       }
     },
   },
-  mounted() {
+  mounted() {    
     axios
       .get(
         process.env.VUE_APP_JEEC_WEBSITE_API_URL +
@@ -128,8 +128,8 @@ export default {
           }
         }
       )
-      .then(response => (this.types = response.data["data"][0].activity_types["data"], 
-                         this.days = response.data["data"][0].dates));
+      .then(response => (this.types = response.data["data"].activity_types["data"], 
+                         this.days = response.data["data"].dates));
   }
 };
 </script>

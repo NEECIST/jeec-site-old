@@ -28,13 +28,13 @@
       <div class="navbar-title">Feed</div>
     </router-link> -->
 
-    <router-link router-link :to="{ name: 'Activities' }">
+    <!-- <router-link router-link :to="{ name: 'Activities' }">
       <div class="navbar-title">Registrations</div>
-    </router-link>
+    </router-link> -->
 
-    <router-link router-link :to="{ name: 'Schedule' }">
+    <!-- <router-link router-link :to="{ name: 'Schedule' }">
       <div class="navbar-title">Schedule</div>
-    </router-link>
+    </router-link> -->
 
     <div id="menuToggle">
       <input type="checkbox" :checked="show_menu" v-on:click="show_menu = !show_menu" />
@@ -44,8 +44,8 @@
       <span></span>
 
       <ul id="menu">
-        <li v-on:click="redirect('Schedule')">Schedule</li>
-        <li v-on:click="redirect('Activities')">Registrations</li>
+        <!-- <li v-on:click="redirect('Schedule')">Schedule</li> -->
+        <!-- <li v-on:click="redirect('Activities')">Registrations</li> -->
         <li v-on:click="redirect('Speakers')">Speakers</li>
         <li v-on:click="redirect('Partners')">Partners</li>
         <li v-on:click="redirect('Team')">Team</li>
