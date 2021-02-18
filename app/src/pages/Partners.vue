@@ -1,10 +1,11 @@
 <template>
     <div class="partners-app">
-        <component-title 
+        <component-title
+            v-if="partners.main_sponsor.length > 0"
             title="Main Sponsor"
             :subtitle="partners.main_sponsor[0].name"
         />
-        <a v-bind:href="partners.main_sponsor[0].link" target="_blank">
+        <a v-if="partners.main_sponsor.length > 0" v-bind:href="partners.main_sponsor[0].link" target="_blank">
             <img class="main-sponsor-logo" :src="jeec_api_url + partners.main_sponsor[0].logo">
         </a>
 
