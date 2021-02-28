@@ -14,7 +14,7 @@
           v-on:click="isOpen_weekday = !isOpen_weekday, isOpen_type = false"
         >{{getWeekDay(selected_day)}}</div>
 
-        <img class="arrow" :class="isOpen_weekday ? 'rotation' : '' " src="../../dist/static/arrow.svg"/>
+        <img class="arrow" :class="isOpen_weekday ? 'rotation' : '' " src="../../static/arrow.svg"/>
 
         <div class="list" v-if="isOpen_weekday">
           <div 
@@ -36,7 +36,7 @@
           v-on:click="isOpen_type = !isOpen_type, isOpen_weekday = false"
         >{{selected_type}}</div>
 
-        <img class="arrow" :class="isOpen_type ? 'rotation' : '' " src="../../dist/static/arrow.svg"/>
+        <img class="arrow" :class="isOpen_type ? 'rotation' : '' " src="../../static/arrow.svg"/>
 
         <div class="list" v-if="isOpen_type">
           <div 
