@@ -2,7 +2,7 @@
 <div class="latest-speakers-comp">
   <div class="speakers-list-comp">
     <component-title
-      title="SPEAKERS AT JEEC|20"
+      title="SPEAKERS AT JEEC|21"
       subtitle="List of guest speakers that will steal the show!"
     />
       <div class="latest-speakers-flex">
