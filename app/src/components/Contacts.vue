@@ -28,7 +28,7 @@
             <a v-if="main_sponsor[0]" v-bind:href="main_sponsor[0].link" target="_blank">
               <img :src="jeec_api_url + main_sponsor[0].logo">
             </a>
-            <a href="https://www.santandertotta.pt/pt_PT/Particulares/Universitarios.html" target="_blank"><img src="../../static/partner-logos/santander_logo.png"></a>
+            <!-- <a href="https://www.santandertotta.pt/pt_PT/Particulares/Universitarios.html" target="_blank"><img src="../../static/partner-logos/santander_logo.png"></a> -->
             <a href="https://tecnico.ulisboa.pt/pt/" target="_blank"><img src="../../static/partner-logos/ist_logo.png"></a>
 
             <a href="https://neecist.org/" target="_blank"><img src="../../static/partner-logos/neec_logo.png"></a>

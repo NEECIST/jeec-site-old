@@ -1,6 +1,6 @@
 <template>
   <div class="latest-speakers-comp">
-    <component-title title="Latest Speakers" subtitle="Minds that push engineering forward"/>
+    <component-title title="Speakers at JEEC|19" subtitle="Minds that push engineering forward"/>
 
     <div class="latest-speakers-flex">
         <div class="speaker-card" v-for="speaker in speakers" :key="speaker.name">
@@ -102,6 +102,10 @@ a {
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.3);
   margin-top: 20px;
   margin-bottom: 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .origin-text {
@@ -165,12 +169,12 @@ a {
 
 .speaker-card-bottom {
   height: 60px;
+  margin-top: auto;
 }
 
 .speaker-links {
   margin-top: 20px;
   width: 50%;
-  float: left;
 }
 
 .speaker-link-logo {
