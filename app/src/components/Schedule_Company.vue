@@ -4,7 +4,7 @@
       <div class="module-left-head-flex">
         <div class="type-name">
           {{ type }} |
-          <a style="font-size: 2vw; margin-left: 0px" class="type-name">{{ day }}</a>
+          <a class="type-name type-date">{{ day }}</a>
         </div>
         <div class="module-image-flex" v-if="type === 'Opening Ceremony & Discussion Panel'">
           <img class="special-image" src="../../static/abertura.svg" />
@@ -36,7 +36,7 @@
             </a>
           </div>
         </div>
-        <div class="activity-title" v-if="title !== null || title!== ''">{{ title }}</div>
+        <div class="activity-title" v-if="title !== null && title !== ''">{{ title }}</div>
       </div>
       <div class="timeplace-container">
         <div class="timeplace">{{ place }}</div>
@@ -83,7 +83,7 @@ export default {
   flex-flow: column;
   padding-left: 2vw;
   padding-right: 2vw;
-  margin-top: 0.5vw;
+  padding-bottom: 1.5vw;
   width: 91%;
 
   /* border: green solid 3px; */
@@ -130,6 +130,7 @@ export default {
   flex-wrap: wrap;
   flex-flow: row;
   text-align: center;
+  margin-left: 3vw;
 
   /* border: brown solid 3px; */
 
@@ -146,7 +147,7 @@ export default {
   align-items: center;
   flex-direction: row;
   margin-left: 2vw;
-  margin-bottom: 1vw;
+  margin-bottom: 0.5vw;
   /* padding-top: 0.5vw;
   margin-bottom: 2vw; */
 
@@ -171,7 +172,7 @@ export default {
   margin-top: 10px;
   margin-left: 30px;
   font-weight: 600;
-  font-size: 1.8vw;
+  font-size: 1.5vw;
   text-align: right;
   font-weight: bold;
 
@@ -199,12 +200,16 @@ export default {
 }
 
 .type-name {
-  margin-top: 1.5vw;
   margin-left: 3vw;
   font-weight: 600;
-  font-size: 2.5vw;
+  font-size: 2vw;
   text-align: left;
   color: #1c9cd8;
+}
+
+.type-date {
+  font-size: 1.5vw;
+  margin-left: 0px;
 }
 
 .activity-title {
@@ -213,7 +218,7 @@ export default {
   margin-bottom: 1vw;
   text-align: left;
   font-family: "Lato";
-  font-size: 2vw;
+  font-size: 1.5vw;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -243,12 +248,12 @@ export default {
 }
 
 .activity-description {
-  margin-left: 3vw;
+  /* margin-left: 3vw; */
   margin-right: 3vw;
   margin-bottom: 1vw;
   text-align: left;
   font-family: "Lato";
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #000000;
@@ -368,6 +373,11 @@ export default {
     color: #1c9cd8;
   }
 
+  .type-date {
+    font-size: 2vw;
+    margin-left: 0px;
+  }
+
   .activity-title {
     /* height: 6vw; */
     margin-left: 3vw;
@@ -393,7 +403,7 @@ export default {
 
   .activity-description {
     margin-top: 1.5vw;
-    margin-left: 3vw;
+    /* margin-left: 3vw; */
     margin-right: 3vw;
     margin-bottom: 7px;
     text-align: left;

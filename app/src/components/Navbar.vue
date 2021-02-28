@@ -6,7 +6,7 @@
       <img class="navbar-left-logo-mobile" :src="navbar_mobile_logo_link" />
     </router-link>
 
-    <a href="https://jeec.jose-correia.com">
+    <a href="https://brain.jeec.ist/companies/">
       <div class="platform-button">JEEC|Brain Login</div>
     </a>
 
@@ -51,7 +51,7 @@
         <li v-on:click="redirect('Team')">Team</li>
         <!-- <li v-on:click="redirect('newfeed')">Feed</li> -->
 
-        <a href="https://jeec.jose-correia.com">
+        <a href="https://brain.jeec.ist/companies/">
           <div class="platform-button-menu">JEEC|Brain Login</div>
         </a>
       </ul>
