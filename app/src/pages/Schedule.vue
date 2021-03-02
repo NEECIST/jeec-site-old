@@ -87,11 +87,12 @@
           :type="activity.type"
           :companies="activity.companies.data"
           :speakers="activity.speakers.data"
-          :title="activity.name"
+          :name="activity.name"
           :description="activity.description"
           :day="activity.day"
-          :hour="activity.time"
-          :place="activity.location"
+          :start_time="activity.time"
+          :end_time="activity.end_time"
+          :location="activity.location"
           :key="activity.type + activity.day + activity.time"
         ></schedule-company>
       </div>

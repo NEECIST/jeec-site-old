@@ -2,9 +2,9 @@
   <div class="module">
     <div class="time-place">
       <img class="clock" src="../../static/clock.svg" />
-      {{ hour + " ─ " + place }}
+      {{ start_time + " ─ " + end_time }}, {{ location }}
     </div>
-    <div class="activity-title" v-if="title !== null && title !== ''">{{ title }}</div>
+    <div class="activity-title" v-if="name !== null && name !== ''">{{ name }}</div>
     <div class="more-info" :class=" open ? 'more-info-open' : '' ">
       <div class="module-image-flex" v-if="type === 'Opening Ceremony & Discussion Panel'">
         <img class="special-image" src="../../static/abertura.svg" />
@@ -40,9 +40,9 @@
         <div class="activity-description">{{ description }}</div>
       </div>
       <div class="button-flex">
-        <div class="button">Zoom Link</div>
-        <div class="button">Registration</div>
-        <div class="button">Add to Calendar</div>
+        <!-- <div class="button">Zoom Link</div>
+        <div class="button">Registration</div> -->
+        <div @click="$refs.calendar.click()" class="button"><a ref="calendar" :href="calendar()" target="_blank">Add to Calendar</a></div>
       </div>
     </div>
     <img class="arrow" v-on:click="open = !open" src="../../static/arrow_blue.svg"/>
@@ -54,11 +54,12 @@ export default {
   name: "schedule_company",
   props: {
     type: String,
-    title: String,
+    name: String,
     description: String,
     day: String,
-    hour: String,
-    place: String,
+    start_time: String,
+    end_time: String,
+    location: String,
     companies: Array,
     speakers: Array
   },
@@ -68,7 +69,95 @@ export default {
       jeec_api_url: process.env.VUE_APP_JEEC_BRAIN_URL,
       open: false
     };
-  }
+  },
+
+  methods: {
+    calendar() {
+      var url = "https://calendar.google.com/calendar/render?action=TEMPLATE";
+      url = url + "&text=" + this.name;
+      url = url + "&ctz=" + "Europe/Lisbon";
+      url = url + "&location=" + this.location;
+      url = url + "&dates=" + this.getDate();
+      // url =
+      //   url +
+      //   "&sprop=website:" +
+      //   this.activity.registration_link +
+      //   "&sprop=name:" +
+      //   this.activity.name;
+
+      // if (this.activity.registration_open) {
+      //   url =
+      //     url +
+      //     "&details=" +
+      //     "Registrations in " +
+      //     this.activity.registration_link +
+      //     "\n" +
+      //     this.activity.description;
+      // } else {
+      //   url = url + "&details=" + this.activity.description;
+      // }
+
+      url = url + "&details=" + this.description;
+
+      // var date = new Date();
+
+      // if (
+      //   date.getHours().toString() + ":" + date.getMinutes().toString() >
+      //   this.activity.time
+      // ) {
+      //   url = url + "&crm=" + "BUSY"; //busy
+      // } else if (!this.activity.registration_open) {
+      //   url = url + "&crm=" + "BLOCKING"; //blocking
+      // } else {
+      //   url = url + "&crm=" + "AVAILABLE"; //available
+      // }
+
+      return url;
+    },
+    getDate() {
+      var start_date = new Date(
+        this.day.substring(0, 11) + " " + this.start_time + ":00"
+      );
+      var end_date = new Date(
+        this.day.substring(0, 11) +
+          " " +
+          this.end_time +
+          ":00"
+      );
+
+      start_date =
+        start_date.getFullYear().toString() +
+        (start_date.getMonth() + 1 < 10
+          ? "0" + (start_date.getMonth() + 1).toString()
+          : (start_date.getMonth() + 1).toString()) +
+        start_date.getDate().toString() +
+        "T" +
+        (start_date.getHours() < 10
+          ? "0" + start_date.getHours()
+          : start_date.getHours()) +
+        (start_date.getMinutes() < 10
+          ? "0" + start_date.getMinutes()
+          : start_date.getMinutes()) +
+        "00";
+
+      end_date =
+        end_date.getFullYear().toString() +
+        (end_date.getMonth() + 1 < 10
+          ? "0" + (end_date.getMonth() + 1).toString()
+          : (end_date.getMonth() + 1).toString()) +
+        end_date.getDate().toString() +
+        "T" +
+        (end_date.getHours() < 10
+          ? "0" + end_date.getHours()
+          : end_date.getHours()) +
+        (end_date.getMinutes() < 10
+          ? "0" + end_date.getMinutes()
+          : end_date.getMinutes()) +
+        "00";
+
+      return start_date + "/" + end_date;
+    },
+  },
 };
 </script>
 
@@ -145,6 +234,11 @@ export default {
   cursor: pointer;
 }
 
+.button > a {
+  text-decoration: none;
+  color: white;
+}
+
 .module-image-flex {
   display: -webkit-box; /* iOS 6-, Safari 3.1-6, BB7 */
   display: -ms-flexbox; /* IE 10 */
@@ -180,7 +274,7 @@ export default {
 .activity-description {
   margin-right: 3vw;
   margin-bottom: 1vw;
-  text-align: left;
+  text-align: justify;
   font-size: 1.3vw;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
