@@ -83,7 +83,7 @@
       <div class="schedule-cards-flex" style="margin-top: 2vw">
         <schedule-company
           v-for="activity in activities"
-          v-if="(activity.type == selected_type) && activity.day == selected_day"
+          v-if="activity.type == selected_type && activity.day == selected_day && activity.type !== 'Aux'"
           :type="activity.type"
           :companies="activity.companies.data"
           :speakers="activity.speakers.data"
