@@ -5,6 +5,7 @@
       subtitle="Never miss another activity!"
     />
 
+    <!-- MOBILE DROPLISTS -->
     <div class="dropdown-group">
       <!-- WEEK DAY -->
       <div class="dropdown" style="margin: 4vw">
@@ -51,6 +52,52 @@
       </div>
     </div>
 
+    <div class="selector-all">
+      <div class="selector-group">
+        <div class="selector">
+          <div
+            class="button"
+            :class="selected_day == day ? 'active' : '' "
+            v-for="day in days"
+            v-bind:key="day"
+            v-on:click="selectDay(day)"
+          >
+            <div>{{ getWeekDay(day) }}</div>
+            <div class="day">{{ getDay(day) }}</div>
+            <svg class="triangle" :class="selected_day == day ? '' : 'hide' " xmlns="http://www.w3.org/2000/svg" width="508.1" height="108.9" viewBox="0 0 508.1 108.9">
+              <path id="triangle-blue" d="M0,0,254.1,108.9,508.1,0Z" fill="#27ade4"/>
+            </svg>
+          </div>
+        </div>
+        <div class="selector">
+          <div
+            class="button-activities"
+            :class="selected_type == type.name ? 'active' : '' "
+            v-for="type in types"
+            v-bind:key="type.name"
+            v-on:click="selectType(type.name)"
+            v-show="type.name !== 'Opening Ceremony & Discussion Panel' && type.name !== 'Closing Ceremony' && type.name !== 'Fast Meeting' && type.name !== 'Clarification Session'"
+          >{{ type.name }}</div>
+        </div>
+      </div>
+      <div class="schedule-cards-flex" style="margin-top: 2vw">
+        <schedule-company
+          v-for="activity in activities"
+          v-if="(activity.type == selected_type) && activity.day == selected_day"
+          :type="activity.type"
+          :companies="activity.companies.data"
+          :speakers="activity.speakers.data"
+          :title="activity.name"
+          :description="activity.description"
+          :day="activity.day"
+          :hour="activity.time"
+          :place="activity.location"
+          :key="activity.type + activity.day + activity.time"
+        ></schedule-company>
+      </div>
+    </div>
+    
+    <!--
     <div class="selector-flex">
       <div
         class="button"
@@ -71,24 +118,7 @@
         v-show="type.name !== 'Opening Ceremony & Discussion Panel' && type.name !== 'Closing Ceremony' && type.name !== 'Fast Meeting' && type.name !== 'Clarification Session'"
       >{{ type.name }}</div>
     </div>
-
-    <div class="flex-info">
-      <div class="info">
-        <schedule-company
-          v-for="activity in activities"
-          v-if="(activity.type == selected_type) && activity.day == selected_day"
-          :type="activity.type"
-          :companies="activity.companies.data"
-          :speakers="activity.speakers.data"
-          :title="activity.name"
-          :description="activity.description"
-          :day="activity.day"
-          :hour="activity.time"
-          :place="activity.location"
-          :key="activity.type + activity.day + activity.time"
-        ></schedule-company>
-      </div>
-    </div>
+    -->
 
     <contacts/>
   </div>
@@ -112,7 +142,19 @@ export default {
         "Thu": "Thursday",
         "Fri": "Friday",
         "Sat": "Saturday",
-        "Sun": "Sunday"
+        "Sun": "Sunday",
+        "Jan": "01",
+        "Feb": "02",
+        "Mar": "03",
+        "Apr": "04",
+        "May": "05",
+        "Jun": "06",
+        "Jul": "07",
+        "Aug": "08",
+        "Sep": "09",
+        "Oct": "10",
+        "Nov": "11",
+        "December": "12"
       },
       jeec_api_url: process.env.VUE_APP_JEEC_BRAIN_URL,
       activities: [],
@@ -125,6 +167,11 @@ export default {
     getWeekDay(day) {
       var week_day = day.substr(day.length - 3);
       return this.dict[week_day];
+    },
+    getDay(day) {
+      var nr_day = day.substr(0, 2);
+      var month = day.substr(3, 3);
+      return nr_day + "/" + this.dict[month];
     },
     selectDay(day) {
       this.selected_day = day;
@@ -189,24 +236,45 @@ export default {
   transform: rotate(90deg);
 }
 
+.selector-all {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.selector-group {
+  width: 90vw;
+  align-self: center;
+}
+
+.selector {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: stretch;
+}
+
+.selector div:first-child {
+  border-left-width: 2px;
+}
+
+.selector div:last-child {
+  border-right-width: 2px;
+}
+
+.schedule-cards-flex {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  align-self: center;
+}
+
 .selector-flex {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 6px;
-}
-
-.selector-flex div:first-child {
-  border-top-left-radius: 1.5vw;
-  border-bottom-left-radius: 1.5vw;
-  border-left-width: 2px;
-}
-
-.selector-flex div:last-child {
-  border-top-right-radius: 1.5vw;
-  border-bottom-right-radius: 1.5vw;
-  border-right-width: 2px;
 }
 
 .list {
@@ -232,12 +300,12 @@ export default {
 }
 
 .button {
-  width: 13.8vw;
-  height: 1.6vw;
+  /* width: 13.8vw; */
+  /* height: 1.6vw; */
   font-size: 1.4vw;
   color: #27ADE4;
   font-weight: 500;
-  border-color: #27ADE4;
+  border-color: #F6F6F6;
   border-style: solid;
   border-top-width: 2px;
   border-bottom-width: 2px;
@@ -245,6 +313,57 @@ export default {
   border-right-width: 1px;
   padding: 0.5vw;
   transition: 0.2s;
+  flex-grow: 1;
+  position: relative;
+}
+
+.button.active {
+  background-color: #27ADE4;
+  color: white;
+  border-color: #27ADE4;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.day {
+  font-size: 1.1vw;
+}
+
+.triangle {
+  position: absolute;
+  top: 108%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15%;
+  height: 15%;
+  transition: 0.2s;
+  z-index: 10;
+}
+
+.button-activities {
+  font-size: 1.4vw;
+  color: #51545B;
+  font-weight: 500;
+  background-color: #F6F6F6;
+  border-color: #F6F6F6;
+  border-style: solid;
+  border-top-width: 2px;
+  border-bottom-width: 3px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  padding: 1vw;
+  transition: 0.2s;
+  flex-grow: 1;
+}
+
+.button-activities.active {
+  border-bottom-color: #27ADE4;
+}
+
+.button-activities:hover {
+  cursor: pointer;
 }
 
 .button-vertical {
@@ -259,18 +378,8 @@ export default {
   padding-top: 1.5vw;
 }
 
-.button:hover {
-  cursor: pointer;
-  font-size: 1.5vw;
-}
-
 .button-vertical:hover {
   font-size: 3.8vw;
-}
-
-.button.active {
-  background-color: #27ADE4;
-  color: white;
 }
 
 .flex-all {
@@ -354,6 +463,10 @@ export default {
 @media screen and (max-width: 800px) {
 
 .selector-flex {
+  display: none;
+}
+
+.selector-group {
   display: none;
 }
 
