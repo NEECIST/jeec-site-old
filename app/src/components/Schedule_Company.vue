@@ -2,7 +2,7 @@
   <div class="module">
     <div class="time-place">
       <img class="clock" src="../../static/clock.svg" />
-      {{ start_time + " ─ " + end_time + location ? (', ' + location) : '' }}
+      {{ (start_time + " ─ " + end_time) + (location ? (', ' + location) : '' )}}
     </div>
     <div class="activity-title" v-if="name !== null && name !== ''">{{ name }}</div>
     <div class="more-info" :class=" open ? 'more-info-open' : '' ">
