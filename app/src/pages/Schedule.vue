@@ -10,29 +10,29 @@
       <!-- WEEK DAY -->
       <div class="dropdown" style="margin: 4vw">
         <div
-          class="button button-vertical top-radius active"
+          class="button-vertical active"
           :class="isOpen_weekday ? '' : 'bottom-radius' "
           v-on:click="isOpen_weekday = !isOpen_weekday, isOpen_type = false"
-        >{{getWeekDay(selected_day)}}</div>
+        >{{getWeekDay(selected_day) + ", " + getDay(selected_day)}}</div>
 
         <img class="arrow" :class="isOpen_weekday ? 'rotation' : '' " src="../../static/arrow.svg"/>
 
         <div class="list" v-if="isOpen_weekday">
           <div 
-            class="button button-vertical"
+            class="button-vertical"
             :class="selected_day == day ? 'active' : '' "
             v-for="day in days"
             v-bind:key="day"
             v-on:click="selectDay(day), isOpen_weekday = !isOpen_weekday, isOpen_type = false"
             v-if="(day != selected_day)"
-          >{{ getWeekDay(day) }}</div>
+          >{{ getWeekDay(day) + ", " + getDay(day) }}</div>
         </div>
       </div>
 
       <!-- TYPE OF ACTIVITY -->
       <div class="dropdown" style="margin: 4vw">
         <div
-          class="button button-vertical top-radius active"
+          class="button-vertical active"
           :class="isOpen_type ? '' : 'bottom-radius' "
           v-on:click="isOpen_type = !isOpen_type, isOpen_weekday = false"
         >{{selected_type}}</div>
@@ -41,7 +41,7 @@
 
         <div class="list" v-if="isOpen_type">
           <div 
-            class="button button-vertical"
+            class="button-vertical"
             :class="selected_type == type.name ? 'active' : '' "
             v-for="type in types"
             v-bind:key="type.name"
@@ -97,29 +97,6 @@
         ></schedule-company>
       </div>
     </div>
-    
-    <!--
-    <div class="selector-flex">
-      <div
-        class="button"
-        :class="selected_day == day ? 'active' : '' "
-        v-for="day in days"
-        v-bind:key="day"
-        v-on:click="selectDay(day)"
-      >{{ getWeekDay(day) }}</div>
-    </div>
-
-    <div class="selector-flex">
-      <div
-        class="button"
-        :class="selected_type == type.name ? 'active' : '' "
-        v-for="type in types"
-        v-bind:key="type.name"
-        v-on:click="selectType(type.name)"
-        v-show="type.name !== 'Opening Ceremony & Discussion Panel' && type.name !== 'Closing Ceremony' && type.name !== 'Fast Meeting' && type.name !== 'Clarification Session'"
-      >{{ type.name }}</div>
-    </div>
-    -->
 
     <contacts/>
   </div>
@@ -285,19 +262,7 @@ export default {
 }
 
 .list div:last-child {
-  border-bottom-right-radius: 1.5vw;
-  border-bottom-left-radius: 1.5vw;
   border-bottom-width: 2px;
-}
-
-.top-radius {
-  border-top-right-radius: 1.5vw;
-  border-top-left-radius: 1.5vw;
-}
-
-.bottom-radius {
-  border-bottom-right-radius: 1.5vw;
-  border-bottom-left-radius: 1.5vw;
 }
 
 .button {
@@ -370,17 +335,31 @@ export default {
 .button-vertical {
   width: 40vw;
   height: 5vw;
-  font-size: 3.5vw;
-  background-color: #FFFFFF;
+  color: #27ADE4;
+  font-weight: 500;
+  border-color: #F6F6F6;
+  border-style: solid;
   border-top-width: 1px;
   border-bottom-width: 1px;
   border-left-width: 2px;
   border-right-width: 2px;
+  padding: 0.5vw;
   padding-top: 1.5vw;
+  transition: 0.2s;
+  flex-grow: 1;
+  position: relative;
+  font-size: 3.3vw;
+  background-color: #FFFFFF;
 }
 
 .button-vertical:hover {
-  font-size: 3.8vw;
+  font-size: 3.5vw;
+}
+
+.button-vertical.active {
+  background-color: #27ADE4;
+  color: white;
+  border-color: #27ADE4;
 }
 
 .flex-all {

@@ -462,6 +462,42 @@ export default {
     /* border: black solid 3px; */
   }
 
+  .time-place {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    color: #27ade4;
+    font-weight: 400;
+    font-size: 4.5vw;
+    margin-bottom: 0.5vw;
+    margin-top: 2vw;
+  }
+
+  .clock {
+    width: 5vw;
+    margin-right: 3vw;;
+  }
+
+  .arrow {
+    width: 3.2vw;
+    position: absolute;
+    top: 15%;
+    left: 94%;
+    transform: rotate(90deg);
+    cursor: pointer;
+  }
+
+  .button {
+    font-size: 2.5vw;
+    background-color: #27ade4;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    margin-right: 2vw;
+    border-radius: 2vw;
+  }
+
   .timeplace {
     margin-top: 10px;
     margin-left: 30px;
