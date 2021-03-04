@@ -160,6 +160,8 @@ export default {
 .team-member img{ 
     height: 220px;
     width: 220px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .teams_container:hover .team-member {
