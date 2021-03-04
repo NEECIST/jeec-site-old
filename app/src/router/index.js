@@ -7,6 +7,7 @@ import Partners from '@/pages/Partners'
 import Error_Handling from '@/pages/Error_Handling'
 import Activities from '@/pages/Activities'
 import Schedule from '@/pages/Schedule'
+import Prizes from '@/pages/Prizes'
 
 Vue.use(Router)
 
@@ -45,6 +46,11 @@ export default new Router({
       path: '/schedule',
       name: 'Schedule',
       component: Schedule
+    },
+    {
+      path: '/prizes',
+      name: 'Prizes',
+      component: Prizes
     },
     { 
       path: '/404', 
