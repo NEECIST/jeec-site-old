@@ -26,9 +26,9 @@
         </div>
       </div>
       <div class="module-image-flex" v-if="speakers.length">
-        <div v-for="speaker in speakers" :key="speaker.name" style="margin-right: 1vw;">
+        <div class="speaker-flex" v-for="speaker in speakers" :key="speaker.name" style="margin-right: 1vw;">
           <a :href="speaker.linkedin_url" target="_blank">
-            <img class="speaker-image" :src="jeec_api_url + speaker.image" />
+            <img class="speaker-image" :class="moderator == speaker.name ? 'moderator' : 'not-moderator' " :src="jeec_api_url + speaker.image" />
           </a>
           <div class="speaker-name">{{ speaker.name }}</div>
           <a :href="speaker.company_link" target="_blank">
@@ -61,13 +61,14 @@ export default {
     end_time: String,
     location: String,
     companies: Array,
-    speakers: Array
+    speakers: Array,
+    moderator: String
   },
 
   data() {
     return {
       jeec_api_url: process.env.VUE_APP_JEEC_BRAIN_URL,
-      open: false
+      open: this.type == '15/15'
     };
   },
 
@@ -251,6 +252,10 @@ export default {
   margin-bottom: 0.5vw;
 }
 
+.speaker-flex {
+  align-self: flex-start;
+}
+
 .activity-image {
   max-height: 4vw;
   margin: 1vw;
@@ -263,6 +268,22 @@ export default {
   margin: 1vw;
   margin-bottom: 0;
   max-width: 10vw;
+
+  border-radius: 50%;
+  background-color: white;
+  background-size: 105%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.moderator {
+  border: 0.4vh solid #27ade4;
+  box-shadow: 0 0 1vh 0.2vh #27ade4;
+}
+
+.not-moderator {
+  border: 0.4vh solid #FFFFFF;
+  box-shadow: 0 0 1vh 0.2vh #FFFFFF;
 }
 
 .special-image {
@@ -468,7 +489,7 @@ export default {
     justify-content: flex-start;
     color: #27ade4;
     font-weight: 400;
-    font-size: 4.5vw;
+    font-size: 3.8vw;
     margin-bottom: 0.5vw;
     margin-top: 2vw;
   }

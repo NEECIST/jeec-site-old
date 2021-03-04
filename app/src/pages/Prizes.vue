@@ -270,6 +270,59 @@
 	color: #00D4E4;
 }
 
+@media screen and (max-width: 800px) {
+
+.bottom-text {
+	width: 60%;
+	padding-left: 7vw;
+	padding-top: 1vw;
+	margin-right: 7vw;
+	font-family: Montserrat;
+}
+
+.first-text {
+	font-weight: 600;
+  font-size: 3.8vw;
+  text-align: left;
+	margin-bottom: 2vw;
+}
+
+.second-text {
+	color: #646578;
+	font-weight: 400;
+  font-size: 2.9vw;
+  text-align: left;
+}
+
+.trophy-all {
+	width: 25vw;
+	padding-top: 2vw;
+}
+
+.trophy {
+	width: 25vw;
+}
+
+.line-middle {
+	width: 0.25vw;
+	left: 35%;
+	top: -10%;
+}
+
+.line-left {
+	width: 0.25vw;
+	left: 18%;
+	top: -7%;
+}
+
+.line-right {
+	width: 0.25vw;
+	left: 52%;
+	top: -7%;
+}
+
+}
+
 @keyframes move-middle {
   0%   {transform: translateY(0);}
   50%  {transform: translateY(-1vw);}

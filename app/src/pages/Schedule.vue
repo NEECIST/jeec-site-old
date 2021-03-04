@@ -94,6 +94,7 @@
           :end_time="activity.end_time"
           :location="activity.location"
           :key="activity.type + activity.day + activity.time"
+          :moderator="activity.moderator"
         ></schedule-company>
       </div>
     </div>
