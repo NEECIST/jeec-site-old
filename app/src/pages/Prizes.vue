@@ -61,13 +61,13 @@
 			<div class="prizes-flex">
 				<div class="prize-card">
 					<img class="prize-image" src="https://brain.jeec.ist/static/rewards/98d73548-c24f-4f51-8b46-efce06ebbef8.png">
-					<div class="prize-name">Daily Team Prizes</div>
-					<div class="prize-notes">Every day, the team with the highest score of the day will win that specific day big prize.</div>
+					<div class="prize-name">Daily Squad Prizes</div>
+					<div class="prize-notes">Every day, the squad with the highest score of the day will win that specific day big prize.</div>
 				</div>
 				<div class="prize-card">
 					<img class="prize-image" src="https://brain.jeec.ist/static/rewards/c3ae9766-f381-4e49-857b-493a666ce8e1.png">
-					<div class="prize-name">Top 3 Team of the week</div>
-					<div class="prize-notes">The tree highest ranked Individual Participants at the end of the week will win the specific reward.</div>
+					<div class="prize-name">Top 3 Squad of the week</div>
+					<div class="prize-notes">The tree highest ranked Squads at the end of the week will win the specific reward.</div>
 				</div>
 			</div>
     </div>
