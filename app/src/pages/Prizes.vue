@@ -47,7 +47,7 @@
 				<div class="prize-card">
 					<img class="prize-image" src="https://brain.jeec.ist/static/rewards/a56676a9-dc10-47d4-b22a-69173b78d629.png">
 					<div class="prize-name">Top 3 Individual Participants</div>
-					<div class="prize-notes">The tree highest ranked Individual Participants at the end of the week will win the specific reward.</div>
+					<div class="prize-notes">The tree highest ranked Individual Participants, at the end of the week, will win a reward according to the rank, starting with a PS5.</div>
 				</div>
 				<div class="prize-card">
 					<img class="prize-image" src="https://brain.jeec.ist/static/rewards/7632097a-b4a0-48e1-a6ab-17e594a747c8.png">
@@ -62,12 +62,12 @@
 				<div class="prize-card">
 					<img class="prize-image" src="https://brain.jeec.ist/static/rewards/98d73548-c24f-4f51-8b46-efce06ebbef8.png">
 					<div class="prize-name">Daily Squad Prizes</div>
-					<div class="prize-notes">Every day, the squad with the highest score of the day will win that specific day big prize.</div>
+					<div class="prize-notes">Every day, the squad with the highest score of the day will win the daily big prize (changes daily).</div>
 				</div>
 				<div class="prize-card">
 					<img class="prize-image" src="https://brain.jeec.ist/static/rewards/c3ae9766-f381-4e49-857b-493a666ce8e1.png">
 					<div class="prize-name">Top 3 Squad of the week</div>
-					<div class="prize-notes">The tree highest ranked Squads at the end of the week will win the specific reward.</div>
+					<div class="prize-notes">The tree highest ranked Squads, at the end of the week, will win a reward according to the rank, starting with Nintendo Switch Lite.</div>
 				</div>
 			</div>
     </div>

@@ -27,7 +27,8 @@
                         </div> 
                         <div class="linkedin-icons">
                             <a :href="member.linkedin_url" target="_blank">
-                                <img :src="linkedin_icon_link"></a>
+                                <img class="icon-team-member" :src="linkedin_icon_link"/>
+                            </a>
                         </div>                              
                     </div>         
                     <p class="member-name">{{ member.name }}</p> 
@@ -177,6 +178,10 @@ export default {
     color: #262626;
 }
 
+.icon-team-member {
+    height: 60px;
+}
+
 
 @media screen and (max-width: 1200px) {
     .team-flex {
@@ -212,12 +217,20 @@ export default {
         height: 140px;
         width: 140px;
         margin-top: 30px;
-        flex: 0 0 50%; margin-right: 10px;
+        flex: 0 0 50%;
+        margin-right: 10px;
     }
 
     .member-name{
         font-size: 17px;
         margin-left:13%;
+    }
+
+    .icon-team-member {
+        height: 40px !important;
+        width: 40px !important;
+        margin-top: 20px !important;
+        margin-right: 0px !important;
     }
 }
 
