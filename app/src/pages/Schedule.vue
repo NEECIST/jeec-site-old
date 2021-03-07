@@ -121,7 +121,7 @@ export default {
   data() {
     return {
       selected_day: '',
-      selected_type: 'Job Fair',
+      selected_type: this.$route.query.type ? this.$route.query.type : 'Job Fair',
       isOpen_weekday: false,
       isOpen_type: false,
       dict: {
