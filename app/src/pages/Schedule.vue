@@ -72,6 +72,11 @@
         <div class="selector">
           <div
             class="button-activities"
+            :class="selected_type == 'All' ? 'active' : '' "
+            v-on:click="selectType('All')"
+          >All</div>
+          <div
+            class="button-activities"
             :class="selected_type == type.name ? 'active' : '' "
             v-for="type in types"
             v-bind:key="type.name"
@@ -80,10 +85,13 @@
           >{{ type.name }}</div>
         </div>
       </div>
+
+      <div v-if="activity_dict[selected_type]" class="activity-short-description">{{ activity_dict[selected_type] }}</div>
+
       <div class="schedule-cards-flex" style="margin-top: 2vw">
         <schedule-company
           v-for="activity in activities"
-          v-if="activity.type == selected_type && activity.day == selected_day"
+          v-if="(activity.type == selected_type || selected_type == 'All') && activity.day == selected_day"
           :type="activity.type"
           :companies="activity.companies.data"
           :speakers="activity.speakers.data"
@@ -95,6 +103,8 @@
           :location="activity.location"
           :key="activity.type + activity.day + activity.time"
           :moderator="activity.moderator"
+          :raffle_prize="activity.reward"
+          :selected_type="selected_type"
         ></schedule-company>
       </div>
     </div>
@@ -133,7 +143,16 @@ export default {
         "Sep": "09",
         "Oct": "10",
         "Nov": "11",
-        "December": "12"
+        "Dec": "12"
+      },
+      activity_dict: {
+        "Workshop": "Workshops are perfect to strengthen your knowledge and skills, through \"hands on\" activities",
+        "Discussion Panel": "Top professionals discuss sensitive topics related to technology, the future and more",
+        "Speaker": "Top professionals and entrepreneurs talk about the hottest topics",
+        "15/15": "15 minutes to talk about the company's project, 15 minutes to discuss it: the perfect networking moment",
+        "Matchmaking": "Companies openly talk to students, lending itself to create strong connections between them",
+        "Job Fair": "Companies share their business experience and students have the opportunity to learn more",
+        "Doc Talk": "Doctoral degrees are thoroughly explained and their career paths unveiled"
       },
       jeec_api_url: process.env.VUE_APP_JEEC_BRAIN_URL,
       activities: [],
@@ -157,7 +176,7 @@ export default {
     },
     selectType(type) {
       this.selected_type = type;
-    },
+    }
   },
   mounted() {
     axios
@@ -192,6 +211,12 @@ export default {
 
 
 <style scoped>
+
+.activity-short-description {
+  font-size: 1.4vw;
+  color: #70747c;
+  margin-top: 2vw;
+}
 
 .dropdown-group {
   display: flex;
@@ -449,6 +474,14 @@ export default {
 
 .selector-group {
   display: none;
+}
+
+.activity-short-description {
+  align-self: center;
+  max-width: 60%;
+  font-size: 2.5vw;
+  margin-top: 0vw;
+  margin-bottom: 1vw;
 }
 
 }

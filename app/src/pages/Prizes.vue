@@ -70,14 +70,15 @@
 					<div class="prize-notes">The tree highest ranked Squads, at the end of the week, will win a reward according to the rank, starting with Nintendo Switch Lite.</div>
 				</div>
 			</div>
+
+			<div class="warning">All prizes (excluding activity raffles) are exclusive to <a class= "link" v-on:click="redirect('Web_App')">Web App</a> IST students</div>
+
     </div>
 
 		<div class="bottom">
 			<div class="bottom-text">
 				<div class="first-text">What are you waiting for?</div>
-				<!-- COLOCAR LINK DA APP -->
-				<!-- <div class="second-text">Log in to our <a class="link" href="www.jeec.ist">Web APP</a>, via fenix, to see all our detailed Prizes' information and start earning points today!</div> -->
-				<div class="second-text">Log in to our Web APP, via fenix, to see all our detailed Prizes' information and start earning points today!</div>
+				<div class="second-text">Log in to our <a class="link" v-on:click="redirect('Web_App')">Web APP</a>, via fenix, to see all our detailed Prizes' information and start earning points today!</div>
 			</div>
 			<div class="trophy-all">
 				<img class="trophy" src="../../static/podium.svg">
@@ -91,6 +92,16 @@
   </div>
 </template>
 
+<script>
+export default {
+  methods: {
+    redirect(page) {
+      this.show_menu = false;
+      this.$router.push({ name: page });
+    }
+  }
+};
+</script>
 
 <style scoped>
 
@@ -224,6 +235,12 @@
   text-align: left;
 }
 
+.warning {
+	color: #000000;
+	font-size: 1vw;
+	font-weight: 600;
+}
+
 .trophy-all {
 	position: relative;
 	width: 18vw;
@@ -319,6 +336,12 @@
 	width: 0.25vw;
 	left: 52%;
 	top: -7%;
+}
+
+.warning {
+	color: #000000;
+	font-size: 2vw;
+	font-weight: 600;
 }
 
 }
