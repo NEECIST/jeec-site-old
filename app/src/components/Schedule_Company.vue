@@ -2,6 +2,7 @@
   <div class="module">
     <div class="time-place">
       <img class="clock" src="../../static/clock.svg" />
+      <div style="font-weight: 600; margin-right: 5px">{{(this.selected_type == 'All' ? (this.type + ':') : '')}}</div>
       {{ (start_time + " ─ " + end_time) + (location ? (', ' + location) : '' )}}
     </div>
     <div class="activity-title" v-if="name !== null && name !== ''">{{ name }}</div>
@@ -39,13 +40,14 @@
       <div class="module-bottom-flex">
         <div class="activity-description">{{ description }}</div>
       </div>
+      <div v-if="raffle_prize.name" class="raffle">Raffle: {{ raffle_prize.name }}</div>
       <div class="button-flex">
         <!-- <div class="button">Zoom Link</div>
         <div class="button">Registration</div> -->
         <div @click="$refs.calendar.click()" class="button"><a ref="calendar" :href="calendar()" target="_blank">Add to Calendar</a></div>
       </div>
     </div>
-    <img class="arrow" v-on:click="open = !open" src="../../static/arrow_blue.svg"/>
+    <img class="arrow" v-on:click="click_open = !click_open; first_click = true" src="../../static/arrow_blue.svg"/>
   </div>
 </template>
 
@@ -62,14 +64,28 @@ export default {
     location: String,
     companies: Array,
     speakers: Array,
-    moderator: String
+    moderator: String,
+    raffle_prize: Object,
+    selected_type: String
   },
 
   data() {
     return {
       jeec_api_url: process.env.VUE_APP_JEEC_BRAIN_URL,
-      open: this.type == '15/15'
+      click_open: this.selected_type == '15/15',
+      first_click: false
     };
+  },
+
+  computed: {
+    open() {
+      var start_open = this.type == '15/15' && this.selected_type != 'All';
+      if (!this.first_click) {
+        return start_open;
+      } else {
+        return this.click_open;
+      }
+    }
   },
 
   methods: {
@@ -303,6 +319,16 @@ export default {
   width: 100%;
 }
 
+.raffle {
+  text-align: left;
+  margin-bottom: 1vw;
+  font-size: 1.1vw;
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #51545B;
+}
+
 .arrow {
   width: 1.5vw;
   position: absolute;
@@ -487,16 +513,17 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    align-items: center;
     color: #27ade4;
     font-weight: 400;
-    font-size: 3.8vw;
+    font-size: 2.7vw;
     margin-bottom: 0.5vw;
     margin-top: 2vw;
   }
 
   .clock {
     width: 5vw;
-    margin-right: 3vw;;
+    margin-right: 1vw;;
   }
 
   .arrow {
@@ -531,7 +558,7 @@ export default {
   }
 
   .activity-image {
-    max-height: 6vw;
+    max-height: 10vw;
     max-width: 15vw;
     margin: 1vw;
     margin-bottom: 0;
@@ -573,6 +600,11 @@ export default {
     color: #000000;
   }
 
+  .raffle {
+    margin-bottom: 1vw;
+    font-size: 2.5vw;
+  }
+
   .speaker-name {
     text-align: center;
     font-family: "Lato";
@@ -584,17 +616,14 @@ export default {
   }
 
   .activity-description {
-    margin-top: 1.5vw;
     margin-right: 3vw;
-    margin-bottom: 7px;
-    text-align: left;
-    font-family: "Lato";
-    font-size: 2vw;
+    margin-bottom: 1vw;
+    text-align: justify;
+    font-size: 2.8vw;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #000000;
-
-    width: 65%;
+    color: #51545B;
+    width: 100%;
   }
 }
 </style>
