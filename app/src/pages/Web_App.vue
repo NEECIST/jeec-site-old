@@ -11,7 +11,7 @@
 			<div class="subsection">
 				<div class="side-text" style="font-size: 2.2vw">
 					<!-- INSERIR LINK DO LOGIN DA APP -->
-					Go to our <a class="link" href="www.jeec.ist">Log In page</a>, choose "Student Log In".
+					Go to our <a class="link" href="https://www.jeec.ist">Log In page</a>, choose "Student Log In".
 					You must use your fenix account in order to Log In to our Web APP.
 				</div>
 				<div class="side-image">
@@ -25,21 +25,21 @@
 							<div class="button animated" style="background-color: #27ADE4">
 								<img
 									src="../../static/graduation-hat.svg"
-									class="icon"
+									class="icon-button"
 								/>
 								Student Login
 							</div>
 							<div class="button" style="background-color: #27ADE4">
 								<img
 									src="../../static/businessman.svg"
-									class="icon"
+									class="icon-button"
 								/>
 								Partner Login
 							</div>
 							<div class="button" style="background-color: #E42741">
 								<img
 									src="../../static/back-arrow.svg"
-									class="icon"
+									class="icon-button"
 								/>
 								Return to Website
 							</div>
@@ -101,20 +101,20 @@
 				<div class="side-image">
 					<img 
 						class="bubble"
-						style="width: 45%; height: 45%; top: 45%; left: 50%; animation-duration: 4s;"
+						style="width: 60%; height: 60%; top: 45%; left: 50%; animation-duration: 4s;"
 						src="../../static/rocket-chat.svg"
 					/>
 					<div 
 						class="bubble"
-						style="width: 8%; height: 8%; top: 80%; left: 40%; animation-duration: 3s;"
+						style="width: 8%; height: 8%; top: 85%; left: 40%; animation-duration: 3s;"
 					></div>
 					<div 
 						class="bubble"
-						style="width: 8%; height: 8%; top: 35%; left: 20%; animation-duration: 2s;"
+						style="width: 8%; height: 8%; top: 35%; left: 15%; animation-duration: 2s;"
 					></div>
 					<div 
 						class="bubble"
-						style="width: 8%; height: 8%; top: 25%; left: 80%; animation-duration: 4s;"
+						style="width: 8%; height: 8%; top: 25%; left: 85%; animation-duration: 4s;"
 					></div>
 				</div>
 				<div class="side-text">
@@ -240,6 +240,8 @@
   text-align: center;
   font-weight: 700;
   margin-bottom: 10px;
+	margin-bottom: 2vw;
+	margin-top: 2vw;
 }
 
 .section-header::before {
@@ -258,8 +260,9 @@
 	justify-content: space-around;
 	flex-direction: row;
 	align-items: center;
-	height: 30vw;
-	padding: 4vw;
+	height: 25vw;
+	padding-right: 2vw;
+	padding-left: 2vw;
 }
 
 .side-text {
@@ -271,7 +274,7 @@
 }
 
 .side-image {
-	width: 30vw;
+	width: 25vw;
 	height: 100%;
 	position: relative;
 }
@@ -309,10 +312,10 @@
   display: flex;
   align-items: center;
   border-radius: 4vw;
-  padding: 0.5vw;
+  padding: 0.3vw;
   margin: 0.5vw;
   color: #FFFFFF;
-  font-size: 1.2vw;
+  font-size: 1vw;
   font-weight: 650;
 }
 
@@ -323,9 +326,9 @@
 	animation-timing-function: ease-in-out;
 }
 
-.icon {
+.icon-button {
   padding-right: 2vw;
-	padding-left: 2vw;
+	padding-left: 1.5vw;
   width: 2vw;
 	height: 2vw;
 }
