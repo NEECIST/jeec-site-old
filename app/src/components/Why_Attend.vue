@@ -10,7 +10,7 @@
             <div class="audience-container">
                 <div class="icons-flex">
                     <div class="reason-to-come" v-for="icon in group.icons" :key="icon.link">
-                        <div><img class="icon" :src="icon.link"></div>
+                        <div><img class="icon-fix" :src="icon.link"></div>
                         
                         <div class="icon-text" v-html="icon.description"/>
                     </div>
@@ -114,7 +114,7 @@ export default {
   text-align: center;
 }
 
-.icon {
+.icon-fix {
   width: 80px;
   height: 80px;
   display: inline-block;
