@@ -135,13 +135,13 @@
 					</div>
 					<div class="bubble" style="width: 40%; height: 40%; top: 40%; left: 25%; animation-duration: 5s;">
 					<img 
-						style="width: 80%; margin-top: 25%" 
+						style="width: 70%; margin-top: 15%" 
 						src="https://brain.jeec.ist/static/companies/images/kpmg.png"
 					/>
 					</div>
 					<div class="bubble" style="width: 25%; height: 25%; top: 20%; left: 60%; animation-duration: 3s;">
 						<img 
-							style="width: 80%; margin-top: 25%" 
+							style="width: 70%; margin-top: 15%" 
 							src="https://brain.jeec.ist/static/companies/images/link_consulting.png"
 						/>
 					</div>
