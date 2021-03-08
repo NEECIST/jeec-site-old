@@ -6,8 +6,8 @@
       <img class="navbar-left-logo-mobile" :src="navbar_mobile_logo_link" />
     </router-link>
 
-    <a href="https://brain.jeec.ist/companies/">
-      <div class="platform-button">JEEC|Brain Login</div>
+    <a href="https://app.jeec.ist/">
+      <div class="platform-button">Web App Login</div>
     </a>
 
     <!--<div class="brain-msg">Login as a partner and bid for Main Sponsor of JEEC|20!</div>-->
@@ -121,13 +121,13 @@ export default {
   width: 170px;
   border-radius: 10px;
   background: #fff;
-  color: rgb(67, 154, 236);
+  color: #27ade4;
   font-weight: bold;
   font-size: 17px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding-top: 8px;
-  border: 2px solid #77a1d1;
+  border: 2px solid #27ade4;
   transition: all 0.2s ease-in-out;
   display: inline-block;
 }
