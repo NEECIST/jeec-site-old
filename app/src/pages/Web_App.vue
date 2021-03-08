@@ -185,7 +185,7 @@
 					<img style="width: 70%; margin-top: 10%" src="../../static/dollar.svg"/>
 				</div>
 				<div class="side-text">
-					Earn extra points attending to the Special Quests.
+					Earn extra points by completing Special Quests.
 				</div>
 			</div>
 

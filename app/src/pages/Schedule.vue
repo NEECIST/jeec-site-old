@@ -150,7 +150,7 @@ export default {
         "Discussion Panel": "Top professionals discuss sensitive topics related to technology, the future and more",
         "Speaker": "Top professionals and entrepreneurs talk about the hottest topics",
         "15/15": "15 minutes to talk about the company's project, 15 minutes to discuss it: the perfect networking moment",
-        "Matchmaking": "Companies openly talk to students, lending itself to create strong connections between them",
+        "Matchmaking": "Companies openly talk to students, creating strong connections for internships or jobs",
         "Job Fair": "Companies share their business experience and students have the opportunity to learn more",
         "Doc Talk": "Doctoral degrees are thoroughly explained and their career paths unveiled"
       },
