@@ -12,6 +12,7 @@
         <partner-tier tier="Gold Partners" v-bind:partners="partners.gold" tier_color="#cfbf2c"/>
         <partner-tier tier="Silver Partners" v-bind:partners="partners.silver" tier_color="#B7B7B7"/>
         <partner-tier tier="Bronze Partners" v-bind:partners="partners.bronze" tier_color="#CE8F6B"/>
+        <partner-tier tier="Our Sponsors" v-bind:partners="partners.sponsor" tier_color="#000000"/>
 
         <contacts/>
     </div>
@@ -30,7 +31,8 @@ export default {
                 main_sponsor: [],
                 gold: [],
                 silver: [],
-                bronze: []
+                bronze: [],
+                sponsor: []
             }
         }
     },
@@ -71,6 +73,15 @@ export default {
             }
         })
         .then(response => (this.partners.bronze = response.data['data']));
+
+         axios
+        .get(process.env.VUE_APP_JEEC_WEBSITE_API_URL + '/companies?partnership_tier=sponsor', {
+            auth: {
+                username: process.env.VUE_APP_JEEC_WEBSITE_USERNAME, 
+                password: process.env.VUE_APP_JEEC_WEBSITE_KEY
+            }
+        })
+        .then(response => (this.partners.sponsor = response.data['data']));
     }
 }   
 </script>
