@@ -152,7 +152,8 @@ export default {
         "15/15": "15 minutes to talk about the company's project, 15 minutes to discuss it: the perfect networking moment",
         "Matchmaking": "Companies openly talk to students, creating strong connections for internships or jobs",
         "Job Fair": "Companies share their business experience and students have the opportunity to learn more",
-        "Doc Talk": "Doctoral degrees are thoroughly explained and their career paths unveiled"
+        "Doc Talk": "Doctoral degrees are thoroughly explained and their career paths unveiled",
+        "Ceremony": "In the official opening and closing moments of our event, we give the floor to some representatives of our course and IST"
       },
       jeec_api_url: process.env.VUE_APP_JEEC_BRAIN_URL,
       activities: [],
