@@ -101,12 +101,12 @@
           :start_time="activity.time"
           :end_time="activity.end_time"
           :location="activity.location"
-          :key="activity.type + activity.day + activity.time"
+          :key="activity.name + activity.type + activity.day + activity.time"
           :moderator="activity.moderator"
           :raffle_prize="activity.reward"
           :selected_type="selected_type"
           :registration_link="activity.registration_link"
-          :registration_open="registration_open"
+          :registration_open="activity.registration_open"
         ></schedule-company>
       </div>
     </div>

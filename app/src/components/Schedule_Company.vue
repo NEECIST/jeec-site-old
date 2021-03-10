@@ -43,7 +43,7 @@
       <div v-if="raffle_prize.name" class="raffle">Raffle: {{ raffle_prize.name }}</div>
       <div class="button-flex">
         <!-- <div class="button">Zoom Link</div> -->
-        <div v-if="registration_link" class="button" :class="registration_open ? '' : 'disabled'" target="_blank"><a :href="registration_link">Registration</a></div>
+        <div v-if="registration_link" @click="$refs.registration.click()" class="button" :class="registration_open ? '' : 'disabled'"><a ref="registration" :href="registration_link" target="_blank">Registration</a></div>
         <div @click="$refs.calendar.click()" class="button"><a ref="calendar" :href="calendar()" target="_blank">Add to Calendar</a></div>
       </div>
     </div>
