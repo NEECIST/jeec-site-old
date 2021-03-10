@@ -105,6 +105,8 @@
           :moderator="activity.moderator"
           :raffle_prize="activity.reward"
           :selected_type="selected_type"
+          :registration_link="activity.registration_link"
+          :registration_open="registration_open"
         ></schedule-company>
       </div>
     </div>

@@ -66,7 +66,9 @@ export default {
     speakers: Array,
     moderator: String,
     raffle_prize: Object,
-    selected_type: String
+    selected_type: String,
+    registration_link: String,
+    registration_open: Boolean,
   },
 
   data() {
