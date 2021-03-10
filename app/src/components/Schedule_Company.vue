@@ -42,8 +42,8 @@
       </div>
       <div v-if="raffle_prize.name" class="raffle">Raffle: {{ raffle_prize.name }}</div>
       <div class="button-flex">
-        <!-- <div class="button">Zoom Link</div>
-        <div class="button">Registration</div> -->
+        <!-- <div class="button">Zoom Link</div> -->
+        <div v-if="registration_link" class="button" :class="registration_open ? '' : 'disabled'" target="_blank"><a :href="registration_link">Registration</a></div>
         <div @click="$refs.calendar.click()" class="button"><a ref="calendar" :href="calendar()" target="_blank">Add to Calendar</a></div>
       </div>
     </div>
@@ -249,6 +249,13 @@ export default {
   margin-right: 1vw;
   border-radius: 2vw;
   cursor: pointer;
+  border: 0px;
+}
+
+.disabled, .disabled a {
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: grey;
 }
 
 .button > a {
