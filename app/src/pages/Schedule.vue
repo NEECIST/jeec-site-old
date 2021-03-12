@@ -107,6 +107,7 @@
           :selected_type="selected_type"
           :registration_link="activity.registration_link"
           :registration_open="activity.registration_open"
+          :zoom_link="activity.zoom_link"
         ></schedule-company>
       </div>
     </div>
