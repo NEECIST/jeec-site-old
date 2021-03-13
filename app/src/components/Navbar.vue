@@ -61,8 +61,8 @@
         <li v-on:click="redirect('Team')">Team</li>
         <!-- <li v-on:click="redirect('newfeed')">Feed</li> -->
 
-        <a href="https://brain.jeec.ist/companies/">
-          <div class="platform-button-menu">JEEC|Brain Login</div>
+        <a href="https://app.jeec.ist/">
+          <div class="platform-button-menu">Web App Login</div>
         </a>
       </ul>
     </div>
@@ -145,13 +145,13 @@ export default {
   width: 170px;
   border-radius: 10px;
   background: #fff;
-  color: rgb(67, 154, 236);
+  color: #27ade4;
   font-weight: bold;
   font-size: 17px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding-top: 8px;
-  border: 2px solid #77a1d1;
+  border: 2px solid #27ade4;
   transition: all 0.2s ease-in-out;
   display: none;
 }
