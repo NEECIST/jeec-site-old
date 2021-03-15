@@ -5,9 +5,11 @@
             title="Main Sponsor"
             :subtitle="partners.main_sponsor[0].name"
         />
-        <a v-if="partners.main_sponsor.length > 0" v-bind:href="partners.main_sponsor[0].link" target="_blank">
-            <img class="main-sponsor-logo" :src="jeec_api_url + partners.main_sponsor[0].logo">
-        </a>
+        <div style="display: flex; align-items: center; justify-content: center">
+            <a v-if="partners.main_sponsor.length > 0" v-for="main in partners.main_sponsor" v-bind:key="main" v-bind:href="main.link" target="_blank">
+                <img class="main-sponsor-logo" :src="jeec_api_url + main.logo"> 
+            </a>
+        </div>
 
         <partner-tier tier="Gold Partners" v-bind:partners="partners.gold" tier_color="#cfbf2c"/>
         <partner-tier tier="Silver Partners" v-bind:partners="partners.silver" tier_color="#B7B7B7"/>
