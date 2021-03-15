@@ -25,13 +25,12 @@
         </section>
 
         <div class="flexbox-imgs">
-            <a v-if="main_sponsor[0]" v-bind:href="main_sponsor[0].link" target="_blank">
-              <img :src="jeec_api_url + main_sponsor[0].logo">
+            <a v-for="sponsor in main_sponsor" v-bind:href="sponsor.link" v-bind:key="sponsor" target="_blank">
+              <img :src="jeec_api_url + sponsor.logo">
             </a>
             <!-- <a href="https://www.santandertotta.pt/pt_PT/Particulares/Universitarios.html" target="_blank"><img src="../../static/partner-logos/santander_logo.png"></a> -->
             <a href="https://tecnico.ulisboa.pt/pt/" target="_blank"><img src="../../static/partner-logos/ist_logo.png"></a>
 
-            <a href="https://neecist.org/" target="_blank"><img src="../../static/partner-logos/neec_logo.png"></a>
             <a href="https://fenix.tecnico.ulisboa.pt/departamentos/deec" target="_blank"><img src="../../static/partner-logos/deec_logo.png"></a>
         </div>
 
