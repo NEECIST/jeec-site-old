@@ -180,6 +180,16 @@ export default {
     },
     selectType(type) {
       this.selected_type = type;
+    },
+    selectDayInit() {
+      var date = Date().split(" ");
+      var today = date[2] + " " + date[1] + " " + date[3] + ", " + date[0];
+
+      if (this.days.includes(today)) {
+        this.selected_day = today;
+      } else {
+        this.selected_day = this.days[0];
+      }
     }
   },
   mounted() {
@@ -208,7 +218,7 @@ export default {
         }
       )
       .then(response => (this.types = response.data["data"].activity_types["data"], 
-                         this.days = response.data["data"].dates, this.selectDay(this.days[0])));
+                         this.days = response.data["data"].dates, this.selectDayInit()));
   },
 };
 </script>
