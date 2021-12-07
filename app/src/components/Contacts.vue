@@ -16,7 +16,7 @@
                     <div class="contact-email">
                     <i class="ion-ios-email-outline"></i>
                     <h3>Email</h3>
-                    <p><a href="mailto:contacto@jeec.ist">contacto@jeec.ist</a></p>
+                    <p><a href="mailto:coordination@jeec.ist">coordination@jeec.ist</a></p>
                     </div>
                 </div>
 
