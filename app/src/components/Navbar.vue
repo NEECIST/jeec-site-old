@@ -44,6 +44,10 @@
       <div class="navbar-title">Schedule</div>
     </router-link>
 
+    <router-link router-link :to="{ name: 'Last_Editions' }">
+      <div class="navbar-title">Last Editions</div>
+    </router-link>
+
     <div id="menuToggle">
       <input type="checkbox" :checked="show_menu" v-on:click="show_menu = !show_menu" />
 
@@ -59,6 +63,7 @@
         <li v-on:click="redirect('Web_App')">Web App</li>
         <li v-on:click="redirect('Prizes')">Prizes</li> 
         <li v-on:click="redirect('Team')">Team</li>
+        <li v-on:click="redirect('Last_Editions')">Last Editions</li>
         <!-- <li v-on:click="redirect('newfeed')">Feed</li> -->
 
         <a href="https://app.jeec.ist/">

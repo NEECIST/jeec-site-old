@@ -3,7 +3,7 @@
     <component-title title="Speakers at JEEC|21" subtitle="Minds that push engineering forward"/>
 
     <div class="latest-speakers-flex">
-        <div class="speaker-card" v-for="speaker in speakers" :key="speaker.name">
+        <div class="speaker-card" v-for="(speaker,speaker_id) in speakers" :key="speaker_id">
 
             <div><img class="speaker-image" :src="jeec_api_url + speaker.image"></div>
             
