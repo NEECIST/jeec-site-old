@@ -1,46 +1,46 @@
 <template>
   <div class="who-are-we-comp">
-  
-      <component-title title="Who are we?" subtitle="JEECIST"/>
+    <component-title title="Who are we?" subtitle="JEECIST" />
 
-      <div class="who-are-we-text">
-        <span v-html="text"></span>
+    <div class="who-are-we-text">
+      <span v-html="text"></span>
+    </div>
+
+    <div class="activities-container">
+      <div class="activity-flex">
+        <p
+          class="activity"
+          v-for="activity in activities"
+          v-bind:key="activity.name"
+        >
+          <b>{{ activity.name }}</b>
+        </p>
       </div>
-
-      <!--<div class="activities-container">
-        <div class="activity-flex">
-          <span v-for="activity in activities" v-html="activity" v-bind:key="activity"/>
-        </div>
-      </div>-->
-
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'who-are-we',
+  name: "who-are-we",
   data() {
     return {
-      activities: [
-        'Job Fair',
-        'Panel Discussions',
-        'Workshops',
-        'Matchmaking sessions'
-      ],
-      text: 'A group of <b>IST</b> students, whose main purpose is to organize an event with the intention of closing the gap between the business world and university life.<p>Participation is free of charge and open to a strong student community with over 11000 aspiring engineers.</p><p>Activities available at JEEC:<div style="line-height: 20px;"><p><b>Job Fair</b></p><p><b>Speakers</b></p><p><b>Panel Discussions</b></p><p><b>Workshops</b></p><p><b>Matchmaking sessions</b></p><p><b>15/15</b></p></div></p>',
-    }
+      text:
+        "A group of <b>IST</b> students, whose main purpose is to organize an event with the intention of closing the gap between the business world and university life.<p>Participation is free of charge and open to a strong student community with over 11000 aspiring engineers.</p><p>Activities available at JEEC:</p>",
+    };
   },
-
+  props: {
+    activities: Array,
+  },
   methods: {
-    openNav () {
-      document.getElementById('mySidenav').style.width = '250px'
+    openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
     },
-
-    closeNav () {
-      document.getElementById('mySidenav').style.width = '0'
-    }
-  }
-}
+    closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    },
+  },
+};
 </script>
 
 <style>
