@@ -8,13 +8,7 @@
 
     <div class="activities-container">
       <div class="activity-flex">
-        <p
-          class="activity"
-          v-for="activity in activities"
-          v-bind:key="activity.name"
-        >
-          <b>{{ activity.name }}</b>
-        </p>
+        <span v-for="activity in activities" v-html="activity.name" :key="activity.name"/>
       </div>
     </div>
   </div>

@@ -9,7 +9,7 @@
       :instagram_link="event ? event.instagram_link : ''"
     />
 
-    <latest-speakers />
+    <latest-speakers :name="event ? event.name : ''"/>
     <!--
         <div>
             <div style="float: left; width: 40%">

@@ -1,6 +1,6 @@
 <template>
   <div class="latest-speakers-comp">
-    <component-title title="Speakers at JEEC|21" subtitle="Minds that push engineering forward"/>
+    <component-title :title="'Speakers at ' + name" subtitle="Minds that push engineering forward"/>
 
     <div class="latest-speakers-flex">
         <div class="speaker-card" v-for="speaker in speakers" :key="speaker.name">
@@ -49,7 +49,9 @@ export default {
           speakers: []
       }
   },
-
+  props: {
+    name: String,
+  },
   mounted () {
     var basicAuth = 'Basic ' + btoa(process.env.VUE_APP_JEEC_WEBSITE_USERNAME + ':' + process.env.VUE_APP_JEEC_WEBSITE_KEY);
 
