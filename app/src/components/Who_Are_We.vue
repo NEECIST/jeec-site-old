@@ -8,7 +8,7 @@
 
     <div class="activities-container">
       <div class="activity-flex">
-        <span v-for="activity in activities" v-html="activity.name" :key="activity.name"/>
+        <div class="activity-bold" v-for="activity in activities" v-html="activity.name" :key="activity.name"/>
       </div>
     </div>
   </div>
@@ -19,8 +19,7 @@ export default {
   name: "who-are-we",
   data() {
     return {
-      text:
-        "A group of <b>IST</b> students, whose main purpose is to organize an event with the intention of closing the gap between the business world and university life.<p>Participation is free of charge and open to a strong student community with over 11000 aspiring engineers.</p><p>Activities available at JEEC:</p>",
+      text: "",
     };
   },
   props: {
@@ -33,11 +32,47 @@ export default {
     closeNav() {
       document.getElementById("mySidenav").style.width = "0";
     },
+    get_text() {
+      this.text = 'A group of <b>IST</b> students, whose main purpose is to organize an event with the intention of closing the gap between the business world and university life.<p>Participation is free of charge and open to a strong student community with over 11000 aspiring engineers.</p><p>Activities available at JEEC:<div style="line-height: 20px;">';
+
+      // for (activity of this.activities) {
+      //   console.log(activity.name);
+      //   this.text += `<p><b>${activity.name}</b></p>`;
+      // }
+
+      this.text += "</div></p>";
+
+      return this.text;
+    },
   },
+  mounted() {
+    this.text = this.get_text();
+  }
 };
 </script>
 
 <style>
+.activity-flex {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 15px;
+}
+
+.activity-bold {
+  font-size: 25px;
+  font-family: Lato;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  color: #505050;
+  letter-spacing: normal;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
 .who-are-we-comp {
   width: 100%;
   background-color: #ffffff;
