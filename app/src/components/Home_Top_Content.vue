@@ -16,7 +16,7 @@
       <div class="follow-us">{{ social_media_text }}</div>
       <div class="social-icons">
         <a :href="facebook_link">
-          <img :src="facebook_icon_link" class="social-icon shadow" />
+          <img :src="facebook_icon_link" class="social-icon" />
         </a>
 
         <a :href="youtube_link">

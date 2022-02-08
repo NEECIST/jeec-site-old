@@ -32,22 +32,7 @@ export default {
     closeNav() {
       document.getElementById("mySidenav").style.width = "0";
     },
-    get_text() {
-      this.text = 'A group of <b>IST</b> students, whose main purpose is to organize an event with the intention of closing the gap between the business world and university life.<p>Participation is free of charge and open to a strong student community with over 11000 aspiring engineers.</p><p>Activities available at JEEC:<div style="line-height: 20px;">';
-
-      // for (activity of this.activities) {
-      //   console.log(activity.name);
-      //   this.text += `<p><b>${activity.name}</b></p>`;
-      // }
-
-      this.text += "</div></p>";
-
-      return this.text;
-    },
   },
-  mounted() {
-    this.text = this.get_text();
-  }
 };
 </script>
 
