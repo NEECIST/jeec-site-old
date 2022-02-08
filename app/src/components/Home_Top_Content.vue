@@ -1,29 +1,29 @@
 <template>
-    <div class="home-top-comp">
-        <div class="date-location">
-            {{ date }}
-            <p>{{ location }}</p>
-        </div>
+  <div class="home-top-comp">
+    <div class="date-location">
+      {{ date ? date : "" }}
+      <p>{{ location }}</p>
+    </div>
 
     <!--
     <div class="warning">Thank you for attending the event!</div>-->
 
     <div class="main-logo-container">
-      <img :src="center_image_link" class="logo-home" />
+      <img :src="image" class="logo-home" />
     </div>
 
     <div class="social-media">
       <div class="follow-us">{{ social_media_text }}</div>
       <div class="social-icons">
-        <a href="https://www.facebook.com/JEECIST/">
+        <a :href="facebook_link">
           <img :src="facebook_icon_link" class="social-icon" />
         </a>
 
-        <a href="https://www.youtube.com/channel/UCTO2g_8WD8ZEQ_VvIeQ1QRQ">
+        <a :href="youtube_link">
           <img :src="youtube_icon_link" class="social-icon" />
         </a>
 
-        <a href="https://www.instagram.com/jeec.ist/">
+        <a :href="instagram_link">
           <img :src="instagram_icon_link" class="social-icon" />
         </a>
       </div>
@@ -35,31 +35,35 @@
 
 <script>
 export default {
-  name: 'home-top-comp',
+  name: "home-top-comp",
+  props: {
+    date: String,
+    location: String,
+    image: String,
+    facebook_link: String,
+    youtube_link: String,
+    instagram_link: String,
+  },
   data() {
     return {
-
-      date: "15th to 19th of March 2021",
-      location: "Instituto Superior Técnico",
       social_media_text: "Follow us on",
       center_image_link: "../../static/jeec-logo.png",
       linkedin_icon_link: "../../static/linkedin.svg",
       facebook_icon_link: "../../static/facebook.svg",
       youtube_icon_link: "../../static/youtube.svg",
-      instagram_icon_link: "../../static/instagram.svg"
-    }
+      instagram_icon_link: "../../static/instagram.svg",
+      jeec_api_url: process.env.VUE_APP_JEEC_BRAIN_URL,
+    };
   },
-
   methods: {
-    openNav () {
-      document.getElementById('mySidenav').style.width = '250px'
+    openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
     },
-
-    closeNav () {
-      document.getElementById('mySidenav').style.width = '0'
-    }
-  }
-}
+    closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    },
+  },
+};
 </script>
 
 <style>
