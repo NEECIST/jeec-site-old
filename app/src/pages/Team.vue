@@ -158,6 +158,10 @@ export default {
   opacity: 1;
 }
 
+.team-member {
+    transition: .5s ease;
+}
+
 .team-member img{ 
     height: 220px;
     width: 220px;
