@@ -30,8 +30,10 @@
                                 <img class="icon-team-member" :src="linkedin_icon_link"/>
                             </a>
                         </div>                              
-                    </div>         
-                    <p class="member-name">{{ member.name }}</p> 
+                    </div>
+                    <div class="team-member-name">
+                        <p class="member-name">{{ member.name }}</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -126,6 +128,7 @@ export default {
 
 .team-flex{
     padding-left: 50px;
+    padding-right: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -158,6 +161,12 @@ export default {
   opacity: 1;
 }
 
+.team-member-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 .team-member {
     transition: .5s ease;
 }
@@ -174,7 +183,6 @@ export default {
 }
 
 .member-name{
-    margin-left: 25%;
     width: 100px;
     font-size: 22px;
     text-align: center;
