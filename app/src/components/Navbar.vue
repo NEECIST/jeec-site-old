@@ -36,11 +36,11 @@
       <div class="navbar-title">Feed</div>
     </router-link> -->
 
-    <!-- <router-link router-link :to="{ name: 'Activities' }">
+    <router-link v-if="show_registrations" router-link :to="{ name: 'Activities' }">
       <div class="navbar-title">Registrations</div>
-    </router-link> -->
+    </router-link>
 
-    <router-link router-link :to="{ name: 'Schedule' }">
+    <router-link v-if="show_schedule" router-link :to="{ name: 'Schedule' }">
       <div class="navbar-title">Schedule</div>
     </router-link>
 
@@ -52,8 +52,8 @@
       <span></span>
 
       <ul id="menu">
-        <li v-on:click="redirect('Schedule')">Schedule</li>
-        <!-- <li v-on:click="redirect('Activities')">Registrations</li> -->
+        <li v-if="show_schedule" v-on:click="redirect('Schedule')">Schedule</li>
+        <li v-if="show_registrations" v-on:click="redirect('Activities')">Registrations</li>
         <li v-on:click="redirect('Speakers')">Speakers</li>
         <li v-on:click="redirect('Partners')">Partners</li>
         <li v-on:click="redirect('Web_App')">Web App</li>
@@ -70,11 +70,15 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   name: "navbar",
   data() {
     return {
       show_menu: false,
+      show_registrations: false,
+      show_schedule: false,
       navbar_logo_link: "../../static/jeec_logo_small.svg",
       navbar_mobile_logo_link: "../../static/jeec_logo_mobile.svg"
     };
@@ -85,7 +89,23 @@ export default {
       this.show_menu = false;
       this.$router.push({ name: page });
     }
-  }
+  },
+
+  mounted() {
+    axios
+      .get(
+        process.env.VUE_APP_JEEC_WEBSITE_API_URL +
+          "/event",
+        {
+          auth: {
+            username: process.env.VUE_APP_JEEC_WEBSITE_USERNAME,
+            password: process.env.VUE_APP_JEEC_WEBSITE_KEY
+          }
+        }
+      )
+      .then(response => (this.show_registrations = response.data["data"].show_registrations, 
+                         this.show_schedule = response.data["data"].show_schedule));
+  },
 };
 </script>
 

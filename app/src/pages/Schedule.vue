@@ -78,7 +78,7 @@
           <div
             class="button-activities"
             :class="selected_type == type.name ? 'active' : '' "
-            v-for="type in types"
+            v-for="type in types.filter(t => t.show_in_schedule)"
             v-bind:key="type.name"
             v-on:click="selectType(type.name)"
             v-show="type.name !== 'Opening Ceremony & Discussion Panel' && type.name !== 'Closing Ceremony' && type.name !== 'Fast Meeting' && type.name !== 'Clarification Session'"
@@ -217,7 +217,7 @@ export default {
           }
         }
       )
-      .then(response => (this.types = response.data["data"].activity_types["data"], 
+      .then(response => (this.types = response.data["data"].activity_types["data"].sort((a, b) => a.name.localeCompare(b.name)), 
                          this.days = response.data["data"].dates, this.selectDayInit()));
   },
 };
