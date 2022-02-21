@@ -2,7 +2,7 @@
 <div class="latest-speakers-comp">
   <div class="speakers-list-comp">
     <component-title
-      title="SPEAKERS AT JEEC|21"
+      :title="'Speakers at ' + event_name"
       subtitle="List of guest speakers that will steal the show!"
     />
       <div class="latest-speakers-flex">
@@ -56,7 +56,9 @@ export default {
       speakers: []
     };
   },
-
+  props: {
+    event_name: String,
+  },
   mounted () {
     axios
       .get(process.env.VUE_APP_JEEC_WEBSITE_API_URL + '/speakers', {
