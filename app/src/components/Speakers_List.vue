@@ -29,7 +29,6 @@
             <div class="speaker-links">
                 <a v-if="speaker.linkedin_url.length" :href="speaker.linkedin_url" target="_blank"><img class="speaker-link-logo" src="../../static/linkedin.svg"/></a>
                 <a v-if="speaker.youtube_url.length" :href="speaker.youtube_url" target="_blank"><img class="speaker-link-logo" src="../../static/youtube.svg"/></a>
-              </a>
             </div>
 
             <!--
@@ -182,17 +181,20 @@ a {
 
 .speaker-card-bottom {
   height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .speaker-links {
   margin-top: 20px;
   width: 50%;
-  float: left;
 }
 
 .speaker-link-logo {
   max-width: 30px;
-  margin-right: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
   transition: all 0.2s ease-in-out;
 }
 
