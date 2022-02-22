@@ -171,7 +171,9 @@ a {
 
 .speaker-card-bottom {
   height: 60px;
-  margin-top: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .speaker-links {
@@ -181,8 +183,9 @@ a {
 
 .speaker-link-logo {
   max-width: 30px;
-  margin-right: 15px;
-  transition: all .2s ease-in-out;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: all 0.2s ease-in-out;
 }
 
 .speaker-link-logo:hover {
