@@ -9,6 +9,7 @@ import Activities from '@/pages/Activities'
 import Schedule from '@/pages/Schedule'
 import Prizes from '@/pages/Prizes'
 import Web_App from '@/pages/Web_App'
+import Last_Editions from '@/pages/Last_Editions'
 
 Vue.use(Router)
 
@@ -37,6 +38,11 @@ export default new Router({
       path: '/partners',
       name: 'Partners',
       component: Partners
+    },
+    {
+      path: '/lasteditions',
+      name: 'Last_Editions',
+      component: Last_Editions
     },
     {
       path: '/speakers',

@@ -25,7 +25,7 @@
         </section>
 
         <div class="flexbox-imgs">
-            <a v-for="sponsor in main_sponsor" v-bind:href="sponsor.link" v-bind:key="sponsor" target="_blank">
+            <a v-for="(sponsor,id_sponsor) in main_sponsor" v-bind:href="sponsor.link" v-bind:key="id_sponsor" target="_blank">
               <img :src="jeec_api_url + sponsor.logo">
             </a>
             <!-- <a href="https://www.santandertotta.pt/pt_PT/Particulares/Universitarios.html" target="_blank"><img src="../../static/partner-logos/santander_logo.png"></a> -->

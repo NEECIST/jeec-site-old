@@ -11,6 +11,7 @@ import Contacts from './components/Contacts'
 import Our_Activities from './components/Our_Activities'
 import Who_Are_We from './components/Who_Are_We'
 import Latest_Speakers from './components/Latest_Speakers'
+import Last_Editions_List from './components/Last_Editions_List'
 import Speakers_List from './components/Speakers_List'
 import Meet_our_speakers from './components/Meet_our_speakers'
 
@@ -40,6 +41,7 @@ Vue.component('why-attend', Why_Attend)
 Vue.component('contacts', Contacts)
 Vue.component('ouractivities', Our_Activities)
 Vue.component('latest-speakers', Latest_Speakers)
+Vue.component('last-editions-list', Last_Editions_List)
 Vue.component('speakers-list', Speakers_List)
 Vue.component('meet-our-speakers', Meet_our_speakers)
 Vue.component('scroll-down-arrow', Scroll_Down_Arrow)

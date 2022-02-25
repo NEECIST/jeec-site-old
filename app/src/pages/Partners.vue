@@ -6,8 +6,8 @@
             :subtitle="partners.main_sponsor[0].name"
         />
         <div style="display: flex; align-items: center; justify-content: center">
-            <a v-if="partners.main_sponsor.length > 0" v-for="main in partners.main_sponsor" v-bind:key="main" v-bind:href="main.link" target="_blank">
-                <img class="main-sponsor-logo" :src="jeec_api_url + main.logo"> 
+            <a v-for="(main,id_main) in partners.main_sponsor" v-bind:key="id_main" v-bind:href="main.link" target="_blank">
+                <img v-if="partners.main_sponsor.length > 0" class="main-sponsor-logo" :src="jeec_api_url + main.logo"> 
             </a>
         </div>
 
