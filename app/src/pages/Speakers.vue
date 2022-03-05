@@ -1,7 +1,7 @@
 <template>
     <div class="speakers-app">
         <speakers-list :event_name="event ? event.name : ''"/>
-        <contacts/>
+        <contacts />
     </div>
 </template>
 

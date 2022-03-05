@@ -27,7 +27,7 @@
 
     <!--<ouractivities/>-->
 
-    <contacts />
+    <contacts/>
   </div>
 </template>
 
