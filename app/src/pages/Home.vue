@@ -7,6 +7,7 @@
       :facebook_link="event ? event.facebook_link : ''"
       :youtube_link="event ? event.youtube_link : ''"
       :instagram_link="event ? event.instagram_link : ''"
+      :linkedin_link="event ? event.linkedin_link : ''"
     />
 
     <latest-speakers :name="event ? event.name : ''"/>
