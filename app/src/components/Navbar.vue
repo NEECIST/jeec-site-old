@@ -320,12 +320,14 @@ a:hover {
   box-shadow: 0 200px 300px 0 rgba(0, 0, 0, 0.3);
   border-radius: 30px;
   transform-origin: 0% 0%;
-  transform: translate(1100px, 0px);
+  transform: translate(1480px, 0px);
   transition: transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
 #menu li {
-  padding: 20px 0;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-right: 25px;
   font-size: 22px;
 }
 
@@ -343,12 +345,7 @@ a:hover {
   }
 }
 
-/* On screens that are 600px wide*/
 @media only screen and (max-width: 1080px) {
-  .navbar {
-    height: 70px;
-  }
-
   .navbar-left-logo {
     display: none;
   }
@@ -359,6 +356,13 @@ a:hover {
     margin-left: 20px;
     margin-top: 10px;
     float: left;
+  }
+}
+
+/* On screens that are 600px wide*/
+@media only screen and (max-width: 1400px) {
+  .navbar {
+    height: 70px;
   }
 
   .navbar-title {

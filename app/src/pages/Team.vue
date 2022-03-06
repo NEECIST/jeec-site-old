@@ -38,7 +38,7 @@
             </div>
         </div>
 
-        <contacts/>
+        <contacts :email="event ? event.email : []"/>
     </div>
 </template>
 
@@ -49,6 +49,7 @@ export default {
   name: "team",
   data() {
       return {
+        event: null,
         jeec_api_url : process.env.VUE_APP_JEEC_BRAIN_URL,
         teams: [],
         linkedin_icon_link: "../../static/linkedin.svg"
@@ -57,13 +58,22 @@ export default {
 
   mounted () {
     axios
-      .get(process.env.VUE_APP_JEEC_WEBSITE_API_URL + '/teams', {
+    .get(process.env.VUE_APP_JEEC_WEBSITE_API_URL + '/teams', {
+    auth: {
+        username: process.env.VUE_APP_JEEC_WEBSITE_USERNAME, 
+        password: process.env.VUE_APP_JEEC_WEBSITE_KEY
+    }
+    })
+    .then(response => (this.teams = response.data['data']));
+
+    axios
+    .get(process.env.VUE_APP_JEEC_WEBSITE_API_URL + "/event", {
         auth: {
-          username: process.env.VUE_APP_JEEC_WEBSITE_USERNAME, 
-          password: process.env.VUE_APP_JEEC_WEBSITE_KEY
-        }
-      })
-      .then(response => (this.teams = response.data['data']))
+            username: process.env.VUE_APP_JEEC_WEBSITE_USERNAME,
+            password: process.env.VUE_APP_JEEC_WEBSITE_KEY,
+        },
+    })
+    .then((response) => (this.event = response.data["data"]));
   }
 };
 </script>

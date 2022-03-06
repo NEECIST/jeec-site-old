@@ -53,7 +53,7 @@
       </div>
     </div>
 
-    <contacts />
+    <contacts :email="event ? event.email : []"/>
   </div>
 </template>
 
@@ -64,6 +64,7 @@ export default {
   name: "schedule",
   data() {
     return {
+      event: null,
       jeec_api_url: process.env.VUE_APP_JEEC_BRAIN_URL,
       selected_day: 0,
       activities: [],
@@ -110,7 +111,7 @@ export default {
           password: process.env.VUE_APP_JEEC_WEBSITE_KEY
         }
       })
-      .then(response => (this.days = response.data["data"][0].dates));
+      .then(response => (this.days = response.data["data"][0].dates, this.event = response.data["data"]));
   }
 };
 </script>

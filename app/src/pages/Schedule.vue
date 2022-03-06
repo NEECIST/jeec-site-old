@@ -112,7 +112,7 @@
       </div>
     </div>
 
-    <contacts/>
+    <contacts :email="event ? event.email : []"/>
   </div>
 </template>
 
@@ -123,6 +123,7 @@ export default {
   name: "schedule",
   data() {
     return {
+      event: null,
       selected_day: '',
       selected_type: this.$route.query.type ? this.$route.query.type : 'Job Fair',
       isOpen_weekday: false,
@@ -218,7 +219,7 @@ export default {
         }
       )
       .then(response => (this.types = response.data["data"].activity_types["data"].sort((a, b) => a.name.localeCompare(b.name)), 
-                         this.days = response.data["data"].dates, this.selectDayInit()));
+                         this.days = response.data["data"].dates, this.selectDayInit(), this.event = response.data["data"]));
   },
 };
 </script>
