@@ -54,7 +54,7 @@
       <ul id="menu">
         <li v-if="show_schedule" v-on:click="redirect('Schedule')">Schedule</li>
         <li v-if="show_registrations" v-on:click="redirect('Activities')">Registrations</li>
-        <li v-on:click="redirect('Speakers')" style="border: 2px black solid">Speakers</li>
+        <li v-on:click="redirect('Speakers')">Speakers</li>
         <li v-on:click="redirect('Partners')">Partners</li>
         <li v-on:click="redirect('Web_App')">Web App</li>
         <li v-on:click="redirect('Prizes')">Prizes</li> 
@@ -307,7 +307,6 @@ a:hover {
 }
 
 #menu {
-  border: 2px red solid;
   position: absolute;
   width: 100vw;
   margin-left: -95vw;
