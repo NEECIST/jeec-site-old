@@ -325,7 +325,9 @@ a:hover {
 }
 
 #menu li {
-  padding: 20px 0;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-right: 25px;
   font-size: 22px;
 }
 
