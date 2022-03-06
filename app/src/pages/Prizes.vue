@@ -88,7 +88,7 @@
 			</div>
 		</div>
     
-    <contacts />
+    <contacts :email="event ? event.email : []"/>
   </div>
 </template>
 
@@ -96,20 +96,22 @@
 import axios from "axios";
 
 export default {
+	name: 'prizes',
+	data() {
+		return {
+			event: null,
+			jeec_api_url: process.env.VUE_APP_JEEC_WEBSITE_API_URL,
+      brain_url : process.env.VUE_APP_JEEC_BRAIN_URL,
+      singleplayer_prizes: {},
+      multiplayer_prizes: {},
+      loaded: false
+		}
+	},
   methods: {
     redirect(page) {
       this.show_menu = false;
       this.$router.push({ name: page });
     }
-  },
-
-  data() {
-	return {
-		brain_url : process.env.VUE_APP_JEEC_BRAIN_URL,
-		singleplayer_prizes: {},
-		multiplayer_prizes: {},
-		loaded: false
-	}
   },
 
   mounted() {
@@ -127,7 +129,16 @@ export default {
       .then(response => (this.singleplayer_prizes = response.data["singleplayer"], 
                          this.multiplayer_prizes = response.data["multiplayer"],
 						 this.loaded = true));
-  },
+
+    axios
+		.get(this.jeec_api_url + "/event", {
+			auth: {
+				username: process.env.VUE_APP_JEEC_WEBSITE_USERNAME,
+				password: process.env.VUE_APP_JEEC_WEBSITE_KEY,
+			},
+		})
+		.then((response) => (this.event = response.data["data"]));
+  }
 };
 </script>
 

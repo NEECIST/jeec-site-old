@@ -7,6 +7,7 @@
       :facebook_link="event ? event.facebook_link : ''"
       :youtube_link="event ? event.youtube_link : ''"
       :instagram_link="event ? event.instagram_link : ''"
+      :linkedin_link="'https://www.linkedin.com/company/jeecist/'"
     />
 
     <latest-speakers :name="event ? event.name : ''"/>
@@ -27,7 +28,7 @@
 
     <!--<ouractivities/>-->
 
-    <contacts />
+    <contacts :email="event ? event.email : []"/>
   </div>
 </template>
 

@@ -5,27 +5,25 @@
        <section id="contact" class="section-bg wow fadeInUp">
             <div class="container">
                 <div class="row contact-info">
-                <div class="col-md-4">
-                    <div class="contact-address">
-                    <h3>Address</h3>
-                    <address>Instituto Superior Técnico - Av. Rovisco Pais, 1049-001 Lisbon</address>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="contact-email">
-                    <i class="ion-ios-email-outline"></i>
-                    <h3>Email</h3>
-                    <p><a href="mailto:coordination@jeec.ist">coordination@jeec.ist</a></p>
-                    </div>
-                </div>
-
+                  <div class="col-md-4">
+                      <div class="contact-address">
+                      <h3>Address</h3>
+                      <address>Instituto Superior Técnico - Av. Rovisco Pais, 1049-001 Lisbon</address>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="contact-email">
+                      <i class="ion-ios-email-outline"></i>
+                      <h3>Email</h3>
+                      <p><a :href="'mailto:' + email">{{email}}</a></p>
+                      </div>
+                  </div>
                 </div>
             </div>
         </section>
 
         <div class="flexbox-imgs">
-            <a v-for="sponsor in main_sponsor" v-bind:href="sponsor.link" v-bind:key="sponsor" target="_blank">
+            <a v-for="sponsor in main_sponsor" v-bind:href="sponsor.link" target="_blank">
               <img :src="jeec_api_url + sponsor.logo">
             </a>
             <!-- <a href="https://www.santandertotta.pt/pt_PT/Particulares/Universitarios.html" target="_blank"><img src="../../static/partner-logos/santander_logo.png"></a> -->
@@ -36,7 +34,7 @@
 
         <div class="bottom-bar">
             <div id="copyright">
-                Copyright © 2020 - Jornadas de Engenharia Eletrotécnica e de Computadores do Instituto Superior Técnico
+                {{ "Copyright © " + event_year + " - Jornadas de Engenharia Eletrotécnica e de Computadores do Instituto Superior Técnico" }}
             </div>
             <div id="source-code">
                 Code hosted on <a href="https://github.com/NEECIST/jeec-webapp" target="_blank">Github</a>
@@ -58,7 +56,9 @@ export default {
             main_sponsor: [],
         }
     },
-
+    props: {
+      email: String,
+    },
     mounted () {
         axios
         .get(process.env.VUE_APP_JEEC_WEBSITE_API_URL + '/companies?partnership_tier=main_sponsor', {
@@ -68,6 +68,12 @@ export default {
             }
         })
         .then(response => (this.main_sponsor = response.data['data']));
+    },
+    computed: {
+      event_year: function () {
+        // return this.event_start.split(" ")[2].substr(0, 4);
+        return new Date().getFullYear();
+      }
     }
 }   
 </script>
