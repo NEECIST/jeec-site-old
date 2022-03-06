@@ -27,7 +27,7 @@
 
     <!--<ouractivities/>-->
 
-    <contacts />
+    <contacts :email="event ? event.email : []"/>
   </div>
 </template>
 
