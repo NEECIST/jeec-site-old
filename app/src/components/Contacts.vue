@@ -5,21 +5,19 @@
        <section id="contact" class="section-bg wow fadeInUp">
             <div class="container">
                 <div class="row contact-info">
-                <div class="col-md-4">
-                    <div class="contact-address">
-                    <h3>Address</h3>
-                    <address>Instituto Superior Técnico - Av. Rovisco Pais, 1049-001 Lisbon</address>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="contact-email">
-                    <i class="ion-ios-email-outline"></i>
-                    <h3>Email</h3>
-                    <p><a href="mailto:coordination@jeec.ist">coordination@jeec.ist</a></p>
-                    </div>
-                </div>
-
+                  <div class="col-md-4">
+                      <div class="contact-address">
+                      <h3>Address</h3>
+                      <address>Instituto Superior Técnico - Av. Rovisco Pais, 1049-001 Lisbon</address>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="contact-email">
+                      <i class="ion-ios-email-outline"></i>
+                      <h3>Email</h3>
+                      <p><a :href="'mailto:' + email">{{email}}</a></p>
+                      </div>
+                  </div>
                 </div>
             </div>
         </section>
@@ -58,7 +56,9 @@ export default {
             main_sponsor: [],
         }
     },
-
+    props: {
+      email: String,
+    },
     mounted () {
         axios
         .get(process.env.VUE_APP_JEEC_WEBSITE_API_URL + '/companies?partnership_tier=main_sponsor', {

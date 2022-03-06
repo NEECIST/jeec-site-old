@@ -16,7 +16,7 @@
         <partner-tier tier="Bronze Partners" v-bind:partners="partners.bronze" tier_color="#CE8F6B"/>
         <partner-tier tier="Our Sponsors" v-bind:partners="partners.sponsor" tier_color="#000000"/>
 
-        <contacts/>
+        <contacts :email="event ? event.email : []"/>
     </div>
 </template>
 
@@ -27,6 +27,7 @@ export default {
     name: 'partners',
     data() {
         return {
+            event: null,
             jeec_api_url : process.env.VUE_APP_JEEC_BRAIN_URL,
             partners:
             {
@@ -76,7 +77,7 @@ export default {
         })
         .then(response => (this.partners.bronze = response.data['data']));
 
-         axios
+        axios
         .get(process.env.VUE_APP_JEEC_WEBSITE_API_URL + '/companies?partnership_tier=sponsor', {
             auth: {
                 username: process.env.VUE_APP_JEEC_WEBSITE_USERNAME, 
@@ -84,6 +85,15 @@ export default {
             }
         })
         .then(response => (this.partners.sponsor = response.data['data']));
+
+        axios
+        .get(process.env.VUE_APP_JEEC_WEBSITE_API_URL + "/event", {
+            auth: {
+            username: process.env.VUE_APP_JEEC_WEBSITE_USERNAME,
+            password: process.env.VUE_APP_JEEC_WEBSITE_KEY,
+            },
+        })
+        .then((response) => (this.event = response.data["data"]));
     }
 }   
 </script>

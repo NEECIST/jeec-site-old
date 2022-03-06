@@ -200,13 +200,34 @@
 			
     </div>
     
-    <contacts />
+    <contacts :email="event ? event.email : []"/>
   </div>
 </template>
 
+<script>
+import axios from "axios";
+export default {
+	name: 'web-app',
+	data() {
+		return {
+			event: null,
+			jeec_api_url: process.env.VUE_APP_JEEC_WEBSITE_API_URL,
+		}
+	},
+	mounted() {
+    axios
+		.get(this.jeec_api_url + "/event", {
+			auth: {
+				username: process.env.VUE_APP_JEEC_WEBSITE_USERNAME,
+				password: process.env.VUE_APP_JEEC_WEBSITE_KEY,
+			},
+		})
+		.then((response) => (this.event = response.data["data"]));
+  }
+};
+</script>
 
 <style scoped>
-
 .flex-all {
   display: flex;
   display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
