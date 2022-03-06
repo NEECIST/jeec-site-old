@@ -26,6 +26,10 @@
         <a :href="instagram_link">
           <img :src="instagram_icon_link" class="social-icon" />
         </a>
+
+        <a :href="linkedin_link">
+          <img :src="linkedin_icon_link" class="social-icon" />
+        </a>
       </div>
     </div>
 
@@ -43,6 +47,7 @@ export default {
     facebook_link: String,
     youtube_link: String,
     instagram_link: String,
+    linkedin_link: String,
   },
   data() {
     return {
@@ -52,6 +57,7 @@ export default {
       facebook_icon_link: "../../static/facebook.svg",
       youtube_icon_link: "../../static/youtube.svg",
       instagram_icon_link: "../../static/instagram.svg",
+      linkedin_icon_link: "../../static/linkedin.svg",
       jeec_api_url: process.env.VUE_APP_JEEC_BRAIN_URL,
     };
   },
