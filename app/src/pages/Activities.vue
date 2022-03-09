@@ -111,7 +111,7 @@ export default {
           password: process.env.VUE_APP_JEEC_WEBSITE_KEY
         }
       })
-      .then(response => (this.days = response.data["data"][0].dates, this.event = response.data["data"]));
+      .then(response => (this.days = response.data["data"].dates, this.event = response.data["data"]));
   }
 };
 </script>
