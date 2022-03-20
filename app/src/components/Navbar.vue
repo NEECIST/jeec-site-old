@@ -16,7 +16,7 @@
       <div class="navbar-title">Team</div>
     </router-link>
 
-    <router-link router-link :to="{ name: 'Prizes' }">
+    <router-link v-if="show_prizes" router-link :to="{ name: 'Prizes' }">
       <div class="navbar-title">Prizes</div>
     </router-link>
 
@@ -57,7 +57,7 @@
         <li v-on:click="redirect('Speakers')">Speakers</li>
         <li v-on:click="redirect('Partners')">Partners</li>
         <li v-on:click="redirect('Web_App')">Web App</li>
-        <li v-on:click="redirect('Prizes')">Prizes</li> 
+        <li v-if="show_prizes" v-on:click="redirect('Prizes')">Prizes</li> 
         <li v-on:click="redirect('Team')">Team</li>
         <!-- <li v-on:click="redirect('newfeed')">Feed</li> -->
 
@@ -79,6 +79,7 @@ export default {
       show_menu: false,
       show_registrations: false,
       show_schedule: false,
+      show_prizes: false,
       navbar_logo_link: "../../static/jeec_logo_small.svg",
       navbar_mobile_logo_link: "../../static/jeec_logo_mobile.svg"
     };
@@ -104,7 +105,8 @@ export default {
         }
       )
       .then(response => (this.show_registrations = response.data["data"].show_registrations, 
-                         this.show_schedule = response.data["data"].show_schedule));
+                         this.show_schedule = response.data["data"].show_schedule,
+                         this.show_prizes = response.data["data"].show_prizes));
   },
 };
 </script>

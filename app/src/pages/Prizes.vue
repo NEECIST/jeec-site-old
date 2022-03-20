@@ -5,69 +5,69 @@
       subtitle="Start collecting points by logging in to our Web APP, via fenix."
     />
 
-		<div class="prizes margin-top">
+		<div class="prizes margin-top" v-if="loaded">
 			<div class="section-header">Singleplayer</div>
 
 			<div class="prizes-flex">
-				<div class="prize-card">
-					<img class="prize-image" src="https://brain.jeec.ist/static/rewards/ffa079ef-a957-4590-9e6e-89f6eb9c98a0.png">
+       			<div class="prize-card"> <!-- Progress Bar -->
+					<img class="prize-image" :src="brain_url + singleplayer_prizes.progress_bar.image">
 					<div class="prize-name">Progress Bar</div>
 					<div class="prize-notes">Simply by participating in our activities, collecting points, you are rewarded with several items from our JEEC merchandise.</div>
 				</div>
-				<div class="prize-card">
+				<div class="prize-card"> <!-- Partners' Merchandise -->
 					<img class="prize-image" src="../../static/anti-stress.jpg">
 					<div class="prize-name">Partners' Merchandise</div>
-					<div class="prize-notes">Some booths have their own merchandise. You can collect them too just by talking with our partners via ZOOM.</div>
+					<div class="prize-notes">Some booths have their own merchandise. You can collect them too just by talking with our partners in the Job Fair.</div>
 				</div>
-				<div class="prize-card">
-					<img class="prize-image" style="border-radius: 0%;" src="https://brain.jeec.ist/static/rewards/bb35950b-f149-4159-86b6-8e100e805b5e.png">
+				<div class="prize-card"> <!-- Activity Raffle -->
+					<img class="prize-image" :src="brain_url + singleplayer_prizes.activity_raffle.image">
 					<div class="prize-name">Activity Raffle</div>
 					<div class="prize-notes">Every activity has a prize that will be drawn between the participants.</div>
 				</div>
-				<div class="prize-card">
-					<img class="prize-image" src="https://brain.jeec.ist/static/rewards/9ebeda89-2ef7-463d-a70a-12219cbdd20a.png">
+				<div class="prize-card"> <!-- King of Networking -->
+					<img class="prize-image" :src="brain_url + singleplayer_prizes.king_networking.image">
 					<div class="prize-name">King of Networking</div>
 					<div class="prize-notes">Highest Number of 15/15's visited.</div>
 				</div>
-				<div class="prize-card">
-					<img class="prize-image" src="https://brain.jeec.ist/static/rewards/cfaba5c8-ad36-46bc-9169-7fe6d1e71749.png">
+				<div class="prize-card"> <!-- King of the Job Fair -->
+					<img class="prize-image" :src="brain_url + singleplayer_prizes.king_job_fair.image">
 					<div class="prize-name">King of the Job Fair</div>
 					<div class="prize-notes">Highest number of booths visited.</div>
 				</div>
-				<div class="prize-card">
-					<img class="prize-image" src="https://brain.jeec.ist/static/rewards/e8883962-f2a7-4be1-a526-8844a3012aeb.png">
+				<div class="prize-card"> <!-- King of Knowledge -->
+					<img class="prize-image" :src="brain_url + singleplayer_prizes.king_knowledge.image">
 					<div class="prize-name">King of Knowledge</div>
 					<div class="prize-notes">Highest number of Speakers and Discussion Panels visited.</div>
 				</div>
-				<div class="prize-card">
-					<img class="prize-image" src="https://brain.jeec.ist/static/rewards/e8883962-f2a7-4be1-a526-8844a3012aeb.png">
+				<div class="prize-card"> <!-- King of Hacking -->
+					<img class="prize-image" :src="brain_url + singleplayer_prizes.king_hacking.image">
 					<div class="prize-name">King of Hacking</div>
 					<div class="prize-notes">Highest number of workshops visited.</div>
 				</div>
-				<div class="prize-card">
-					<img class="prize-image" src="https://brain.jeec.ist/static/rewards/a56676a9-dc10-47d4-b22a-69173b78d629.png">
+				<div class="prize-card"> <!-- Top 3 Individual Participants -->
+					<img class="prize-image" :src="brain_url + singleplayer_prizes.top_participants.image">
 					<div class="prize-name">Top 3 Individual Participants</div>
-					<div class="prize-notes">The tree highest ranked Individual Participants, at the end of the week, will win a reward according to the rank, starting with a PS5.</div>
+					<div class="prize-notes">The tree highest ranked Individual Participants, at the end of the week, will win a reward according to the rank, starting with a {{singleplayer_prizes.top_participants.name}}.</div>
 				</div>
-				<div class="prize-card">
-					<img class="prize-image" src="https://brain.jeec.ist/static/rewards/7632097a-b4a0-48e1-a6ab-17e594a747c8.png">
+				<div class="prize-card"> <!-- CV Platform Raffle -->
+					<img class="prize-image" :src="brain_url + singleplayer_prizes.cv_platform_raffle.image">
 					<div class="prize-name">CV Platform Raffle</div>
-					<div class="prize-notes">By submitting your CV to our platform, you are automatically registered in a Raffle to win an iPad 6th Gen. 9.7''.</div>
+					<div class="prize-notes">By submitting your CV to our platform, you are automatically registered in a Raffle to win an {{singleplayer_prizes.cv_platform_raffle.name}}.</div>
 				</div>
 			</div>
 		
 			<div class="section-header">Multiplayer</div>
 
 			<div class="prizes-flex">
-				<div class="prize-card">
-					<img class="prize-image" src="https://brain.jeec.ist/static/rewards/98d73548-c24f-4f51-8b46-efce06ebbef8.png">
+				<div class="prize-card"> <!-- Daily Squad Prizes -->
+					<img class="prize-image" :src="brain_url + multiplayer_prizes.top_squads.image">
 					<div class="prize-name">Daily Squad Prizes</div>
 					<div class="prize-notes">Every day, the squad with the highest score of the day will win the daily big prize (changes daily).</div>
 				</div>
-				<div class="prize-card">
-					<img class="prize-image" src="https://brain.jeec.ist/static/rewards/c3ae9766-f381-4e49-857b-493a666ce8e1.png">
+				<div class="prize-card"> <!-- Top 3 Squad of the week -->
+					<img class="prize-image" :src="brain_url + multiplayer_prizes.daily_squad.image">
 					<div class="prize-name">Top 3 Squad of the week</div>
-					<div class="prize-notes">The tree highest ranked Squads, at the end of the week, will win a reward according to the rank, starting with Nintendo Switch Lite.</div>
+					<div class="prize-notes">The tree highest ranked Squads, at the end of the week, will win a reward according to the rank, starting with {{multiplayer_prizes.daily_squad.name}}.</div>
 				</div>
 			</div>
 
@@ -94,12 +94,17 @@
 
 <script>
 import axios from "axios";
+
 export default {
 	name: 'prizes',
 	data() {
 		return {
 			event: null,
 			jeec_api_url: process.env.VUE_APP_JEEC_WEBSITE_API_URL,
+      brain_url : process.env.VUE_APP_JEEC_BRAIN_URL,
+      singleplayer_prizes: {},
+      multiplayer_prizes: {},
+      loaded: false
 		}
 	},
   methods: {
@@ -108,7 +113,23 @@ export default {
       this.$router.push({ name: page });
     }
   },
-	mounted() {
+
+  mounted() {
+    axios
+      .get(
+        process.env.VUE_APP_JEEC_WEBSITE_API_URL +
+          "/prizes",
+        {
+          auth: {
+            username: process.env.VUE_APP_JEEC_WEBSITE_USERNAME,
+            password: process.env.VUE_APP_JEEC_WEBSITE_KEY
+          }
+        }
+      )
+      .then(response => (this.singleplayer_prizes = response.data["singleplayer"], 
+                         this.multiplayer_prizes = response.data["multiplayer"],
+						 this.loaded = true));
+
     axios
 		.get(this.jeec_api_url + "/event", {
 			auth: {
