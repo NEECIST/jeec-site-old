@@ -125,7 +125,7 @@ export default {
     return {
       event: null,
       selected_day: '',
-      selected_type: this.$route.query.type ? this.$route.query.type : 'Job Fair',
+      selected_type: this.$route.query.type ? this.$route.query.type : 'All',
       isOpen_weekday: false,
       isOpen_type: false,
       dict: {
