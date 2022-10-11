@@ -3,7 +3,7 @@
     <home-top
       :date="event ? getDateString(event.start_date, event.end_date) : ''"
       :location="event ? event.location : ''"
-      :image="event ? jeec_brain_url + event.logo : ''"
+      :image="event ? event.logo : ''"
       :facebook_link="event ? event.facebook_link : ''"
       :youtube_link="event ? event.youtube_link : ''"
       :instagram_link="event ? event.instagram_link : ''"
@@ -22,7 +22,7 @@
             </div>
         </div>-->
 
-    <who-are-we :activities="event ? event.activity_types.data : []" />
+    <who-are-we/>
 
     <why-attend />
 
@@ -33,13 +33,14 @@
 </template>
 
 <script>
-import axios from "axios";
 export default {
   data() {
     return {
-      event: null,
-      jeec_api_url: process.env.VUE_APP_JEEC_WEBSITE_API_URL,
-      jeec_brain_url: process.env.VUE_APP_JEEC_BRAIN_URL,
+      event: {start_date:"21 Mar 2022, Mon",end_date:"25 Mar 2022, Fri",location:"Instituto Superior Técnico",logo:"../../static/imagens/events/639c1510-6c5f-44a1-a59e-664b002a4ca3.png",facebook_link:"https://www.facebook.com/JEECIST",youtube_link:"https://www.youtube.com/user/JEECvideos",instagram_link:"https://www.instagram.com/jeec.ist/",
+    activity_types:[{name:"Job Fair",show_in_home:true},{name:"Matchmaking",show_in_home:true},
+    {name:"Workshop",show_in_home:true},{name:"Doc Talks",show_in_home:true},{name:"Discussion Panel",show_in_home:true},
+    ,{name:"15/15",show_in_home:true}
+  ],email:"coordination@jeec.ist", name:"JEEC|22"},
     };
   },
   methods: {
@@ -105,16 +106,6 @@ export default {
     getNumberOrdinal(n) {
       return (n += [, "st", "nd", "rd"][(n % 100 >> 3) ^ 1 && n % 10] || "th");
     },
-  },
-  mounted() {
-    axios
-      .get(this.jeec_api_url + "/event", {
-        auth: {
-          username: process.env.VUE_APP_JEEC_WEBSITE_USERNAME,
-          password: process.env.VUE_APP_JEEC_WEBSITE_KEY,
-        },
-      })
-      .then((response) => (this.event = response.data["data"]));
   },
 };
 </script>

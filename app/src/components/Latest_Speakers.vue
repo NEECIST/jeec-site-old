@@ -5,13 +5,13 @@
     <div class="latest-speakers-flex">
         <div class="speaker-card" v-for="speaker in speakers" :key="speaker.name">
 
-            <div><img class="speaker-image" :src="jeec_api_url + speaker.image"></div>
+            <div><img class="speaker-image" :src="speaker.image"></div>
             
             <div class="speaker-name">{{ speaker.name }}</div>
             
             <div class="speaker-current-function">{{ speaker.position }}</div>
 
-            <a :href="speaker.company_link" target="_blank"><img class="speaker-company-logo" :src="jeec_api_url + speaker.company_logo"/></a>
+            <a :href="speaker.company_link" target="_blank"><img class="speaker-company-logo" :src="speaker.company_logo"/></a>
 
             <div>
               <div class="origin-text">{{ speaker.country }}</div>
@@ -45,25 +45,41 @@ export default {
   name: "latest_speakers",
   data() {
       return {
-          jeec_api_url : process.env.VUE_APP_JEEC_BRAIN_URL,
-          speakers: []
+          speakers: [{name:"Telmo Pires",country:"New York City, USA",
+          bio:"Young AI and Machine Learning specialist, with previous focus on unsupervised learning methods and NN’s. IST Alumnus from Aerospace Engineering. Formerly an AI Engineer at Unbabel and Google.",
+          position:"Senior Machine Learning Engineer",image:"../../static/imagens/speakers/real speakers/telmo_pires.png",company_link:"https://www.apple.com/pt/",
+          company_logo:"../../static/imagens/speakers/companies/apple.png",
+          linkedin_url:"https://www.linkedin.com/in/tjppires/",youtube_url:""},
+          {name:"Morgan Roe",country:"Cornwall, UK",
+          bio:"Morgan studied in Plymouth, UK and was involved in a wide range of engineering tasks, such as making parts for animation, maintaining and setting up robotic camera rigs.",
+          position:"Director Of Operations",image:"../../static/imagens/speakers/real speakers/morgan_roe.png",company_link:"https://www.engineeredarts.co.uk/",
+          company_logo:"../../static/imagens/speakers/companies/engineered_arts.jpg",
+          linkedin_url:"https://discordapp.com/channels/@me/758276093458251796/1026971616091046029",youtube_url:""},
+          {name:"Scott Mackenzie",country:"France",
+          bio:"Scott Mackenzie is the CTO and Co-Founder of Edapt, an education-legal support company for school staff. He is also Head of Product of Truphone, working with the telecommunications market with eSIM.",
+          position:"Head of Product",image:"../../static/imagens/speakers/real speakers/scott_mackenzie.png",company_link:"https://www.truphone.com/",
+          company_logo:"../../static/imagens/speakers/companies/truphone.png",
+          linkedin_url:"https://www.linkedin.com/in/scottmackenzie/",youtube_url:""},
+          {name:"Karim Chamaa",country:"Boston, Massachusetts, USA",
+          bio:"Masters in Mechatronics Engineering in NYU, developed and taught the Robotics course of Udacity.",
+          position:"Head of Product",image:"../../static/imagens/speakers/real speakers/karim_chamaa.png",company_link:"https://www.amazon.jobs/en/teams/amazon-robotics",
+          company_logo:"../../static/imagens/speakers/companies/amazon_robotics.png",
+          linkedin_url:"https://www.linkedin.com/in/karimchamaa/",youtube_url:""},
+          {name:"Luís Andrade",country:"Portugal",
+          bio:"IST Alumnus in Electrical and Computer Engineering. Luís works as a Data Scientist at Spotify.",
+          position:"Data Scientist",image:"../../static/imagens/speakers/real speakers/luís_andrade.png",company_link:"https://www.spotify.com/",
+          company_logo:"../../static/imagens/speakers/companies/spotify.png",
+          linkedin_url:"https://www.linkedin.com/in/luis-andrade-58728461/",youtube_url:""},
+          {name:"Bruce Howe",country:"Honolulu, Hawaii, USA",
+          bio:"Bruce Howe studied in Stanford and works today in the Joint Task Force for SMART Cables Initiative, a project to incorporate sensors into the global network of submarine telecommunication cables.",
+          position:"Chair",image:"../../static/imagens/speakers/real speakers/bruce_howe.png",company_link:"https://www.smartcables.org/",
+          company_logo:"../../static/imagens/speakers/companies/smart_subsea_cables.png",
+          linkedin_url:"https://www.linkedin.com/in/bruce-howe-1a3746b/",youtube_url:""}]
       }
   },
   props: {
     name: String,
   },
-  mounted () {
-    var basicAuth = 'Basic ' + btoa(process.env.VUE_APP_JEEC_WEBSITE_USERNAME + ':' + process.env.VUE_APP_JEEC_WEBSITE_KEY);
-
-    axios
-      .get(process.env.VUE_APP_JEEC_WEBSITE_API_URL + '/speakers?spotlight=True', {
-        auth: {
-          username: process.env.VUE_APP_JEEC_WEBSITE_USERNAME, 
-          password: process.env.VUE_APP_JEEC_WEBSITE_KEY
-        }
-      })
-      .then(response => (this.speakers = response.data['data']))
-  }
 };
 </script>
 
