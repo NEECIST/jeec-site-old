@@ -130,7 +130,7 @@ export default {
           {name:"Mário Caldeira",country:"Portugal",
           bio:"Mário Caldeira is a full professor at ISEG (University of Lisbon), and associate partner at Deloitte in the area of ​​Innovation Ecosystems.",
           position:"Associate Partner",image:"../../static/imagens/speakers/QI/mário_caldeira_.png",company_link:"https://www2.deloitte.com/pt/pt.html",
-          company_logo:"../../static/imagens/speakers/companies/delloite.png",
+          company_logo:"../../static/imagens/speakers/companies/deloitte.png",
           linkedin_url:"https://www.linkedin.com/in/mario-caldeira-07b8796/",youtube_url:""},
           {name:"Paulo Dimas",country:"Lisbon, Portugal",
           bio:"",
