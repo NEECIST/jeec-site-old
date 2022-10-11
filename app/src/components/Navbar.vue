@@ -70,7 +70,6 @@
 </template>
 
 <script>
-import axios from "axios";
 
 export default {
   name: "navbar",
@@ -92,22 +91,6 @@ export default {
     }
   },
 
-  mounted() {
-    axios
-      .get(
-        process.env.VUE_APP_JEEC_WEBSITE_API_URL +
-          "/event",
-        {
-          auth: {
-            username: process.env.VUE_APP_JEEC_WEBSITE_USERNAME,
-            password: process.env.VUE_APP_JEEC_WEBSITE_KEY
-          }
-        }
-      )
-      .then(response => (this.show_registrations = response.data["data"].show_registrations, 
-                         this.show_schedule = response.data["data"].show_schedule,
-                         this.show_prizes = response.data["data"].show_prizes));
-  },
 };
 </script>
 
