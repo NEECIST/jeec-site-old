@@ -4,7 +4,7 @@
        <div class="description-team">
            <div class="team-text">
                 <div class="description-title">
-                    Our Team
+                    JEEC|22 Team
                 </div>
 
                 <div class="description-text">Connecting the best students and engineers for over 20 years!
@@ -150,7 +150,7 @@ export default {
 
 
 .description-title{
-    font-family: 'Raleway', sans-serif;
+    font-family: sans-serif;
     font-size: 50px;
     font-weight: bolder;
     color: #505050;
