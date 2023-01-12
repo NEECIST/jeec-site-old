@@ -1,5 +1,9 @@
 <template>
     <div class="partners-app">
+        <h2 id="speaker-title">
+            JEEC|22 partners
+        </h2>
+
         <component-title
             v-if="partners.main_sponsor.length > 0"
             title="Main Sponsor"
@@ -171,6 +175,15 @@ export default {
 </script>
 
 <style>
+#speaker-title {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 60px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 100px;
+}
 .partners-app {
     padding-top: 90px;
 }

@@ -2,8 +2,8 @@
 <div class="latest-speakers-comp">
   <div class="speakers-list-comp">
     <component-title
-      :title="'Speakers at ' + event_name"
-      subtitle="List of guest speakers that will steal the show!"
+      title="Speakers that participated in JEEC|22"
+      subtitle="List of guest speakers that stole the show!"
     />
       <div class="latest-speakers-flex">
         <div class="speaker-card" v-for="speaker in speakers" :key="speaker.name">
@@ -61,7 +61,7 @@ export default {
           bio:"Morgan studied in Plymouth, UK and was involved in a wide range of engineering tasks, such as making parts for animation, maintaining and setting up robotic camera rigs.",
           position:"Director Of Operations",image:"../../static/imagens/speakers/real speakers/morgan_roe.png",company_link:"https://www.engineeredarts.co.uk/",
           company_logo:"../../static/imagens/speakers/companies/engineered_arts.jpg",
-          linkedin_url:"https://discordapp.com/channels/@me/758276093458251796/1026971616091046029",youtube_url:""},
+          linkedin_url:"https://www.linkedin.com/in/morgan-roe-225818148/",youtube_url:""},
           {name:"Scott Mackenzie",country:"France",
           bio:"Scott Mackenzie is the CTO and Co-Founder of Edapt, an education-legal support company for school staff. He is also Head of Product of Truphone, working with the telecommunications market with eSIM.",
           position:"Head of Product",image:"../../static/imagens/speakers/real speakers/scott_mackenzie.png",company_link:"https://www.truphone.com/",

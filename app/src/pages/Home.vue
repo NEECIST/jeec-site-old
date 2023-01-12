@@ -36,7 +36,7 @@
 export default {
   data() {
     return {
-      event: {start_date:"21 Mar 2022, Mon",end_date:"25 Mar 2022, Fri",location:"Instituto Superior Técnico",logo:"../../static/imagens/events/639c1510-6c5f-44a1-a59e-664b002a4ca3.png",facebook_link:"https://www.facebook.com/JEECIST",youtube_link:"https://www.youtube.com/user/JEECvideos",instagram_link:"https://www.instagram.com/jeec.ist/",
+      event: {start_date:"06 Mar 2023, Mon",end_date:"10 Mar 2023, Fri",location:"Instituto Superior Técnico",logo:"../../static/imagens/events/639c1510-6c5f-44a1-a59e-664b002a4ca3.png",facebook_link:"https://www.facebook.com/JEECIST",youtube_link:"https://www.youtube.com/user/JEECvideos",instagram_link:"https://www.instagram.com/jeec.ist/",
     activity_types:[{name:"Job Fair",show_in_home:true},{name:"Matchmaking",show_in_home:true},
     {name:"Workshop",show_in_home:true},{name:"Doc Talks",show_in_home:true},{name:"Discussion Panel",show_in_home:true},
     ,{name:"15/15",show_in_home:true}
