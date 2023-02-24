@@ -31,7 +31,7 @@
               v-bind:key="company.name"
             >
               <a v-bind:href="company.link" target="_blank">
-                <img class="session-partner-logo" :src="company.logo" />
+                <img class="session-partner-logo" :src="jeec_api_url+company.logo" />
               </a>
             </div>
             <div
@@ -40,7 +40,7 @@
               v-bind:key="speaker.name"
             >
               <a v-bind:href="speaker.linkedin_url" target="_blank">
-                <img class="session-partner-logo" :src="speaker.image" />
+                <img class="session-partner-logo" :src="jeec_api_url+speaker.image" />
               </a>
             </div>
           </div>
@@ -65,6 +65,7 @@ export default {
   data() {
     return {
       event: null,
+      jeec_api_url: process.env.VUE_APP_JEEC_BRAIN_URL,
       selected_day: 0,
       activities: [],
       days: []
