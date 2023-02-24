@@ -115,8 +115,9 @@ export default {
 
 .main-sponsor-logo {
     justify-content: center;
-    max-height: 150px;
-    max-width: 200px;
+    width: 400px;
+    height:400px;
+    object-fit: contain;
     margin: 10px 25px;
     opacity: .85;
     transition: all .2s ease-in-out;

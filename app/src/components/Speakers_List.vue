@@ -132,6 +132,8 @@ a {
 .speaker-image {
   width: 160px;
   height: 160px;
+  object-fit: cover;
+  border-radius: 10%;
 }
 
 .speaker-name {
