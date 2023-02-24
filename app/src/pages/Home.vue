@@ -3,7 +3,7 @@
     <home-top
       :date="event ? getDateString(event.start_date, event.end_date) : ''"
       :location="event ? event.location : ''"
-      :image="event ? event.logo : ''"
+      :image="event_logo"
       :facebook_link="event ? event.facebook_link : ''"
       :youtube_link="event ? event.youtube_link : ''"
       :instagram_link="event ? event.instagram_link : ''"
@@ -12,6 +12,7 @@
 
     <latest-speakers :name="event ? event.name : ''"/>
     <!--
+      :image="event ? jeec_brain_url + event.logo : ''"
         <div>
             <div style="float: left; width: 40%">
                 <iframe width="100%" height="600px" src="https://www.youtube.com/embed/F-Vawhs9-4U" 
@@ -22,90 +23,153 @@
             </div>
         </div>-->
 
-    <who-are-we/>
+    <who-are-we :activities="event ? event.activity_types.data : []" />
 
     <why-attend />
 
     <!--<ouractivities/>-->
 
-    <contacts :email="event ? event.email : []"/>
+    <contacts :email="event ? event.email : ''"/>
   </div>
 </template>
 
 <script>
+import axios from "axios";
 export default {
   data() {
     return {
-      event: {start_date:"06 Mar 2023, Mon",end_date:"10 Mar 2023, Fri",location:"Instituto Superior Técnico",logo:"../../static/imagens/events/639c1510-6c5f-44a1-a59e-664b002a4ca3.png",facebook_link:"https://www.facebook.com/JEECIST",youtube_link:"https://www.youtube.com/user/JEECvideos",instagram_link:"https://www.instagram.com/jeec.ist/",
-    activity_types:[{name:"Job Fair",show_in_home:true},{name:"Matchmaking",show_in_home:true},
-    {name:"Workshop",show_in_home:true},{name:"Doc Talks",show_in_home:true},{name:"Discussion Panel",show_in_home:true},
-    ,{name:"15/15",show_in_home:true}
-  ],email:"coordination@jeec.ist", name:"JEEC|22"},
+      event: null,
+      jeec_api_url: process.env.VUE_APP_JEEC_WEBSITE_API_URL,
+      jeec_brain_url: process.env.VUE_APP_JEEC_BRAIN_URL,
+      event_logo:"../../static/jeec-logo.png"
     };
   },
   methods: {
     getDateString(start_date, end_date) {
-      var startDate = new Date(start_date.substring(0, 11));
-      var endDate = new Date(end_date.substring(0, 11));
-      const monthNames = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December",
-      ];
-      if (startDate.getMonth() === endDate.getMonth()) {
-        return (
-          this.getNumberOrdinal(startDate.getDate()) +
-          " to " +
-          this.getNumberOrdinal(endDate.getDate()) +
-          " of " +
-          monthNames[startDate.getMonth()] +
-          " " +
-          startDate.getFullYear()
-        );
-      } else if (
-        startDate.getMonth() !== endDate.getMonth() &&
-        startDate.getFullYear() === endDate.getFullYear()
-      ) {
-        return (
-          this.getNumberOrdinal(startDate.getDate()) +
-          " of " +
-          monthNames[startDate.getMonth()] +
-          " to " +
-          this.getNumberOrdinal(endDate.getDate()) +
-          " of " +
-          monthNames[endDate.getMonth()] +
-          " " +
-          startDate.getFullYear()
-        );
-      } else {
-        return (
-          this.getNumberOrdinal(startDate.getDate()) +
-          " of " +
-          monthNames[startDate.getMonth()] +
-          " " +
-          startDate.getFullYear() +
-          " to " +
-          this.getNumberOrdinal(endDate.getDate()) +
-          " of " +
-          monthNames[endDate.getMonth()] +
-          " " +
-          endDate.getFullYear()
-        );
+      let start_day = start_date.substring(0,2)
+      if(start_day[0]=="0"){
+        start_day = start_day[1]
+        if(start_day=="1"){
+          start_day = start_day.concat('st')
+        }
+        else if(start_day=="2"){
+          start_day = start_day.concat('nd')
+        }
+        else if(start_day=="3"){
+          start_day = start_day.concat('rd')
+        }
+        else{
+          start_day = start_day.concat('th')
+        }
       }
-      return " aa ";
+      else{
+        start_day = start_day.concat('th')
+      }
+      let start_month = start_date.substring(3,5)
+      if (start_month=="01"){
+        start_month="January"
+      }
+      else if(start_month=="02"){
+        start_month="February"
+      }
+      else if(start_month=="03"){
+        start_month="March"
+      }
+      else if(start_month=="04"){
+        start_month="April"
+      }
+      else if(start_month=="05"){
+        start_month="May"
+      }
+      else if(start_month=="06"){
+        start_month="June"
+      }
+      else if(start_month=="07"){
+        start_month="July"
+      }
+      else if(start_month=="08"){
+        start_month="August"
+      }
+      else if(start_month=="09"){
+        start_month="September"
+      }
+      else if(start_month=="10"){
+        start_month="October"
+      }
+      else if(start_month=="11"){
+        start_month="November"
+      }
+      else if(start_month=="12"){
+        start_month="December"
+      }
+      let end_day = end_date.substring(0,2)
+      if(end_day[0]=="0"){
+        end_day = end_day[1]
+        if(end_day=="1"){
+          end_day = end_day.concat('st')
+        }
+        else if(end_day=="2"){
+          end_day = end_day.concat('nd')
+        }
+        else if(end_day=="3"){
+          end_day = end_day.concat('rd')
+        }
+        else{
+          end_day = end_day.concat('th')
+        }
+      }
+      else{
+        end_day = end_day.concat('th')
+      }
+      let end_month = end_date.substring(3,5)
+      if (end_month=="01"){
+        end_month="January"
+      }
+      else if(end_month=="02"){
+        end_month="February"
+      }
+      else if(end_month=="03"){
+        end_month="March"
+      }
+      else if(end_month=="04"){
+        end_month="April"
+      }
+      else if(end_month=="05"){
+        end_month="May"
+      }
+      else if(end_month=="06"){
+        end_month="June"
+      }
+      else if(end_month=="07"){
+        end_month="July"
+      }
+      else if(end_month=="08"){
+        end_month="August"
+      }
+      else if(end_month=="09"){
+        end_month="September"
+      }
+      else if(end_month=="10"){
+        end_month="October"
+      }
+      else if(end_month=="11"){
+        end_month="November"
+      }
+      else if(end_month=="12"){
+        end_month="December"
+      }
+      return start_day + " of " + start_month + " to " +  end_day + " of " + end_month 
     },
-    getNumberOrdinal(n) {
-      return (n += [, "st", "nd", "rd"][(n % 100 >> 3) ^ 1 && n % 10] || "th");
-    },
+  },
+  mounted() {
+    axios
+      .get(this.jeec_api_url + "/event", {
+        auth: {
+          username: process.env.VUE_APP_JEEC_WEBSITE_USERNAME,
+          password: process.env.VUE_APP_JEEC_WEBSITE_KEY,
+        },
+      })
+      .then((response) => (this.event = response.data["data"]));
   },
 };
 </script>

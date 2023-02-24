@@ -22,18 +22,18 @@
       <div class="module-image-flex" v-if="companies.length">
         <div v-for="(company, index) in companies" :key="index">
           <a :href="company.link" target="_blank">
-            <img class="activity-image" :src="company.logo" />
+            <img class="activity-image" :src="jeec_api_url + company.logo" />
           </a>
         </div>
       </div>
       <div class="module-image-flex" v-if="speakers.length">
         <div class="speaker-flex" v-for="speaker in speakers" :key="speaker.name" style="margin-right: 1vw;">
           <a :href="speaker.linkedin_url" target="_blank">
-            <img class="speaker-image" :class="moderator == speaker.name ? 'moderator' : 'not-moderator' " :src="speaker.image" />
+            <img class="speaker-image" :class="moderator == speaker.name ? 'moderator' : 'not-moderator' " :src="jeec_api_url + speaker.image" />
           </a>
           <div class="speaker-name">{{ speaker.name }}</div>
           <a :href="speaker.company_link" target="_blank">
-            <img class="activity-image" :src="speaker.company_logo" />
+            <img class="activity-image" :src="jeec_api_url + speaker.company_logo" />
           </a>
         </div>
       </div>
@@ -74,6 +74,7 @@ export default {
 
   data() {
     return {
+      jeec_api_url: process.env.VUE_APP_JEEC_BRAIN_URL,
       click_open: this.selected_type == '15/15',
       first_click: false
     };

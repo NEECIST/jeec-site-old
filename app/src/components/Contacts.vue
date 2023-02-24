@@ -23,8 +23,8 @@
         </section>
 
         <div class="flexbox-imgs">
-            <a href="https://www.premium-minds.com" key="Premium Minds" target="_blank">
-              <img src="../../static/imagens/companies/real companies/premium_minds.png">
+            <a v-for="sponsor in main_sponsor" v-bind:href="sponsor.link" v-bind:key="sponsor.name" target="_blank">
+              <img :src="jeec_api_url + sponsor.logo">
             </a>
             <!-- <a href="https://www.santandertotta.pt/pt_PT/Particulares/Universitarios.html" target="_blank"><img src="../../static/partner-logos/santander_logo.png"></a> -->
             <a href="https://tecnico.ulisboa.pt/pt/" target="_blank"><img src="../../static/partner-logos/ist_logo.png"></a>
@@ -46,11 +46,28 @@
 
 
 <script>
+import axios from 'axios';
 
 export default {
     name: 'contacts',
+    data() {
+        return {
+            jeec_api_url : process.env.VUE_APP_JEEC_BRAIN_URL,
+            main_sponsor: [],
+        }
+    },
     props: {
       email: String,
+    },
+    mounted () {
+        axios
+        .get(process.env.VUE_APP_JEEC_WEBSITE_API_URL + '/companies?partnership_tier=main_sponsor', {
+            auth: {
+                username: process.env.VUE_APP_JEEC_WEBSITE_USERNAME, 
+                password: process.env.VUE_APP_JEEC_WEBSITE_KEY
+            }
+        })
+        .then(response => (this.main_sponsor = response.data['data']));
     },
     computed: {
       event_year: function () {
