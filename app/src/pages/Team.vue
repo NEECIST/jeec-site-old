@@ -24,7 +24,7 @@
                     <div class="teams_container">
                         <div class="team-member">
                             <img v-if="member.image!=null" :src="jeec_api_url + member.image">
-                            <img v-else src="../../static/jeec_logo_mobile.svg">
+                            <img v-else id="jeec-logo" src="../../static/jeec_logo_mobile.svg">
                         </div> 
                         <div class="linkedin-icons">
                             <a :href="member.linkedin_url" target="_blank">
@@ -116,6 +116,10 @@ export default {
     padding-top: 30px;
 }
 
+#jeec-logo{
+        object-fit: scale-down;
+    }
+
 .description-text{
     margin-top: 10px;
     background-color: rgb(95, 140, 179);
@@ -184,8 +188,9 @@ export default {
 
 .team-member img{ 
     width:200px;
-    height:300px;
-    object-fit: contain;
+    height:200px;
+    object-fit: cover;
+    border-radius: 50%;
     margin-right: 10px;
     margin-left: 10px;
 }
@@ -302,5 +307,6 @@ export default {
     .member-name{
         margin-left:6%;
     }
+    
 }
 </style>

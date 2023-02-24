@@ -285,6 +285,11 @@ a:hover {
     background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
 
+#menu li:hover {
+  color: rgb(55, 121, 184);
+  transform: scale(1.1);
+}
+
 #menuToggle span:first-child {
   transform-origin: 0% 0%;
 }

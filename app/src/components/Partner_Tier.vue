@@ -61,9 +61,9 @@
 
 .partner-logo {
     justify-content: center;
-    max-height: 100px;
-    max-width: 150px;
-    min-width:100px;
+    width: 200px;
+    height:200px;
+    object-fit: contain;
     margin: 10px 25px;
     opacity: .85;
     transition: all .2s ease-in-out;
