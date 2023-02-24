@@ -8,22 +8,21 @@
 
     <div class="activities-container">
       <div class="activity-flex">
-        <div class="activity-bold" v-for="activity in activities.filter(a => a.show_in_home)" v-html="activity.name" :key="activity.name"/>
+        <div class="activity-bold" v-for="activity in activities" v-html="activity"  :key="activity"/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+
 export default {
   name: "who-are-we",
   data() {
     return {
+      activities: ["Job Fair","Inside Talks","Workshop","Doc Talks","Discussion Panel","15/15"],
       text: 'A group of <b>IST</b> students, whose main purpose is to organize an event with the intention of closing the gap between the business world and university life.<p>Participation is free of charge and open to a strong student community with over 11000 aspiring engineers.</p><p>Activities available at JEEC:</p>',
     };
-  },
-  props: {
-    activities: Array,
   },
   methods: {
     openNav() {
