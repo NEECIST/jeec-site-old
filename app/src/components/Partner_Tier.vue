@@ -5,14 +5,9 @@
         <div class="partners-container" v-bind:style="{ borderColor: tier_color }">
             <div class="partners-flex">
                 <div class="partner" v-for="partner in partners" :key="partner.name">
-                    <a v-if="partner.link" v-bind:href="partner.link" target="_blank">
-                        <img v-if="partner.logo!=null" class="partner-logo" :src="jeec_api_url + partner.logo">
-                        <img v-else class="partner-logo" src="../../static/jeec_logo_mobile.svg">
+                    <a v-bind:href="partner.link" target="_blank">
+                        <img class="partner-logo" :src="partner.logo">
                     </a>
-                    <div v-else>
-                        <img v-if="partner.logo!=null" class="partner-logo" :src="jeec_api_url + partner.logo">
-                        <img v-else class="partner-logo" src="../../static/jeec_logo_mobile.svg">
-                    </div>
                 </div>
             </div>
         </div>
@@ -23,11 +18,6 @@
     export default {
         name: 'partner-tier',
         props: ['partners', 'tier', 'tier_color'],
-        data() {
-            return {
-                jeec_api_url : process.env.VUE_APP_JEEC_BRAIN_URL,
-            };
-        },
     }
 </script>
 
@@ -63,7 +53,6 @@
     justify-content: center;
     max-height: 100px;
     max-width: 150px;
-    min-width:100px;
     margin: 10px 25px;
     opacity: .85;
     transition: all .2s ease-in-out;

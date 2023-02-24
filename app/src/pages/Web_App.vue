@@ -9,10 +9,9 @@
 			<div class="section-header">How to join?</div>
 
 			<div class="subsection">
-				<div class="side-text" style="font-size: 2.2vw">
+				<div class="side-text">
 					<!-- INSERIR LINK DO LOGIN DA APP -->
-					Go to our <a class="link" href="https://app.jeec.ist/">Log In page</a>, choose "Student Log In".
-					You must use your fenix account in order to Log In to our Web APP.
+					The app is currently closed and will be back online in February, see you then!
 				</div>
 				<div class="side-image">
 					<div class="loading">
@@ -54,35 +53,35 @@
 			<div class="section-header">What can I do?</div>
 
 			<div class="subsection">
-				<!-- <div class="side-image">
-					<img 
+				<div class="side-image">
+					<img
 						class="bubble"
 						style="width: 45%; height: 45%; top: 60%; left: 30%; animation-duration: 4s;"
-						src="https://brain.jeec.ist/static/rewards/a56676a9-dc10-47d4-b22a-69173b78d629.png"
+						src="../../static/imagens/rewards/a56676a9-dc10-47d4-b22a-69173b78d629.png"
 					/>
-					<img 
+					<img
 						class="bubble"
-						style="width: 40%; height: 40%; top: 40%; left: 75%; animation-duration: 5s;" 
-						src="https://brain.jeec.ist/static/rewards/c3ae9766-f381-4e49-857b-493a666ce8e1.png"
+						style="width: 40%; height: 40%; top: 40%; left: 75%; animation-duration: 5s;"
+						src="../../static/imagens/rewards/c3ae9766-f381-4e49-857b-493a666ce8e1.png"
 					/>
-					<img 
+					<img
 						class="bubble"
-						style="width: 25%; height: 25%; top: 20%; left: 40%; animation-duration: 3s;" 
-						src="https://brain.jeec.ist/static/rewards/7632097a-b4a0-48e1-a6ab-17e594a747c8.png"
+						style="width: 25%; height: 25%; top: 20%; left: 40%; animation-duration: 3s;"
+						src="../../static/imagens/rewards/7632097a-b4a0-48e1-a6ab-17e594a747c8.png"
 					/>
-					<div 
+					<div
 						class="bubble"
 						style="width: 8%; height: 8%; top: 30%; left: 20%; animation-duration: 3s;"
 					></div>
-					<div 
+					<div
 						class="bubble"
 						style="width: 8%; height: 8%; top: 50%; left: 0%; animation-duration: 2s;"
 					></div>
-					<div 
+					<div
 						class="bubble"
 						style="width: 8%; height: 8%; top: 80%; left: 60%; animation-duration: 4s;"
 					></div>
-				</div> -->
+				</div>
 				<div class="side-text">
 					Earn Rewards by collecting points.
 				</div>
@@ -99,20 +98,20 @@
 
 			<div class="subsection">
 				<div class="side-image">
-					<img 
+					<img
 						class="bubble"
 						style="width: 60%; height: 60%; top: 45%; left: 50%; animation-duration: 4s;"
 						src="../../static/rocket-chat.svg"
 					/>
-					<div 
+					<div
 						class="bubble"
 						style="width: 8%; height: 8%; top: 85%; left: 40%; animation-duration: 3s;"
 					></div>
-					<div 
+					<div
 						class="bubble"
 						style="width: 8%; height: 8%; top: 35%; left: 15%; animation-duration: 2s;"
 					></div>
-					<div 
+					<div
 						class="bubble"
 						style="width: 8%; height: 8%; top: 25%; left: 85%; animation-duration: 4s;"
 					></div>
@@ -126,38 +125,38 @@
 				<div class="side-text">
 					Get full access to all activities and registration links in a centralized way.
 				</div>
-				<!-- <div class="side-image">
+				<div class="side-image">
 					<div class="bubble" style="width: 45%; height: 45%; top: 60%; left: 70%; animation-duration: 4s;">
-						<img 
+						<img
 							style="width: 70%; margin-top: 30%"
-							src="https://brain.jeec.ist/static/companies/images/deloitte.png"
+							src="../../static/imagens/companies/real companies/deloitte.png"
 						/>
 					</div>
 					<div class="bubble" style="width: 40%; height: 40%; top: 40%; left: 25%; animation-duration: 5s;">
-					<img 
-						style="width: 70%; margin-top: 15%" 
-						src="https://brain.jeec.ist/static/companies/images/kpmg.png"
+					<img
+						style="width: 70%; margin-top: 15%"
+						src="../../static/imagens/companies/real companies/kpmg.png"
 					/>
 					</div>
 					<div class="bubble" style="width: 25%; height: 25%; top: 20%; left: 60%; animation-duration: 3s;">
-						<img 
-							style="width: 70%; margin-top: 15%" 
-							src="https://brain.jeec.ist/static/companies/images/link_consulting.png"
+						<img
+							style="width: 70%; margin-top: 15%"
+							src="../../static/imagens/companies/link_consulting.png"
 						/>
 					</div>
-					<div 
+					<div
 						class="bubble"
 						style="width: 8%; height: 8%; top: 70%; left: 35%; animation-duration: 3s;"
 					></div>
-					<div 
+					<div
 						class="bubble"
 						style="width: 8%; height: 8%; top: 30%; left: 85%; animation-duration: 2s;"
 					></div>
-					<div 
+					<div
 						class="bubble"
 						style="width: 8%; height: 8%; top: 70%; left: 100%; animation-duration: 4s;"
 					></div>
-				</div> -->
+				</div>
 			</div>
 
 			<div class="section-header">How do I earn points?</div>
@@ -197,34 +196,35 @@
 					<img style="width: 70%; margin-top:-10%" src="../../static/teamwork.png"/>
 				</div>
 			</div>
-			
+
     </div>
-    
-    <contacts :email="event ? event.email : ''"/>
+
+    <!-- <contacts :email="event ? event.email : []"/> -->
+	<contacts email="coordination@jeec.ist"/>
   </div>
 </template>
 
 <script>
-import axios from "axios";
-export default {
-	name: 'web-app',
-	data() {
-		return {
-			event: null,
-			jeec_api_url: process.env.VUE_APP_JEEC_WEBSITE_API_URL,
-		}
-	},
-	mounted() {
-    axios
-		.get(this.jeec_api_url + "/event", {
-			auth: {
-				username: process.env.VUE_APP_JEEC_WEBSITE_USERNAME,
-				password: process.env.VUE_APP_JEEC_WEBSITE_KEY,
-			},
-		})
-		.then((response) => (this.event = response.data["data"]));
-  }
-};
+// import axios from "axios";
+// export default {
+// 	name: 'web-app',
+// 	data() {
+// 		return {
+// 			event: null,
+// 			jeec_api_url: process.env.VUE_APP_JEEC_WEBSITE_API_URL,
+// 		}
+// 	},
+// 	mounted() {
+//     axios
+// 		.get(this.jeec_api_url + "/event", {
+// 			auth: {
+// 				username: process.env.VUE_APP_JEEC_WEBSITE_USERNAME,
+// 				password: process.env.VUE_APP_JEEC_WEBSITE_KEY,
+// 			},
+// 		})
+// 		.then((response) => (this.event = response.data["data"]));
+//   }
+// };
 </script>
 
 <style scoped>
@@ -289,7 +289,7 @@ export default {
 .side-text {
 	width: 55vw;
   font-family: "Montserrat";
-  font-size: 3vw;
+  font-size: 30px;
 	font-weight: 600;
   color: #2C3E50;
 }

@@ -16,9 +16,9 @@
       <div class="navbar-title">Team</div>
     </router-link>
 
-    <!-- <router-link v-if="show_prizes" router-link :to="{ name: 'Prizes' }">
+    <router-link v-if="show_prizes" router-link :to="{ name: 'Prizes' }">
       <div class="navbar-title">Prizes</div>
-    </router-link> -->
+    </router-link>
 
     <router-link router-link :to="{ name: 'Web_App' }">
       <div class="navbar-title">Web App</div>
@@ -36,13 +36,13 @@
       <div class="navbar-title">Feed</div>
     </router-link> -->
 
-    <!-- <router-link v-if="show_registrations" router-link :to="{ name: 'Activities' }">
+    <router-link v-if="show_registrations" router-link :to="{ name: 'Activities' }">
       <div class="navbar-title">Registrations</div>
     </router-link>
 
     <router-link v-if="show_schedule" router-link :to="{ name: 'Schedule' }">
       <div class="navbar-title">Schedule</div>
-    </router-link> -->
+    </router-link>
 
     <div id="menuToggle">
       <input type="checkbox" :checked="show_menu" v-on:click="show_menu = !show_menu" />
@@ -52,12 +52,12 @@
       <span></span>
 
       <ul id="menu">
-        <!-- <li v-if="show_schedule" v-on:click="redirect('Schedule')">Schedule</li> -->
-        <!-- <li v-if="show_registrations" v-on:click="redirect('Activities')">Registrations</li> -->
+        <li v-if="show_schedule" v-on:click="redirect('Schedule')">Schedule</li>
+        <li v-if="show_registrations" v-on:click="redirect('Activities')">Registrations</li>
         <li v-on:click="redirect('Speakers')">Speakers</li>
         <li v-on:click="redirect('Partners')">Partners</li>
         <li v-on:click="redirect('Web_App')">Web App</li>
-        <!-- <li v-if="show_prizes" v-on:click="redirect('Prizes')">Prizes</li>  -->
+        <li v-if="show_prizes" v-on:click="redirect('Prizes')">Prizes</li> 
         <li v-on:click="redirect('Team')">Team</li>
         <!-- <li v-on:click="redirect('newfeed')">Feed</li> -->
 
@@ -70,7 +70,6 @@
 </template>
 
 <script>
-import axios from "axios";
 
 export default {
   name: "navbar",
@@ -92,22 +91,6 @@ export default {
     }
   },
 
-  mounted() {
-    axios
-      .get(
-        process.env.VUE_APP_JEEC_WEBSITE_API_URL +
-          "/event",
-        {
-          auth: {
-            username: process.env.VUE_APP_JEEC_WEBSITE_USERNAME,
-            password: process.env.VUE_APP_JEEC_WEBSITE_KEY
-          }
-        }
-      )
-      .then(response => (this.show_registrations = response.data["data"].show_registrations, 
-                         this.show_schedule = response.data["data"].show_schedule,
-                         this.show_prizes = response.data["data"].show_prizes));
-  },
 };
 </script>
 
@@ -120,7 +103,7 @@ export default {
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.16);
   position: fixed;
   z-index: 1000;
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .navbar-left-logo {
@@ -293,20 +276,20 @@ a:hover {
   transform-origin: 0% 100%;
 }
 
-/* #menuToggle input:checked ~ span {
+#menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #232323;
-} */
+}
 
-/* #menuToggle input:checked ~ span:nth-last-child(3) {
+#menuToggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
 #menuToggle input:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
-} */
+}
 
 #menu {
   position: absolute;
