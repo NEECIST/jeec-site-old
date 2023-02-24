@@ -58,6 +58,7 @@ export default {
       youtube_icon_link: "../../static/youtube.svg",
       instagram_icon_link: "../../static/instagram.svg",
       linkedin_icon_link: "../../static/linkedin.svg",
+      jeec_api_url: process.env.VUE_APP_JEEC_BRAIN_URL,
     };
   },
   methods: {
@@ -111,7 +112,7 @@ export default {
     margin-top: 0px;
     max-width: 100%;
     height: auto;
-    width: 90vw;
+    width: 1100px;
     display: inline-block;
 }
 
