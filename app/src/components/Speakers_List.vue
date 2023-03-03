@@ -68,6 +68,7 @@ export default {
         }
       })
       .then(response => {let all_speakers = response.data['data']
+      console.log(all_speakers)
       for(let i=0;i<all_speakers.length;i++){
           if(all_speakers[i].image && all_speakers[i].company_logo){
             this.speakers.push(all_speakers[i])

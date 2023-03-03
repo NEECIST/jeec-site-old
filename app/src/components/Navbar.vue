@@ -36,13 +36,13 @@
       <div class="navbar-title">Feed</div>
     </router-link> -->
 
-    <!-- <router-link v-if="show_registrations" router-link :to="{ name: 'Activities' }">
+    <!-- <router-link router-link :to="{ name: 'Activities' }">
       <div class="navbar-title">Registrations</div>
-    </router-link>
+    </router-link> -->
 
     <router-link v-if="show_schedule" router-link :to="{ name: 'Schedule' }">
       <div class="navbar-title">Schedule</div>
-    </router-link> -->
+    </router-link> 
 
     <div id="menuToggle">
       <input type="checkbox" :checked="show_menu" v-on:click="show_menu = !show_menu" />
