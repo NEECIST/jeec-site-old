@@ -52,7 +52,7 @@
       <span></span>
 
       <ul id="menu">
-        <!-- <li v-if="show_schedule" v-on:click="redirect('Schedule')">Schedule</li> -->
+        <li v-if="show_schedule" v-on:click="redirect('Schedule')">Schedule</li>
         <!-- <li v-if="show_registrations" v-on:click="redirect('Activities')">Registrations</li> -->
         <li v-on:click="redirect('Speakers')">Speakers</li>
         <li v-on:click="redirect('Partners')">Partners</li>
@@ -106,7 +106,8 @@ export default {
       )
       .then(response => (this.show_registrations = response.data["data"].show_registrations, 
                          this.show_schedule = response.data["data"].show_schedule,
-                         this.show_prizes = response.data["data"].show_prizes));
+                         this.show_prizes = response.data["data"].show_prizes,
+                         console.log(this.response.data["data"].show_registrations)));
   },
 };
 </script>
