@@ -168,13 +168,13 @@ export default {
 
   methods: {
     getWeekDay(day) {
-      var week_day = day.substr(day.length - 3);
-      return this.dict[week_day];
+      var week_day = day.substr(12);
+      return week_day;
     },
     getDay(day) {
       var nr_day = day.substr(0, 2);
       var month = day.substr(3, 3);
-      return nr_day + "/" + this.dict[month];
+      return nr_day + "/" + month;
     },
     selectDay(day) {
       this.selected_day = day;

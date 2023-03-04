@@ -1,6 +1,6 @@
 <template>
   <div class="home-app">
-    <home-top
+    <home-top :key="loaded"
       :date="event ? getDateString(event.start_date, event.end_date) : ''"
       :location="event ? event.location : ''"
       :image="event_logo"
@@ -9,7 +9,6 @@
       :instagram_link="event ? event.instagram_link : ''"
       :linkedin_link="'https://www.linkedin.com/company/jeecist/'"
     />
-
     <latest-speakers :name="event ? event.name : ''"/>
     <!--
       :image="event ? jeec_brain_url + event.logo : ''"
@@ -41,7 +40,8 @@ export default {
       event: null,
       jeec_api_url: process.env.VUE_APP_JEEC_WEBSITE_API_URL,
       jeec_brain_url: process.env.VUE_APP_JEEC_BRAIN_URL,
-      event_logo:"../../static/jeec-logo.png"
+      event_logo:"../../static/jeec-logo.png",
+      loaded:false
     };
   },
   methods: {
@@ -169,7 +169,10 @@ export default {
           password: process.env.VUE_APP_JEEC_WEBSITE_KEY,
         },
       })
-      .then((response) => (this.event = response.data["data"]));
+      .then((response) => {
+        (this.event = response.data.data)
+        this.loaded=true;
+      console.log(this.event)});
   },
 };
 </script>
