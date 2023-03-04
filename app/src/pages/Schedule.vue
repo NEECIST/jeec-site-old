@@ -5,6 +5,11 @@
       subtitle="Never miss another activity!"
     />
 
+    <h1 class="job-fair-text">Companies present in our jobfair on {{ this.selected_day.substring(11,) }}</h1>
+    <div class="job-fair-container" v-if="job_fair_companies.length>0">
+      <img v-for="company in job_fair_companies" class="job-fair-company" :src="jeec_api_url + company" :key="company">
+    </div>
+
     <!-- MOBILE DROPLISTS -->
     <div class="dropdown-group">
       <!-- WEEK DAY -->
@@ -162,7 +167,9 @@ export default {
       jeec_api_url: process.env.VUE_APP_JEEC_BRAIN_URL,
       activities: [],
       days: [],
-      types: []
+      types: [],
+      job_fair_companies:[],
+      list:[]
     };
   },
 
@@ -178,6 +185,21 @@ export default {
     },
     selectDay(day) {
       this.selected_day = day;
+      if(day.includes('Tuesday')){
+        this.job_fair_companies = this.list['1']
+      }
+      else if(day.includes('Wednesday')){
+        this.job_fair_companies = this.list['2']
+      }
+      else if(day.includes('Thursday')){
+        this.job_fair_companies = this.list['3']
+      }
+      else if(day.includes('Friday')){
+        this.job_fair_companies = this.list['4']
+      }
+      else{
+        this.job_fair_companies = this.list['0']
+      }
     },
     selectType(type) {
       this.selected_type = type;
@@ -220,6 +242,16 @@ export default {
       )
       .then(response => (this.types = response.data["data"].activity_types["data"].sort((a, b) => a.name.localeCompare(b.name)), 
                          this.days = response.data["data"].dates, this.selectDayInit(), this.event = response.data["data"]));
+    axios.get(process.env.VUE_APP_JEEC_WEBSITE_API_URL + "/job-fair",{
+          auth: {
+            username: process.env.VUE_APP_JEEC_WEBSITE_USERNAME,
+            password: process.env.VUE_APP_JEEC_WEBSITE_KEY
+          }
+        }).then(response=>{
+          this.list = response.data
+          this.job_fair_companies = this.list['0']
+        }  )
+        
   },
 };
 </script>
@@ -507,5 +539,33 @@ export default {
   display: none;
 }
 
+}
+
+.job-fair-company{
+  width:20vw;
+  max-width:160px;
+}
+
+.job-fair-container{
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border:2px solid #27ADE4;
+  width:90vw;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:5vh;
+  border-radius:30vw;
+}
+
+.job-fair-text{
+  -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 10px;
+    padding-left:5vw;
+    padding-right:5vw;
 }
 </style>
