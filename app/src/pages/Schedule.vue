@@ -551,11 +551,14 @@ export default {
   justify-content: space-evenly;
   align-items: center;
   border:2px solid #27ADE4;
-  width:90vw;
+  width:80vw;
   margin-left:auto;
   margin-right:auto;
   margin-bottom:5vh;
   border-radius:30vw;
+  flex-wrap:wrap;
+  padding:5vw;
+  margin-top:5vh;
 }
 
 .job-fair-text{
