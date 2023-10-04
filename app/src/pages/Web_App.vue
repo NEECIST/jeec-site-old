@@ -9,10 +9,13 @@
 			<div class="section-header">How to join?</div>
 
 			<div class="subsection">
-				<div class="side-text" style="font-size: 2.2vw">
-					<!-- INSERIR LINK DO LOGIN DA APP -->
+				<!--<div class="side-text" style="font-size: 2.2vw">
 					Go to our <a class="link" href="https://app.jeec.ist/">Log In page</a>, choose "Student Log In".
 					You must use your fenix account in order to Log In to our Web APP.
+				</div> -->
+        <div class="side-text" style="font-size: 2.2vw">
+					<!-- INSERIR LINK DO LOGIN DA APP -->
+					We are currently working on our Web APP. Stay tuned for news! 
 				</div>
 				<div class="side-image">
 					<div class="loading">

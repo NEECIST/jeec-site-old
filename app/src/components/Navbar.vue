@@ -6,9 +6,9 @@
       <img class="navbar-left-logo-mobile" :src="navbar_mobile_logo_link" />
     </router-link>
 
-    <a href="https://app.jeec.ist/">
+    <!--<a href="https://app.jeec.ist/">
       <div class="platform-button">Web App Login</div>
-    </a>
+    </a>-->
 
     <!--<div class="brain-msg">Login as a partner and bid for Main Sponsor of JEEC|20!</div>-->
 
