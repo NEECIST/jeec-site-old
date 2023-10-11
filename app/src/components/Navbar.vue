@@ -61,9 +61,9 @@
         <li v-on:click="redirect('Team')">Team</li>
         <!-- <li v-on:click="redirect('newfeed')">Feed</li> -->
 
-        <a href="https://app.jeec.ist/">
+       <!-- <a href="https://app.jeec.ist/">
           <div class="platform-button-menu">Web App Login</div>
-        </a>
+        </a> -->
       </ul>
     </div>
   </div>
