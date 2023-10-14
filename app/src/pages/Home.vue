@@ -1,6 +1,6 @@
 <template>
   <div class="home-app">
-    <home-top :key="loaded"
+   <!-- <home-top :key="loaded"
       :date="event ? getDateString(event.start_date, event.end_date) : ''"
       :location="event ? event.location : ''"
       :image="event_logo"
@@ -8,8 +8,18 @@
       :youtube_link="event ? event.youtube_link : ''"
       :instagram_link="event ? event.instagram_link : ''"
       :linkedin_link="'https://www.linkedin.com/company/jeecist/'"
+    />-->
+    <home-top :key="loaded"
+      :date="19th to 23rd February of 2024"
+      :location="Técnico Innovation Center"
+      :image="event_logo"
+      :facebook_link="event ? event.facebook_link : ''"
+      :youtube_link="event ? event.youtube_link : ''"
+      :instagram_link="event ? event.instagram_link : ''"
+      :linkedin_link="'https://www.linkedin.com/company/jeecist/'"
     />
     <latest-speakers :name="event ? event.name : ''"/>
+    
     <!--
       :image="event ? jeec_brain_url + event.logo : ''"
         <div>
