@@ -6,7 +6,7 @@
     </div>-->
     <div class="date-location">
       19th to 23rd February 2024
-      <p>{{ location }}</p>
+      <p>Técnico Innovation Center</p>
     </div>
 
     <!--
