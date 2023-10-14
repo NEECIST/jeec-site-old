@@ -1,8 +1,12 @@
 <template>
   <div class="home-top-comp">
-    <div class="date-location">
+    <!--<div class="date-location">
       {{ date ? date : "" }}
       <p>{{ location }}</p>
+    </div>-->
+    <div class="date-location">
+      19th to 23rd February 2024
+      <p>Técnico Innovation Center</p>
     </div>
 
     <!--
