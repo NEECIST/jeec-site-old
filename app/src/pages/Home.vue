@@ -9,7 +9,10 @@
       :instagram_link="event ? event.instagram_link : ''"
       :linkedin_link="'https://www.linkedin.com/company/jeecist/'"
     />
-    <latest-speakers :name="event ? event.name : ''"/>
+    <div>
+      WE ARE WORKING ON IT! STAY TUNED! (ASS: WebDead Team)
+    </div>
+    <!-- <latest-speakers :name="event ? event.name : ''"/> -->
     <!--
       :image="event ? jeec_brain_url + event.logo : ''"
         <div>
