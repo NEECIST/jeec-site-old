@@ -53,11 +53,11 @@
 
       <ul id="menu">
         <li v-if="show_schedule" v-on:click="redirect('Schedule')">Schedule</li>
-        <!-- <li v-if="show_registrations" v-on:click="redirect('Activities')">Registrations</li> -->
+        <!-- <li v-if="show_registrations" v-on:click="redirect('Activities')">Registrations</li>
         <li v-on:click="redirect('Speakers')">Speakers</li>
         <li v-on:click="redirect('Partners')">Partners</li>
         <li v-on:click="redirect('Web_App')">Web App</li>
-        <!-- <li v-if="show_prizes" v-on:click="redirect('Prizes')">Prizes</li>  -->
+        <li v-if="show_prizes" v-on:click="redirect('Prizes')">Prizes</li>  -->
         <li v-on:click="redirect('Team')">Team</li>
         <!-- <li v-on:click="redirect('newfeed')">Feed</li> -->
 
