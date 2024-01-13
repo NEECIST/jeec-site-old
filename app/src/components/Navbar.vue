@@ -20,17 +20,17 @@
       <div class="navbar-title">Prizes</div>
     </router-link> -->
 
-    <router-link router-link :to="{ name: 'Web_App' }">
+    <!-- <router-link router-link :to="{ name: 'Web_App' }">
       <div class="navbar-title">Web App</div>
-    </router-link>
+    </router-link> -->
 
-    <router-link router-link :to="{ name: 'Partners' }">
+    <!--<router-link router-link :to="{ name: 'Partners' }">
       <div class="navbar-title">Partners</div>
-    </router-link>
+    </router-link> -->
 
-    <router-link router-link :to="{ name: 'Speakers' }">
+    <!-- <router-link router-link :to="{ name: 'Speakers' }">
       <div class="navbar-title">Speakers</div>
-    </router-link>
+    </router-link> -->
 
     <!-- <router-link router-link :to="{ name: 'newfeed' }">
       <div class="navbar-title">Feed</div>
