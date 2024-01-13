@@ -22,16 +22,6 @@
             </div>
         </section>
 
-        <div class="flexbox-imgs">
-            <a v-for="sponsor in main_sponsor" v-bind:href="sponsor.link" v-bind:key="sponsor.name" target="_blank">
-              <img :src="jeec_api_url + sponsor.logo">
-            </a>
-            <!-- <a href="https://www.santandertotta.pt/pt_PT/Particulares/Universitarios.html" target="_blank"><img src="../../static/partner-logos/santander_logo.png"></a> -->
-            <a href="https://tecnico.ulisboa.pt/pt/" target="_blank"><img src="../../static/partner-logos/ist_logo.png"></a>
-
-            <a href="https://fenix.tecnico.ulisboa.pt/departamentos/deec" target="_blank"><img src="../../static/partner-logos/deec_logo.png"></a>
-        </div>
-
         <div class="bottom-bar">
             <div id="copyright">
                 {{ "Copyright © " + event_year + " - Jornadas de Engenharia Eletrotécnica e de Computadores do Instituto Superior Técnico" }}
